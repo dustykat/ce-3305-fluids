@@ -38,14 +38,41 @@
 # 
 # The format will differ if you prepare a Notebook, or work the problem by-hand. Here is an example worked out on paper which will be repeated in a Notebook.
 # 
-# ```{figure} example-1.png
+# ```{figure} example-1-1.png
 # ---
-# height: 150px
-# name: directive-fig
+# width: 400px
+# name: ex1-1
 # ---
-# Here is my figure caption!
+# Example of fluid mechanics homework problem solution format (page 1 of 4)
 # ```
+# {numref}'ex1-1'
 # 
+# ```{figure} example-1-2.png
+# ---
+# width: 400px
+# name: ex1-2
+# ---
+# Example of fluid mechanics homework problem solution format (page 2 of 4)
+# ```
+# {numref}'ex1-2'
+# 
+# ```{figure} example-1-3.png
+# ---
+# width: 400px
+# name: ex1-3
+# ---
+# Example of fluid mechanics homework problem solution format (page 3 of 4)
+# ```
+# {numref}'ex1-3'
+# 
+# ```{figure} example-1-4.png
+# ---
+# width: 400px
+# name: ex1-4
+# ---
+# Example of fluid mechanics homework problem solution format (page 4 of 4)
+# ```
+# {numref}'ex1-4'
 
 # ## Definition(s)
 # 
