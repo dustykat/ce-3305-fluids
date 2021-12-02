@@ -1,11 +1,11 @@
-# Engineering Fluid Mechanics: A WebBook to Accompany CE 3305 at TTU
+# Fluid Mechanics Notes to Accompany CE 3305 at TTU
 
 Copyright © 2021 Theodore G. Cleveland, *The contents of this Jupyter Book are licensed for free consumption under the following license: [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)*
 
 :::{note}
 These are Dr. Cleveland's course notes.  If you are not in his course you may want to refer to your actual instructor's content - but you are free to examine and use these notes as long you cite them.
 
-*Suggested Citation* Theodore G. Cleveland (2021) *Engineering Fluid Mechanics: A WebBook to Accompany CE 3305 at TTU*, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering, DOI (pending) 
+*Suggested Citation: * Cleveland, T. G. (2021) * Fluid Mechanics Notes to Accompany CE 3305 at TTU*, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering, DOI (pending) 
 :::
 
 ## Overview
@@ -39,9 +39,8 @@ The graded components of the course are:
 The complete syllabus is located at [http://54.243.252.9/ce-3305-webroot/0-Syllabus/CE-3305-2022-1-syllabus.html](http://54.243.252.9/ce-3372-webroot/0-Syllabus/CE-3305-2022-1-syllabus.html)
 
 :::{note}
-1. These notes were originally written to be used in conjunction with 
-
-- DF Elger, BC Williams, Crowe, CT and JA Roberson, Engineering Fluid Mechanics 10th edition, John Wiley & Sons, Inc., 2013.
+These notes were originally written to be used in conjunction with <br>
+DF Elger, BC Williams, Crowe, CT and JA Roberson, *Engineering Fluid Mechanics 10th edition*, John Wiley & Sons, Inc., 2013.
 
 2. Exercises (homework) are supplied in a separate section of the course website, so this notebook is not so cluttered.  These will be linked directly in Blackboard
 
