@@ -261,14 +261,58 @@
        Solution
       </a>
      </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#discussion">
+       Discussion
+      </a>
+     </li>
     </ul>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-s">
+     Definition(s)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#what-is-a-solid">
+       What is a Solid?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#what-is-a-fluid">
+       What is a Fluid?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#what-is-fluid-mechanics">
+       What is Fluid Mechanics?
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#continuum-mechanics">
+         Continuum Mechanics
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#particle-mechanics">
+         Particle Mechanics
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dimensions">
+     Dimensions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#units">
+     Units
+    </a>
+   </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definition-s">
-   Definition(s)
-  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#readings">
@@ -381,21 +425,94 @@
 </div>
 <div class="section" id="known-quantities">
 <h4>Known Quantities<a class="headerlink" href="#known-quantities" title="Permalink to this headline">¶</a></h4>
+<p>Here we will be mixing code and text</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a code cell</span>
+<span class="n">vol_tank</span> <span class="o">=</span> <span class="mi">17</span> <span class="c1"># tank volume in cubic feet</span>
+<span class="n">p_gas</span> <span class="o">=</span> <span class="mi">500</span> <span class="c1"># gas pressure in psi</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1"># gas temperature in celsius</span>
+<span class="n">wt_tank</span> <span class="o">=</span> <span class="mi">50</span> <span class="c1"># tank weight in pounds</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="unknown-quantities">
 <h4>Unknown Quantities<a class="headerlink" href="#unknown-quantities" title="Permalink to this headline">¶</a></h4>
+<p>Our unknowns are</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wt_gas</span>
+<span class="n">wt_total</span> <span class="o">=</span> <span class="n">wt_tank</span><span class="o">+</span><span class="n">wt_gas</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="governing-principles">
 <h4>Governing Principles<a class="headerlink" href="#governing-principles" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(pV=\frac{m}{M}RT\)</span> Ideal gas law</p></li>
+<li><p><span class="math notranslate nohighlight">\(wt_{total} = wt_{tank}+wt_{gas}\)</span> Duh!</p></li>
+<li><p><span class="math notranslate nohighlight">\(R = 0.0821 \frac{L \cdot atm}{K \cdot mol}\)</span> Definition of universal gas constant</p></li>
+<li><p><span class="math notranslate nohighlight">\(T_{K}=T_{C}+273\)</span> Definition of Kelvin temperature scale</p></li>
+<li><p><span class="math notranslate nohighlight">\(1 atm = 14.7 psi\)</span> Unit conversion</p></li>
+<li><p><span class="math notranslate nohighlight">\(M_{N_2} = 28.014 \frac{g}{mol}\)</span> Molar weight of nitrogen gas</p></li>
+</ol>
 </div>
 <div class="section" id="solution">
 <h4>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h4>
+<p>Now simply produce a sequential script to solve for total weight</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mwN2</span><span class="o">=</span><span class="mf">28.014</span> <span class="c1"># MW nitrogen</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mf">0.0821</span> <span class="c1"># universal gas constant</span>
+<span class="n">grabity</span> <span class="o">=</span> <span class="mf">9.8</span> <span class="c1"># acceleration of gravity</span>
+<span class="n">vol_tank_l</span><span class="o">=</span><span class="n">vol_tank</span><span class="o">*</span><span class="p">((</span><span class="mi">1</span><span class="o">/</span><span class="mf">3.28</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span> <span class="c1"># tank volume in liters</span>
+<span class="n">temp_k</span><span class="o">=</span><span class="n">temp</span><span class="o">+</span><span class="mi">273</span> <span class="c1"># temp in kelvin</span>
+<span class="n">p_atm</span><span class="o">=</span><span class="n">p_gas</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mf">14.7</span><span class="p">)</span> <span class="c1"># gas pressure in atmospheres</span>
+<span class="n">mass_gas</span> <span class="o">=</span> <span class="p">(</span><span class="n">p_atm</span><span class="o">*</span><span class="n">vol_tank_l</span><span class="o">*</span><span class="n">mwN2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">R</span><span class="o">*</span><span class="n">temp_k</span><span class="p">)</span> <span class="c1"># gas mass in grams</span>
+<span class="n">wt_gas</span> <span class="o">=</span> <span class="n">mass_gas</span><span class="o">*</span><span class="n">grabity</span><span class="o">/</span><span class="mi">1000</span> <span class="c1"># weight of gas in newtons</span>
+<span class="n">wt_total</span> <span class="o">=</span> <span class="n">wt_tank</span> <span class="o">+</span> <span class="n">wt_gas</span><span class="o">*</span><span class="p">(</span><span class="mf">2.2</span><span class="p">)</span><span class="o">/</span><span class="n">grabity</span> <span class="c1"># total weight in pounds</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Total weight = &#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">wt_total</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="s1">&#39; pounds&#39;</span><span class="p">)</span>
+</pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total weight =  92.0  pounds
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="discussion">
+<h4>Discussion<a class="headerlink" href="#discussion" title="Permalink to this headline">¶</a></h4>
+<p>Probably would want a little more description in the calculation sequence, notice units are reported with the answer. If we want to get fancy, could embed a database for common gasses, and some interactive inputs - but that’s overkill.  In practice, you will likely use a hybrid of paper-based and notebook-based problem solving.</p>
 </div>
 </div>
 <div class="section" id="definition-s">
-<h2>Definition(s)<a class="headerlink" href="#definition-s" title="Permalink to this headline">¶</a></h2>
+<h3>Definition(s)<a class="headerlink" href="#definition-s" title="Permalink to this headline">¶</a></h3>
+<p>Here we present some fundamental definitions</p>
+<div class="section" id="what-is-a-solid">
+<h4>What is a Solid?<a class="headerlink" href="#what-is-a-solid" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="what-is-a-fluid">
+<h4>What is a Fluid?<a class="headerlink" href="#what-is-a-fluid" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="what-is-fluid-mechanics">
+<h4>What is Fluid Mechanics?<a class="headerlink" href="#what-is-fluid-mechanics" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="continuum-mechanics">
+<h5>Continuum Mechanics<a class="headerlink" href="#continuum-mechanics" title="Permalink to this headline">¶</a></h5>
+</div>
+<div class="section" id="particle-mechanics">
+<h5>Particle Mechanics<a class="headerlink" href="#particle-mechanics" title="Permalink to this headline">¶</a></h5>
+</div>
+</div>
+</div>
+<div class="section" id="dimensions">
+<h3>Dimensions<a class="headerlink" href="#dimensions" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="units">
+<h3>Units<a class="headerlink" href="#units" title="Permalink to this headline">¶</a></h3>
 <hr></div>
+</div>
 <div class="section" id="readings">
 <h2>Readings<a class="headerlink" href="#readings" title="Permalink to this headline">¶</a></h2>
 <p>CE-3305-2022-1 Syllabus. <a class="reference external" href="http://54.243.252.9/ce-3372-webroot/0-Syllabus/CE-3305-2022-1-syllabus.html">http://54.243.252.9/ce-3305-webroot/0-Syllabus/CE-3305-2022-1-syllabus.html</a></p>

@@ -101,14 +101,73 @@
 # ```
 # 
 # #### Known Quantities
+# Here we will be mixing code and text
+
+# In[1]:
+
+
+# This is a code cell
+vol_tank = 17 # tank volume in cubic feet
+p_gas = 500 # gas pressure in psi
+temp = 20 # gas temperature in celsius
+wt_tank = 50 # tank weight in pounds
+
+
 # #### Unknown Quantities
+# 
+# Our unknowns are
+# 
+# ```
+# wt_gas
+# wt_total = wt_tank+wt_gas
+# ```
+#     
 # #### Governing Principles
+# 1. $pV=\frac{m}{M}RT$ Ideal gas law
+# 2. $wt_{total} = wt_{tank}+wt_{gas}$ Duh!
+# 3. $R = 0.0821 \frac{L \cdot atm}{K \cdot mol}$ Definition of universal gas constant
+# 4. $T_{K}=T_{C}+273$ Definition of Kelvin temperature scale
+# 5. $1 atm = 14.7 psi$ Unit conversion
+# 6. $M_{N_2} = 28.014 \frac{g}{mol}$ Molar weight of nitrogen gas 
+# 
 # #### Solution
+# Now simply produce a sequential script to solve for total weight
 
-# 
+# In[2]:
 
-# ## Definition(s)
+
+mwN2=28.014 # MW nitrogen
+R = 0.0821 # universal gas constant
+grabity = 9.8 # acceleration of gravity
+vol_tank_l=vol_tank*((1/3.28)**3)*1000 # tank volume in liters
+temp_k=temp+273 # temp in kelvin
+p_atm=p_gas*(1/14.7) # gas pressure in atmospheres
+mass_gas = (p_atm*vol_tank_l*mwN2)/(R*temp_k) # gas mass in grams
+wt_gas = mass_gas*grabity/1000 # weight of gas in newtons
+wt_total = wt_tank + wt_gas*(2.2)/grabity # total weight in pounds
+print('Total weight = ', round(wt_total,1),' pounds')
+
+
+# #### Discussion
+# Probably would want a little more description in the calculation sequence, notice units are reported with the answer. If we want to get fancy, could embed a database for common gasses, and some interactive inputs - but that's overkill.  In practice, you will likely use a hybrid of paper-based and notebook-based problem solving.
+
+# ### Definition(s)
 # 
+# Here we present some fundamental definitions 
+# 
+# #### What is a Solid?
+# 
+# #### What is a Fluid?
+# 
+# #### What is Fluid Mechanics?
+# 
+# ##### Continuum Mechanics
+# 
+# ##### Particle Mechanics
+# 
+# ### Dimensions
+# 
+# ### Units
 # <hr>
 
 # ## Readings
