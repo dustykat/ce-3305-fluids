@@ -1,8 +1,8 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: CE 3305 (Instructor Notes)
-author: The
+title: CE 3305 Mechanics of Fluids
+author: Theodore G. Cleveland
 logo: I5-fluidos.png
 
 # Force re-execution of notebooks on each build.
