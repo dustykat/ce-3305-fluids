@@ -34,9 +34,9 @@
 # 5. Starting from one or more governing principles and the known quantities solve for the unknowns.
 # 6. Validate/discuss results
 # 
-# #### Suggested Format (By-Hand)
+# #### Suggested Format (Paper-Based)
 # 
-# The format will differ if you prepare a Notebook, or work the problem by-hand. Here is an example worked out on paper which will be repeated in a Notebook.
+# The format will differ slightly if you prepare a Notebook, or work the problem by-hand. Here is an example worked out on paper which will be repeated in a Notebook.
 # 
 # ```{figure} example-1-1.png
 # ---
@@ -45,7 +45,7 @@
 # ---
 # Example of fluid mechanics homework problem solution format (page 1 of 4)
 # ```
-# {numref}`ex1-1`
+# {numref}`ex1-1` is a screen capture of the problem with the first four solution protocol items listed.  The author used headings (underlined) in the figure to keep track of the protocol items.  Also observe the simplistic sketch - a device to organize knowns and unknowns.
 # 
 # ```{figure} example-1-2.png
 # ---
@@ -54,7 +54,7 @@
 # ---
 # Example of fluid mechanics homework problem solution format (page 2 of 4)
 # ```
-# {numref}`ex1-2`
+# {numref}`ex1-2` is a screen capture of the solution process.  Here the author uses various definitions of volumes, mass, and the ideal gas law to try to find the sought after quantity.  Part way into the solution an additional quantity was needed - simply add that known or governing principle where needed and make a note as done in the example.
 # 
 # ```{figure} example-1-3.png
 # ---
@@ -63,7 +63,7 @@
 # ---
 # Example of fluid mechanics homework problem solution format (page 3 of 4)
 # ```
-# {numref}`ex1-3`
+# {numref}`ex1-3` is a screen capture of the solution.  Here the author uses the computed volumes, mass, and the ideal gas law to solve for the desired quantity.  Then a unit conversion is applied because the problem was stated in mixed (SI and Imperial) units.  Finally the results are discussed from a problem solving perspective; so years later anyone reading will understand the thinking process applied for the problem.
 # 
 # ```{figure} example-1-4.png
 # ---
@@ -72,7 +72,40 @@
 # ---
 # Example of fluid mechanics homework problem solution format (page 4 of 4)
 # ```
-# {numref}`ex1-4`
+# {numref}`ex1-4` is a screen capture of a Periodic Chart of Elements.  Here it is included as a citation for the source of the molar masses of the gasses in the problem.  The URL is circled on the chart, again establishing a persistent citation to the data source.
+
+# ### Example (Repeated as a Jupyter Notebook)
+# 
+# :::{note}
+# Here we will repeat the example.  Because this "lesson" is actually a Jupyter Notebook, I am embedding some code directly into the "lesson" - you will not need to mix markdown code blocks with actual code in your notebooks
+# :::
+
+# ---
+# **Name**<br>
+# **R Number**<br>
+# **Date**<br>
+# 
+# #### Problem Statement
+# Find the total weight of a 17 $ft^3$ tank of nitrogen at 500 $psia$.  The vessel itself weighs 50 $lbf$.  The gas is stored at a temperature of 20 $^o~C$
+# #### Sketch
+# This is the hardest part, draw the sketch, then save as a png file and embed using
+# ```
+# ![](filename.png)
+# ```
+# like so:
+# 
+# ```{figure} FBD-tank.png
+# ---
+# width: 400px
+# name: ex1-fbd
+# ```
+# 
+# #### Known Quantities
+# #### Unknown Quantities
+# #### Governing Principles
+# #### Solution
+
+# 
 
 # ## Definition(s)
 # 

@@ -42,6 +42,8 @@
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -218,8 +220,45 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#suggested-format-by-hand">
-       Suggested Format (By-Hand)
+      <a class="reference internal nav-link" href="#suggested-format-paper-based">
+       Suggested Format (Paper-Based)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-repeated-as-a-jupyter-notebook">
+     Example (Repeated as a Jupyter Notebook)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#problem-statement">
+       Problem Statement
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sketch">
+       Sketch
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#known-quantities">
+       Known Quantities
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#unknown-quantities">
+       Unknown Quantities
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#governing-principles">
+       Governing Principles
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#solution">
+       Solution
       </a>
      </li>
     </ul>
@@ -290,29 +329,67 @@
 <li><p>Validate/discuss results</p></li>
 </ol>
 </div>
-<div class="section" id="suggested-format-by-hand">
-<h4>Suggested Format (By-Hand)<a class="headerlink" href="#suggested-format-by-hand" title="Permalink to this headline">¶</a></h4>
-<p>The format will differ if you prepare a Notebook, or work the problem by-hand. Here is an example worked out on paper which will be repeated in a Notebook.</p>
+<div class="section" id="suggested-format-paper-based">
+<h4>Suggested Format (Paper-Based)<a class="headerlink" href="#suggested-format-paper-based" title="Permalink to this headline">¶</a></h4>
+<p>The format will differ slightly if you prepare a Notebook, or work the problem by-hand. Here is an example worked out on paper which will be repeated in a Notebook.</p>
 <div class="figure align-default" id="ex1-1">
 <a class="reference internal image-reference" href="../../_images/example-1-1.png"><img alt="../../_images/example-1-1.png" src="../../_images/example-1-1.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Example of fluid mechanics homework problem solution format (page 1 of 4)</span><a class="headerlink" href="#ex1-1" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#ex1-1"><span class="std std-numref">Fig. 1</span></a></p>
+<p><a class="reference internal" href="#ex1-1"><span class="std std-numref">Fig. 1</span></a> is a screen capture of the problem with the first four solution protocol items listed.  The author used headings (underlined) in the figure to keep track of the protocol items.  Also observe the simplistic sketch - a device to organize knowns and unknowns.</p>
 <div class="figure align-default" id="ex1-2">
 <a class="reference internal image-reference" href="../../_images/example-1-2.png"><img alt="../../_images/example-1-2.png" src="../../_images/example-1-2.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Example of fluid mechanics homework problem solution format (page 2 of 4)</span><a class="headerlink" href="#ex1-2" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#ex1-2"><span class="std std-numref">Fig. 2</span></a></p>
+<p><a class="reference internal" href="#ex1-2"><span class="std std-numref">Fig. 2</span></a> is a screen capture of the solution process.  Here the author uses various definitions of volumes, mass, and the ideal gas law to try to find the sought after quantity.  Part way into the solution an additional quantity was needed - simply add that known or governing principle where needed and make a note as done in the example.</p>
 <div class="figure align-default" id="ex1-3">
 <a class="reference internal image-reference" href="../../_images/example-1-3.png"><img alt="../../_images/example-1-3.png" src="../../_images/example-1-3.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Example of fluid mechanics homework problem solution format (page 3 of 4)</span><a class="headerlink" href="#ex1-3" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#ex1-3"><span class="std std-numref">Fig. 3</span></a></p>
+<p><a class="reference internal" href="#ex1-3"><span class="std std-numref">Fig. 3</span></a> is a screen capture of the solution.  Here the author uses the computed volumes, mass, and the ideal gas law to solve for the desired quantity.  Then a unit conversion is applied because the problem was stated in mixed (SI and Imperial) units.  Finally the results are discussed from a problem solving perspective; so years later anyone reading will understand the thinking process applied for the problem.</p>
 <div class="figure align-default" id="ex1-4">
 <a class="reference internal image-reference" href="../../_images/example-1-4.png"><img alt="../../_images/example-1-4.png" src="../../_images/example-1-4.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Example of fluid mechanics homework problem solution format (page 4 of 4)</span><a class="headerlink" href="#ex1-4" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#ex1-4"><span class="std std-numref">Fig. 4</span></a></p>
+<p><a class="reference internal" href="#ex1-4"><span class="std std-numref">Fig. 4</span></a> is a screen capture of a Periodic Chart of Elements.  Here it is included as a citation for the source of the molar masses of the gasses in the problem.  The URL is circled on the chart, again establishing a persistent citation to the data source.</p>
+</div>
+</div>
+<div class="section" id="example-repeated-as-a-jupyter-notebook">
+<h3>Example (Repeated as a Jupyter Notebook)<a class="headerlink" href="#example-repeated-as-a-jupyter-notebook" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Here we will repeat the example.  Because this “lesson” is actually a Jupyter Notebook, I am embedding some code directly into the “lesson” - you will not need to mix markdown code blocks with actual code in your notebooks</p>
+</div>
+<hr class="docutils" />
+<p><strong>Name</strong><br>
+<strong>R Number</strong><br>
+<strong>Date</strong><br></p>
+<div class="section" id="problem-statement">
+<h4>Problem Statement<a class="headerlink" href="#problem-statement" title="Permalink to this headline">¶</a></h4>
+<p>Find the total weight of a 17 <span class="math notranslate nohighlight">\(ft^3\)</span> tank of nitrogen at 500 <span class="math notranslate nohighlight">\(psia\)</span>.  The vessel itself weighs 50 <span class="math notranslate nohighlight">\(lbf\)</span>.  The gas is stored at a temperature of 20 <span class="math notranslate nohighlight">\(^o~C\)</span></p>
+</div>
+<div class="section" id="sketch">
+<h4>Sketch<a class="headerlink" href="#sketch" title="Permalink to this headline">¶</a></h4>
+<p>This is the hardest part, draw the sketch, then save as a png file and embed using</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>![](filename.png)
+</pre></div>
+</div>
+<p>like so:</p>
+<div class="figure align-default" id="ex1-fbd">
+<a class="reference internal image-reference" href="../../_images/FBD-tank.png"><img alt="../../_images/FBD-tank.png" src="../../_images/FBD-tank.png" style="width: 400px;" /></a>
+</div>
+</div>
+<div class="section" id="known-quantities">
+<h4>Known Quantities<a class="headerlink" href="#known-quantities" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="unknown-quantities">
+<h4>Unknown Quantities<a class="headerlink" href="#unknown-quantities" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="governing-principles">
+<h4>Governing Principles<a class="headerlink" href="#governing-principles" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="solution">
+<h4>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h4>
 </div>
 </div>
 </div>
