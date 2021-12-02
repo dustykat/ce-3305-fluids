@@ -2,37 +2,50 @@
 # coding: utf-8
 
 # # Introduction
+# 
+# ## Lesson Outline
+# 1. Problem Solving and Documentation
+#   - Problem Solving Protocol
+#   - Jupyter Notebooks (preferred way to record your work)
+#   - Illustrative Example
+# 2. What is Fluid Mechanics?
+#   - Definition of a Fluid
+#   - Fundamental Properties
 
+# ### Problem Solving and Documentation
 # 
-# ## Overview
-# The title of the course is Mechanics of Fluids.  The catalog description is: 
-# > CE 3305: Mechanics of Fluids (3:3:0).  Prerequisites: CE 2301.  Hydrostatics; dynamics of viscous and nonviscous fluids; resistance to flow; flow in pipes and open channels.
+# The exercises are instruments to practice problem solving.  
 # 
-# ## Purpose
-# The purpose of this required course is to provide engineering students with the fundamentals of fluid mechanics.  Students should be able to use this foundation for the more in-depth courses to follow.  This course shall provide students with a set of tools and concepts that are directly applicable to pipe systems, open channels, pumping plants, and measurement of fluid flows as well as other related problems that may be encountered as practicing engineers. 
+# - Format 
+# - Process
 # 
-# ## Objectives:
-# Upon sucessful completion of this course, students will have demonstrated the Knowledge, Skill, and Ability (KSA) to:
+# The purpose of such practice is to:
 # 
-# 1. Identify and apply fluid properties to analyze and solve fluid mechanics problems
-# 2. Interpret conservation laws and apply them to analyze problems in hydrodynamics
-# 3. Identify and apply systems and control volume methods based on conservation principles
-# 4. Analyze steady pipe flow in networks using associated concepts and Computational Thinking (ENGR 1330) tools
-# 5. Differentiate and apply principles of dimensional homogeneity
-# 6. Analyze boundary layer flows and drag for hydraulic analysis
-# 7. Apply Computational Thinking (ENGR 1330) methods to analyze data and create mathematical models
-# 8. Recognize how specific sensors and instruments in fluid mechanics work
-# 9. Characterize, analyze and design open channels for steady one-dimensional flow
+# - Develop a systematic method to solve closed (solvable) engineering problems.
+# - Develop *muscle memory* to apply the process
+# - Become accustomed to documenting effort
 # 
-# ## Assesment
+# #### Suggested Protocol
 # 
-# The graded components of the course are:
+# 1. State the problem
+# 2. Sketch the situation (sketching no matter how ugly helps organize thoughts!). Identify (list) known quantities 
+# 3. Identify (list) unknown quantities 
+# 4. Identify (list) governing principles and equations that appear relevant to the problem
+# 5. Starting from one or more governing principles and the known quantities solve for the unknowns.
+# 6. Validate/discuss results
 # 
-# - Quizzes (administered on a learning management system); individual activity
-# - Exercises (collected on a learning management system); individual activity
-# - Exams (administered on a learning management system); individual activity
+# #### Suggested Format (By-Hand)
 # 
-# The complete syllabus is located at [http://54.243.252.9/ce-3305-webroot/0-Syllabus/CE-3305-2022-1-syllabus.html](http://54.243.252.9/ce-3372-webroot/0-Syllabus/CE-3305-2022-1-syllabus.html)
+# The format will differ if you prepare a Notebook, or work the problem by-hand. Here is an example worked out on paper which will be repeated in a Notebook.
+# 
+# ```{figure} example-1.png
+# ---
+# height: 150px
+# name: directive-fig
+# ---
+# Here is my figure caption!
+# ```
+# 
 
 # ## Definition(s)
 # 
