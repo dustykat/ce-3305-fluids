@@ -45,7 +45,7 @@
 # ---
 # Example of fluid mechanics homework problem solution format (page 1 of 4)
 # ```
-# {numref}'ex1-1'
+# {numref}`ex1-1`
 # 
 # ```{figure} example-1-2.png
 # ---
@@ -54,7 +54,7 @@
 # ---
 # Example of fluid mechanics homework problem solution format (page 2 of 4)
 # ```
-# {numref}'ex1-2'
+# {numref}`ex1-2`
 # 
 # ```{figure} example-1-3.png
 # ---
@@ -63,7 +63,7 @@
 # ---
 # Example of fluid mechanics homework problem solution format (page 3 of 4)
 # ```
-# {numref}'ex1-3'
+# {numref}`ex1-3`
 # 
 # ```{figure} example-1-4.png
 # ---
@@ -72,7 +72,7 @@
 # ---
 # Example of fluid mechanics homework problem solution format (page 4 of 4)
 # ```
-# {numref}'ex1-4'
+# {numref}`ex1-4`
 
 # ## Definition(s)
 # 
