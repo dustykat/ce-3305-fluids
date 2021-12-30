@@ -177,12 +177,13 @@ print('Total weight = ', round(wt_total,1),' pounds')
 # ```{figure} stress-strain-fluid.png
 # ---
 # width: 400px
-# name: stress-strain-solid
+# name: stress-strain-fluid
 # ---
 # Stress-strain schematic for a fluid (gas or liquid; maybe plasma) material
 # ```
 # 
-# The deformation amount (strain) is proportional to the applied stress, and time of application - fluid strain is time variant.
+# {numref}`stress-strain-fluid` is a highly-conceptualized schematic of the stress-strain behavior of a fluid material.
+# The deformation amount (strain) is proportional to the applied stress, and duration of application - fluid strain is time variant.
 # 
 # #### What is Fluid Mechanics?
 # 
@@ -195,11 +196,11 @@ print('Total weight = ', round(wt_total,1),' pounds')
 # ```{figure} REV.png
 # ---
 # width: 400px
-# name: stress-strain-solid
+# name: REV
 # ---
 # Continuum and sampling volume relationship.
 # ```
-# The smallest usable value $\Delta V$ is called a representative elementry volume (REV).  In later classes this minutiae may have importance, here its just to be precise.  We will assume we are operating at a correct sample size unless explicitly stated.
+# {numref}`REV` is a conceptual diagram of sampling size utility. The smallest usable value $\Delta V$ is called a representative elementry volume (REV).  In later classes such minutiae has importance, here its just to be precise.  We will assume we are operating at a correct sample size unless explicitly stated otherwise.
 # 
 # ##### Particle Mechanics
 # 
@@ -208,11 +209,12 @@ print('Total weight = ', round(wt_total,1),' pounds')
 # ```{figure} Lagrangian.png
 # ---
 # width: 400px
-# name: stress-strain-solid
+# name: lagrangian
 # ---
 # Reference systems. Eulerian is most common in our book; but sometimes the Lagrangian system is more useful.
 # ```
-# It is used when studying motion in a Lagrangian reference frame.  
+# {numref}`lagrangian` is a conceptual diagram of different reference systems, in particular Eulerian (which is commonly used) and Lagrangian (also common, but in different contexts). It is used when studying motion in a Lagrangian reference frame.  
+# 
 # A fluid parcel is a quantity of fluid with fixed identity (usually mass).
 # The volume of the parcel can be finite, or infinitesmal - if infinitesmal, the parcels are called fluid particles.
 # 

@@ -36,7 +36,7 @@ The graded components of the course are:
 - Exercises (collected on a learning management system); individual activity
 - Exams (administered on a learning management system); individual activity
 
-The complete syllabus is located at [http://54.243.252.9/ce-3305-webroot/0-Syllabus/CE-3305-2022-1-syllabus.html](http://54.243.252.9/ce-3372-webroot/0-Syllabus/CE-3305-2022-1-syllabus.html)
+The complete syllabus is located at [http://54.243.252.9/ce-3305-webroot/0-Syllabus/CE-3305-2022-1-syllabus.html](http://54.243.252.9/ce-3305-webroot/0-Syllabus/CE-3305-2022-1-syllabus.html)
 
 :::{note}
 These notes were originally written to be used in conjunction with <br>
