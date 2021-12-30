@@ -566,29 +566,15 @@ The volume of the parcel can be finite, or infinitesmal - if infinitesmal, the p
 <hr><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Simple script for unit conversions</span>
-<span class="n">lengthUS</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter Length in feet&#39;</span><span class="p">))</span>
+<span class="n">lengthUS</span> <span class="o">=</span> <span class="mf">3.28</span>
+<span class="c1">## lengthUS = float(input(&#39;Enter Length in feet&#39;)) # Use this line for interactive inputs</span>
 <span class="n">lengthSI</span> <span class="o">=</span> <span class="n">lengthUS</span><span class="o">*</span><span class="mf">0.3048</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">lengthUS</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="s1">&#39; feet is equal to &#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">lengthSI</span><span class="p">),</span><span class="s1">&#39; meters &#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="n">ef675bcf80d3</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Simple script for unit conversions</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">lengthUS</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter Length in feet&#39;</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">lengthSI</span> <span class="o">=</span> <span class="n">lengthUS</span><span class="o">*</span><span class="mf">0.3048</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">lengthUS</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="s1">&#39; feet is equal to &#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">lengthSI</span><span class="p">),</span><span class="s1">&#39; meters &#39;</span><span class="p">)</span>
-
-<span class="nn">/opt/jupyterhub/lib/python3.8/site-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">    </span><span class="mi">855</span>         <span class="s2">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">856</span><span class="s2">         if not self._allow_stdin:</span>
-<span class="ne">--&gt; </span><span class="mi">857</span><span class="s2">             raise StdinNotImplementedError(</span>
-<span class="g g-Whitespace">    </span><span class="mi">858</span><span class="s2">                 &quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">859</span><span class="s2">             )</span>
-
-<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.28  feet is equal to  1  meters 
 </pre></div>
 </div>
 </div>

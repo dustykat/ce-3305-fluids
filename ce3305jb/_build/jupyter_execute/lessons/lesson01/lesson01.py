@@ -252,7 +252,8 @@ print('Total weight = ', round(wt_total,1),' pounds')
 
 
 # Simple script for unit conversions
-lengthUS = float(input('Enter Length in feet'))
+lengthUS = 3.28
+## lengthUS = float(input('Enter Length in feet')) # Use this line for interactive inputs
 lengthSI = lengthUS*0.3048
 print(round(lengthUS,3),' feet is equal to ',round(lengthSI),' meters ')
 
