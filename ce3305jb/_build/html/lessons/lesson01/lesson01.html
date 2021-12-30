@@ -539,15 +539,71 @@ The volume of the parcel can be finite, or infinitesmal - if infinitesmal, the p
 </div>
 <div class="section" id="dimensions">
 <h3>Dimensions<a class="headerlink" href="#dimensions" title="Permalink to this headline">¶</a></h3>
+<p>Dimensions are things that can be measured such as:</p>
+<ul class="simple">
+<li><p>length</p></li>
+<li><p>weight</p></li>
+<li><p>temperature</p></li>
+<li><p>speed</p></li>
+<li><p>time</p></li>
+</ul>
+<p>Most things are expressed in a set of primary dimensions defined either by</p>
+<ul class="simple">
+<li><p>length-mass-acceleration or</p></li>
+<li><p>length-weight-acceleration</p></li>
+</ul>
+<p>Primary dimensions are used to construct secondary dimensions.  These secondary dimensions are often more practical in engineering</p>
 </div>
 <div class="section" id="units">
 <h3>Units<a class="headerlink" href="#units" title="Permalink to this headline">¶</a></h3>
-<hr></div>
+<p>Units are how much of a dimension is measured or counted.</p>
+<p>A <strong>meter</strong> is a unit of <strong>length</strong></p>
+<p>Consistent units is a set of units with conversion factors equal to unity.  The U.S. Customary (Imperial) is conststent as is the SI (System Internationale), but mixing systems leads to spectular errors (the Hubble Telescope comes to mind!). Using a single system, when possible, reduces errors because of fewer arithmetic operations.  Many practical cases commonly use blends of both systems so unit conversions are required.  Page 9 of Hibbler et. al. contains representative tables for conversion - and the example above contained embedded conversions.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A Jupyter Notebook to handle conversions should be within your skillset already, but for fun an example is below.</p>
+</div>
+<hr><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Simple script for unit conversions</span>
+<span class="n">lengthUS</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter Length in feet&#39;</span><span class="p">))</span>
+<span class="n">lengthSI</span> <span class="o">=</span> <span class="n">lengthUS</span><span class="o">*</span><span class="mf">0.3048</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">lengthUS</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="s1">&#39; feet is equal to &#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">lengthSI</span><span class="p">),</span><span class="s1">&#39; meters &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="n">ef675bcf80d3</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Simple script for unit conversions</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">lengthUS</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter Length in feet&#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">lengthSI</span> <span class="o">=</span> <span class="n">lengthUS</span><span class="o">*</span><span class="mf">0.3048</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">lengthUS</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="s1">&#39; feet is equal to &#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">lengthSI</span><span class="p">),</span><span class="s1">&#39; meters &#39;</span><span class="p">)</span>
+
+<span class="nn">/opt/jupyterhub/lib/python3.8/site-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">    </span><span class="mi">855</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">856</span><span class="s2">         if not self._allow_stdin:</span>
+<span class="ne">--&gt; </span><span class="mi">857</span><span class="s2">             raise StdinNotImplementedError(</span>
+<span class="g g-Whitespace">    </span><span class="mi">858</span><span class="s2">                 &quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">859</span><span class="s2">             )</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A on-line tool in JavaScript that handles some units is located at <a class="reference external" href="http://54.243.252.9/toolbox/ordinarytools/UnitsConverterTool/UnitsConverterTool.html">http://54.243.252.9/toolbox/ordinarytools/UnitsConverterTool/UnitsConverterTool.html</a></p>
+<p>Countless conversions are on the internet, most are probably correct (but beware, your on your own if you don’t understand the conversion and trust without verification!</p>
+</div>
+</div>
 </div>
 <div class="section" id="readings">
 <h2>Readings<a class="headerlink" href="#readings" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
-<li><p>CE-3305-2022-1 Syllabus. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html">http://54.243.252.9/ce-3305-webroot/0-Syllabus/CE-3305-2022-1-syllabus.html</a></p></li>
+<li><p>CE-3305-2022-1 Syllabus. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html">http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html</a></p></li>
 <li><p>Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 3-14</p></li>
 <li><p>DF Elger, BC Williams, Crowe, CT and JA Roberson, <em>Engineering Fluid Mechanics 10th edition</em>, John Wiley &amp; Sons, Inc., 2013.  (placeholder file to get links working). <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-1.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-1.pdf</a></p></li>
 </ol>

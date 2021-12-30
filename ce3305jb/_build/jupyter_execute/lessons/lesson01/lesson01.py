@@ -222,12 +222,49 @@ print('Total weight = ', round(wt_total,1),' pounds')
 # 
 # ### Dimensions
 # 
+# Dimensions are things that can be measured such as:
+# - length
+# - weight
+# - temperature
+# - speed
+# - time
+# 
+# Most things are expressed in a set of primary dimensions defined either by
+# - length-mass-acceleration or
+# - length-weight-acceleration
+# 
+# Primary dimensions are used to construct secondary dimensions.  These secondary dimensions are often more practical in engineering
+# 
 # ### Units
+# 
+# Units are how much of a dimension is measured or counted.
+# 
+# A **meter** is a unit of **length**
+# 
+# Consistent units is a set of units with conversion factors equal to unity.  The U.S. Customary (Imperial) is conststent as is the SI (System Internationale), but mixing systems leads to spectular errors (the Hubble Telescope comes to mind!). Using a single system, when possible, reduces errors because of fewer arithmetic operations.  Many practical cases commonly use blends of both systems so unit conversions are required.  Page 9 of Hibbler et. al. contains representative tables for conversion - and the example above contained embedded conversions.
+# 
+# :::{note}
+# A Jupyter Notebook to handle conversions should be within your skillset already, but for fun an example is below.
+# :::
 # <hr>
 
+# In[3]:
+
+
+# Simple script for unit conversions
+lengthUS = float(input('Enter Length in feet'))
+lengthSI = lengthUS*0.3048
+print(round(lengthUS,3),' feet is equal to ',round(lengthSI),' meters ')
+
+
+# :::{note} A on-line tool in JavaScript that handles some units is located at [http://54.243.252.9/toolbox/ordinarytools/UnitsConverterTool/UnitsConverterTool.html](http://54.243.252.9/toolbox/ordinarytools/UnitsConverterTool/UnitsConverterTool.html)
+# 
+# Countless conversions are on the internet, most are probably correct (but beware, your on your own if you don't understand the conversion and trust without verification!
+# :::
+# 
 # ## Readings
 # 
-# 1. CE-3305-2022-1 Syllabus. [http://54.243.252.9/ce-3305-webroot/0-Syllabus/CE-3305-2022-1-syllabus.html](http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html)
+# 1. CE-3305-2022-1 Syllabus. [http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html](http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html)
 # 
 # 2. Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 3-14
 # 
