@@ -5,4 +5,5 @@ format: jb-book
 root: intro
 chapters:
 - file: lessons/lesson01/lesson01
+- file: lessons/lesson02/lesson02
 #- file: notebooks

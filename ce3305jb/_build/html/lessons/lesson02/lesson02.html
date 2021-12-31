@@ -42,6 +42,8 @@
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -51,6 +53,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Introduction" href="../lesson01/lesson01.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -91,10 +94,15 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../lesson01/lesson01.html">
    Introduction
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Intensive and Extensive Fluid Properties
   </a>
  </li>
 </ul>
@@ -207,6 +215,90 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fluid-properties">
+   Fluid Properties
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#density">
+     Density
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#specific-weight">
+     Specific Weight
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#specific-gravity">
+     Specific Gravity
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bulk-modulus-of-elasticity">
+     Bulk Modulus (of elasticity)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#constant-volume-specific-heat">
+     Constant Volume Specific Heat
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#constant-pressure-specific-heat">
+     Constant Pressure Specific Heat
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#specific-internal-energy">
+     Specific Internal Energy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#specific-enthalpy">
+     Specific Enthalpy
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#equation-of-state">
+   Equation of State
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#viscosity">
+   Viscosity
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#absolute-viscosity">
+     Absolute Viscosity
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#apparent-viscosity">
+     Apparent Viscosity
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kinematic-viscosity">
+     Kinematic Viscosity
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#general-comments">
+     General Comments
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-1">
+   Example 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#readings">
    Readings
   </a>
@@ -230,8 +322,9 @@
 <li><p>Basic Fluid Properties</p></li>
 </ol>
 <ul class="simple">
-<li><p>Intensive Properties</p></li>
-<li><p>Extensive Properties</p></li>
+<li><p>Intensive/Extensive Properties</p></li>
+<li><p>Typical physical and thermodynamic properties</p></li>
+<li><p>Equations of state (IGL)</p></li>
 </ul>
 <ol class="simple">
 <li><p>Viscosimiters</p></li>
@@ -247,10 +340,204 @@
 <li><p>Barometers</p></li>
 </ul>
 </div>
+<div class="section" id="fluid-properties">
+<h2>Fluid Properties<a class="headerlink" href="#fluid-properties" title="Permalink to this headline">¶</a></h2>
+<p>Extensive properties apply to a system and are associated with a fixed quantity of mass.</p>
+<p>Intensive properties apply to components of a system, and are defined with restect to a boundary in space.</p>
+<p>Imagine a gallon of water; its weight is an extensive property assocated with that gallon.  The specific weight, <span class="math notranslate nohighlight">\(\gamma\)</span>, is the weight per volume is an intensive property. The properties in the textboox (pp 14-19) are for the most part intensive properties (mostly defined per unit volume)</p>
+<div class="figure align-default" id="gallon-properties">
+<a class="reference internal image-reference" href="../../_images/gallon-properties.png"><img alt="../../_images/gallon-properties.png" src="../../_images/gallon-properties.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">One gallon, and a 30cc sample removed</span><a class="headerlink" href="#gallon-properties" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#gallon-properties"><span class="std std-numref">Fig. 9</span></a> is a schematic of a simple example to relate extensive and intensive properties.<br />
+We first weigh the entire gallon, 8.32 lbs. Then we weigh the 30cc subsample, 0.065 lbs.</p>
+<p>The extensive property of weight for the gallon is 8.32 lbs; the extensive property of weight for the 30cc is 0.065 lbs.</p>
+<p>If we now compute specific weights of each entity and adjust to a common basis volume:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spwt_gallon</span> <span class="o">=</span> <span class="mf">8.32</span> <span class="c1"># lbs per gallon</span>
+<span class="n">spwt_30cc</span> <span class="o">=</span> <span class="mf">0.065</span> <span class="c1"># lbs per 30 cc</span>
+<span class="c1"># convert to common volume</span>
+<span class="n">spwt_30cc</span> <span class="o">=</span> <span class="n">spwt_30cc</span><span class="o">*</span><span class="p">(</span><span class="mi">128</span><span class="o">/</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># 30cc==1oz; 128oz==1gal conversion to common volume basis.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sp. Wt. of 1 gallon sample = &#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">spwt_gallon</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sp. Wt. of 30 cc sample = &#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">spwt_30cc</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sp. Wt. of 1 gallon sample =  8.32
+Sp. Wt. of 30 cc sample =  8.32
+</pre></div>
+</div>
+</div>
+</div>
+<p>They are the same value (as anticipated); intensive properties are useful in most fluid mechanics problems because they are a property of a specific fluid, rather that some fixed volume of that fluid - however we must be comfortable using both.</p>
+<div class="section" id="density">
+<h3>Density<a class="headerlink" href="#density" title="Permalink to this headline">¶</a></h3>
+<p>Density (or mass density) is the mass per unit volume.  Typical symbol is <span class="math notranslate nohighlight">\(\rho\)</span>, sometimes subscripted to identify fluid in multiiple fluid problems.</p>
+<div class="math notranslate nohighlight">
+\[ \rho = \frac{m}{V} \]</div>
+</div>
+<div class="section" id="specific-weight">
+<h3>Specific Weight<a class="headerlink" href="#specific-weight" title="Permalink to this headline">¶</a></h3>
+<p>Specific weight is the weight per unit volume.  Typical symbol is <span class="math notranslate nohighlight">\(\gamma\)</span>.
+It is related to density by gravitational acceleration:</p>
+<div class="math notranslate nohighlight">
+\[\gamma = \rho g\]</div>
+</div>
+<div class="section" id="specific-gravity">
+<h3>Specific Gravity<a class="headerlink" href="#specific-gravity" title="Permalink to this headline">¶</a></h3>
+<p>Specific gravity is the ratio of density of a fluid to a reference fluid.  In Civil Engineering the reference fluid is typically liquid water. Typical symbol is <span class="math notranslate nohighlight">\(S\)</span></p>
+<div class="math notranslate nohighlight">
+\[ S =\frac{\rho_{i}}{\rho_{water}}=\frac{\gamma_{i}}{\gamma_{water}} \]</div>
+</div>
+<div class="section" id="bulk-modulus-of-elasticity">
+<h3>Bulk Modulus (of elasticity)<a class="headerlink" href="#bulk-modulus-of-elasticity" title="Permalink to this headline">¶</a></h3>
+<p>The bulk modulus relates the change in volume of a fluid element to a change in pressure.  For liquids it is quite high, gasses quite a bit smaller - it is essentially a Hooke’s law (springs) for a continuum element.  It conveys how much pressure change is needed to effect a incremental volume change.</p>
+<div class="math notranslate nohighlight">
+\[ E_v = -\frac{dp}{(\frac{dV}{V})} \]</div>
+<p>Dimensionally it is a pressure.  For water at terresterial pressure and temperature its value is upwards of 2.2 GPa (about 23 atmospheres); for solid steel well over 150 GPa (about 1550 atmospheres).</p>
+<p>In our practical sense, gas is compressible, water is not very compressible, steel smaller still.</p>
+<p>All the properties above are temperature dependent, and in gasses the compressibility is small, hence they are called compressible fluids.</p>
+<p>A few thermodynamic properties are useful too:</p>
+</div>
+<div class="section" id="constant-volume-specific-heat">
+<h3>Constant Volume Specific Heat<a class="headerlink" href="#constant-volume-specific-heat" title="Permalink to this headline">¶</a></h3>
+<p>The heat amount added to a unit mass of fluid to raise the temperature one degree (units system dependent!) while volume is held constant.<br />
+Typical symbol is <span class="math notranslate nohighlight">\(c_v\)</span>.</p>
+</div>
+<div class="section" id="constant-pressure-specific-heat">
+<h3>Constant Pressure Specific Heat<a class="headerlink" href="#constant-pressure-specific-heat" title="Permalink to this headline">¶</a></h3>
+<p>The heat amount added to a unit mass of fluid to raise the temperature one degree (units system dependent!) while pressure is held constant.</p>
+<p>Typical symbol is <span class="math notranslate nohighlight">\(c_p\)</span>.</p>
+</div>
+<div class="section" id="specific-internal-energy">
+<h3>Specific Internal Energy<a class="headerlink" href="#specific-internal-energy" title="Permalink to this headline">¶</a></h3>
+<p>Energy a unit mass possesses because of its state of molecular activity.  Typical symbol is <span class="math notranslate nohighlight">\(u\)</span></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The symbol <span class="math notranslate nohighlight">\(u\)</span> is also commonly used for the x-component, or streamline component of velocity.  Be aware of context to avoid confusion.  In some documents <span class="math notranslate nohighlight">\(U\)</span> is the velocity vector - again the context should be a clue.</p>
+</div>
+</div>
+<div class="section" id="specific-enthalpy">
+<h3>Specific Enthalpy<a class="headerlink" href="#specific-enthalpy" title="Permalink to this headline">¶</a></h3>
+<p>Energy a substance possesses because of internal energy and applied normal stress (aka pressure).  Typical symbol is <span class="math notranslate nohighlight">\(h = u + \frac{p}{\rho}\)</span></p>
+</div>
+</div>
+<div class="section" id="equation-of-state">
+<h2>Equation of State<a class="headerlink" href="#equation-of-state" title="Permalink to this headline">¶</a></h2>
+<p>The state of a fluid is the value of all its properties at specified temperature, pressure, and gravitational filed strength.  The Ideal Gas Law is a relatively simple equation of state for gasses.</p>
+<div class="figure align-default" id="pvnrt">
+<a class="reference internal image-reference" href="../../_images/pvnrt.png"><img alt="../../_images/pvnrt.png" src="../../_images/pvnrt.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Ideal Gas Law (Equation of State)</span><a class="headerlink" href="#pvnrt" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#pvnrt"><span class="std std-numref">Fig. 10</span></a> is the equation of state in two different forms for gasses. An equation of state allows prediction of state as temperature, pressure, or volume are changed.</p>
+</div>
+<div class="section" id="viscosity">
+<h2>Viscosity<a class="headerlink" href="#viscosity" title="Permalink to this headline">¶</a></h2>
+<p>“… a property of a fluid that relates the resistance to motion (in a thin layer) when a shear force is applied…”</p>
+<p>This somewhat useless definition is trying to convey how fluids deform under shear, and more importantly the rate of deformation.<br />
+Consider a steel sheet that we cut with a shear (like sicssors), if we want to cut fast we need a lot of force; using the same shears on an equal thickness of plastic sheet will take less force for the same rate of cut.<br />
+This solids analog to viscosity conveys that steel is more viscous than plastic (usually).</p>
+<div class="figure align-default" id="viscosity-one">
+<a class="reference internal image-reference" href="../../_images/viscosity-one.png"><img alt="../../_images/viscosity-one.png" src="../../_images/viscosity-one.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Viscosity Schematic</span><a class="headerlink" href="#viscosity-one" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#viscosity-one"><span class="std std-numref">Fig. 11</span></a> Is a diagram attempting to convey the concept of viscosity.  In the drawing the thickness <span class="math notranslate nohighlight">\(\partial y\)</span> and the deformation angle <span class="math notranslate nohighlight">\(\partial \alpha\)</span> are small, and the sine of the angle is approximated by the angle itself.</p>
+<div class="figure align-default" id="viscosity-two">
+<a class="reference internal image-reference" href="../../_images/viscosity-two.png"><img alt="../../_images/viscosity-two.png" src="../../_images/viscosity-two.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">Viscosity Trigonometry</span><a class="headerlink" href="#viscosity-two" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#viscosity-two"><span class="std std-numref">Fig. 12</span></a> shows the relevant trigonometry to relate deformation rate to shear stress.</p>
+<div class="section" id="absolute-viscosity">
+<h3>Absolute Viscosity<a class="headerlink" href="#absolute-viscosity" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="newtonian">
+<a class="reference internal image-reference" href="../../_images/newtonian.png"><img alt="../../_images/newtonian.png" src="../../_images/newtonian.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Absolute viscosity (definition)</span><a class="headerlink" href="#newtonian" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#newtonian"><span class="std std-numref">Fig. 13</span></a> defines a Newtonian fluid and introduces the absolute viscosity <span class="math notranslate nohighlight">\(\mu\)</span> in terms of the thin layer, cross-layer velocity profile <span class="math notranslate nohighlight">\(\frac{du}{dy}\)</span> and the applied shear stress <span class="math notranslate nohighlight">\(\tau\)</span>.  The viscosity has dimensions of <span class="math notranslate nohighlight">\(\frac{Force \cdot Time}{Area}\)</span></p>
+</div>
+<div class="section" id="apparent-viscosity">
+<h3>Apparent Viscosity<a class="headerlink" href="#apparent-viscosity" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="non-newtonian">
+<a class="reference internal image-reference" href="../../_images/non-newtonian.png"><img alt="../../_images/non-newtonian.png" src="../../_images/non-newtonian.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">Apparent viscosity (definition) power-law model</span><a class="headerlink" href="#non-newtonian" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#non-newtonian"><span class="std std-numref">Fig. 14</span></a> shows a typical power-law model of viscosity; the term is referred to as an apparent viscosity.  Many real fluids are Non-Newtonian and will have some type of viscosity model to explain the deformation behavior.</p>
+</div>
+<div class="section" id="kinematic-viscosity">
+<h3>Kinematic Viscosity<a class="headerlink" href="#kinematic-viscosity" title="Permalink to this headline">¶</a></h3>
+<p>The ratio of absolute (or apparent) viscosity to the fluid density is called the <em>kinematic</em> viscosity. The usual symbol is <span class="math notranslate nohighlight">\(\nu = \frac{\mu}{\rho}\)</span>  The kinematic viscosity has dimensions of <span class="math notranslate nohighlight">\(\frac{Area}{Time}\)</span></p>
+</div>
+<div class="section" id="general-comments">
+<h3>General Comments<a class="headerlink" href="#general-comments" title="Permalink to this headline">¶</a></h3>
+<p>Viscous effects cause a velocity gradient (profile) to develop across the fluid layers as shown in <a class="reference internal" href="#slip-profile"><span class="std std-numref">Fig. 15</span></a>.</p>
+<div class="figure align-default" id="slip-profile">
+<a class="reference internal image-reference" href="../../_images/slip-profile.png"><img alt="../../_images/slip-profile.png" src="../../_images/slip-profile.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">Velocity Profile Diagram</span><a class="headerlink" href="#slip-profile" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#slip-profile"><span class="std std-numref">Fig. 15</span></a> is a diagram of the cross-layer velocity profile. The slope of the profile is related to shear force and hence the apparent or absolute viscosity.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The no-slip condition is deduced from experiments - in my opinion it is an assumption that velocity vanishes at the contact interface.  In your future studies keep this in mind; it is quite possible that slip occurs at some scale, however it is a useful and accepted boundary condition.</p>
+</div>
+</div>
+</div>
+<div class="section" id="example-1">
+<h2>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h2>
+<p>Here is a hand-worked example to illustrate viscosity concepts and problem solving protocol.</p>
+<p>We start with a problem statement:</p>
+<div class="figure align-default" id="problem-statement">
+<a class="reference internal image-reference" href="../../_images/problem-statement.png"><img alt="../../_images/problem-statement.png" src="../../_images/problem-statement.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">Block sliding on an inclined plane</span><a class="headerlink" href="#problem-statement" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#problem-statement"><span class="std std-numref">Fig. 16</span></a> is a problem statement of the problem we wish to solve.</p>
+<p>The next step is to sketch the situation, mindful of several different scales in the problem.</p>
+<div class="figure align-default" id="problem-sketch">
+<a class="reference internal image-reference" href="../../_images/problem-sketch.png"><img alt="../../_images/problem-sketch.png" src="../../_images/problem-sketch.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">Block sliding on an inclined plane (various definining sketches)</span><a class="headerlink" href="#problem-sketch" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#problem-sketch"><span class="std std-numref">Fig. 17</span></a> is a set of sketches, showing the macro-scale conditions, as well as a free-body-diagram, and a sketch of the fluid layer between the block and the plane.</p>
+<p>Next we list knowns, unknowns, and governing equations:</p>
+<div class="figure align-default" id="problem-known">
+<a class="reference internal image-reference" href="../../_images/problem-known.png"><img alt="../../_images/problem-known.png" src="../../_images/problem-known.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">Known or given values</span><a class="headerlink" href="#problem-known" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#problem-known"><span class="std std-numref">Fig. 18</span></a> is a list of known or supplied (in the problem statement) values</p>
+<div class="figure align-default" id="problem-unknown">
+<a class="reference internal image-reference" href="../../_images/problem-unknown.png"><img alt="../../_images/problem-unknown.png" src="../../_images/problem-unknown.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">Unknown (sought) values</span><a class="headerlink" href="#problem-unknown" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#problem-unknown"><span class="std std-numref">Fig. 19</span></a> is a list of unknown or sought values</p>
+<div class="figure align-default" id="problem-governing-equations">
+<a class="reference internal image-reference" href="../../_images/problem-governing-equations.png"><img alt="../../_images/problem-governing-equations.png" src="../../_images/problem-governing-equations.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">Relevant equations</span><a class="headerlink" href="#problem-governing-equations" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#problem-governing-equations"><span class="std std-numref">Fig. 20</span></a> is an initial list of applicable equations (we may add to this list as the analysis proceedes).</p>
+<p>Now we proceede with the analysis</p>
+<div class="figure align-default" id="problem-solution-1">
+<a class="reference internal image-reference" href="../../_images/problem-solution-1.png"><img alt="../../_images/problem-solution-1.png" src="../../_images/problem-solution-1.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">Solution</span><a class="headerlink" href="#problem-solution-1" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#problem-solution-1"><span class="std std-numref">Fig. 21</span></a> is our initial work towards a solution, ending with an expression relating shear force and viscosity.</p>
+<div class="figure align-default" id="problem-solution-2">
+<a class="reference internal image-reference" href="../../_images/problem-solution-2.png"><img alt="../../_images/problem-solution-2.png" src="../../_images/problem-solution-2.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">Solution(continued)</span><a class="headerlink" href="#problem-solution-2" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#problem-solution-2"><span class="std std-numref">Fig. 22</span></a> is the completion where the geomtric terms are inserted and a numerical answer is supplied.</p>
+<div class="figure align-default" id="problem-discussion">
+<a class="reference internal image-reference" href="../../_images/problem-discussion.png"><img alt="../../_images/problem-discussion.png" src="../../_images/problem-discussion.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 23 </span><span class="caption-text">Discussion of results</span><a class="headerlink" href="#problem-discussion" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#problem-discussion"><span class="std std-numref">Fig. 23</span></a> is a discussion of results; this part is important as part of professional documentation, esp. if the analysis is a first approximation and is being used to determine whether further work will be needed.</p>
+</div>
 <div class="section" id="readings">
 <h2>Readings<a class="headerlink" href="#readings" title="Permalink to this headline">¶</a></h2>
-<p>CE-3305-2022-1 Syllabus. <a class="reference external" href="http://54.243.252.9/ce-3372-webroot/0-Syllabus/CE-3305-2022-1-syllabus.html">http://54.243.252.9/ce-3305-webroot/0-Syllabus/CE-3305-2022-1-syllabus.html</a></p>
-<p>Engineering Fluid Mechanics (placeholder file to get links working). <a class="reference external" href="http://54.243.252.9/ce-3372-webroot/3-Readings/EFM-1.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-1.pdf</a></p>
+<ol class="simple">
+<li><p>CE-3305-2022-1 Syllabus. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html">http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html</a></p></li>
+<li><p>Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 14-45</p></li>
+<li><p>DF Elger, BC Williams, Crowe, CT and JA Roberson, <em>Engineering Fluid Mechanics 10th edition</em>, John Wiley &amp; Sons, Inc., 2013.  (placeholder file to get links working). <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-2.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-2.pdf</a></p></li>
+</ol>
 </div>
 </div>
 
@@ -283,6 +570,15 @@
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="../lesson01/lesson01.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Introduction</p>
+            </div>
+        </a>
+    </div>
 
 </div>
         
