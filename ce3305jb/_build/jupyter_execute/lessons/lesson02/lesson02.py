@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Intensive and Extensive Fluid Properties 
+# # Basic Fluid Properties 
 # 
 # ## Lesson Outline
 # 1. Basic Fluid Properties
@@ -194,7 +194,7 @@ print('Sp. Wt. of 30 cc sample = ',round(spwt_30cc,3))
 # 
 # ```{figure} problem-statement.png
 # ---
-# width: 400px
+# width: 500px
 # name: problem-statement
 # ---
 # Block sliding on an inclined plane
@@ -205,7 +205,7 @@ print('Sp. Wt. of 30 cc sample = ',round(spwt_30cc,3))
 # 
 # ```{figure} problem-sketch.png
 # ---
-# width: 400px
+# width: 500px
 # name: problem-sketch
 # ---
 # Block sliding on an inclined plane (various definining sketches)
@@ -216,7 +216,7 @@ print('Sp. Wt. of 30 cc sample = ',round(spwt_30cc,3))
 # 
 # ```{figure} problem-known.png
 # ---
-# width: 400px
+# width: 500px
 # name: problem-known
 # ---
 # Known or given values
@@ -225,7 +225,7 @@ print('Sp. Wt. of 30 cc sample = ',round(spwt_30cc,3))
 # 
 # ```{figure} problem-unknown.png
 # ---
-# width: 400px
+# width: 500px
 # name: problem-unknown
 # ---
 # Unknown (sought) values
@@ -234,7 +234,7 @@ print('Sp. Wt. of 30 cc sample = ',round(spwt_30cc,3))
 # 
 # ```{figure} problem-governing-equations.png
 # ---
-# width: 400px
+# width: 500px
 # name: problem-governing-equations
 # ---
 # Relevant equations
@@ -245,7 +245,7 @@ print('Sp. Wt. of 30 cc sample = ',round(spwt_30cc,3))
 # 
 # ```{figure} problem-solution-1.png
 # ---
-# width: 400px
+# width: 500px
 # name: problem-solution-1
 # ---
 # Solution
@@ -254,7 +254,7 @@ print('Sp. Wt. of 30 cc sample = ',round(spwt_30cc,3))
 # 
 # ```{figure} problem-solution-2.png
 # ---
-# width: 400px
+# width: 500px
 # name: problem-solution-2
 # ---
 # Solution(continued)
@@ -263,7 +263,7 @@ print('Sp. Wt. of 30 cc sample = ',round(spwt_30cc,3))
 # 
 # ```{figure} problem-discussion.png
 # ---
-# width: 400px
+# width: 500px
 # name: problem-discussion
 # ---
 # Discussion of results
@@ -276,52 +276,113 @@ print('Sp. Wt. of 30 cc sample = ',round(spwt_30cc,3))
 # 
 # ```{figure} example2-p1.png
 # ---
-# width: 400px
+# width: 600px
 # name: example2-p1
 # ---
-# Discussion of results
+# Fluid drive problem (i.e how a transmission works!)
 # ```
 # {numref}`example2-p1` is a problem statement and list of known values and governing equations.
 # 
 # ```{figure} example2-p2.png
 # ---
-# width: 400px
+# width: 600px
 # name: example2-p2
 # ---
-# Discussion of results
+# Schematic sketches to define problem terms
 # ```
 # {numref}`example2-p2` is a list of unknown values and defining sketches.  Notice the geometry poses some complexity, hence the varied drawings to guide analysis.
 # 
 # ```{figure} example2-p3.png
 # ---
-# width: 400px
+# width: 600px
 # name: example2-p3
 # ---
-# Discussion of results
+# Schematic sketches to define problem terms (continued)
 # ```
 # {numref}`example2-p3` are continued defining sketches and associated analyses.
 # 
 # ```{figure} example2-p4.png
 # ---
-# width: 400px
+# width: 600px
 # name: example2-p4
 # ---
-# Discussion of results
+# Results and Discussion
 # ```
 # {numref}`example2-p4` is the results in useful units, and a discussion of the findings. The problem parts are straightforward using concepts for prior classes, but the analyst does have to keep track of the steps to get to a useable solution.
 # 
 
-# In[ ]:
+# ## Liquid Properties
+# 
+# A liquid is one kind of fluid, but it has a few added properties that are important.  One such property is surface tension, $\sigma$.
+# 
+# Surface tension is the force per unit area required to separate two fluids.  It is measured with a ring tensiometer [https://en.wikipedia.org/wiki/Du_No%C3%BCy_ring_method](https://en.wikipedia.org/wiki/Du_No%C3%BCy_ring_method), and a few other ways.
+# Dimensionally it is a force per unit length, and is one reason why liquids can rise up capillary tubes, or into porous materials (like a sponge).  Surface tension controls how liquids spread or bead up on a surface.
+# 
+# ```{figure} surface-tension.png
+# ---
+# width: 600px
+# name: surface-tension
+# ---
+# Wetting and non-wetting fluid-fluid-solid systems.
+# ```
+# {numref}`surface-tension` is a schematic of a wetting and non-wetting drop of fluid onto a surface.
+# 
+# ### Capillary Rise
+# 
+# We can explain capillary rise using a force-balance and the concepts of wetting and non-wetting fluids.
+# 
+# ```{figure} capillary-fbd.png
+# ---
+# width: 600px
+# name: capillary-fbd
+# ---
+# Schematic of capillary tube
+# ```
+# {numref}`capillary-fbd`
+# 
+# ```{figure} capillary-analysis.png
+# ---
+# width: 600px
+# name: capillary-analysis
+# ---
+# Force balance analysis of portion above free surface.
+# ```
+# {numref}`capillary-analysis`
+# 
+# :::{note}
+# Some of the intermediate algebra is shown below to illustrate the terms that are cancelled.  Many equations in the book are shown without intermediate steps; its up to you to trust explicitly, or check the intermediate steps yourselves - textbooks are a bit more reliable than Facebook for facts, but not much (even this notebook should be held suspect until you check the work for errors and ommissions!)
+# 
+# ```{figure} capillary-algebra.png
+# ---
+# width: 400px
+# name: capillary-algebra
+# ---
+# Intermediate algebra
+# ```
+# {numref}`capillary-algebra` is some of the intermediate algebra for capillary tubes.
+# :::
+# 
+# Using our equations and knowledge of contact angle for water in the note above we can calculate the rise in a capillary tube.
 
-
-
-
-
-# In[ ]:
-
-
-
-
+# ## Example 3 - Capillary Tube
+# 
+# ```{figure} capillary-water-1.png
+# ---
+# width: 600px
+# name: capillary-water-1
+# ---
+# Intermediate algebra
+# ```
+# {numref}`capillary-water-1` is a brief problem statement, sketch, and list of known values.
+# 
+# ```{figure} capillary-water-2.png
+# ---
+# width: 600px
+# name: capillary-water-2
+# ---
+# Intermediate algebra
+# ```
+# {numref}`capillary-water-2` is the remainder of the solution, with a list of unknowns, the governing equation, and worked out solution.  Notice the solution protocol is still followed but greatly simplified in this example.
 
 # ## Readings
 # 
@@ -329,8 +390,9 @@ print('Sp. Wt. of 30 cc sample = ',round(spwt_30cc,3))
 # 
 # 2. Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 14-45
 # 
-# 3. DF Elger, BC Williams, Crowe, CT and JA Roberson, *Engineering Fluid Mechanics 10th edition*, John Wiley & Sons, Inc., 2013.  (placeholder file to get links working). [http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-2.pdf](http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-2.pdf)
+# 3. DF Elger, BC Williams, Crowe, CT and JA Roberson, *Engineering Fluid Mechanics 10th edition*, John Wiley & Sons, Inc., 2013. [http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-2.pdf](http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-2.pdf)
 # 
+# 4. Cleveland, T. G. (2014) *Fluid Mechanics Notes to Accompany CE 3305 at Jade-Holshule (TTU Study Abroad 2015-2019)*, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering. [http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-003.1.pdf](http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-003.1.pdf)
 
 # In[ ]:
 

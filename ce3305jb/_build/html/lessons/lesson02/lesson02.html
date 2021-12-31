@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Intensive and Extensive Fluid Properties &#8212; CE 3305 Mechanics of Fluids</title>
+    <title>Basic Fluid Properties &#8212; CE 3305 Mechanics of Fluids</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -102,7 +102,7 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Intensive and Extensive Fluid Properties
+   Basic Fluid Properties
   </a>
  </li>
 </ul>
@@ -304,6 +304,23 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#liquid-properties">
+   Liquid Properties
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#capillary-rise">
+     Capillary Rise
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-3-capillary-tube">
+   Example 3 - Capillary Tube
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#readings">
    Readings
   </a>
@@ -319,8 +336,8 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="intensive-and-extensive-fluid-properties">
-<h1>Intensive and Extensive Fluid Properties<a class="headerlink" href="#intensive-and-extensive-fluid-properties" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="basic-fluid-properties">
+<h1>Basic Fluid Properties<a class="headerlink" href="#basic-fluid-properties" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="lesson-outline">
 <h2>Lesson Outline<a class="headerlink" href="#lesson-outline" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
@@ -493,45 +510,45 @@ This solids analog to viscosity conveys that steel is more viscous than plastic 
 <p>Here is a hand-worked example to illustrate viscosity concepts and problem solving protocol.</p>
 <p>We start with a problem statement:</p>
 <div class="figure align-default" id="problem-statement">
-<a class="reference internal image-reference" href="../../_images/problem-statement.png"><img alt="../../_images/problem-statement.png" src="../../_images/problem-statement.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/problem-statement.png"><img alt="../../_images/problem-statement.png" src="../../_images/problem-statement.png" style="width: 500px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">Block sliding on an inclined plane</span><a class="headerlink" href="#problem-statement" title="Permalink to this image">¶</a></p>
 </div>
 <p><a class="reference internal" href="#problem-statement"><span class="std std-numref">Fig. 16</span></a> is a problem statement of the problem we wish to solve.</p>
 <p>The next step is to sketch the situation, mindful of several different scales in the problem.</p>
 <div class="figure align-default" id="problem-sketch">
-<a class="reference internal image-reference" href="../../_images/problem-sketch.png"><img alt="../../_images/problem-sketch.png" src="../../_images/problem-sketch.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/problem-sketch.png"><img alt="../../_images/problem-sketch.png" src="../../_images/problem-sketch.png" style="width: 500px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">Block sliding on an inclined plane (various definining sketches)</span><a class="headerlink" href="#problem-sketch" title="Permalink to this image">¶</a></p>
 </div>
 <p><a class="reference internal" href="#problem-sketch"><span class="std std-numref">Fig. 17</span></a> is a set of sketches, showing the macro-scale conditions, as well as a free-body-diagram, and a sketch of the fluid layer between the block and the plane.</p>
 <p>Next we list knowns, unknowns, and governing equations:</p>
 <div class="figure align-default" id="problem-known">
-<a class="reference internal image-reference" href="../../_images/problem-known.png"><img alt="../../_images/problem-known.png" src="../../_images/problem-known.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/problem-known.png"><img alt="../../_images/problem-known.png" src="../../_images/problem-known.png" style="width: 500px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">Known or given values</span><a class="headerlink" href="#problem-known" title="Permalink to this image">¶</a></p>
 </div>
 <p><a class="reference internal" href="#problem-known"><span class="std std-numref">Fig. 18</span></a> is a list of known or supplied (in the problem statement) values</p>
 <div class="figure align-default" id="problem-unknown">
-<a class="reference internal image-reference" href="../../_images/problem-unknown.png"><img alt="../../_images/problem-unknown.png" src="../../_images/problem-unknown.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/problem-unknown.png"><img alt="../../_images/problem-unknown.png" src="../../_images/problem-unknown.png" style="width: 500px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">Unknown (sought) values</span><a class="headerlink" href="#problem-unknown" title="Permalink to this image">¶</a></p>
 </div>
 <p><a class="reference internal" href="#problem-unknown"><span class="std std-numref">Fig. 19</span></a> is a list of unknown or sought values</p>
 <div class="figure align-default" id="problem-governing-equations">
-<a class="reference internal image-reference" href="../../_images/problem-governing-equations.png"><img alt="../../_images/problem-governing-equations.png" src="../../_images/problem-governing-equations.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/problem-governing-equations.png"><img alt="../../_images/problem-governing-equations.png" src="../../_images/problem-governing-equations.png" style="width: 500px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">Relevant equations</span><a class="headerlink" href="#problem-governing-equations" title="Permalink to this image">¶</a></p>
 </div>
 <p><a class="reference internal" href="#problem-governing-equations"><span class="std std-numref">Fig. 20</span></a> is an initial list of applicable equations (we may add to this list as the analysis proceedes).</p>
 <p>Now we proceede with the analysis</p>
 <div class="figure align-default" id="problem-solution-1">
-<a class="reference internal image-reference" href="../../_images/problem-solution-1.png"><img alt="../../_images/problem-solution-1.png" src="../../_images/problem-solution-1.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/problem-solution-1.png"><img alt="../../_images/problem-solution-1.png" src="../../_images/problem-solution-1.png" style="width: 500px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">Solution</span><a class="headerlink" href="#problem-solution-1" title="Permalink to this image">¶</a></p>
 </div>
 <p><a class="reference internal" href="#problem-solution-1"><span class="std std-numref">Fig. 21</span></a> is our initial work towards a solution, ending with an expression relating shear force and viscosity.</p>
 <div class="figure align-default" id="problem-solution-2">
-<a class="reference internal image-reference" href="../../_images/problem-solution-2.png"><img alt="../../_images/problem-solution-2.png" src="../../_images/problem-solution-2.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/problem-solution-2.png"><img alt="../../_images/problem-solution-2.png" src="../../_images/problem-solution-2.png" style="width: 500px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">Solution(continued)</span><a class="headerlink" href="#problem-solution-2" title="Permalink to this image">¶</a></p>
 </div>
 <p><a class="reference internal" href="#problem-solution-2"><span class="std std-numref">Fig. 22</span></a> is the completion where the geomtric terms are inserted and a numerical answer is supplied.</p>
 <div class="figure align-default" id="problem-discussion">
-<a class="reference internal image-reference" href="../../_images/problem-discussion.png"><img alt="../../_images/problem-discussion.png" src="../../_images/problem-discussion.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/problem-discussion.png"><img alt="../../_images/problem-discussion.png" src="../../_images/problem-discussion.png" style="width: 500px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 23 </span><span class="caption-text">Discussion of results</span><a class="headerlink" href="#problem-discussion" title="Permalink to this image">¶</a></p>
 </div>
 <p><a class="reference internal" href="#problem-discussion"><span class="std std-numref">Fig. 23</span></a> is a discussion of results; this part is important as part of professional documentation, esp. if the analysis is a first approximation and is being used to determine whether further work will be needed.</p>
@@ -540,32 +557,81 @@ This solids analog to viscosity conveys that steel is more viscous than plastic 
 <h2>Example 2 - Radial Geometry Kinematics<a class="headerlink" href="#example-2-radial-geometry-kinematics" title="Permalink to this headline">¶</a></h2>
 <p>A similar example is presented below, however the geometry is changed a bit.</p>
 <div class="figure align-default" id="example2-p1">
-<a class="reference internal image-reference" href="../../_images/example2-p1.png"><img alt="../../_images/example2-p1.png" src="../../_images/example2-p1.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 24 </span><span class="caption-text">Discussion of results</span><a class="headerlink" href="#example2-p1" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../../_images/example2-p1.png"><img alt="../../_images/example2-p1.png" src="../../_images/example2-p1.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 24 </span><span class="caption-text">Fluid drive problem (i.e how a transmission works!)</span><a class="headerlink" href="#example2-p1" title="Permalink to this image">¶</a></p>
 </div>
 <p><a class="reference internal" href="#example2-p1"><span class="std std-numref">Fig. 24</span></a> is a problem statement and list of known values and governing equations.</p>
 <div class="figure align-default" id="example2-p2">
-<a class="reference internal image-reference" href="../../_images/example2-p2.png"><img alt="../../_images/example2-p2.png" src="../../_images/example2-p2.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 25 </span><span class="caption-text">Discussion of results</span><a class="headerlink" href="#example2-p2" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../../_images/example2-p2.png"><img alt="../../_images/example2-p2.png" src="../../_images/example2-p2.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 25 </span><span class="caption-text">Schematic sketches to define problem terms</span><a class="headerlink" href="#example2-p2" title="Permalink to this image">¶</a></p>
 </div>
 <p><a class="reference internal" href="#example2-p2"><span class="std std-numref">Fig. 25</span></a> is a list of unknown values and defining sketches.  Notice the geometry poses some complexity, hence the varied drawings to guide analysis.</p>
 <div class="figure align-default" id="example2-p3">
-<a class="reference internal image-reference" href="../../_images/example2-p3.png"><img alt="../../_images/example2-p3.png" src="../../_images/example2-p3.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 26 </span><span class="caption-text">Discussion of results</span><a class="headerlink" href="#example2-p3" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../../_images/example2-p3.png"><img alt="../../_images/example2-p3.png" src="../../_images/example2-p3.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 26 </span><span class="caption-text">Schematic sketches to define problem terms (continued)</span><a class="headerlink" href="#example2-p3" title="Permalink to this image">¶</a></p>
 </div>
 <p><a class="reference internal" href="#example2-p3"><span class="std std-numref">Fig. 26</span></a> are continued defining sketches and associated analyses.</p>
 <div class="figure align-default" id="example2-p4">
-<a class="reference internal image-reference" href="../../_images/example2-p4.png"><img alt="../../_images/example2-p4.png" src="../../_images/example2-p4.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 27 </span><span class="caption-text">Discussion of results</span><a class="headerlink" href="#example2-p4" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../../_images/example2-p4.png"><img alt="../../_images/example2-p4.png" src="../../_images/example2-p4.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 27 </span><span class="caption-text">Results and Discussion</span><a class="headerlink" href="#example2-p4" title="Permalink to this image">¶</a></p>
 </div>
 <p><a class="reference internal" href="#example2-p4"><span class="std std-numref">Fig. 27</span></a> is the results in useful units, and a discussion of the findings. The problem parts are straightforward using concepts for prior classes, but the analyst does have to keep track of the steps to get to a useable solution.</p>
+</div>
+<div class="section" id="liquid-properties">
+<h2>Liquid Properties<a class="headerlink" href="#liquid-properties" title="Permalink to this headline">¶</a></h2>
+<p>A liquid is one kind of fluid, but it has a few added properties that are important.  One such property is surface tension, <span class="math notranslate nohighlight">\(\sigma\)</span>.</p>
+<p>Surface tension is the force per unit area required to separate two fluids.  It is measured with a ring tensiometer <a class="reference external" href="https://en.wikipedia.org/wiki/Du_No%C3%BCy_ring_method">https://en.wikipedia.org/wiki/Du_No%C3%BCy_ring_method</a>, and a few other ways.
+Dimensionally it is a force per unit length, and is one reason why liquids can rise up capillary tubes, or into porous materials (like a sponge).  Surface tension controls how liquids spread or bead up on a surface.</p>
+<div class="figure align-default" id="surface-tension">
+<a class="reference internal image-reference" href="../../_images/surface-tension.png"><img alt="../../_images/surface-tension.png" src="../../_images/surface-tension.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 28 </span><span class="caption-text">Wetting and non-wetting fluid-fluid-solid systems.</span><a class="headerlink" href="#surface-tension" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#surface-tension"><span class="std std-numref">Fig. 28</span></a> is a schematic of a wetting and non-wetting drop of fluid onto a surface.</p>
+<div class="section" id="capillary-rise">
+<h3>Capillary Rise<a class="headerlink" href="#capillary-rise" title="Permalink to this headline">¶</a></h3>
+<p>We can explain capillary rise using a force-balance and the concepts of wetting and non-wetting fluids.</p>
+<div class="figure align-default" id="capillary-fbd">
+<a class="reference internal image-reference" href="../../_images/capillary-fbd.png"><img alt="../../_images/capillary-fbd.png" src="../../_images/capillary-fbd.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 29 </span><span class="caption-text">Schematic of capillary tube</span><a class="headerlink" href="#capillary-fbd" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#capillary-fbd"><span class="std std-numref">Fig. 29</span></a></p>
+<div class="figure align-default" id="capillary-analysis">
+<a class="reference internal image-reference" href="../../_images/capillary-analysis.png"><img alt="../../_images/capillary-analysis.png" src="../../_images/capillary-analysis.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 30 </span><span class="caption-text">Force balance analysis of portion above free surface.</span><a class="headerlink" href="#capillary-analysis" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#capillary-analysis"><span class="std std-numref">Fig. 30</span></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some of the intermediate algebra is shown below to illustrate the terms that are cancelled.  Many equations in the book are shown without intermediate steps; its up to you to trust explicitly, or check the intermediate steps yourselves - textbooks are a bit more reliable than Facebook for facts, but not much (even this notebook should be held suspect until you check the work for errors and ommissions!)</p>
+<div class="figure align-default" id="capillary-algebra">
+<a class="reference internal image-reference" href="../../_images/capillary-algebra.png"><img alt="../../_images/capillary-algebra.png" src="../../_images/capillary-algebra.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 31 </span><span class="caption-text">Intermediate algebra</span><a class="headerlink" href="#capillary-algebra" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#capillary-algebra"><span class="std std-numref">Fig. 31</span></a> is some of the intermediate algebra for capillary tubes.</p>
+</div>
+<p>Using our equations and knowledge of contact angle for water in the note above we can calculate the rise in a capillary tube.</p>
+</div>
+</div>
+<div class="section" id="example-3-capillary-tube">
+<h2>Example 3 - Capillary Tube<a class="headerlink" href="#example-3-capillary-tube" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="capillary-water-1">
+<a class="reference internal image-reference" href="../../_images/capillary-water-1.png"><img alt="../../_images/capillary-water-1.png" src="../../_images/capillary-water-1.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 32 </span><span class="caption-text">Intermediate algebra</span><a class="headerlink" href="#capillary-water-1" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#capillary-water-1"><span class="std std-numref">Fig. 32</span></a> is a brief problem statement, sketch, and list of known values.</p>
+<div class="figure align-default" id="capillary-water-2">
+<a class="reference internal image-reference" href="../../_images/capillary-water-2.png"><img alt="../../_images/capillary-water-2.png" src="../../_images/capillary-water-2.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 33 </span><span class="caption-text">Intermediate algebra</span><a class="headerlink" href="#capillary-water-2" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#capillary-water-2"><span class="std std-numref">Fig. 33</span></a> is the remainder of the solution, with a list of unknowns, the governing equation, and worked out solution.  Notice the solution protocol is still followed but greatly simplified in this example.</p>
 </div>
 <div class="section" id="readings">
 <h2>Readings<a class="headerlink" href="#readings" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>CE-3305-2022-1 Syllabus. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html">http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html</a></p></li>
 <li><p>Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 14-45</p></li>
-<li><p>DF Elger, BC Williams, Crowe, CT and JA Roberson, <em>Engineering Fluid Mechanics 10th edition</em>, John Wiley &amp; Sons, Inc., 2013.  (placeholder file to get links working). <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-2.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-2.pdf</a></p></li>
+<li><p>DF Elger, BC Williams, Crowe, CT and JA Roberson, <em>Engineering Fluid Mechanics 10th edition</em>, John Wiley &amp; Sons, Inc., 2013. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-2.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-2.pdf</a></p></li>
+<li><p>Cleveland, T. G. (2014) <em>Fluid Mechanics Notes to Accompany CE 3305 at Jade-Holshule (TTU Study Abroad 2015-2019)</em>, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-003.1.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-003.1.pdf</a></p></li>
 </ol>
 </div>
 </div>
