@@ -186,7 +186,7 @@ print('Sp. Wt. of 30 cc sample = ',round(spwt_30cc,3))
 # 
 # 
 
-# ## Example 1
+# ## Example 1 
 # 
 # Here is a hand-worked example to illustrate viscosity concepts and problem solving protocol.
 # 
@@ -269,6 +269,59 @@ print('Sp. Wt. of 30 cc sample = ',round(spwt_30cc,3))
 # Discussion of results
 # ```
 # {numref}`problem-discussion` is a discussion of results; this part is important as part of professional documentation, esp. if the analysis is a first approximation and is being used to determine whether further work will be needed.
+
+# ## Example 2 - Radial Geometry Kinematics
+# 
+# A similar example is presented below, however the geometry is changed a bit. 
+# 
+# ```{figure} example2-p1.png
+# ---
+# width: 400px
+# name: example2-p1
+# ---
+# Discussion of results
+# ```
+# {numref}`example2-p1` is a problem statement and list of known values and governing equations.
+# 
+# ```{figure} example2-p2.png
+# ---
+# width: 400px
+# name: example2-p2
+# ---
+# Discussion of results
+# ```
+# {numref}`example2-p2` is a list of unknown values and defining sketches.  Notice the geometry poses some complexity, hence the varied drawings to guide analysis.
+# 
+# ```{figure} example2-p3.png
+# ---
+# width: 400px
+# name: example2-p3
+# ---
+# Discussion of results
+# ```
+# {numref}`example2-p3` are continued defining sketches and associated analyses.
+# 
+# ```{figure} example2-p4.png
+# ---
+# width: 400px
+# name: example2-p4
+# ---
+# Discussion of results
+# ```
+# {numref}`example2-p4` is the results in useful units, and a discussion of the findings. The problem parts are straightforward using concepts for prior classes, but the analyst does have to keep track of the steps to get to a useable solution.
+# 
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
 
 # ## Readings
 # 
