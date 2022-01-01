@@ -6,4 +6,5 @@ root: intro
 chapters:
 - file: lessons/lesson01/lesson01
 - file: lessons/lesson02/lesson02
+- file: lessons/lesson03/lesson03
 #- file: notebooks

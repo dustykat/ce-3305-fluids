@@ -1,0 +1,538 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fluid Statics and Pressure &#8212; CE 3305 Mechanics of Fluids</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Basic Fluid Properties" href="../lesson02/lesson02.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/I5-fluidos.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">CE 3305 Mechanics of Fluids</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Fluid Mechanics Notes to Accompany CE 3305 at TTU
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson01/lesson01.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson02/lesson02.html">
+   Basic Fluid Properties
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Fluid Statics and Pressure
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/lessons/lesson03/lesson03.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flessons/lesson03/lesson03.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/lessons/lesson03/lesson03.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lesson-outline">
+   Lesson Outline
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fluid-statics">
+   Fluid Statics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pressure">
+     Pressure
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#absolute-and-gage-pressure">
+     Absolute and Gage Pressure
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hydrostatic-equation">
+     Hydrostatic Equation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pressure-measurements">
+   Pressure Measurements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples">
+   Examples
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-1">
+     Example 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-2">
+     Example 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-3">
+     Example 3
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pressure-force-on-submerged-objects">
+   Pressure Force on Submerged Objects
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-4">
+     Example 4
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="fluid-statics-and-pressure">
+<h1>Fluid Statics and Pressure<a class="headerlink" href="#fluid-statics-and-pressure" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="lesson-outline">
+<h2>Lesson Outline<a class="headerlink" href="#lesson-outline" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Fluid Statics</p></li>
+<li><p>Pressure</p></li>
+<li><p>Measurment</p></li>
+<li><p>Hydrostatic Forces on a Plane Surface</p></li>
+</ul>
+</div>
+<div class="section" id="fluid-statics">
+<h2>Fluid Statics<a class="headerlink" href="#fluid-statics" title="Permalink to this headline">¶</a></h2>
+<p>Fluid statics deals with forces in fluids that are have no relative motion within the fluid.  The vessel containing the fluid may be at non-zero velocity or acceleration, but the fluid body within the vessel has no relative motion.</p>
+<p>Two principal types of forces involved are body and surface forces as shown in <a class="reference internal" href="#fluidstatics"><span class="std std-numref">Fig. 34</span></a></p>
+<div class="figure align-default" id="fluidstatics">
+<a class="reference internal image-reference" href="../../_images/FluidStatics.png"><img alt="../../_images/FluidStatics.png" src="../../_images/FluidStatics.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 34 </span><span class="caption-text">A sphere of some fluid, depicting a local coordinate system, differential area and a normal and tangential force pair</span><a class="headerlink" href="#fluidstatics" title="Permalink to this image">¶</a></p>
+</div>
+<p>Body forces are developed without contact and are distributed over the entire volume of a fluid.  In the sketch the weight of the sphere is a body force.</p>
+<p>Surface forces act at boundaries of a medium through contant.  The normal force in the sketch (which is the product of pressure and area) is a surface force, defined on the surface of the sphere.</p>
+<p>Stress is the limiting value of <span class="math notranslate nohighlight">\(\frac{dF}{dA}\)</span>; in the sketch there are two stresses: a normal stress (usually called pressure), and a tangential stress (usually called shear).</p>
+<p>Shear stresses are formed by friction, no-slip assumption, and other practically occuring situations.</p>
+<div class="figure align-default" id="stresses">
+<a class="reference internal image-reference" href="../../_images/Stresses.png"><img alt="../../_images/Stresses.png" src="../../_images/Stresses.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 35 </span><span class="caption-text">Shear and normal stresses on a plane parallel to x-y coordinate plane, at some value z.</span><a class="headerlink" href="#stresses" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#stresses"><span class="std std-numref">Fig. 35</span></a> is a diagram of a small planar element in a 3-D cartesian coordinate system that illustrate normal and shear stresses.  The tensor-like naming system is also indicated.</p>
+<p>A conventional notation is <span class="math notranslate nohighlight">\(\sigma_{n,i-k}\)</span> for normal stress, and <span class="math notranslate nohighlight">\(\tau_{n,i-k}\)</span> for shear stress.  The first subscript is the direction of the outward pointing normal vector from the application plane (in the drawing +z), the second subscript is the direction of force application, with the normal stress positive into the plane.  In the drawing the three stresses are <span class="math notranslate nohighlight">\(\sigma_{z,z}\)</span>,<span class="math notranslate nohighlight">\(\tau_{z,x}\)</span>, and <span class="math notranslate nohighlight">\(\tau_{z,y}\)</span>.</p>
+<div class="section" id="pressure">
+<h3>Pressure<a class="headerlink" href="#pressure" title="Permalink to this headline">¶</a></h3>
+<p>Fluid pressure (usual symbol <span class="math notranslate nohighlight">\(p\)</span>) is the normal stress applied to a fluid element, so in practice we simply make the direct substitution.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The use of pressure in fluids and normal stress in solids is simply a convention - one could refer to solids pressure but that would confuse people.</p>
+</div>
+<p>Pressure is a normal force per unit area, so at any <strong>point</strong> within a fluid it is a scalar quantity. The dimensionality of pressure is the ratio of force to area; typical units are <span class="math notranslate nohighlight">\(\frac{N}{m^2} = Pa\)</span>,<span class="math notranslate nohighlight">\(\frac{lbs}{in^2}\)</span>.  Pressure is also expressed in atmospheres <span class="math notranslate nohighlight">\(1 atm = 101325Pa = 14.75psi\)</span> and liquid column height <span class="math notranslate nohighlight">\(1 atm \approx 10m_{water} \approx 29.92in_{Hg}\)</span></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Pressure is scalar (magnitude), the force it causes when pushing against an object is a vector (magnitude and direction)</p>
+</div>
+<div class="figure align-default" id="pressurewedge">
+<a class="reference internal image-reference" href="../../_images/PressureWedge.png"><img alt="../../_images/PressureWedge.png" src="../../_images/PressureWedge.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 36 </span><span class="caption-text">FBD of small wedge of a static fluid.</span><a class="headerlink" href="#pressurewedge" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#pressurewedge"><span class="std std-numref">Fig. 36</span></a> is a free body diagram of a small wedge of fluid; analyzing the wedge we can demonstrate that pressure is a scalar (Pascal’s Law).</p>
+<p>First we will stipulate the fluid is a rest; no internal motion.  Next perform a force balance in each direction as in <a class="reference internal" href="#forcebalancewedge"><span class="std std-numref">Fig. 37</span></a></p>
+<div class="figure align-default" id="forcebalancewedge">
+<a class="reference internal image-reference" href="../../_images/ForceBalanceWedge.png"><img alt="../../_images/ForceBalanceWedge.png" src="../../_images/ForceBalanceWedge.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 37 </span><span class="caption-text">Force balance x,y, and z directions on fluid wedge.</span><a class="headerlink" href="#forcebalancewedge" title="Permalink to this image">¶</a></p>
+</div>
+<p>Notice we immediately invoke the definition of pressure to compute forces <span class="math notranslate nohighlight">\(F=p \cdot A\)</span> where <span class="math notranslate nohighlight">\(A = \Delta x \Delta z\)</span> and such, applying trigonometry to the wedge to resolve its force components. The directions are associated with the outward pointing normal vectors associated with the various planar areas.</p>
+<p>We complete the analysis by studying the requirement of zero motion (statics) and find thet indeed pressure is a scalar as in <a class="reference internal" href="#fbcomplete"><span class="std std-numref">Fig. 38</span></a></p>
+<div class="figure align-default" id="fbcomplete">
+<a class="reference internal image-reference" href="../../_images/FBComplete.png"><img alt="../../_images/FBComplete.png" src="../../_images/FBComplete.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 38 </span><span class="caption-text">Force balance x,y, and z directions on fluid wedge.</span><a class="headerlink" href="#fbcomplete" title="Permalink to this image">¶</a></p>
+</div>
+<p>Because the three pressures are all the same at a point, we can drop the double subscript notation and simplify our notation herein.</p>
+<p>Some practical application of Pascal’s Law is that in a closed system a change in pressure is transmitted undiminished throughout the entire system.  This phenomenon is the basis of hydraulic machinery like pneumatic jacks (pg. 49 of the textbook)</p>
+</div>
+<div class="section" id="absolute-and-gage-pressure">
+<h3>Absolute and Gage Pressure<a class="headerlink" href="#absolute-and-gage-pressure" title="Permalink to this headline">¶</a></h3>
+<p>Pressure is usually measured against some reference value.  Two values in common use are a vaccum (zero pressure) and a standard atmosphere.</p>
+<p>If the measurement is referenced to a standard atmosphere the measure is called <em>gage pressure</em>.</p>
+<p>If the measurement is referenced to a vaccum, the measure is called <em>absolute pressure</em></p>
+<p>Gage pressures can be negative, but negative absolute pressures don’t make any sense.</p>
+<div class="figure align-default" id="absolutepressure">
+<a class="reference internal image-reference" href="../../_images/AbsolutePressure.png"><img alt="../../_images/AbsolutePressure.png" src="../../_images/AbsolutePressure.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 39 </span><span class="caption-text">Force balance x,y, and z directions on fluid wedge.</span><a class="headerlink" href="#absolutepressure" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#absolutepressure"><span class="std std-numref">Fig. 39</span></a> is a diagram depicting the relationship of gage and absolute pressures.</p>
+</div>
+<div class="section" id="hydrostatic-equation">
+<h3>Hydrostatic Equation<a class="headerlink" href="#hydrostatic-equation" title="Permalink to this headline">¶</a></h3>
+<p>Here we develop the fundamental equation of fluid statics, and examine a couple of applications (pg. 52 is a condensed explaination).</p>
+<p>Recall fluid statics means no relative motion within the fluid - the entire fluid behaves as a rigid body. The absence of angular deformation implies absence of shear stress; static fluids only sustain normal stress (pressure)</p>
+<div class="figure align-default" id="fstatics-1">
+<a class="reference internal image-reference" href="../../_images/fstatics-1.png"><img alt="../../_images/fstatics-1.png" src="../../_images/fstatics-1.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 40 </span><span class="caption-text">Velocity gradient in static fluid</span><a class="headerlink" href="#fstatics-1" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#fstatics-1"><span class="std std-numref">Fig. 40</span></a> is a</p>
+<p>Consider a fluid element as in <a class="reference internal" href="#fstatics-2"><span class="std std-numref">Fig. 41</span></a>. We analyze the forces on the element taking limits as appropriate (continuum hypothesis) to recover the equation of a static fluid.</p>
+<div class="figure align-default" id="fstatics-2">
+<a class="reference internal image-reference" href="../../_images/fstatics-2.png"><img alt="../../_images/fstatics-2.png" src="../../_images/fstatics-2.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 41 </span><span class="caption-text">Small fluid element in space (the final frontier!)</span><a class="headerlink" href="#fstatics-2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Writing the surface and body forces of the element as a rigid body, and equating these forces to acceleration (Newton’s 2nd Law) produces a set of terms in <a class="reference internal" href="#fstatics-3"><span class="std std-numref">Fig. 42</span></a></p>
+<div class="figure align-default" id="fstatics-3">
+<a class="reference internal image-reference" href="../../_images/fstatics-3.png"><img alt="../../_images/fstatics-3.png" src="../../_images/fstatics-3.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 42 </span><span class="caption-text">Caption</span><a class="headerlink" href="#fstatics-3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Using Taylor-series expansions about the centroid of the element</p>
+<div class="figure align-default" id="fstatics-4">
+<a class="reference internal image-reference" href="../../_images/fstatics-4.png"><img alt="../../_images/fstatics-4.png" src="../../_images/fstatics-4.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 43 </span><span class="caption-text">Caption</span><a class="headerlink" href="#fstatics-4" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#fstatics-4"><span class="std std-numref">Fig. 43</span></a></p>
+<div class="figure align-default" id="fstatics-5">
+<a class="reference internal image-reference" href="../../_images/fstatics-5.png"><img alt="../../_images/fstatics-5.png" src="../../_images/fstatics-5.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 44 </span><span class="caption-text">Caption</span><a class="headerlink" href="#fstatics-5" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#fstatics-5"><span class="std std-numref">Fig. 44</span></a></p>
+<div class="figure align-default" id="fstatics-6">
+<a class="reference internal image-reference" href="../../_images/fstatics-6.png"><img alt="../../_images/fstatics-6.png" src="../../_images/fstatics-6.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 45 </span><span class="caption-text">Caption</span><a class="headerlink" href="#fstatics-6" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#fstatics-6"><span class="std std-numref">Fig. 45</span></a></p>
+<div class="figure align-default" id="fstatics-7">
+<a class="reference internal image-reference" href="../../_images/fstatics-7.png"><img alt="../../_images/fstatics-7.png" src="../../_images/fstatics-7.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 46 </span><span class="caption-text">Caption</span><a class="headerlink" href="#fstatics-7" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#fstatics-7"><span class="std std-numref">Fig. 46</span></a></p>
+<div class="figure align-default" id="fstatics-8">
+<a class="reference internal image-reference" href="../../_images/fstatics-8.png"><img alt="../../_images/fstatics-8.png" src="../../_images/fstatics-8.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 47 </span><span class="caption-text">Caption</span><a class="headerlink" href="#fstatics-8" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#fstatics-8"><span class="std std-numref">Fig. 47</span></a></p>
+<div class="figure align-default" id="fstatics-9">
+<a class="reference internal image-reference" href="../../_images/fstatics-9.png"><img alt="../../_images/fstatics-9.png" src="../../_images/fstatics-9.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 48 </span><span class="caption-text">Caption</span><a class="headerlink" href="#fstatics-9" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#fstatics-9"><span class="std std-numref">Fig. 48</span></a></p>
+</div>
+</div>
+<div class="section" id="pressure-measurements">
+<h2>Pressure Measurements<a class="headerlink" href="#pressure-measurements" title="Permalink to this headline">¶</a></h2>
+<p>Specific gravity is the ratio of density of a fluid to a reference fluid.  In Civil Engineering the reference fluid is typically liquid water. Typical symbol is <span class="math notranslate nohighlight">\(S\)</span></p>
+<div class="math notranslate nohighlight">
+\[ S =\frac{\rho_{i}}{\rho_{water}}=\frac{\gamma_{i}}{\gamma_{water}} \]</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="example-1">
+<h3>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<p>The bulk modulus relates the change in volume of a fluid element to a change in pressure.  For liquids it is quite high, gasses quite a bit smaller - it is essentially a Hooke’s law (springs) for a continuum element.  It conveys how much pressure change is needed to effect a incremental volume change.</p>
+<div class="math notranslate nohighlight">
+\[ E_v = -\frac{dp}{(\frac{dV}{V})} \]</div>
+<p>Dimensionally it is a pressure.  For water at terresterial pressure and temperature its value is upwards of 2.2 GPa (about 23 atmospheres); for solid steel well over 150 GPa (about 1550 atmospheres).</p>
+<p>In our practical sense, gas is compressible, water is not very compressible, steel smaller still.</p>
+<p>All the properties above are temperature dependent, and in gasses the compressibility is small, hence they are called compressible fluids.</p>
+<p>A few thermodynamic properties are useful too:</p>
+</div>
+<div class="section" id="example-2">
+<h3>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<p>The heat amount added to a unit mass of fluid to raise the temperature one degree (units system dependent!) while volume is held constant.<br />
+Typical symbol is <span class="math notranslate nohighlight">\(c_v\)</span>.</p>
+</div>
+<div class="section" id="example-3">
+<h3>Example 3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
+<p>The heat amount added to a unit mass of fluid to raise the temperature one degree (units system dependent!) while pressure is held constant.</p>
+<p>Typical symbol is <span class="math notranslate nohighlight">\(c_p\)</span>.</p>
+</div>
+</div>
+<div class="section" id="pressure-force-on-submerged-objects">
+<h2>Pressure Force on Submerged Objects<a class="headerlink" href="#pressure-force-on-submerged-objects" title="Permalink to this headline">¶</a></h2>
+<p>Energy a unit mass possesses because of its state of molecular activity.  Typical symbol is <span class="math notranslate nohighlight">\(u\)</span></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The symbol <span class="math notranslate nohighlight">\(u\)</span> is also commonly used for the x-component, or streamline component of velocity.  Be aware of context to avoid confusion.  In some documents <span class="math notranslate nohighlight">\(U\)</span> is the velocity vector - again the context should be a clue.</p>
+</div>
+<div class="section" id="example-4">
+<h3>Example 4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
+<p>Energy a substance possesses because of internal energy and applied normal stress (aka pressure).  Typical symbol is <span class="math notranslate nohighlight">\(h = u + \frac{p}{\rho}\)</span></p>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 47-80</p></li>
+<li><p>Cleveland, T. G. (2014) <em>Fluid Mechanics Notes to Accompany CE 3305 at Jade-Holshule (TTU Study Abroad 2015-2019)</em>, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-003.1.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-003.1.pdf</a></p></li>
+<li><p>DF Elger, BC Williams, Crowe, CT and JA Roberson, <em>Engineering Fluid Mechanics 10th edition</em>, John Wiley &amp; Sons, Inc., 2013. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-3.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-3.pdf</a></p></li>
+<li><p>CE-3305-2022-1 Syllabus. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html">http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html</a></p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons/lesson03"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../lesson02/lesson02.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Basic Fluid Properties</p>
+            </div>
+        </a>
+    </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Theodore G. Cleveland<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
