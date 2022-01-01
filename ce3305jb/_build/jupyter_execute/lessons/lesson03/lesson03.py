@@ -119,9 +119,17 @@
 # ---
 # Velocity gradient in static fluid
 # ```
-# {numref}`fstatics-1` is a 
+# {numref}`fstatics-1` is the mathematical statement of these stipulations. 
 # 
-# Consider a fluid element as in {numref}`fstatics-2`. We analyze the forces on the element taking limits as appropriate (continuum hypothesis) to recover the equation of a static fluid.
+# ```{figure} fruid-element.png
+# ---
+# width: 500px
+# name: fruid-element
+# ---
+# Small fluid element in space (the final frontier!)
+# ```
+# 
+# Consider a fluid element as in {numref}`fruid-element`. We analyze the forces on the element taking limits as appropriate (continuum hypothesis) to recover the equation of a static fluid.
 # 
 # ```{figure} fstatics-2.png
 # ---
@@ -130,6 +138,8 @@
 # ---
 # Small fluid element in space (the final frontier!)
 # ```
+# {numref}`fstatics-2` 
+# 
 # Writing the surface and body forces of the element as a rigid body, and equating these forces to acceleration (Newton's 2nd Law) produces a set of terms in {numref}`fstatics-3`
 # 
 # ```{figure} fstatics-3.png
