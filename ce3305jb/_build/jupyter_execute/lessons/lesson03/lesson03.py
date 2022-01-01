@@ -212,31 +212,86 @@
 # $$ S =\frac{\rho_{i}}{\rho_{water}}=\frac{\gamma_{i}}{\gamma_{water}} $$
 # 
 # ## Examples
-# 
+# Below are a few examples applying the hydrostatic equation and Pascal's law in a few different situations
 # ### Example 1
 # 
-# The bulk modulus relates the change in volume of a fluid element to a change in pressure.  For liquids it is quite high, gasses quite a bit smaller - it is essentially a Hooke's law (springs) for a continuum element.  It conveys how much pressure change is needed to effect a incremental volume change.
-# 
-# $$ E_v = -\frac{dp}{(\frac{dV}{V})} $$
-# 
-# Dimensionally it is a pressure.  For water at terresterial pressure and temperature its value is upwards of 2.2 GPa (about 23 atmospheres); for solid steel well over 150 GPa (about 1550 atmospheres).
-# 
-# In our practical sense, gas is compressible, water is not very compressible, steel smaller still.
-# 
-# All the properties above are temperature dependent, and in gasses the compressibility is small, hence they are called compressible fluids.
-# 
-# A few thermodynamic properties are useful too:
+# ```{figure} example1-1.png
+# ---
+# width: 500px
+# name: example1-1
+# ---
+# Caption
+# ```
+# {numref}`example1-1` is a classical pressure at the bottom of a vessel, using the problem solving protocol.
 # 
 # ### Example 2
 # 
-# The heat amount added to a unit mass of fluid to raise the temperature one degree (units system dependent!) while volume is held constant.  
-# Typical symbol is $c_v$.
+# ```{figure} example2-1.png
+# ---
+# width: 500px
+# name: example2-1
+# ---
+# Caption
+# ```
+# {numref}`example2-1` is a classical pressure at the bottom of a vessel, using the problem solving protocol.
+# 
+# ```{figure} example2-2.png
+# ---
+# width: 500px
+# name: example2-2
+# ---
+# Caption
+# ```
+# {numref}`example2-2` is a classical pressure at the bottom of a vessel, using the problem solving protocol.
 # 
 # ### Example 3
 # 
-# The heat amount added to a unit mass of fluid to raise the temperature one degree (units system dependent!) while pressure is held constant.  
+# ```{figure} example3-1.png
+# ---
+# width: 500px
+# name: example3-1
+# ---
+# Caption
+# ```
+# {numref}`example3-1` is a classical pressure at the bottom of a vessel, using the problem solving protocol.
 # 
-# Typical symbol is $c_p$.
+# ```{figure} example3-2.png
+# ---
+# width: 500px
+# name: example3-2
+# ---
+# Caption
+# ```
+# {numref}`example3-2` is a classical pressure at the bottom of a vessel, using the problem solving protocol.
+# 
+# ```{figure} example3-3.png
+# ---
+# width: 500px
+# name: example3-3
+# ---
+# Caption
+# ```
+# {numref}`example3-3` is a classical pressure at the bottom of a vessel, using the problem solving protocol.
+# 
+# ### Example 4
+# 
+# ```{figure} example4-1.png
+# ---
+# width: 500px
+# name: example4-1
+# ---
+# Caption
+# ```
+# {numref}`example4-1` is a classical pressure at the bottom of a vessel, using the problem solving protocol.
+# 
+# ```{figure} example4-2.png
+# ---
+# width: 500px
+# name: example4-2
+# ---
+# Caption
+# ```
+# {numref}`example4-2` is a classical pressure at the bottom of a vessel, using the problem solving protocol.
 # 
 # ## Pressure Force on Submerged Objects
 # 
