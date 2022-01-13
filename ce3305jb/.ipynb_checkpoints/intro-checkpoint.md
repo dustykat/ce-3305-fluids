@@ -5,7 +5,7 @@ Copyright © 2021 Theodore G. Cleveland, *The contents of this Jupyter Book are 
 :::{note}
 These are Dr. Cleveland's course notes.  If you are not in his course you may want to refer to your actual instructor's content - but you are free to examine and use these notes as long you cite them.
 
-*Suggested Citation: * Cleveland, T. G. (2021) * Fluid Mechanics Notes to Accompany CE 3305 at TTU*, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering, DOI (pending) 
+*Suggested Citation:* Cleveland, T. G. (2021) *Fluid Mechanics Notes to Accompany CE 3305 at TTU*, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering, DOI (pending) 
 :::
 
 ## Overview
@@ -36,7 +36,7 @@ The graded components of the course are:
 - Exercises (collected on a learning management system); individual activity
 - Exams (administered on a learning management system); individual activity
 
-The complete syllabus is located at [http://54.243.252.9/ce-3305-webroot/0-Syllabus/CE-3305-2022-1-syllabus.html](http://54.243.252.9/ce-3305-webroot/0-Syllabus/CE-3305-2022-1-syllabus.html)
+The complete syllabus is located at [http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html](http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html)
 
 :::{note}
 These notes were originally written to be used in conjunction with <br>
