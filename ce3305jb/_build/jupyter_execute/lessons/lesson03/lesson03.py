@@ -6,7 +6,7 @@
 # ## Lesson Outline
 # - Fluid Statics
 #  - Pressure
-# - Measurment
+# - Measurement
 # - Hydrostatic Forces on a Plane Surface
 
 # ## Fluid Statics
@@ -75,14 +75,14 @@
 # ```
 # Notice we immediately invoke the definition of pressure to compute forces $F=p \cdot A$ where $A = \Delta x \Delta z$ and such, applying trigonometry to the wedge to resolve its force components. The directions are associated with the outward pointing normal vectors associated with the various planar areas.
 # 
-# We complete the analysis by studying the requirement of zero motion (statics) and find thet indeed pressure is a scalar as in {numref}`FBComplete`
+# We complete the analysis by studying the requirement of zero motion (statics) and find that indeed pressure is a scalar as in {numref}`FBComplete`
 # 
 # ```{figure} FBComplete.png
 # ---
 # width: 500px
 # name: FBComplete
 # ---
-# Force balance x,y, and z directions on fluid wedge.
+# Analysis summary and demonstration pressure must be scalar.
 # ```
 # 
 # Because the three pressures are all the same at a point, we can drop the double subscript notation and simplify our notation herein.
@@ -103,7 +103,7 @@
 # width: 500px
 # name: AbsolutePressure
 # ---
-# Force balance x,y, and z directions on fluid wedge.
+# Gage and absolute pressure.
 # ```
 # {numref}`AbsolutePressure` is a diagram depicting the relationship of gage and absolute pressures.
 # 
@@ -136,7 +136,7 @@
 # width: 500px
 # name: fstatics-2
 # ---
-# Small fluid element in space (the final frontier!)
+# Force balance statement, and naming of forces
 # ```
 # {numref}`fstatics-2` 
 # 
@@ -147,7 +147,7 @@
 # width: 500px
 # name: fstatics-3
 # ---
-# Caption
+# Expansion of forces from centroid to front, back,left,right, top, bottom face of the small fluid element.
 # ```
 # Using Taylor-series expansions about the centroid of the element 
 # 
@@ -156,63 +156,131 @@
 # width: 500px
 # name: fstatics-4
 # ---
-# Caption
+# Substitution into force definition (surface forces)
 # ```
-# {numref}`fstatics-4`
+# {numref}`fstatics-4` is the substitution of our forces at each face into the equation of motion.
 # 
 # ```{figure} fstatics-5.png
 # ---
 # width: 500px
 # name: fstatics-5
 # ---
-# Caption
+# Surface and body forces into balance equation; rescaling by element volume
 # ```
-# {numref}`fstatics-5`
+# {numref}`fstatics-5` is the balance equation divided by the small but non-vanishing element volume to produce the fluid equation at an arbitrary point.
 # 
 # ```{figure} fstatics-6.png
 # ---
 # width: 500px
 # name: fstatics-6
 # ---
-# Caption
+# Zero acceleration equation of fluid statics
 # ```
-# {numref}`fstatics-6`
+# {numref}`fstatics-6` is the equation of motion (this is actually Euler's equation - but he does not need it anymore!) at zero acceleration.
 # 
 # ```{figure} fstatics-7.png
 # ---
 # width: 500px
 # name: fstatics-7
 # ---
-# Caption
+# Decomposition into cartesian components
 # ```
-# {numref}`fstatics-7`
+# {numref}`fstatics-7` is the decomposition of the vector equation into its independent components, in this case cartesian coordinates. The $z$-axis equation is the only one conveying meaningful information (because of our choice of gravitational action).
 # 
 # ```{figure} fstatics-8.png
 # ---
 # width: 500px
 # name: fstatics-8
 # ---
-# Caption
+# Hydrostatic equation in a liquid
 # ```
-# {numref}`fstatics-8`
+# {numref}`fstatics-8` is the hydrostatic equation for an incompressible liquid (like water).  Pressure increases moving down from the free surface.
 # 
 # ```{figure} fstatics-9.png
 # ---
 # width: 500px
 # name: fstatics-9
 # ---
-# Caption
+# Hydrostatic approximation for compressible fluid (like the atmosphere)
 # ```
-# {numref}`fstatics-9`
+# {numref}`fstatics-9` is the hydrostatic approximation for compressible fluid. Here the ideal gas law is used as the equation of state.
+
 # ## Pressure Measurements
 # 
+# Pressure is mesured by a variety of devices depending on the fluid.  Some of these are:
 # 
-# Specific gravity is the ratio of density of a fluid to a reference fluid.  In Civil Engineering the reference fluid is typically liquid water. Typical symbol is $S$ 
+# - barometer (for measuring atmospheric pressure)
+# - piezometer
+# - manometer
+# - [Bourdon-type gages](https://www.bourdon-instruments.com/us/en/product-overview/pressure-gauges/c/36822) The principle of [operation](https://www.sciencedirect.com/topics/engineering/bourdon-tube) is the deformation of a curved tube in response to external pressure force change.
+# - pressure transducers
 # 
-# $$ S =\frac{\rho_{i}}{\rho_{water}}=\frac{\gamma_{i}}{\gamma_{water}} $$
+# ### Barometer
 # 
+# A barometer is a tube filled with liquid (oil,Hg,water), that is capped on one end, inverted into a basin and allowed to equilibrate as in {numref}`barometer`
+# 
+# 
+# ```{figure} barometer.png
+# ---
+# width: 400px
+# name: barometer
+# ---
+# Schematic of a barometer.  
+# ```
+# 
+# The height of rise is obtained from a force balance between the vapor pressure of the working fluid in the capped end and the surrounding atmospheric pressure.
+# 
+
+# ### Piezometer
+# 
+# A piezometer is a tube inserted into a fluid (usually liquid) which is open at both ends, large enough diameter so that capillary rise is negligible.  The height of rise of liquid in the tube is proportional to the static pressure in the liquid at the bottom of the tube.  
+# 
+# 
+# ```{figure} piezometer.png
+# ---
+# width: 400px
+# name: piezometer
+# ---
+# Schematic of a piezometer.  
+# ```
+# 
+# A well in an aquifer is a common example of a piezometer that measures the water pressure at the bottom of the tube (or averaged over the well screen length)
+
+# ### Manometer
+# 
+# Manometers are like a hybrid of a barometer and piezometer.
+# 
+# ```{figure} manometer.png
+# ---
+# width: 400px
+# name: manometer
+# ---
+# Schematic of a manometer.  
+# ```
+# 
+# Manometers are connected to a fluid (measured), via an immiscible working fluid (usually oil or Hg).  The force differential between the fluid and atmosphere is indicated by the working fluid.
+# 
+# As with similar devices the $\frac{F}{A}$ is equated to the column height differential in the working fluid through $h=\frac{p}{\rho_{w.f.}g}$
+# 
+# ```{figure} manometer-rules.png
+# ---
+# width: 400px
+# name: manometer-rules
+# ---
+# Reading a manometer.  
+# ```
+# 
+# Multiple tube/fluid manometers follow 2 rules (Pascal's law, and the hydrostatic equation)
+# 
+# 1. Any two points at the same elevation in a **continuous** length of the **same** fluid are at the same pressure.
+# 2. pressure **increases** with depth in a liquid column.
+
+# ### Transducers
+# [Insert link to sensor book here]
+
 # ## Examples
 # Below are a few examples applying the hydrostatic equation and Pascal's law in a few different situations
+# 
 # ### Example 1
 # 
 # ```{figure} example1-1.png
@@ -220,10 +288,10 @@
 # width: 500px
 # name: example1-1
 # ---
-# Caption
+# Pressure at the bottom of a vessel.
 # ```
 # {numref}`example1-1` is a classical pressure at the bottom of a vessel, using the problem solving protocol.
-# 
+
 # ### Example 2
 # 
 # ```{figure} example2-1.png
@@ -231,19 +299,19 @@
 # width: 500px
 # name: example2-1
 # ---
-# Caption
+# Pressure in a two-layer fluid system (1 of 2)
 # ```
-# {numref}`example2-1` is a classical pressure at the bottom of a vessel, using the problem solving protocol.
+# {numref}`example2-1` is an analysis of a multi-phase system (Air, Oil, Water), using the problem solving protocol.
 # 
 # ```{figure} example2-2.png
 # ---
 # width: 500px
 # name: example2-2
 # ---
-# Caption
+# Pressure in a two-layer fluid system (2 of 2)
 # ```
-# {numref}`example2-2` is a classical pressure at the bottom of a vessel, using the problem solving protocol.
-# 
+# {numref}`example2-2` is an analysis of a multi-phase system (Air, Oil, Water), using the problem solving protocol.
+
 # ### Example 3
 # 
 # ```{figure} example3-1.png
@@ -251,28 +319,28 @@
 # width: 500px
 # name: example3-1
 # ---
-# Caption
+# Manometer with three fluids (1 of 3)
 # ```
-# {numref}`example3-1` is a classical pressure at the bottom of a vessel, using the problem solving protocol.
+# {numref}`example3-1` is a manometer system, with two working fluids (and the measured fluid for three total)
 # 
 # ```{figure} example3-2.png
 # ---
 # width: 500px
 # name: example3-2
 # ---
-# Caption
+# Manometer with three fluids (2 of 3)
 # ```
-# {numref}`example3-2` is a classical pressure at the bottom of a vessel, using the problem solving protocol.
+# {numref}`example3-2` is a manometer system, with two working fluids (and the measured fluid for three total)
 # 
 # ```{figure} example3-3.png
 # ---
 # width: 500px
 # name: example3-3
 # ---
-# Caption
+# Manometer with three fluids (3 of 3)
 # ```
-# {numref}`example3-3` is a classical pressure at the bottom of a vessel, using the problem solving protocol.
-# 
+# {numref}`example3-3` is a manometer system, with two working fluids (and the measured fluid for three total)
+
 # ### Example 4
 # 
 # ```{figure} example4-1.png
@@ -280,32 +348,150 @@
 # width: 500px
 # name: example4-1
 # ---
-# Caption
+# Pressure in a small drop (1 of 2)
 # ```
-# {numref}`example4-1` is a classical pressure at the bottom of a vessel, using the problem solving protocol.
+# {numref}`example4-1` is the derivation of a formula to estimate the pressure in a small spherical droplet.
 # 
 # ```{figure} example4-2.png
 # ---
 # width: 500px
 # name: example4-2
 # ---
-# Caption
+# Pressure in a small drop (2 of 2)
 # ```
-# {numref}`example4-2` is a classical pressure at the bottom of a vessel, using the problem solving protocol.
-# 
+# {numref}`example4-2` is the derivation of a formula to estimate the pressure in a small spherical droplet.
+
 # ## Pressure Force on Submerged Objects
 # 
-# Energy a unit mass possesses because of its state of molecular activity.  Typical symbol is $u$
+# Now we consider the forces generated on submerged objects by hydrostatic pressure.  It's the same force you feel on your [耳](https://translate.yandex.com/?lang=en-ja&text=ears) when you dive to the bottom of a [schwimmbad](https://dictionary.cambridge.org/us/dictionary/german-english/schwimmbad).
 # 
 # :::{note}
-# The symbol $u$ is also commonly used for the x-component, or streamline component of velocity.  Be aware of context to avoid confusion.  In some documents $U$ is the velocity vector - again the context should be a clue.
+# I am having a little fun with the language translators on Google; the sentance in English is "... It's the same force you feel on your ears when you dive to the bottom of a swimming pool".
 # :::
 # 
-# ### Example 4
+# ### Uniform Pressure
 # 
-# Energy a substance possesses because of internal energy and applied normal stress (aka pressure).  Typical symbol is $h = u + \frac{p}{\rho}$
+# Consider area $A$ shown with **uniform** pressure as shown on {numref}`panel-uniform` 
 # 
-#  
+# ```{figure} panel-uniform.png
+# ---
+# width: 500px
+# name: panel-uniform
+# ---
+# Pressure force on some area.
+# ```
+# The indicated force is the product of the area $A$ and the pressure $p$
+# 
+# $$F=pA$$
+# 
+# ### Distributed Pressure
+# 
+# Now, consider the area $A$ shown with **distributed** pressure as shown on {numref}`panel-distributed`.  As we move around the plate, the value of $p$ changes with position (like going down in a column of water)
+# 
+# ```{figure} panel-distributed.png
+# ---
+# width: 500px
+# name: panel-distributed
+# ---
+# Pressure force on a small area in a variable pressure field
+# ```
+# 
+# In this instance, we use calculus to integrate all the little forces fo fine the aggregate (net) force on the entire plate.
+# 
+# $$F = \int_{A} p \cdot dA$$
+# 
+# Now lets extend the idea, to an arbitrary angle in the distributed pressure field, as in {numref}`panel-angle`
+# 
+# ```{figure} panel-angle.png
+# ---
+# width: 500px
+# name: panel-angle
+# ---
+# Flat plate submerged at an arbitrary angle
+# ```
+# Depth to an incremental portion of the plate $dy$ is $h$. Distance along the $+y$ axis is $y$.  The value of $y$ is related to depth, $h$, by the angle $\alpha$. 
+# 
+# :::{note}
+# We choose $\alpha$ to represent the angle because it looks like a fish, and fish are found underwater!
+# :::
+# 
+# Next looking at the plate from a viewing angle that is normal to the plate (the eyeball in the sketch)it might look like {numref}`panel-normal`
+# 
+# ```{figure} panel-normal.png
+# ---
+# width: 500px
+# name: panel-normal
+# ---
+# Looking perpindicular to the flat plate. Width of the integrand is some function of $y$
+# ```
+# 
+# In this sketch the panel area is $dA = width(y) \cdot dy$ when looking perpindicular to the $+y$ axis.  The resultant net force on the submerged plate (perpindicular to the $y$ axis) is simply 
+# 
+# $$F = \int_{A} p \cdot dA$$
+# 
+# Now we apply some geometry and triggernometry to relate the integral to depth (and some moments).
+# 
+# ```{figure} panel-trig.png
+# ---
+# width: 500px
+# name: panel-trig
+# ---
+# Geometric/Trigonometric relationships.
+# ```
+# Generally we will want to express pressure in terms of $y$ or $h$.
+# 
+# $$ p = \rho g h = \rho g y sin(\alpha)$$
+# 
+# In practice the actual integration is a nusicance, instead we would likw to be able to deal in total area and depth.  The term in the red box is the [first moment of area](https://en.wikipedia.org/wiki/First_moment_of_area) that you had in statics.
+# 
+# :::{note}
+# The observation of that the red box is the 1st moment of area, makes those tables of centroids and such for common geometric shapes quite useful in fluids!
+# :::
+# 
+# If you recall from statics, the first moment of area is the distance to the centroid of the geometric object from the axis (in this case the $x$ axis that is trying to poke your eye!)
+# 
+# $$ \frac{1}{A} \int_A y \cdot dA = \bar y$$
+# 
+# Applying some trigonometry and algebraic substitution
+# 
+# $$F = \rho g y sin(\alpha) A \bar y = \rho g A \bar h$$
+# 
+# Where $\bar h$ is the depth from the free surface to the centroid of the plate area.  So we now can express the magnitude of the force in terms of depth (to the centroid) and the plate area.
+# 
+# $$F = \gamma A \bar h$$
+
+# Now we have the magnitude, and sometimes that might be enough but usually we need to also know the line of action.  We find that by taking a moment to examine {numref}`line-o-action`
+# 
+# ```{figure} line-o-action.png
+# ---
+# width: 500px
+# name: line-o-action
+# ---
+# Line of action of equivalent point load (equivalent to the actual distributed load)
+# ```
+# We will simply require the moment generated by the total force we just determined (equivalent point load) to be equal the the moment generated by the distributed force (actual distributed load).
+# 
+# Choosing the upper edge of the plate as a rotational axis we have
+# 
+# $$ \sum M_A = \int_A y dF = y_P F$$
+# 
+# Rearrangement gives
+# 
+# $$ y_P = \frac{\int_A y dF}{F} = \frac{\int_A y^2sin(\alpha)dA}{\int_A y sin(\alpha)dA}$$
+# 
+# Simplification gives
+# 
+# $$ y_P = \frac{\int_A y^2dA}{\int_A y dA} = \frac{I_x}{A \bar y}$$
+# 
+# The value $I_x$ is the moment of inertia about the $x$ axis. We will then recall the [parallel axis theorem](https://en.wikipedia.org/wiki/Parallel_axis_theorem) to find the value in terms of our centroidal locations
+# 
+# $$ y_P =  \frac{I_0}{A \bar y}+ \bar y$$
+# 
+# Where $I_0$ is the moment of inertia about the plate centroid (tabulated for common geometric shapes).
+# 
+# The nice thing is that this calculus will work fine for any surface (shape and orientation), but at the expense of having to perform analysis to find the functions to integrate (or do numerical integrations which is easier if we can describe the geometry)
+
+# 
 
 # ## References
 # 
@@ -316,6 +502,10 @@
 # 3. DF Elger, BC Williams, Crowe, CT and JA Roberson, *Engineering Fluid Mechanics 10th edition*, John Wiley & Sons, Inc., 2013. [http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-3.pdf](http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-3.pdf)
 # 
 # 4. CE-3305-2022-1 Syllabus. [http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html](http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html)
+# 
+# 5. [Pressure Measurement](https://en.wikipedia.org/wiki/Pressure_measurement)
+# 
+# 6. [Barometer](https://en.wikipedia.org/wiki/Barometer)
 
 # In[ ]:
 
