@@ -384,6 +384,35 @@ print('Sp. Wt. of 30 cc sample = ',round(spwt_30cc,3))
 # ```
 # {numref}`capillary-water-2` is the remainder of the solution, with a list of unknowns, the governing equation, and worked out solution.  Notice the solution protocol is still followed but greatly simplified in this example.
 
+# ## Viscosimiters
+# 
+# ### Measuring viscosity
+# 
+# ### Example Problem
+# 
+# Figure {numref}`FallingCylinderViscosity` is a schematic of a cylinder falling inside a pipe that is filled with oil. The annular space between the cylinder and the pipe is lubricated with an oil film that has viscosity $\mu$.
+# 
+# ```{figure} FallingCylinderViscosity.png
+# ---
+# width: 600px
+# name: FallingCylinderViscosity
+# ---
+# Falling cylinder in an oil-filled pipe
+# ```
+# 
+# - Derive a formula for the steady rate of descent of a cylinder with weight $W$ , diameter $d$, and length $l$ sliding inside a vertical smooth pipe that has inside diameter $D$. Assume the cylinder remains concentric with the pipe as it falls.
+# - Use the general formula you develop to estimate the rate of descent for a cylinder 100 millimeters in diameter that slides inside a 100.5 millimeter inside diameter pipe. The cylinder is 200 millimeters long and weighs 15 Newtons. The lubricant is SAE 20W oil at $10^o~C$.
+# 
+# Applying the problem solving methodology we have:
+# 
+# ```{figure} FallingCylinderViscosity-Soln.png
+# ---
+# width: 600px
+# name: FallingCylinderViscosity-Soln
+# ---
+# 
+# ```
+
 # ## Readings
 # 
 # 1. CE-3305-2022-1 Syllabus. [http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html](http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html)
