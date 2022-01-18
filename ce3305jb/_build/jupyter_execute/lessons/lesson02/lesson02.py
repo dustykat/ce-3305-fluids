@@ -384,9 +384,11 @@ print('Sp. Wt. of 30 cc sample = ',round(spwt_30cc,3))
 # ```
 # {numref}`capillary-water-2` is the remainder of the solution, with a list of unknowns, the governing equation, and worked out solution.  Notice the solution protocol is still followed but greatly simplified in this example.
 
-# ## Viscosimiters
+# ## Viscometers
 # 
-# ### Measuring viscosity
+# A variety of [instruments](https://en.wikipedia.org/wiki/Viscometer) are used to measure viscosity.
+# 
+# They all operate on roughly the same principle - determine the force requires to make two solid planes move with a fluid between then; from the force and known geometry the viscosity can be inferred. The example problem below is a falling piston viscometer - with the question asked in an unusual fashion, but it could easily be used to measure viscosity based on a measured fall velocity.
 # 
 # ### Example Problem
 # 
@@ -394,7 +396,7 @@ print('Sp. Wt. of 30 cc sample = ',round(spwt_30cc,3))
 # 
 # ```{figure} FallingCylinderViscosity.png
 # ---
-# width: 600px
+# width: 300px
 # name: FallingCylinderViscosity
 # ---
 # Falling cylinder in an oil-filled pipe
@@ -407,11 +409,37 @@ print('Sp. Wt. of 30 cc sample = ',round(spwt_30cc,3))
 # 
 # ```{figure} FallingCylinderViscosity-Soln.png
 # ---
-# width: 600px
+# width: 400px
 # name: FallingCylinderViscosity-Soln
 # ---
 # 
 # ```
+# 
+# We can easily script a tool for frequent application of a falling cylinder viscometer
+
+# In[2]:
+
+
+# falling piston viscometer
+import math
+# viscosity function for falling piston in a tube geometry
+def viscosity(weight,spacing,dpiston,lpiston,velocity):
+    viscosity = (weight*spacing)/(2*math.pi*dpiston*lpiston*velocity)
+    return viscosity
+# Example Problem Values
+weight = 15 #newtons
+spacing = 0.5e-03 #meters spacing
+dpiston = 0.1 #meters
+lpiston = 0.2 #meters
+velocity = 0.17 #meters/sec
+print("Viscosity = ",round(viscosity(weight,spacing,dpiston,lpiston,velocity),3)," Newtons per square meter")
+
+
+# ## Vapor Pressure
+# 
+# [Vapor pressure](https://en.wikipedia.org/wiki/Vapor_pressure) is the pressure exerted by a vapor in thermodynamic equilibrium with its condensed phases (solid or liquid) at a given temperature in a closed system.
+# 
+# It varies by substance for example [water](https://en.wikipedia.org/wiki/Vapour_pressure_of_water) is extensively tabulated, as is that for [mercury](https://www.govinfo.gov/content/pkg/GOVPUB-C13-66a1ade54071892930184393b1802e69/pdf/GOVPUB-C13-66a1ade54071892930184393b1802e69.pdf), and many other practically useful substances.  It matters most in barometers and pipelines that have negative gage pressures - if the negative pressure gets too large the liquid will flash into vapor and can stop flow or go boom!
 
 # ## Readings
 # 

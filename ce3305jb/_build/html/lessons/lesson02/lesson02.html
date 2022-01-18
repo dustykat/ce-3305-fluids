@@ -332,21 +332,21 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#viscosimiters">
-   Viscosimiters
+  <a class="reference internal nav-link" href="#viscometers">
+   Viscometers
   </a>
   <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#measuring-viscosity">
-     Measuring viscosity
-    </a>
-   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#example-problem">
      Example Problem
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vapor-pressure">
+   Vapor Pressure
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#readings">
@@ -653,16 +653,15 @@ Dimensionally it is a force per unit length, and is one reason why liquids can r
 </div>
 <p><a class="reference internal" href="#capillary-water-2"><span class="std std-numref">Fig. 33</span></a> is the remainder of the solution, with a list of unknowns, the governing equation, and worked out solution.  Notice the solution protocol is still followed but greatly simplified in this example.</p>
 </div>
-<div class="section" id="viscosimiters">
-<h2>Viscosimiters<a class="headerlink" href="#viscosimiters" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="measuring-viscosity">
-<h3>Measuring viscosity<a class="headerlink" href="#measuring-viscosity" title="Permalink to this headline">¶</a></h3>
-</div>
+<div class="section" id="viscometers">
+<h2>Viscometers<a class="headerlink" href="#viscometers" title="Permalink to this headline">¶</a></h2>
+<p>A variety of <a class="reference external" href="https://en.wikipedia.org/wiki/Viscometer">instruments</a> are used to measure viscosity.</p>
+<p>They all operate on roughly the same principle - determine the force requires to make two solid planes move with a fluid between then; from the force and known geometry the viscosity can be inferred. The example problem below is a falling piston viscometer - with the question asked in an unusual fashion, but it could easily be used to measure viscosity based on a measured fall velocity.</p>
 <div class="section" id="example-problem">
 <h3>Example Problem<a class="headerlink" href="#example-problem" title="Permalink to this headline">¶</a></h3>
 <p>Figure <a class="reference internal" href="#fallingcylinderviscosity"><span class="std std-numref">Fig. 34</span></a> is a schematic of a cylinder falling inside a pipe that is filled with oil. The annular space between the cylinder and the pipe is lubricated with an oil film that has viscosity <span class="math notranslate nohighlight">\(\mu\)</span>.</p>
 <div class="figure align-default" id="fallingcylinderviscosity">
-<a class="reference internal image-reference" href="../../_images/FallingCylinderViscosity.png"><img alt="../../_images/FallingCylinderViscosity.png" src="../../_images/FallingCylinderViscosity.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../../_images/FallingCylinderViscosity.png"><img alt="../../_images/FallingCylinderViscosity.png" src="../../_images/FallingCylinderViscosity.png" style="width: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 34 </span><span class="caption-text">Falling cylinder in an oil-filled pipe</span><a class="headerlink" href="#fallingcylinderviscosity" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
@@ -671,9 +670,39 @@ Dimensionally it is a force per unit length, and is one reason why liquids can r
 </ul>
 <p>Applying the problem solving methodology we have:</p>
 <div class="figure align-default" id="fallingcylinderviscosity-soln">
-<a class="reference internal image-reference" href="../../_images/FallingCylinderViscosity-Soln.png"><img alt="../../_images/FallingCylinderViscosity-Soln.png" src="../../_images/FallingCylinderViscosity-Soln.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../../_images/FallingCylinderViscosity-Soln.png"><img alt="../../_images/FallingCylinderViscosity-Soln.png" src="../../_images/FallingCylinderViscosity-Soln.png" style="width: 400px;" /></a>
+</div>
+<p>We can easily script a tool for frequent application of a falling cylinder viscometer</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># falling piston viscometer</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="c1"># viscosity function for falling piston in a tube geometry</span>
+<span class="k">def</span> <span class="nf">viscosity</span><span class="p">(</span><span class="n">weight</span><span class="p">,</span><span class="n">spacing</span><span class="p">,</span><span class="n">dpiston</span><span class="p">,</span><span class="n">lpiston</span><span class="p">,</span><span class="n">velocity</span><span class="p">):</span>
+    <span class="n">viscosity</span> <span class="o">=</span> <span class="p">(</span><span class="n">weight</span><span class="o">*</span><span class="n">spacing</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">dpiston</span><span class="o">*</span><span class="n">lpiston</span><span class="o">*</span><span class="n">velocity</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">viscosity</span>
+<span class="c1"># Example Problem Values</span>
+<span class="n">weight</span> <span class="o">=</span> <span class="mi">15</span> <span class="c1">#newtons</span>
+<span class="n">spacing</span> <span class="o">=</span> <span class="mf">0.5e-03</span> <span class="c1">#meters spacing</span>
+<span class="n">dpiston</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="c1">#meters</span>
+<span class="n">lpiston</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="c1">#meters</span>
+<span class="n">velocity</span> <span class="o">=</span> <span class="mf">0.17</span> <span class="c1">#meters/sec</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Viscosity = &quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">viscosity</span><span class="p">(</span><span class="n">weight</span><span class="p">,</span><span class="n">spacing</span><span class="p">,</span><span class="n">dpiston</span><span class="p">,</span><span class="n">lpiston</span><span class="p">,</span><span class="n">velocity</span><span class="p">),</span><span class="mi">3</span><span class="p">),</span><span class="s2">&quot; Newtons per square meter&quot;</span><span class="p">)</span>
+</pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Viscosity =  0.351  Newtons per square meter
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="vapor-pressure">
+<h2>Vapor Pressure<a class="headerlink" href="#vapor-pressure" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Vapor_pressure">Vapor pressure</a> is the pressure exerted by a vapor in thermodynamic equilibrium with its condensed phases (solid or liquid) at a given temperature in a closed system.</p>
+<p>It varies by substance for example <a class="reference external" href="https://en.wikipedia.org/wiki/Vapour_pressure_of_water">water</a> is extensively tabulated, as is that for <a class="reference external" href="https://www.govinfo.gov/content/pkg/GOVPUB-C13-66a1ade54071892930184393b1802e69/pdf/GOVPUB-C13-66a1ade54071892930184393b1802e69.pdf">mercury</a>, and many other practically useful substances.  It matters most in barometers and pipelines that have negative gage pressures - if the negative pressure gets too large the liquid will flash into vapor and can stop flow or go boom!</p>
 </div>
 <div class="section" id="readings">
 <h2>Readings<a class="headerlink" href="#readings" title="Permalink to this headline">¶</a></h2>
