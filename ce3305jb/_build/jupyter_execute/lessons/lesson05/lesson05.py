@@ -43,11 +43,43 @@
 # ```
 # Consider the flow depicted in the tank above; is the flow field uniform or non-uniform?  What about the flow above the dashed line?
 
-# In[ ]:
-
-
-
-
+# Flow dimensions are classified by how many space coordinates are required to speciofy the velocity field.  All real flows are 3D, but useful results are possible with 2D and 1D approximations.
+# 
+# ### Velocity Field
+# 
+# Velocities are expressed in either a LaGrangian sense, or Eulerian sense.
+# 
+# ```{figure} velocity-field.png
+# ---
+# width: 500px
+# name: velocity-field
+# ---
+# Coordinate systems for velocity description
+# ```
+# 
+# Field is from the mathematical description of a field.  Various rules apply to fields, and these are used later on.
+# 
+# - Magnetic Fields
+# - Elactric Fields
+# - Gravitational Fields
+# - Strawberry Fields (forever)
+# 
+# Are examples of "things" that are fields.  The idea is that if you know location, you know behavior.
+# ```{figure} velocity-equation.png
+# ---
+# width: 500px
+# name: velocity-equation
+# ---
+# Parametric (in time) velocity field equation
+# ```
+# 
+# ```{figure} velocity-stream.png
+# ---
+# width: 500px
+# name: velocity-stream
+# ---
+# Streamline coordinates for a velocity 
+# ```
 
 # In[ ]:
 
