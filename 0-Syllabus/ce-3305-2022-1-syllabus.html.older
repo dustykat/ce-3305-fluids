@@ -13244,6 +13244,25 @@ Computational Thinking with Data Science (ENGR 1330) or equivalent</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<hr>
+<h1 id="Build-Notes">Build Notes<a class="anchor-link" href="#Build-Notes">&#182;</a></h1><p>If you are reading this cell, then this copy of the syllabus is <strong>Not completed</strong>.
+To do:</p>
+<ul>
+<li>test dates need fixing</li>
+<li>class dates need fixing</li>
+<li>cross links to lesson pages</li>
+<li>cross links to homework pages</li>
+</ul>
+<hr>
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Course-Schedule">Course Schedule<a class="anchor-link" href="#Course-Schedule">&#182;</a></h2>
 </div>
 </div>
@@ -13296,8 +13315,8 @@ Computational Thinking with Data Science (ENGR 1330) or equivalent</p>
 </tr>
 <tr>
 <td style="text-align:left">20Jan22</td>
-<td style="text-align:left">Fluid Statics and Pressure <br> - Measuring Devices</td>
-<td style="text-align:left">pp. 47-77</td>
+<td style="text-align:left">Fluid Statics and Pressure <br> - Measuring Devices <br> - Hydrostatic Force on a Plane Surface <br></td>
+<td style="text-align:left">pp. 47-80</td>
 <td style="text-align:left"><a href="http://54.243.252.9/ce-3305-webroot/2-Exercises/ES2/ES2.html">ES-2</a></td>
 </tr>
 </tbody>
@@ -13322,14 +13341,14 @@ Computational Thinking with Data Science (ENGR 1330) or equivalent</p>
 <tbody>
 <tr>
 <td style="text-align:left">25Jan22</td>
-<td style="text-align:left">Fluid Statics and Pressure <br> - Force on a plane surface <br> - Forces on submerged objects</td>
-<td style="text-align:left">pp. 77-80</td>
+<td style="text-align:left">Fluid Statics and Pressure <br>- Forces on Submerged Objects <br> - Bouyancy <br> - Stability</td>
+<td style="text-align:left">pp. 77-93</td>
 <td style="text-align:left"><a href="http://54.243.252.9/ce-3305-webroot/2-Exercises/ES3/ES3.html">ES-3</a></td>
 </tr>
 <tr>
 <td style="text-align:left">27Jan22</td>
-<td style="text-align:left">Fluid Statics and Pressure <br> - Bouyancy <br> - Stability</td>
-<td style="text-align:left">pp. 80-93</td>
+<td style="text-align:left">Euler Equation <br> - Constant Acceleration, Translation <br> -  Constant Velocity, Rotation</td>
+<td style="text-align:left">pp. 93-141</td>
 <td style="text-align:left"><a href="http://54.243.252.9/ce-3305-webroot/2-Exercises/ES4/ES4.html">ES-4</a></td>
 </tr>
 </tbody>
@@ -13354,14 +13373,14 @@ Computational Thinking with Data Science (ENGR 1330) or equivalent</p>
 <tbody>
 <tr>
 <td style="text-align:left">1Feb22</td>
-<td style="text-align:left">Euler Equation <br> - Constant Acceleration, Translation <br> -  Constant Velocity, Rotation</td>
-<td style="text-align:left">pp. 93-141</td>
+<td style="text-align:left">Kinematics <br> - Eulerian Coordinates <br> - Lagrangian Coordinates <br> - Acceleration</td>
+<td style="text-align:left">pp. 141-177</td>
 <td style="text-align:left"><a href="http://54.243.252.9/ce-3305-webroot/2-Exercises/ES5/ES5.html">ES-5</a></td>
 </tr>
 <tr>
 <td style="text-align:left">3Feb22</td>
-<td style="text-align:left">Kinematics <br> - Eulerian Coordinates <br> - Lagrangian Coordinates <br> - Acceleration</td>
-<td style="text-align:left">pp. 141-177</td>
+<td style="text-align:left">Reynold’s Transport Theorem   <br> - Control Volumes <br> - Conservation of Mass <br> - Mean Section Velocity</td>
+<td style="text-align:left">pp. 177-223</td>
 <td style="text-align:left"><a href="http://54.243.252.9/ce-3305-webroot/2-Exercises/ES6/ES6.html">ES-6</a></td>
 </tr>
 </tbody>
@@ -13387,15 +13406,14 @@ Computational Thinking with Data Science (ENGR 1330) or equivalent</p>
 <tbody>
 <tr>
 <td style="text-align:left">8Feb22</td>
-<td style="text-align:left">Reynold’s Transport Theorem   <br> - Control Volumes <br> - Conservation of Mass <br> - Mean Section Velocity</td>
-<td style="text-align:left">pp. 177-223</td>
-<td style="text-align:left"></td>
-<td>ES-7</td>
+<td style="text-align:left">Bernoulli Equation  <br> - Energy Grade Lines <br> - Hydraulic Grade Lines <br> - Energy (Modified Bernoulli) Equation</td>
+<td style="text-align:left">pp. 223-293</td>
+<td style="text-align:left">ES-7</td>
 </tr>
 <tr>
 <td style="text-align:left">10Feb22</td>
-<td style="text-align:left">Bernoulli Equation  <br> - Energy Grade Lines <br> - Hydraulic Grade Lines <br> - Energy (Modified Bernoulli) Equation</td>
-<td style="text-align:left">pp. 223-293</td>
+<td style="text-align:left">Reynold’s Transport Theorem <br> - Linear Momentum <br> - Angular Momentum</td>
+<td style="text-align:left">pp. 293-355</td>
 <td style="text-align:left">ES-8</td>
 </tr>
 </tbody>
@@ -13420,14 +13438,14 @@ Computational Thinking with Data Science (ENGR 1330) or equivalent</p>
 <tbody>
 <tr>
 <td style="text-align:left">15Feb22</td>
-<td style="text-align:left">Reynold’s Transport Theorem <br> - Linear Momentum <br> - Angular Momentum</td>
-<td style="text-align:left">pp. 293-355</td>
+<td style="text-align:left">Differential Fluid Flow <br> - Kinematics <br> - Circulation <br> - Vorticity</td>
+<td style="text-align:left">pp. 355-372</td>
 <td style="text-align:left">ES-9</td>
 </tr>
 <tr>
 <td style="text-align:left">17Feb22</td>
-<td style="text-align:left">Differential Fluid Flow <br> - Kinematics <br> - Circulation <br> - Vorticity</td>
-<td style="text-align:left">pp. 355-372</td>
+<td style="text-align:left">Differential Fluid Flow <br> - Stream Function/Velocity Potential <br> - Ideal Flows <br> - Navier-Stokes Equations</td>
+<td style="text-align:left">pp. 372-429</td>
 <td style="text-align:left">ES-10</td>
 </tr>
 </tbody>
@@ -13452,14 +13470,14 @@ Computational Thinking with Data Science (ENGR 1330) or equivalent</p>
 <tbody>
 <tr>
 <td style="text-align:left">22Feb22</td>
-<td style="text-align:left">Differential Fluid Flow <br> - Stream Function/Velocity Potential <br> - Ideal Flows <br> - Navier-Stokes Equations</td>
-<td style="text-align:left">pp. 372-429</td>
+<td style="text-align:left">Dimensional Analysis <br> - Pi groups <br> – Correlation Functions</td>
+<td style="text-align:left">pp. 429-444</td>
 <td style="text-align:left">ES-11</td>
 </tr>
 <tr>
 <td style="text-align:left">24Feb22</td>
-<td style="text-align:left">Dimensional Analysis <br> - Pi groups <br> – Correlation Functions</td>
-<td style="text-align:left">pp. 429-444</td>
+<td style="text-align:left">Similitude  <br> - Geometric Similarity <br> - Kinematic Similarity <br> - Dynamic Similarity</td>
+<td style="text-align:left">pp. 444-469</td>
 <td style="text-align:left">ES-12</td>
 </tr>
 </tbody>
@@ -13485,14 +13503,14 @@ Computational Thinking with Data Science (ENGR 1330) or equivalent</p>
 <tbody>
 <tr>
 <td style="text-align:left">1Mar22</td>
-<td style="text-align:left">Similitude  <br> - Geometric Similarity <br> - Kinematic Similarity <br> - Dynamic Similarity</td>
-<td style="text-align:left">pp. 444-469</td>
+<td style="text-align:left">Viscous Internal Flows <br> - Parallel Plates <br></td>
+<td style="text-align:left">pp. 469-480</td>
 <td style="text-align:left">ES-13</td>
 </tr>
 <tr>
 <td style="text-align:left">3Mar22</td>
-<td style="text-align:left">Viscous Internal Flows <br> - Parallel Plates <br></td>
-<td style="text-align:left">pp. 469-480</td>
+<td style="text-align:left">Viscous Internal Flows <br> - Smooth Circular Conduit <br> - Reynolds Number</td>
+<td style="text-align:left">pp. 480-517</td>
 <td style="text-align:left">ES-14</td>
 </tr>
 </tbody>
@@ -13517,14 +13535,14 @@ Computational Thinking with Data Science (ENGR 1330) or equivalent</p>
 <tbody>
 <tr>
 <td style="text-align:left">8Mar22</td>
-<td style="text-align:left">Viscous Internal Flows <br> - Smooth Circular Conduit <br> - Reynolds Number</td>
-<td style="text-align:left">pp. 480-517</td>
+<td style="text-align:left">Closed Conduit Analysis <br> - Pipeline loss <br> - Fitting loss <br> - Single Pipeline Flow</td>
+<td style="text-align:left">pp. 517-540</td>
 <td style="text-align:left">ES-15</td>
 </tr>
 <tr>
 <td style="text-align:left">10Mar22</td>
-<td style="text-align:left">Closed Conduit Analysis <br> - Pipeline loss <br> - Fitting loss <br> - Single Pipeline Flow</td>
-<td style="text-align:left">pp. 517-540</td>
+<td style="text-align:left">Pipe Network Analysis <br> - Junction heads <br> - Conduit loss <br> - Equation systems</td>
+<td style="text-align:left">pp. 540-569</td>
 <td style="text-align:left">ES-16</td>
 </tr>
 </tbody>
@@ -13549,14 +13567,14 @@ Computational Thinking with Data Science (ENGR 1330) or equivalent</p>
 <tbody>
 <tr>
 <td style="text-align:left">22Mar22</td>
-<td style="text-align:left">Pipe Network Analysis <br> - Junction heads <br> - Conduit loss <br> - Equation systems</td>
+<td style="text-align:left">Computational Hydraulics <br> - Pipe Network Analysis <br> - Newton-Raphson Method</td>
 <td style="text-align:left">pp. 540-569</td>
 <td style="text-align:left">ES-17</td>
 </tr>
 <tr>
 <td style="text-align:left">24Mar22</td>
-<td style="text-align:left">Computational Hydraulics <br> - Pipe Network Analysis <br> - Newton-Raphson Method</td>
-<td style="text-align:left">pp. 540-569</td>
+<td style="text-align:left">Viscous External Flows <br> – Laminar Boundary Layers <br> - Turbulent Boundary Layers</td>
+<td style="text-align:left">pp. 569-596</td>
 <td style="text-align:left">ES-18</td>
 </tr>
 </tbody>
@@ -13582,14 +13600,14 @@ Computational Thinking with Data Science (ENGR 1330) or equivalent</p>
 <tbody>
 <tr>
 <td style="text-align:left">29Mar22</td>
-<td style="text-align:left">Viscous External Flows <br> – Laminar Boundary Layers <br> - Turbulent Boundary Layers</td>
-<td style="text-align:left">pp. 569-596</td>
+<td style="text-align:left">Viscous External Flows <br> - Drag and Lift<br> - Flow over Flat Plate <br> - Flow around Cylinder</td>
+<td style="text-align:left">pp. 596-647</td>
 <td style="text-align:left">ES-19</td>
 </tr>
 <tr>
 <td style="text-align:left">31Mar22</td>
-<td style="text-align:left">Viscous External Flows <br> - Drag and Lift<br> - Flow over Flat Plate <br> - Flow around Cylinder</td>
-<td style="text-align:left">pp. 596-647</td>
+<td style="text-align:left">Open Conduits <br> - Flow Types <br> - Specific Energy</td>
+<td style="text-align:left">pp. 647-666</td>
 <td style="text-align:left">ES-20</td>
 </tr>
 </tbody>
@@ -13614,14 +13632,14 @@ Computational Thinking with Data Science (ENGR 1330) or equivalent</p>
 <tbody>
 <tr>
 <td style="text-align:left">5Apr22</td>
-<td style="text-align:left">Open Conduits <br> - Flow Types <br> - Specific Energy</td>
-<td style="text-align:left">pp. 647-666</td>
+<td style="text-align:left">Steady Flows <br> - Uniform Flow <br> - Gradually Varied Flow</td>
+<td style="text-align:left">pp. 666-680</td>
 <td style="text-align:left">ES-21</td>
 </tr>
 <tr>
 <td style="text-align:left">7Apr22</td>
-<td style="text-align:left">Steady Flows <br> - Uniform Flow <br> - Gradually Varied Flow</td>
-<td style="text-align:left">pp. 666-680</td>
+<td style="text-align:left">Steady Flows (continued) <br> - Rapidly Varied Flow <br> - Hydraulic Jump <br> - Weirs</td>
+<td style="text-align:left">pp. 680-707</td>
 <td style="text-align:left">ES-22</td>
 </tr>
 </tbody>
@@ -13646,13 +13664,13 @@ Computational Thinking with Data Science (ENGR 1330) or equivalent</p>
 <tbody>
 <tr>
 <td style="text-align:left">12Apr22</td>
-<td style="text-align:left">Steady Flows (continued) <br> - Rapidly Varied Flow <br> - Hydraulic Jump <br> - Weirs</td>
-<td style="text-align:left">pp. 680-707</td>
+<td style="text-align:left">Computational Hydraulics <br> - GVF Backwater Curves <br> - GVF Frontwater Curves</td>
+<td style="text-align:left">ppXX-XX</td>
 <td style="text-align:left">ES-23</td>
 </tr>
 <tr>
 <td style="text-align:left">14Apr22</td>
-<td style="text-align:left">Computational Hydraulics <br> - GVF Backwater Curves <br> - GVF Frontwater Curves</td>
+<td style="text-align:left">Fluid machines <br> - Fans <br> - Compressors <br> - Pumps</td>
 <td style="text-align:left">ppXX-XX</td>
 <td style="text-align:left">ES-24</td>
 </tr>
@@ -13679,13 +13697,13 @@ Computational Thinking with Data Science (ENGR 1330) or equivalent</p>
 <tbody>
 <tr>
 <td style="text-align:left">19Apr22</td>
-<td style="text-align:left">Fluid machines <br> - Fans <br> - Compressors</td>
+<td style="text-align:left">Fluid machines <br> - Pumps</td>
 <td style="text-align:left">ppXX-XX</td>
 <td style="text-align:left">ES-25</td>
 </tr>
 <tr>
 <td style="text-align:left">21Apr22</td>
-<td style="text-align:left">Fluid machines <br> - Pumps</td>
+<td style="text-align:left">Computational Hydraulics <br> - Pipeline with Pumps <br> - Pipe network with pumps</td>
 <td style="text-align:left">ppXX-XX</td>
 <td style="text-align:left">ES-26</td>
 </tr>
@@ -13711,7 +13729,7 @@ Computational Thinking with Data Science (ENGR 1330) or equivalent</p>
 <tbody>
 <tr>
 <td style="text-align:left">26Apr22</td>
-<td style="text-align:left">Computational Hydraulics <br> - Pipeline with Pumps <br> - Pipe network with pumps</td>
+<td style="text-align:left">Unsteady Flow in Pipelines <br> - Rigid Column Theory <br> -  Elastic Theory</td>
 <td style="text-align:left">ppXX-XX</td>
 <td style="text-align:left">ES-27</td>
 </tr>
@@ -13743,7 +13761,7 @@ Computational Thinking with Data Science (ENGR 1330) or equivalent</p>
 <tbody>
 <tr>
 <td style="text-align:left">3May22</td>
-<td style="text-align:left">Compressible Flow <br> - Heat Transfer <br> - Shock Waves <br> - Measurement <br> Unsteady Flow in Pipelines <br> - Rigid Column Theory <br> -  Elastic Theory</td>
+<td style="text-align:left">Compressible Flow <br> - Heat Transfer <br> - Shock Waves <br> - Measurement</td>
 <td style="text-align:left">ppXX-XX</td>
 <td style="text-align:left">ES-28</td>
 </tr>
