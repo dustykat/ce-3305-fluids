@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Euler Equation
+# # Euler and Bernoulli Equations
 # 
 # ## Lesson Outline
 # - Background
@@ -87,14 +87,231 @@
 
 
 
-# ### Will it float
+# ### Uniform Flow
+# 
+# Uniform flow occurs in things with relatively straight pathlines (streamlines), and constant cross section geometries.  Things like pipes, channels of constant geometry, aquifers (like sand-filled pipes), and petroleum reservoirs (like aquifers, but with hydrocarbons in economically useable amounts).
+# 
+# If geometry changes like in a nozzle, then non-uniform flow.  If at steady flowrate, non-uniform can have convective acceleration.
+# 
+# ```{figure} uniform-flow.png
+# ---
+# width: 500px
+# name: uniform-flow
+# ---
+# Uniform flow examples
+# ```
+# 
+# Laminar flow is where fluid in adjacent layers (think back to definition of viscosity) move smoothly with respect to each other (very little mixing across layers).  Turbulent flow has layers mixing substantially.
+# 
+# **Viscous** shear stresses impact the flow.
+# 
+# **Inviscid** shear stresses small enough to ignore.
+# 
+# ```{figure} boundary6-1.png
+# ---
+# width: 500px
+# name: boundary6-1
+# ---
+# Multiple flow regimes around a cylinder
+# ```
+# 
+# Different regimes can exist simultaneously in adjacent space as in {numref}`boundary6-1`. The approach region is nearly inviscid, at the boundary viscid flow along the interface, separation where flow leaves the interface, and a wake region.  Drag increases where there is separation - prevention is impossible but drag reduction by delaying sepaeration is possible.
+# 
+# ```{figure} cannonball.png
+# ---
+# width: 500px
+# name: canonball
+# ---
+# Surface modifications to delay separation
+# ```
+# 
+# Acceleration occurs when there is a change in speed and/or direction.
+# 
+# 
+# ```{figure} acceleration1D1.png
+# ---
+# width: 500px
+# name: acceleration1D1
+# ---
+# 
+# ```
+# 
+# Apply these ideas in multiple spatial dimensions:
+# 
+# 
+# ```{figure} acceleration3D1.png
+# ---
+# width: 500px
+# name: acceleration3D1
+# ---
+# 
+# ```
+# Re-expressing using kinematics terms 
+# 
+# ```{figure} acceleration3D2.png
+# ---
+# width: 500px
+# name: acceleration3D2
+# ---
+# 
+# ```
+# 
+# Some tidying
+# 
+# ```{figure} acceleration3D3.png
+# ---
+# width: 500px
+# name: acceleration3D3
+# ---
+# 
+# ```
+# 
+# A schematic of particle motion over a short time interval.
+# 
+# ```{figure} acceleration3D4.png
+# ---
+# width: 600px
+# name: acceleration3D4
+# ---
+# 
+# ```
+# 
+# We can examine the acceleration either as above or as:
+# 
+# ```{figure} acceleration3D5.png
+# ---
+# width: 400px
+# name: acceleration3D5
+# ---
+# 
+# ```
+# Now recall the expression derived when we demonstrated that pressure should be scalar
+# 
+# 
+# ```{figure} euler-replay.png
+# ---
+# width: 400px
+# name: euler-replay
+# ---
+# 
+# ```
+# 
+# Employ some of these ideas in an example.
+
+# #### Example: Flow field in a nozzle
+# 
+# Here is an example of the type of analysis involved.  Identify the problem solving steps depicted.
+# 
+# ```{figure} trapezoid-nozzle.png
+# ---
+# width: 600px
+# name: trapezoid-nozzle
+# ---
+# 
+# ```
+# 
 # 
 
-# In[ ]:
-
-
-
-
+# ### Euler's Equation and the Bernoulli Equation
+# 
+# Here we will start with the Euler equation and from a sequence of plausible stipulations arrive at the Bernoulli Equation.  This development is an alternative to the way most books present the Bernoulli Equation - choose whichever makes more sense to you.
+# 
+# ```{figure} euler-one.png
+# ---
+# width: 500px
+# name: euler-one
+# ---
+# 
+# ```
+# 
+# #### Example: Fluid surface under constant linear acceleration
+# 
+# Here is an example combining hydrostatic pressure equation and acceleration.  Identify the problem solving steps depicted.  
+# 
+# ```{figure} linear-acc-1.png
+# ---
+# width: 600px
+# name: linear-acc-1
+# ---
+# 
+# ```
+# 
+# ```{figure} linear-acc-2.png
+# ---
+# width: 600px
+# name: linear-acc-2
+# ---
+# 
+# ```
+# #### Example: Constant Angular Velocity
+# 
+# ```{figure} ang-vel-1.png
+# ---
+# width: 600px
+# name: ang-vel-1
+# ---
+# 
+# ```
+# 
+# ```{figure} ang-vel-2.png
+# ---
+# width: 600px
+# name: ang-vel-2
+# ---
+# 
+# ```
+# 
+# Now to continue to onward to the Bernoulli Equation.
+# 
+# ```{figure} euler-two.png
+# ---
+# width: 500px
+# name: euler-two
+# ---
+# 
+# ```
+# 
+# ```{figure} euler-three.png
+# ---
+# width: 500px
+# name: euler-three
+# ---
+# 
+# ```
+# 
+# ```{figure} euler-four.png
+# ---
+# width: 500px
+# name: euler-four
+# ---
+# 
+# ```
+# 
+# ```{figure} euler-five.png
+# ---
+# width: 500px
+# name: euler-five
+# ---
+# 
+# ```
+# 
+# ```{figure} euler-six.png
+# ---
+# width: 500px
+# name: euler-six
+# ---
+# 
+# ```
+# 
+# ```{figure} bernoulli-one.png
+# ---
+# width: 500px
+# name: bernoulli-one
+# ---
+# 
+# ```
+# 
+# 
 
 # 
 # ## Readings
