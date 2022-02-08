@@ -325,15 +325,3 @@
 # 4. Cleveland, T. G. (2014) *Fluid Mechanics Notes to Accompany CE 3305 at Jade-Holshule (TTU Study Abroad 2015-2019)*, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering. [http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-005.0.pdf](http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-005.0.pdf)
 # 
 # 5. De Lima, R. P., Cleveland, T. G., De Carvalho, R.P., 2014. *Infrared thermography as a heat tracer method for velocity estimation in shallow flows* [Die Bodenkultur, Journal for Land Management, Food, and Envrionment, Vol 65, No. 3-4, pp. 71-77. ISSN 006-5471](http://54.243.252.9/ce-3305-webroot/3-Readings/Thermal-Image.PDF)
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
