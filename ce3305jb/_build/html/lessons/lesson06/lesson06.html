@@ -350,9 +350,31 @@
 <div class="figure align-default" id="rotation-two">
 <a class="reference internal image-reference" href="../../_images/rotation-two.png"><img alt="../../_images/rotation-two.png" src="../../_images/rotation-two.png" style="width: 600px;" /></a>
 </div>
+<div class="figure align-default" id="rotation-three">
+<a class="reference internal image-reference" href="../../_images/rotation-three.png"><img alt="../../_images/rotation-three.png" src="../../_images/rotation-three.png" style="width: 600px;" /></a>
+</div>
 </div>
 <div class="section" id="control-volumes-and-continunity">
 <h3>Control Volumes and Continunity<a class="headerlink" href="#control-volumes-and-continunity" title="Permalink to this headline">¶</a></h3>
+<p>Consider a conduit with cross section area, <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>The volume of fluid that passes area <span class="math notranslate nohighlight">\(A\)</span> at location <span class="math notranslate nohighlight">\(x\)</span> in some time interval <span class="math notranslate nohighlight">\(\Delta t\)</span> is given by
+<span class="math notranslate nohighlight">\( A \Delta x = V\)</span></p>
+<div class="figure align-default" id="discharge">
+<a class="reference internal image-reference" href="../../_images/discharge.png"><img alt="../../_images/discharge.png" src="../../_images/discharge.png" style="width: 600px;" /></a>
+</div>
+<p>The flow rate is <span class="math notranslate nohighlight">\(Q = \frac{V}{\Delta t} = \frac{\Delta x}{\Delta t}A\)</span>, the “velocity term” <span class="math notranslate nohighlight">\(u = \frac{\Delta x}{\Delta t}\)</span> is the “mean section velocity”.</p>
+<p>If the velocity varies over the cross section one can obtain the mean section velocity by integration; and in fact this is how streamflow is determined.</p>
+<div class="figure align-default" id="velocity-dist">
+<a class="reference internal image-reference" href="../../_images/velocity-dist.png"><img alt="../../_images/velocity-dist.png" src="../../_images/velocity-dist.png" style="width: 600px;" /></a>
+</div>
+<p>If the orientation is not orthogonal the integrals are the result of the inner product of the velocity vector <span class="math notranslate nohighlight">\(\bar V\)</span> and the area vector <span class="math notranslate nohighlight">\(\bar {dA}\)</span></p>
+<div class="figure align-default" id="q-flux">
+<a class="reference internal image-reference" href="../../_images/q-flux.png"><img alt="../../_images/q-flux.png" src="../../_images/q-flux.png" style="width: 600px;" /></a>
+</div>
+<p>The mass flow rate is the product of the volumetric rate and the fluid density</p>
+<div class="figure align-default" id="mass-flow">
+<a class="reference internal image-reference" href="../../_images/mass-flow.png"><img alt="../../_images/mass-flow.png" src="../../_images/mass-flow.png" style="width: 600px;" /></a>
+</div>
 </div>
 </div>
 <div class="section" id="readings">
