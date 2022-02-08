@@ -155,6 +155,37 @@
 # ---
 # 
 # ```
+# 
+# As with volume, the mass flows also are obtained by inner products as:
+# 
+# 
+# ```{figure} frux-integrals.png
+# ---
+# width: 600px
+# name: frux-integrals
+# ---
+# 
+# ```
+
+# #### Example: Flow in a Rectangular Conduit
+# 
+# ```{figure} rect-channel.png
+# ---
+# width: 600px
+# name: rect-channel
+# ---
+# 
+# ```
+
+# #### Example: Flow in a Triangular Conduit
+# 
+# ```{figure} v-channel.png
+# ---
+# width: 600px
+# name: v-channel
+# ---
+# 
+# ```
 
 # 
 # ## Readings
