@@ -5,7 +5,7 @@
 # 
 # ## Lesson Outline
 # - Applications
-# -
+# - Concepts of Flux (a prelude to Reynolds Transport Theorem)
 
 # ### Background
 # 
