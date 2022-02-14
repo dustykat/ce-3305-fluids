@@ -415,6 +415,41 @@ $B_{sys} = \int \beta dm = \int \beta \rho dV$ -->
 <div class="figure align-default" id="example-1">
 <a class="reference internal image-reference" href="../../_images/example-1.png"><img alt="../../_images/example-1.png" src="../../_images/example-1.png" style="width: 600px;" /></a>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># problem statement - above Yay!</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># sketch</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># known</span>
+<span class="n">V_in</span> <span class="o">=</span> <span class="mi">7</span> <span class="c1"># m/s</span>
+<span class="n">A_in</span> <span class="o">=</span> <span class="mf">0.0025</span> <span class="c1"># m^2</span>
+<span class="n">Q_out</span> <span class="o">=</span> <span class="mf">0.003</span> <span class="c1">#m^3/s</span>
+<span class="c1"># rho = 1000 # kg/m3</span>
+<span class="c1"># grabity = 9.8 # m/s/s</span>
+
+<span class="c1"># change in storage</span>
+<span class="n">dSdt</span> <span class="o">=</span> <span class="n">V_in</span><span class="o">*</span><span class="n">A_in</span> <span class="o">-</span> <span class="n">Q_out</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;storage accumulation is .... wait for it ...&#39;</span><span class="p">,</span><span class="n">dSdt</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>storage accumulation is .... wait for it ... 0.014500000000000002
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="readings">
 <h2>Readings<a class="headerlink" href="#readings" title="Permalink to this headline">¶</a></h2>

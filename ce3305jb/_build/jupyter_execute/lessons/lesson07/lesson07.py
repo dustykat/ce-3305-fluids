@@ -198,6 +198,33 @@
 # 
 # ```
 
+# In[1]:
+
+
+# problem statement - above Yay!
+
+
+# In[2]:
+
+
+# sketch
+
+
+# In[3]:
+
+
+# known
+V_in = 7 # m/s
+A_in = 0.0025 # m^2
+Q_out = 0.003 #m^3/s
+# rho = 1000 # kg/m3
+# grabity = 9.8 # m/s/s
+
+# change in storage
+dSdt = V_in*A_in - Q_out
+print('storage accumulation is .... wait for it ...',dSdt)
+
+
 # 
 # ## Readings
 # 
