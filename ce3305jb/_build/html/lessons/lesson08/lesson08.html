@@ -1,0 +1,622 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bernoulli &amp; CV Applications &#8212; CE 3305 Mechanics of Fluids</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Control Volume Analysis - Continunity" href="../lesson07/lesson07.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/I5-fluidos.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">CE 3305 Mechanics of Fluids</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Fluid Mechanics Notes to Accompany CE 3305 at TTU
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson01/lesson01.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson02/lesson02.html">
+   Basic Fluid Properties
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson03/lesson03.html">
+   Fluid Statics and Pressure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson04/lesson04.html">
+   Fluid Statics and Pressure (continued)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson05/lesson05.html">
+   Euler and Bernoulli Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson06/lesson06.html">
+   Bernoulli Applications
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson07/lesson07.html">
+   Control Volume Analysis - Continunity
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Bernoulli &amp; CV Applications
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/lessons/lesson08/lesson08.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flessons/lesson08/lesson08.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/lessons/lesson08/lesson08.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lesson-outline">
+   Lesson Outline
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#background">
+     Background
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pieziometer">
+     Pieziometer
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pitot-static-system">
+     Pitot-Static System
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-1-appliocation-of-continunity-to-a-spa">
+   Example 1: Appliocation of Continunity to a Spa
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-2-time-to-drain-a-tank">
+   Example 2: Time to Drain a Tank
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-3-time-to-drain-a-tank">
+   Example 3: Time to Drain a Tank
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-4">
+     Example 4
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#readings">
+   Readings
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="bernoulli-cv-applications">
+<h1>Bernoulli &amp; CV Applications<a class="headerlink" href="#bernoulli-cv-applications" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="lesson-outline">
+<h2>Lesson Outline<a class="headerlink" href="#lesson-outline" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Measuring velocity and pressure using pitot-static systems (Bernoulli application)</p></li>
+<li><p>Examples of CV applications for continunity</p></li>
+<li><p>CV Relationships for momentum</p></li>
+</ul>
+<div class="section" id="background">
+<h3>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h3>
+<p>Pressure and velocity can be measured using simple tools based on Bernoulli’s equation.
+While considered archaic today, these devices work without external power (at night need a flashlight) and are a desirable back-up to modern transducers.</p>
+</div>
+<div class="section" id="pieziometer">
+<h3>Pieziometer<a class="headerlink" href="#pieziometer" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="piezometer-l8">
+<a class="reference internal image-reference" href="../../_images/piezometer-l8.png"><img alt="../../_images/piezometer-l8.png" src="../../_images/piezometer-l8.png" style="width: 600px;" /></a>
+</div>
+</div>
+<div class="section" id="pitot-static-system">
+<h3>Pitot-Static System<a class="headerlink" href="#pitot-static-system" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="#pitot-static"><span class="std std-numref">Fig. 88</span></a> is a sketch of a pitot-static system.</p>
+<div class="figure align-default" id="pitot-static">
+<a class="reference internal image-reference" href="../../_images/pitot-static.png"><img alt="../../_images/pitot-static.png" src="../../_images/pitot-static.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 88 </span><span class="caption-text">Sketch of Pitot-Static Measuring System</span><a class="headerlink" href="#pitot-static" title="Permalink to this image">¶</a></p>
+</div>
+<p>The stagnation (pitot) tube orients into flow and captures velocity head plus static head. Write Bernoulli’s from 0 to 1 in the drawing; location 0 is a free-stream location.  <span class="math notranslate nohighlight">\(d\)</span> is the distance from pitot tube centerline to inside wall of conduit or depth in an open flow.  <span class="math notranslate nohighlight">\(l_0\)</span> is the height of rise in a ststic tube at the free stream.</p>
+<p><span class="math notranslate nohighlight">\(l_1\)</span> is the height of rise above <span class="math notranslate nohighlight">\(d\)</span> in the pitot tube.</p>
+<div class="math notranslate nohighlight">
+\[\frac{p_0}{\gamma}+z_0+\frac{V_0^2}{2g}=\frac{p_1}{\gamma}+z_1+\frac{V_1^2}{2g}\]</div>
+<p>The two elevations cancel</p>
+<div class="math notranslate nohighlight">
+\[z_0=z_1\]</div>
+<p>Zero velocity at stagnation point</p>
+<div class="math notranslate nohighlight">
+\[V_1 = 0\]</div>
+<p>Algebra to obtain</p>
+<div class="math notranslate nohighlight">
+\[V_0^2=(\frac{p_1 - p_0}{\gamma})2g\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We apply Bernoulli’s equation (in head form) and observe:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(V_1\)</span> is zero (stagnation)</p></li>
+<li><p><span class="math notranslate nohighlight">\(z_0 = z_1\)</span> is the elevation of the flowline</p></li>
+<li><p><span class="math notranslate nohighlight">\(p_0\)</span> is the static pressure in the free stream</p></li>
+<li><p><span class="math notranslate nohighlight">\(p_1\)</span> is the “kinetic” pressure</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Delta p \propto V_0^2\)</span></p></li>
+</ul>
+</div>
+<p>Next substitute the pressure heads as</p>
+<div class="math notranslate nohighlight">
+\[p_0=\gamma(d+l_0)\]</div>
+<div class="math notranslate nohighlight">
+\[p_1=\gamma(d+l_1)\]</div>
+<p>Finally</p>
+<div class="math notranslate nohighlight">
+\[V_0 = \sqrt{2g(l_1 - l_0)}\]</div>
+<p>If we apply the same analysis to a pitot tube and a free surface in say a channel</p>
+<div class="figure align-default" id="pitot-in-free-surface">
+<a class="reference internal image-reference" href="../../_images/pitot-in-free-surface.png"><img alt="../../_images/pitot-in-free-surface.png" src="../../_images/pitot-in-free-surface.png" style="width: 600px;" /></a>
+</div>
+<div class="math notranslate nohighlight">
+\[V_0 = \sqrt{2g(l)}\]</div>
+<p>In practice the pitot-static system is built into a single instrument as depicted below.</p>
+<div class="figure align-default" id="ps-light-aircraft">
+<a class="reference internal image-reference" href="../../_images/ps-light-aircraft.png"><img alt="../../_images/ps-light-aircraft.png" src="../../_images/ps-light-aircraft.png" style="width: 600px;" /></a>
+</div>
+</div>
+</div>
+<div class="section" id="example-1-appliocation-of-continunity-to-a-spa">
+<h2>Example 1: Appliocation of Continunity to a Spa<a class="headerlink" href="#example-1-appliocation-of-continunity-to-a-spa" title="Permalink to this headline">¶</a></h2>
+<p>Consider an open tank with two connections as depicted in <a class="reference internal" href="#example-2"><span class="std std-numref">Fig. 89</span></a></p>
+<div class="figure align-default" id="example-2">
+<a class="reference internal image-reference" href="../../_images/example-2.png"><img alt="../../_images/example-2.png" src="../../_images/example-2.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 89 </span><span class="caption-text">Open tank with inlet and outlet</span><a class="headerlink" href="#example-2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Apply our problem solving protocol as in <a class="reference internal" href="#example-2-2"><span class="std std-numref">Fig. 90</span></a></p>
+<div class="figure align-default" id="example-2-2">
+<a class="reference internal image-reference" href="../../_images/example-2-2.png"><img alt="../../_images/example-2-2.png" src="../../_images/example-2-2.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 90 </span><span class="caption-text">Problem Solving Protocol: Sketch, CV Definition, Governing Principles, Knowns and Unknowns</span><a class="headerlink" href="#example-2-2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Once we have a formula we can use ENGR-1330 tools (as a calculator):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="c1"># known</span>
+<span class="n">Q_in</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1"># cuft/s</span>
+<span class="n">D_out</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="c1"># m^2</span>
+<span class="n">gravity</span> <span class="o">=</span> <span class="mf">32.2</span> <span class="c1"># ft/s/s</span>
+<span class="c1"># intermediate</span>
+<span class="n">A_out</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="nb">pow</span><span class="p">(</span><span class="n">D_out</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mf">4.0</span>
+<span class="c1"># equilibrium depth</span>
+<span class="n">h</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">Q_in</span><span class="o">/</span><span class="n">A_out</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">gravity</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;equilibrium depth is .... wait for it ...&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="s1">&#39;feat&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>equilibrium depth is .... wait for it ... 10.1 feat
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="example-2-time-to-drain-a-tank">
+<h2>Example 2: Time to Drain a Tank<a class="headerlink" href="#example-2-time-to-drain-a-tank" title="Permalink to this headline">¶</a></h2>
+<p>Consider an open tank as depicted in <a class="reference internal" href="#time-2-drain"><span class="std std-numref">Fig. 91</span></a></p>
+<div class="figure align-default" id="time-2-drain">
+<a class="reference internal image-reference" href="../../_images/time-2-drain.png"><img alt="../../_images/time-2-drain.png" src="../../_images/time-2-drain.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 91 </span><span class="caption-text">Open tank with outlet</span><a class="headerlink" href="#time-2-drain" title="Permalink to this image">¶</a></p>
+</div>
+<p>Apply our problem solving protocol as in <a class="reference internal" href="#example-3-2"><span class="std std-numref">Fig. 92</span></a></p>
+<div class="figure align-default" id="example-3-2">
+<a class="reference internal image-reference" href="../../_images/example-3-2.png"><img alt="../../_images/example-3-2.png" src="../../_images/example-3-2.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 92 </span><span class="caption-text">Problem Solving Protocol: Sketch, CV Definition, Governing Principles, Knowns and Unknowns</span><a class="headerlink" href="#example-3-2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Apply our Calculus tools from MATH 2450</p>
+<div class="figure align-default" id="example-3-3">
+<a class="reference internal image-reference" href="../../_images/example-3-3.png"><img alt="../../_images/example-3-3.png" src="../../_images/example-3-3.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 93 </span><span class="caption-text">Separation and Integration</span><a class="headerlink" href="#example-3-3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Once we have a formula we can use ENGR-1330 tools (as a calculator):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="n">H_0</span> <span class="o">=</span> <span class="mi">3</span>    <span class="c1"># meters initial depth</span>
+<span class="n">H</span>   <span class="o">=</span> <span class="mf">0.3</span>  <span class="c1"># meters ending depth</span>
+<span class="n">D</span>   <span class="o">=</span> <span class="mf">0.6</span>  <span class="c1"># meters tank diameter</span>
+<span class="n">d</span>   <span class="o">=</span> <span class="mf">0.03</span> <span class="c1"># meters outlet diameter</span>
+<span class="n">g</span>   <span class="o">=</span> <span class="mf">9.8</span>  <span class="c1"># m/s/s gravitational avcceleeration conastant</span>
+<span class="c1"># calculations</span>
+<span class="n">time</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">H</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">H_0</span><span class="p">))</span> <span class="o">/</span> <span class="o">-</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">g</span><span class="p">)</span><span class="o">*</span><span class="nb">pow</span><span class="p">(</span><span class="n">d</span><span class="o">/</span><span class="n">D</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Time to drain is&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">time</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="s1">&#39;seconds&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time to drain is 214.0 seconds
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="example-3-time-to-drain-a-tank">
+<h2>Example 3: Time to Drain a Tank<a class="headerlink" href="#example-3-time-to-drain-a-tank" title="Permalink to this headline">¶</a></h2>
+<p>Now consider a similar problem</p>
+<div class="figure align-default" id="example-3-4">
+<a class="reference internal image-reference" href="../../_images/example-3-4.png"><img alt="../../_images/example-3-4.png" src="../../_images/example-3-4.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 94 </span><span class="caption-text">Open tank with outlet</span><a class="headerlink" href="#example-3-4" title="Permalink to this image">¶</a></p>
+</div>
+<p>We can inspect and establish that it is an identical situation with different diameters of the tank and hole, and different starting and ending depths, so we can use our tool just developed.</p>
+<div class="section" id="example-4">
+<h3>Example 4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
+<p>Now consider a pressure tank with oil</p>
+<div class="figure align-default" id="example-live">
+<a class="reference internal image-reference" href="../../_images/example-live.png"><img alt="../../_images/example-live.png" src="../../_images/example-live.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 95 </span><span class="caption-text">Pressure tank with outlet</span><a class="headerlink" href="#example-live" title="Permalink to this image">¶</a></p>
+</div>
+<p>Here we are given the drainage equation, and the variable pressure terms, but cannot apply analysis (Calculus) to obtain a closed-form solution, thus we can:</p>
+<ul class="simple">
+<li><p>Give up</p></li>
+<li><p>Practice saying “How about a hot apple pie to go with that slop?”</p></li>
+<li><p>Approximate using ENGR-1330 tools</p></li>
+</ul>
+<p>Simply insert the pressure term into the drainage equation and develop a function to estimate the change in eleveation over a short time as:</p>
+<div class="figure align-default" id="example-live-fd">
+<a class="reference internal image-reference" href="../../_images/example-live-fd.png"><img alt="../../_images/example-live-fd.png" src="../../_images/example-live-fd.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 96 </span><span class="caption-text">Pressure tank with outlet</span><a class="headerlink" href="#example-live-fd" title="Permalink to this image">¶</a></p>
+</div>
+<p>Now we can build a tool</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="c1"># a plotting function</span>
+<span class="k">def</span> <span class="nf">make2plot</span><span class="p">(</span><span class="n">listx1</span><span class="p">,</span><span class="n">listy1</span><span class="p">,</span><span class="n">listx2</span><span class="p">,</span><span class="n">listy2</span><span class="p">,</span><span class="n">strlablx</span><span class="p">,</span><span class="n">strlably</span><span class="p">,</span><span class="n">strtitle</span><span class="p">):</span>
+    <span class="n">mydata</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span> <span class="c1"># build a square drawing canvass from figure class</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">listx1</span><span class="p">,</span><span class="n">listy1</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;v&#39;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># basic data plot</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">listx2</span><span class="p">,</span><span class="n">listy2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># basic model plot</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="n">strlablx</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="n">strlably</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;Tank Level&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">])</span><span class="c1"># modify for argument insertion</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">strtitle</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="k">return</span>
+<span class="c1"># constants</span>
+<span class="n">pie</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+<span class="n">p_initial</span> <span class="o">=</span> <span class="mf">3e05</span> <span class="c1">#Pa initial pressure</span>
+<span class="n">p_atm</span>     <span class="o">=</span> <span class="mf">1.01e05</span> <span class="c1">#Pa atmospheric pressure</span>
+<span class="n">g</span>         <span class="o">=</span> <span class="mf">9.8</span>  <span class="c1">#m/s/s</span>
+<span class="n">rho_oil</span>   <span class="o">=</span> <span class="mi">1000</span> <span class="c1">#kg/m^3</span>
+<span class="n">L</span>         <span class="o">=</span> <span class="mi">6</span>    <span class="c1">#m tank height</span>
+<span class="n">De</span>        <span class="o">=</span> <span class="mf">0.02</span> <span class="c1">#m outlet diameter</span>
+<span class="n">Dt</span>        <span class="o">=</span> <span class="mf">2.0</span>  <span class="c1">#m tank diameter</span>
+<span class="n">H0</span>        <span class="o">=</span> <span class="mi">5</span>    <span class="c1">#m initial depth</span>
+<span class="n">time</span>      <span class="o">=</span> <span class="p">[]</span>   <span class="c1"># time seconds, an empty list</span>
+<span class="n">depth</span>     <span class="o">=</span> <span class="p">[]</span>   <span class="c1"># depth meters, an empty list</span>
+<span class="n">pnow</span>      <span class="o">=</span> <span class="p">[]</span>   <span class="c1"># pressure, an empty list</span>
+<span class="n">ddepth</span>    <span class="o">=</span> <span class="p">[]</span>   <span class="c1">#change in depth, empty list for debuggiun&#39;</span>
+<span class="n">how_many</span>  <span class="o">=</span> <span class="mi">60</span>   <span class="c1">#time steps</span>
+<span class="n">deltat</span>    <span class="o">=</span> <span class="mi">60</span>   <span class="c1">#seconds a time step length</span>
+<span class="c1"># constants</span>
+<span class="n">Ae</span> <span class="o">=</span> <span class="p">(</span><span class="n">pie</span><span class="o">*</span><span class="n">De</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span>
+<span class="n">At</span> <span class="o">=</span> <span class="p">(</span><span class="n">pie</span><span class="o">*</span><span class="n">Dt</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span>
+<span class="c1"># pressure function</span>
+<span class="k">def</span> <span class="nf">p_now</span><span class="p">(</span><span class="n">p_initial</span><span class="p">,</span><span class="n">p_atm</span><span class="p">,</span><span class="n">L</span><span class="p">,</span><span class="n">H0</span><span class="p">,</span><span class="n">H</span><span class="p">):</span>
+    <span class="n">p_now</span> <span class="o">=</span> <span class="p">(</span><span class="n">p_initial</span><span class="o">+</span><span class="n">p_atm</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">L</span><span class="o">-</span><span class="n">H0</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">L</span><span class="o">-</span><span class="n">H</span><span class="p">))</span><span class="c1">#-p_atm</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">p_now</span><span class="p">)</span>
+<span class="c1"># CV velocity function</span>
+<span class="k">def</span> <span class="nf">dhdt</span><span class="p">(</span><span class="n">Ae</span><span class="p">,</span><span class="n">At</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">H</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">rho</span><span class="p">):</span>
+    <span class="n">dhdt</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">Ae</span><span class="o">/</span><span class="n">At</span><span class="p">)</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">h</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">p</span><span class="o">/</span><span class="n">rho</span><span class="p">)</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">dhdt</span><span class="p">)</span>
+<span class="c1"># initial conditions</span>
+<span class="n">time</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">depth</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">H0</span><span class="p">)</span>
+<span class="n">pnow</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p_initial</span><span class="p">)</span>
+<span class="n">ddepth</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dhdt</span><span class="p">(</span><span class="n">Ae</span><span class="p">,</span><span class="n">At</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">H0</span><span class="p">,</span><span class="n">p_now</span><span class="p">(</span><span class="n">p_initial</span><span class="p">,</span><span class="n">p_atm</span><span class="p">,</span><span class="n">L</span><span class="p">,</span><span class="n">H0</span><span class="p">,</span><span class="n">H0</span><span class="p">),</span><span class="n">rho_oil</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">how_many</span><span class="p">):</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="n">deltat</span><span class="p">)</span>
+    <span class="n">depth</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">depth</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">deltat</span><span class="o">*</span><span class="n">ddepth</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">depth</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">depth</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mf">0.0</span>
+    <span class="n">pnow</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p_now</span><span class="p">(</span><span class="n">p_initial</span><span class="p">,</span><span class="n">p_atm</span><span class="p">,</span><span class="n">L</span><span class="p">,</span><span class="n">H0</span><span class="p">,</span><span class="n">depth</span><span class="p">[</span><span class="n">i</span><span class="p">]));</span>
+    <span class="n">ddepth</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dhdt</span><span class="p">(</span><span class="n">Ae</span><span class="p">,</span><span class="n">At</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">depth</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">pnow</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">rho_oil</span><span class="p">))</span>
+
+    
+    
+<span class="c1">#for i in range(how_many):    </span>
+<span class="c1">#    print(time[i],round(depth[i],3),round(pnow[i],3),round(ddepth[i],6))</span>
+    
+<span class="c1">#now plot</span>
+<span class="n">make2plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span><span class="n">depth</span><span class="p">,</span><span class="n">time</span><span class="p">,</span><span class="n">depth</span><span class="p">,</span><span class="s1">&#39;Time(sec)&#39;</span><span class="p">,</span><span class="s2">&quot;Depth(m)&quot;</span><span class="p">,</span><span class="s2">&quot;Tank oil level&quot;</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/lesson08_8_0.png" src="../../_images/lesson08_8_0.png" />
+</div>
+</div>
+<p>While not at all perfect it illustrates using a calculator to approximate the problem.</p>
+</div>
+</div>
+<div class="section" id="readings">
+<h2>Readings<a class="headerlink" href="#readings" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>CE-3305-2022-1 Syllabus. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html">http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html</a></p></li>
+<li><p>Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 177-</p></li>
+<li><p>DF Elger, BC Williams, Crowe, CT and JA Roberson, <em>Engineering Fluid Mechanics 10th edition</em>, John Wiley &amp; Sons, Inc., 2013.  (placeholder file to get links working). <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-8.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-8.pdf</a></p></li>
+<li><p>Cleveland, T. G. (2014) <em>Fluid Mechanics Notes to Accompany CE 3305 at Jade-Holshule (TTU Study Abroad 2015-2019)</em>, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-7.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-7.pdf</a></p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons/lesson08"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../lesson07/lesson07.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Control Volume Analysis - Continunity</p>
+            </div>
+        </a>
+    </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Theodore G. Cleveland<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
