@@ -53,6 +53,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Conservation of Angular Momentum" href="../lesson10/lesson10.html" />
     <link rel="prev" title="Bernoulli &amp; CV Applications" href="../lesson08/lesson08.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -138,6 +139,11 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Conservation of Linear Momentum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson10/lesson10.html">
+   Conservation of Angular Momentum
   </a>
  </li>
 </ul>
@@ -277,11 +283,16 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-4">
-     Example 4
+    <a class="reference internal nav-link" href="#sluce-gate-calculations">
+     Sluce Gate Calculations
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-3-shallow-wave-speed-in-a-channel">
+   Example 3 Shallow Wave Speed in a Channel
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#readings">
@@ -437,9 +448,98 @@ Added pressure      84240.0  Pascals
 <a class="reference internal image-reference" href="../../_images/momentum-p2-2.png"><img alt="../../_images/momentum-p2-2.png" src="../../_images/momentum-p2-2.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 107 </span><span class="caption-text">CV/CS for sluice gate</span><a class="headerlink" href="#momentum-p2-2" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="example-4">
-<h3>Example 4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
-<p>While not at all perfect it illustrates using a calculator to approximate the problem.</p>
+<p>Using the figure as a guide draw:</p>
+<ul class="simple">
+<li><p>the +/- directions</p></li>
+<li><p>the CV/CS</p></li>
+<li><p>the forces</p></li>
+<li><p>the <span class="math notranslate nohighlight">\(\bar dA \)</span> vectors, and</p></li>
+<li><p>the <span class="math notranslate nohighlight">\(\bar V \)</span> vector(s)</p></li>
+</ul>
+<p>The resulting sketch is shown in <a class="reference internal" href="#momentum-p2-3"><span class="std std-numref">Fig. 108</span></a></p>
+<div class="figure align-default" id="momentum-p2-3">
+<a class="reference internal image-reference" href="lessons/lesson09/momentum-p2-3.png"><img alt="lessons/lesson09/momentum-p2-3.png" src="lessons/lesson09/momentum-p2-3.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 108 </span><span class="caption-text">CV/CS for sluice gate</span><a class="headerlink" href="#momentum-p2-3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Some assumptions are in order; in particular the distance upstream and downstream are relatively small (a few hundred feet) and the frictional contribution is small by virtue of having only a short distance to act, so we neglect the frictional component.  Using the velocity and area directions to resolve the inner products in the flux integrals produces the diagram in <a class="reference internal" href="#momentum-p2-4"><span class="std std-numref">Fig. 109</span></a></p>
+<div class="figure align-default" id="momentum-p2-4">
+<a class="reference internal image-reference" href="../../_images/momentum-p2-4.png"><img alt="../../_images/momentum-p2-4.png" src="../../_images/momentum-p2-4.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 109 </span><span class="caption-text">CV/CS for sluice gate</span><a class="headerlink" href="#momentum-p2-4" title="Permalink to this image">¶</a></p>
+</div>
+<p>The two pressure forces are some distance from the gate and are hydrostatic and computed using that equation.</p>
+<p><span class="math notranslate nohighlight">\(p = \gamma \bar h\)</span> as depicted in <a class="reference internal" href="#momentum-p2-5"><span class="std std-numref">Fig. 110</span></a></p>
+<div class="figure align-default" id="momentum-p2-5">
+<a class="reference internal image-reference" href="../../_images/momentum-p2-5.png"><img alt="../../_images/momentum-p2-5.png" src="../../_images/momentum-p2-5.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 110 </span><span class="caption-text">Pressure force diagram</span><a class="headerlink" href="#momentum-p2-5" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#momentum-p2-6"><span class="std std-numref">Fig. 111</span></a> is a skecth showing the collection of forces on the CV</p>
+<div class="figure align-default" id="momentum-p2-6">
+<a class="reference internal image-reference" href="../../_images/momentum-p2-6.png"><img alt="../../_images/momentum-p2-6.png" src="../../_images/momentum-p2-6.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 111 </span><span class="caption-text">Forces on CV</span><a class="headerlink" href="#momentum-p2-6" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#momentum-p2-7"><span class="std std-numref">Fig. 112</span></a> completes the analysis; then we can generalize for any sluice gate (in rectangular channles) using ENGR-1330 principles as shown in the script below.</p>
+<div class="figure align-default" id="momentum-p2-7">
+<a class="reference internal image-reference" href="../../_images/momentum-p2-7.png"><img alt="../../_images/momentum-p2-7.png" src="../../_images/momentum-p2-7.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 112 </span><span class="caption-text">Forces on CV</span><a class="headerlink" href="#momentum-p2-7" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="sluce-gate-calculations">
+<h3>Sluce Gate Calculations<a class="headerlink" href="#sluce-gate-calculations" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d1</span> <span class="o">=</span> <span class="mf">1.5</span> <span class="c1"># depth upstream</span>
+<span class="n">d2</span> <span class="o">=</span> <span class="mf">0.0563</span> <span class="c1"># depth downstream</span>
+<span class="n">u1</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="c1"># upstream velocity</span>
+<span class="n">u2</span> <span class="o">=</span> <span class="mf">5.33</span> <span class="c1"># downstream velocity</span>
+<span class="n">rho</span> <span class="o">=</span> <span class="mf">1000.0</span> <span class="c1"># density</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.8</span> <span class="c1"># gravitational acceleration</span>
+<span class="n">w</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="c1"># channel width</span>
+<span class="n">Rg</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.5</span><span class="o">*</span><span class="n">rho</span><span class="o">*</span><span class="n">g</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">d1</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">d2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="n">rho</span><span class="o">*</span><span class="p">(</span><span class="n">d1</span><span class="o">*</span><span class="n">u1</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">d2</span><span class="o">*</span><span class="n">u2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Upstream Depth&#39;</span><span class="p">,</span><span class="n">d1</span><span class="p">,</span><span class="s1">&#39; m&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Upstream Speed&#39;</span><span class="p">,</span><span class="n">u1</span><span class="p">,</span><span class="s1">&#39;m/s&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Downstream Depth&#39;</span><span class="p">,</span><span class="n">d2</span><span class="p">,</span><span class="s1">&#39; m&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Downstream Speed&#39;</span><span class="p">,</span><span class="n">u2</span><span class="p">,</span><span class="s1">&#39;m/s&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Force/width&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">Rg</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;N/m&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Upstream Depth 1.5  m
+Upstream Speed 0.2 m/s
+Downstream Depth 0.0563  m
+Downstream Speed 5.33 m/s
+Force/width 9470.05 N/m
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="example-3-shallow-wave-speed-in-a-channel">
+<h2>Example 3 Shallow Wave Speed in a Channel<a class="headerlink" href="#example-3-shallow-wave-speed-in-a-channel" title="Permalink to this headline">¶</a></h2>
+<p>Consider a shallow wave in a rectangular channel as in <a class="reference internal" href="#momentum-ex3-1"><span class="std std-numref">Fig. 113</span></a></p>
+<div class="figure align-default" id="momentum-ex3-1">
+<a class="reference internal image-reference" href="../../_images/momentum-ex3-1.png"><img alt="../../_images/momentum-ex3-1.png" src="../../_images/momentum-ex3-1.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 113 </span><span class="caption-text">Problem Statement</span><a class="headerlink" href="#momentum-ex3-1" title="Permalink to this image">¶</a></p>
+</div>
+<p>First we draw a control volume as in <a class="reference internal" href="#momentum-ex3-2"><span class="std std-numref">Fig. 114</span></a></p>
+<div class="figure align-default" id="momentum-ex3-2">
+<a class="reference internal image-reference" href="../../_images/momentum-ex3-2.png"><img alt="../../_images/momentum-ex3-2.png" src="../../_images/momentum-ex3-2.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 114 </span><span class="caption-text">Sketch</span><a class="headerlink" href="#momentum-ex3-2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Then apply continunity to find the apparent velocities as in <a class="reference internal" href="#momentum-ex3-3"><span class="std std-numref">Fig. 115</span></a></p>
+<div class="figure align-default" id="momentum-ex3-3">
+<a class="reference internal image-reference" href="../../_images/momentum-ex3-3.png"><img alt="../../_images/momentum-ex3-3.png" src="../../_images/momentum-ex3-3.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 115 </span><span class="caption-text">Continunity application</span><a class="headerlink" href="#momentum-ex3-3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Then apply momentum as in <a class="reference internal" href="#momentum-ex3-4"><span class="std std-numref">Fig. 116</span></a></p>
+<div class="figure align-default" id="momentum-ex3-4">
+<a class="reference internal image-reference" href="../../_images/momentum-ex3-4.png"><img alt="../../_images/momentum-ex3-4.png" src="../../_images/momentum-ex3-4.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 116 </span><span class="caption-text">Momentum application</span><a class="headerlink" href="#momentum-ex3-4" title="Permalink to this image">¶</a></p>
+</div>
+<p>Complete the analysis to find the shallow wave speed as in <a class="reference internal" href="#momentum-ex3-5"><span class="std std-numref">Fig. 117</span></a></p>
+<div class="figure align-default" id="momentum-ex3-5">
+<a class="reference internal image-reference" href="../../_images/momentum-ex3-5.png"><img alt="../../_images/momentum-ex3-5.png" src="../../_images/momentum-ex3-5.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 117 </span><span class="caption-text">Analysis results</span><a class="headerlink" href="#momentum-ex3-5" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="readings">
@@ -448,7 +548,7 @@ Added pressure      84240.0  Pascals
 <li><p>CE-3305-2022-1 Syllabus. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html">http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html</a></p></li>
 <li><p>Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 293-355</p></li>
 <li><p>DF Elger, BC Williams, Crowe, CT and JA Roberson, <em>Engineering Fluid Mechanics 10th edition</em>, John Wiley &amp; Sons, Inc., 2013.  (placeholder file to get links working). <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-9.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-9.pdf</a></p></li>
-<li><p>Cleveland, T. G. (2014) <em>Fluid Mechanics Notes to Accompany CE 3305 at Jade-Holshule (TTU Study Abroad 2015-2019)</em>, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture09.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-7.pdf</a></p></li>
+<li><p>Cleveland, T. G. (2014) <em>Fluid Mechanics Notes to Accompany CE 3305 at Jade-Holshule (TTU Study Abroad 2015-2019)</em>, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture09.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-9.pdf</a></p></li>
 </ol>
 </div>
 </div>
@@ -491,6 +591,15 @@ Added pressure      84240.0  Pascals
             </div>
         </a>
     </div>
+     <div id="next">
+        <a class="right-next" href="../lesson10/lesson10.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Conservation of Angular Momentum</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
 
 </div>
         

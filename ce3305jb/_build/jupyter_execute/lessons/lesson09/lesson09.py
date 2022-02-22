@@ -181,18 +181,142 @@ print("Added pressure     ",round(delta_p,3)," Pascals")
 # ---
 # CV/CS for sluice gate
 # ```
+# 
+# Using the figure as a guide draw:
+# 
+# - the +/- directions
+# - the CV/CS
+# - the forces
+# - the $\bar dA $ vectors, and 
+# - the $\bar V $ vector(s)
+# 
+# The resulting sketch is shown in {numref}`momentum-p2-3`
+# 
+# ```{figure} momentum-p2-3.png
+# ---
+# width: 600px
+# name: momentum-p2-3
+# ---
+# CV/CS for sluice gate
+# ```
+# 
+# Some assumptions are in order; in particular the distance upstream and downstream are relatively small (a few hundred feet) and the frictional contribution is small by virtue of having only a short distance to act, so we neglect the frictional component.  Using the velocity and area directions to resolve the inner products in the flux integrals produces the diagram in {numref}`momentum-p2-4`
+# 
+# ```{figure} momentum-p2-4.png
+# ---
+# width: 600px
+# name: momentum-p2-4
+# ---
+# CV/CS for sluice gate
+# ```
+# 
+# The two pressure forces are some distance from the gate and are hydrostatic and computed using that equation.
+# 
+# $p = \gamma \bar h$ as depicted in {numref}`momentum-p2-5`
+# 
+# 
+# ```{figure} momentum-p2-5.png
+# ---
+# width: 600px
+# name: momentum-p2-5
+# ---
+# Pressure force diagram
+# ```
+# 
+# {numref}`momentum-p2-6` is a skecth showing the collection of forces on the CV 
+# 
+# ```{figure} momentum-p2-6.png
+# ---
+# width: 600px
+# name: momentum-p2-6
+# ---
+# Forces on CV
+# ```
+# 
+# {numref}`momentum-p2-7` completes the analysis; then we can generalize for any sluice gate (in rectangular channles) using ENGR-1330 principles as shown in the script below.
+# 
+# ```{figure} momentum-p2-7.png
+# ---
+# width: 600px
+# name: momentum-p2-7
+# ---
+# Forces on CV
+# ```
+# 
 
-# ### Example 4
+# ### Sluce Gate Calculations
 # 
 # 
 
-# In[ ]:
+# In[2]:
 
 
+d1 = 1.5 # depth upstream
+d2 = 0.0563 # depth downstream
+u1 = 0.2 # upstream velocity
+u2 = 5.33 # downstream velocity
+rho = 1000.0 # density
+g = 9.8 # gravitational acceleration
+w = 1.0 # channel width
+Rg = (0.5*rho*g)*(d1**2 - d2**2)+rho*(d1*u1**2 - d2*u2**2)
+print('Upstream Depth',d1,' m')
+print('Upstream Speed',u1,'m/s')
+print('Downstream Depth',d2,' m')
+print('Downstream Speed',u2,'m/s')
+print('Force/width',round(Rg,2),'N/m')
 
 
-
-# While not at all perfect it illustrates using a calculator to approximate the problem.  
+# ## Example 3 Shallow Wave Speed in a Channel
+# 
+# Consider a shallow wave in a rectangular channel as in {numref}`momentum-ex3-1`
+# 
+# ```{figure} momentum-ex3-1.png
+# ---
+# width: 600px
+# name: momentum-ex3-1
+# ---
+# Problem Statement
+# ```
+# 
+# First we draw a control volume as in {numref}`momentum-ex3-2`
+# 
+# ```{figure} momentum-ex3-2.png
+# ---
+# width: 600px
+# name: momentum-ex3-2
+# ---
+# Sketch
+# ```
+# 
+# Then apply continunity to find the apparent velocities as in {numref}`momentum-ex3-3`
+# 
+# ```{figure} momentum-ex3-3.png
+# ---
+# width: 600px
+# name: momentum-ex3-3
+# ---
+# Continunity application
+# ```
+# 
+# Then apply momentum as in {numref}`momentum-ex3-4`
+# 
+# ```{figure} momentum-ex3-4.png
+# ---
+# width: 600px
+# name: momentum-ex3-4
+# ---
+# Momentum application
+# ```
+# 
+# Complete the analysis to find the shallow wave speed as in {numref}`momentum-ex3-5`
+# 
+# ```{figure} momentum-ex3-5.png
+# ---
+# width: 600px
+# name: momentum-ex3-5
+# ---
+# Analysis results
+# ```
 
 # 
 # ## Readings
@@ -203,5 +327,11 @@ print("Added pressure     ",round(delta_p,3)," Pascals")
 # 
 # 3. DF Elger, BC Williams, Crowe, CT and JA Roberson, *Engineering Fluid Mechanics 10th edition*, John Wiley & Sons, Inc., 2013.  (placeholder file to get links working). [http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-9.pdf](http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-9.pdf)
 # 
-# 4. Cleveland, T. G. (2014) *Fluid Mechanics Notes to Accompany CE 3305 at Jade-Holshule (TTU Study Abroad 2015-2019)*, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering. [http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-7.pdf](http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture09.pdf)
+# 4. Cleveland, T. G. (2014) *Fluid Mechanics Notes to Accompany CE 3305 at Jade-Holshule (TTU Study Abroad 2015-2019)*, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering. [http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-9.pdf](http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture09.pdf)
 # 
+
+# In[ ]:
+
+
+
+
