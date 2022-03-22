@@ -213,12 +213,67 @@ print("Pressure drop",round(deltap,3)," psi ")
 # 
 
 # ## Example 2: 
+# 
+# Commerical steel pipe in the sketch below has a diameter of 3-inches and transfers glycerin from the tank to a mixing basin at outlet $B$.  The tank is vented at the top as shown. Determine the initial discharge at $B$ when the gate valve at $C$ is fully opened.  
+# 
+# ```{figure} tank-drain14.png
+# ---
+# width: 400px
+# name: tank-drain14
+# ---
+# Sketch of Chemical Transfer Tank System
+# ```
+# 
+# ### Sketch
+# 
+# Above, nothing special to add
+# 
+# ### Known
+# 
+# ```{figure} fluid-properties14-2.png
+# ---
+# width: 400px
+# name: fluid-properties14-2
+# ---
+# Typical Tabulated Fluid Properties
+# ```
+# 
+# Fluid properties: glycerine $\rho= 2.45 slug/ft^3 $,$\nu= 1.22 \times 10^{-2}~ft^2/s$<br>
+# Minor Loss Components: 2 Elbows $K_{elb}=0.9$, Flush Entrance $K_{ent}=0.5$, Gate valve $K_{v}=0.19$<br>
+# 
+# ### Unknown
+# 
+# $Q_{initial}$ before the liquid level drops very much.  We will stipulste that valve is opened quickly and flow develops rapidly before liquid level drops very much.
+# 
+# ### Governing Principles
+# 
+# - Darcy-Weisbach head loss model $h_{loss}=f\frac{L}{D}\frac{V^2}{2g} + \sum_i{K\frac{V^2}{2g}}$ 
+# - Reynolds' number definition $Re_d = \frac{VD}{\nu}$
+# - Modified bernoulli equation $\frac{p_1}{\rho g}+\frac{V_1^2}{2g}+z_1+h_p = \frac{p_2}{\rho g}+\frac{V_2^2}{2g}+z_2+h_T +h_{loss}$
 
-# In[ ]:
-
-
-
-
+# ### Analysis (Solution)
+# 
+# - Starting with the given fluid find the necessary properties (which are already displayed)
+# - Stipulate the CV will be applied from $A$ to $B$ with tha datum set at $B$.
+# - Apply the modified bernoulli equation: 
+# 
+# $\frac{p_1}{\rho g}+\frac{V_1^2}{2g}+z_1+h_p = \frac{p_2}{\rho g}+\frac{V_2^2}{2g}+z_2+h_T +h_{loss}$
+# 
+# - Substutute the DW head loss model into the modified bernoulli equation
+# 
+# $\frac{p_A}{\rho g}+\frac{V_A^2}{2g}+z_A+h_p = \frac{p_B}{\rho g}+\frac{V_B^2}{2g}+z_B+h_T +f\frac{L}{D}\frac{V^2}{2g} + K_{ent}\frac{V^2}{2g} + 2*K_{elbow}\frac{V^2}{2g}+K_{valve}\frac{V^2}{2g}$
+# 
+# - Insert loss coefficient values (remove the pump and turbine, they do not exist in this example)
+# 
+# $$z_A = \frac{V_B^2}{2g} +f\frac{L}{D}\frac{V^2}{2g} + 0.5\frac{V^2}{2g} + 2*0.9\frac{V^2}{2g}+0.19\frac{V^2}{2g}$$
+# 
+# - Insert numerical values
+# 
+# $$8 = \frac{V_B^2}{2g} +f\frac{18}{0.25}\frac{V^2}{64.4} + 0.5\frac{V^2}{64.4} + 2*0.9\frac{V^2}{64.4}+0.19\frac{V^2}{64.4}$$
+# 
+# - Algebra
+# 
+# $$8 = (72f + 3.49)\frac{V^2}{64.4} $$
 
 # In[ ]:
 

@@ -328,6 +328,33 @@
   <a class="reference internal nav-link" href="#example-2">
    Example 2:
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Sketch
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Known
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Unknown
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#governing-principles">
+     Governing Principles
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Analysis (Solution)
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#readings">
@@ -562,6 +589,64 @@ material = “galvanized iron pipe” (use to find roughness height)<br>
 </div>
 <div class="section" id="example-2">
 <h2>Example 2:<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h2>
+<p>Commerical steel pipe in the sketch below has a diameter of 3-inches and transfers glycerin from the tank to a mixing basin at outlet <span class="math notranslate nohighlight">\(B\)</span>.  The tank is vented at the top as shown. Determine the initial discharge at <span class="math notranslate nohighlight">\(B\)</span> when the gate valve at <span class="math notranslate nohighlight">\(C\)</span> is fully opened.</p>
+<div class="figure align-default" id="tank-drain14">
+<a class="reference internal image-reference" href="../../_images/tank-drain14.png"><img alt="../../_images/tank-drain14.png" src="../../_images/tank-drain14.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 134 </span><span class="caption-text">Sketch of Chemical Transfer Tank System</span><a class="headerlink" href="#tank-drain14" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="id1">
+<h3>Sketch<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Above, nothing special to add</p>
+</div>
+<div class="section" id="id2">
+<h3>Known<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="fluid-properties14-2">
+<a class="reference internal image-reference" href="../../_images/fluid-properties14-2.png"><img alt="../../_images/fluid-properties14-2.png" src="../../_images/fluid-properties14-2.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 135 </span><span class="caption-text">Typical Tabulated Fluid Properties</span><a class="headerlink" href="#fluid-properties14-2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Fluid properties: glycerine <span class="math notranslate nohighlight">\(\rho= 2.45 slug/ft^3 \)</span>,<span class="math notranslate nohighlight">\(\nu= 1.22 \times 10^{-2}~ft^2/s\)</span><br>
+Minor Loss Components: 2 Elbows <span class="math notranslate nohighlight">\(K_{elb}=0.9\)</span>, Flush Entrance <span class="math notranslate nohighlight">\(K_{ent}=0.5\)</span>, Gate valve <span class="math notranslate nohighlight">\(K_{v}=0.19\)</span><br></p>
+</div>
+<div class="section" id="id3">
+<h3>Unknown<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p><span class="math notranslate nohighlight">\(Q_{initial}\)</span> before the liquid level drops very much.  We will stipulste that valve is opened quickly and flow develops rapidly before liquid level drops very much.</p>
+</div>
+<div class="section" id="governing-principles">
+<h3>Governing Principles<a class="headerlink" href="#governing-principles" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Darcy-Weisbach head loss model <span class="math notranslate nohighlight">\(h_{loss}=f\frac{L}{D}\frac{V^2}{2g} + \sum_i{K\frac{V^2}{2g}}\)</span></p></li>
+<li><p>Reynolds’ number definition <span class="math notranslate nohighlight">\(Re_d = \frac{VD}{\nu}\)</span></p></li>
+<li><p>Modified bernoulli equation <span class="math notranslate nohighlight">\(\frac{p_1}{\rho g}+\frac{V_1^2}{2g}+z_1+h_p = \frac{p_2}{\rho g}+\frac{V_2^2}{2g}+z_2+h_T +h_{loss}\)</span></p></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>Analysis (Solution)<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Starting with the given fluid find the necessary properties (which are already displayed)</p></li>
+<li><p>Stipulate the CV will be applied from <span class="math notranslate nohighlight">\(A\)</span> to <span class="math notranslate nohighlight">\(B\)</span> with tha datum set at <span class="math notranslate nohighlight">\(B\)</span>.</p></li>
+<li><p>Apply the modified bernoulli equation:</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(\frac{p_1}{\rho g}+\frac{V_1^2}{2g}+z_1+h_p = \frac{p_2}{\rho g}+\frac{V_2^2}{2g}+z_2+h_T +h_{loss}\)</span></p>
+<ul class="simple">
+<li><p>Substutute the DW head loss model into the modified bernoulli equation</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(\frac{p_A}{\rho g}+\frac{V_A^2}{2g}+z_A+h_p = \frac{p_B}{\rho g}+\frac{V_B^2}{2g}+z_B+h_T +f\frac{L}{D}\frac{V^2}{2g} + K_{ent}\frac{V^2}{2g} + 2*K_{elbow}\frac{V^2}{2g}+K_{valve}\frac{V^2}{2g}\)</span></p>
+<ul class="simple">
+<li><p>Insert loss coefficient values (remove the pump and turbine, they do not exist in this example)</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[z_A = \frac{V_B^2}{2g} +f\frac{L}{D}\frac{V^2}{2g} + 0.5\frac{V^2}{2g} + 2*0.9\frac{V^2}{2g}+0.19\frac{V^2}{2g}\]</div>
+<ul class="simple">
+<li><p>Insert numerical values</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[8 = \frac{V_B^2}{2g} +f\frac{18}{0.25}\frac{V^2}{64.4} + 0.5\frac{V^2}{64.4} + 2*0.9\frac{V^2}{64.4}+0.19\frac{V^2}{64.4}\]</div>
+<ul class="simple">
+<li><p>Algebra</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[8 = (72f + 3.49)\frac{V^2}{64.4} \]</div>
+</div>
 </div>
 <div class="section" id="readings">
 <h2>Readings<a class="headerlink" href="#readings" title="Permalink to this headline">¶</a></h2>
