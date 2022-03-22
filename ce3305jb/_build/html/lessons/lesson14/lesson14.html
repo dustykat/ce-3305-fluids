@@ -1,0 +1,649 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closed Conduit (Pipe) Flow &#8212; CE 3305 Mechanics of Fluids</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Pipe Networks" href="../lesson15/lesson15.html" />
+    <link rel="prev" title="Viscous Flow in a Duct" href="../lesson13/lesson13.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/I5-fluidos.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">CE 3305 Mechanics of Fluids</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Fluid Mechanics Notes to Accompany CE 3305 at TTU
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson01/lesson01.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson02/lesson02.html">
+   Basic Fluid Properties
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson03/lesson03.html">
+   Fluid Statics and Pressure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson04/lesson04.html">
+   Fluid Statics and Pressure (continued)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson05/lesson05.html">
+   Euler and Bernoulli Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson06/lesson06.html">
+   Bernoulli Applications
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson07/lesson07.html">
+   Control Volume Analysis - Continunity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson08/lesson08.html">
+   Bernoulli &amp; CV Applications
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson09/lesson09.html">
+   Conservation of Linear Momentum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson10/lesson10.html">
+   Conservation of Angular Momentum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson11/lesson11.html">
+   Conservation of Energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson12/lesson12.html">
+   Dimensional Analysis and Similitude
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson13/lesson13.html">
+   Viscous Flow in a Duct
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Closed Conduit (Pipe) Flow
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson15/lesson15.html">
+   Pipe Networks
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/lessons/lesson14/lesson14.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flessons/lesson14/lesson14.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/lessons/lesson14/lesson14.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lesson-outline">
+   Lesson Outline
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#background">
+     Background
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-1">
+   Example 1:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sketch">
+     Sketch
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#known">
+     Known
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unknown">
+     Unknown
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#governing-equations">
+     Governing Equations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analysis-solution">
+     Analysis (Solution)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#discussion-of-results">
+     Discussion of Results
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-2">
+   Example 2:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#readings">
+   Readings
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="closed-conduit-pipe-flow">
+<h1>Closed Conduit (Pipe) Flow<a class="headerlink" href="#closed-conduit-pipe-flow" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="lesson-outline">
+<h2>Lesson Outline<a class="headerlink" href="#lesson-outline" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Analyze and design pipe systems with various fittings and connections</p></li>
+<li><p>topic</p></li>
+</ul>
+<div class="section" id="background">
+<h3>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Energy (head) losses in conduits (pipes) arise from frictional losses at the pipe wall (major loss), and additional losses from fittings (minor losses).<br />
+Major and minor refer to the distances over which the losses occur, and not the magnitude.</p>
+</div>
+<p>Recall the modified bernoulli equation for a pipeline system</p>
+<div class="math notranslate nohighlight">
+\[\frac{p_1}{\rho g}+\frac{V_1^2}{2g}+z_1+h_p = \frac{p_2}{\rho g}+\frac{V_2^2}{2g}+z_2+h_T +h_{loss}\]</div>
+<p>Examine the <span class="math notranslate nohighlight">\(h_{loss}\)</span> term:</p>
+<div class="math notranslate nohighlight">
+\[h_{loss} = f\frac{L}{D}\frac{V^2}{2g} + \sum_{i=1}^{n_{fit}} K_i \frac{V_i^2}{2g} \]</div>
+<p>The first part is the pipeline (major) loss (using the Darcy-Weisbach head loss model), the second part is the fitting losses.</p>
+<p>The kinds of fittings include:</p>
+<ul class="simple">
+<li><p>Entrances and exits as depicted below</p></li>
+</ul>
+<div class="figure align-default" id="entrance-effects">
+<a class="reference internal image-reference" href="../../_images/entrance-effects.png"><img alt="../../_images/entrance-effects.png" src="../../_images/entrance-effects.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 129 </span><span class="caption-text">Entrances and exits</span><a class="headerlink" href="#entrance-effects" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>Bends, transitions, and valves</p></li>
+</ul>
+<div class="figure align-default" id="fittings">
+<a class="reference internal image-reference" href="../../_images/fittings.png"><img alt="../../_images/fittings.png" src="../../_images/fittings.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 130 </span><span class="caption-text">Classes of fittings</span><a class="headerlink" href="#fittings" title="Permalink to this image">¶</a></p>
+</div>
+<p>The loss coefficients are tabulated and nearly always require some kind of table look-up.  Here are a few examples:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://neutrium.net/fluid-flow/pressure-loss-from-fittings-excess-head-k-method/">K-values neutrium.net</a></p></li>
+<li><p><a class="reference external" href="http://www.metropumps.com/ResourcesFrictionLossData.pdf">K-values metropumps.com</a></p></li>
+<li><p><a class="reference external" href="https://powderprocess.net/Tools_html/Piping/Pressure_Drop_Key_Piping_Elements_K_Coefficient.html">K-values powderprocess.net</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="example-1">
+<h2>Example 1:<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h2>
+<p>(Pg 532 Hibbler) The 6-inch diameter galvanized iron pipe depicted below transports water from a reservoir at a temperature of 100<span class="math notranslate nohighlight">\(^o~F\)</span>.  Determine the head loss and pressure drop in 200 feet of pipe for a discharge of <span class="math notranslate nohighlight">\(Q=400~gpm\)</span></p>
+<div class="figure align-default" id="img-6180">
+<a class="reference internal image-reference" href="../../_images/IMG-6180.png"><img alt="../../_images/IMG-6180.png" src="../../_images/IMG-6180.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 131 </span><span class="caption-text">Sketch of pipeline situation</span><a class="headerlink" href="#img-6180" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="sketch">
+<h3>Sketch<a class="headerlink" href="#sketch" title="Permalink to this headline">¶</a></h3>
+<p>Above</p>
+</div>
+<div class="section" id="known">
+<h3>Known<a class="headerlink" href="#known" title="Permalink to this headline">¶</a></h3>
+<p><span class="math notranslate nohighlight">\(Q=400~gpm\)</span><br>
+<span class="math notranslate nohighlight">\(D=0.5~ft\)</span><br>
+material = “galvanized iron pipe” (use to find roughness height)<br>
+<span class="math notranslate nohighlight">\(L=200~ft\)</span><br>
+<span class="math notranslate nohighlight">\(T=100^o~F\)</span><br></p>
+</div>
+<div class="section" id="unknown">
+<h3>Unknown<a class="headerlink" href="#unknown" title="Permalink to this headline">¶</a></h3>
+<p><span class="math notranslate nohighlight">\(h_f\)</span><br>
+<span class="math notranslate nohighlight">\(\Delta p\)</span><br></p>
+</div>
+<div class="section" id="governing-equations">
+<h3>Governing Equations<a class="headerlink" href="#governing-equations" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Darcy-Wiseass head loss model <span class="math notranslate nohighlight">\(h_f=f\frac{L}{D}\frac{V^2}{2g}\)</span></p></li>
+<li><p>Reynolds’ number <span class="math notranslate nohighlight">\(Re_d = \frac{VD}{\nu}\)</span></p></li>
+<li><p>Modified bernoulli equation (to find <span class="math notranslate nohighlight">\(\Delta p\)</span>)</p></li>
+</ul>
+</div>
+<div class="section" id="analysis-solution">
+<h3>Analysis (Solution)<a class="headerlink" href="#analysis-solution" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Starting with the given temperature find the necessary water properties; easiest to use an on-line resource such as <a class="reference external" href="http://54.243.252.9/toolbox/fluidmechanics/WaterPropertiesUS/WaterPropertiesUS.html">http://54.243.252.9/toolbox/fluidmechanics/WaterPropertiesUS/WaterPropertiesUS.html</a></p></li>
+</ul>
+<p>The relevant properties are displayed below</p>
+<div class="figure align-default" id="fluid-properties14">
+<a class="reference internal image-reference" href="../../_images/fluid-properties14.png"><img alt="../../_images/fluid-properties14.png" src="../../_images/fluid-properties14.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 132 </span><span class="caption-text">Fluid Properties On-line Database</span><a class="headerlink" href="#fluid-properties14" title="Permalink to this image">¶</a></p>
+</div>
+<p>Now we can compute the Reynolds number as depicted below; first a prototype function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># reynolds number function - execute this cell to prototype the function</span>
+<span class="k">def</span> <span class="nf">reynolds</span><span class="p">(</span><span class="n">velocity</span><span class="p">,</span><span class="n">diameter</span><span class="p">,</span><span class="n">viscosity</span><span class="p">):</span>
+    <span class="n">reynolds</span> <span class="o">=</span> <span class="n">velocity</span><span class="o">*</span><span class="n">diameter</span><span class="o">/</span><span class="n">viscosity</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">reynolds</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Then the actual computations</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># compute the reynolds number</span>
+<span class="n">gpm</span> <span class="o">=</span> <span class="mi">400</span>
+<span class="n">diam</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">long</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="n">grav</span> <span class="o">=</span> <span class="mf">32.2</span>
+<span class="c1"># gpm to cfs</span>
+<span class="n">cfs</span> <span class="o">=</span> <span class="n">gpm</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">60</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mf">7.48</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="n">area</span> <span class="o">=</span> <span class="mf">0.25</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">diam</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">vel</span> <span class="o">=</span> <span class="n">cfs</span><span class="o">/</span><span class="n">area</span>
+<span class="n">nu</span> <span class="o">=</span> <span class="mf">7.39e-06</span> <span class="c1"># from the database lookup</span>
+<span class="n">Re</span> <span class="o">=</span> <span class="n">reynolds</span><span class="p">(</span><span class="n">vel</span><span class="p">,</span><span class="n">diam</span><span class="p">,</span><span class="n">nu</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">Re</span> <span class="o">&gt;</span> <span class="mi">2300</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Reynolds number:&quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">Re</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="s2">&quot; flow is turbulent&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">Re</span> <span class="o">&gt;=</span> <span class="mi">2000</span> <span class="ow">and</span> <span class="n">Re</span> <span class="o">&lt;=</span><span class="mi">2300</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Reynolds number:&quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">Re</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="s2">&quot; flow is transitional&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">Re</span> <span class="o">&lt;</span> <span class="mi">2000</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Reynolds number:&quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">Re</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="s2">&quot; flow is laminar&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reynolds number: 307116.266  flow is turbulent
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next we need to find the roughness height from the material describtion, again an on-line tool is helpful <a class="reference external" href="http://54.243.252.9/toolbox/Databases/RoughnessHeight/RoughnessHeight.html">http://54.243.252.9/toolbox/Databases/RoughnessHeight/RoughnessHeight.html</a></p>
+<div class="figure align-default" id="roughness14">
+<a class="reference internal image-reference" href="../../_images/roughness14.png"><img alt="../../_images/roughness14.png" src="../../_images/roughness14.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 133 </span><span class="caption-text">Galvanized Iron Roughness from On-line Database</span><a class="headerlink" href="#roughness14" title="Permalink to this image">¶</a></p>
+</div>
+<p>With the roughness height we can complete the analysis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">roughness</span> <span class="o">=</span> <span class="mf">0.15</span> <span class="c1">#mm</span>
+<span class="n">roughness</span> <span class="o">=</span> <span class="n">roughness</span><span class="o">/</span><span class="mf">25.4</span><span class="o">/</span><span class="mi">12</span> <span class="c1">#mm to inches, inches to feet</span>
+<span class="n">relative_roughness</span> <span class="o">=</span> <span class="n">roughness</span><span class="o">/</span><span class="n">diam</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Relative roughness&quot;</span><span class="p">,</span><span class="n">relative_roughness</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Relative roughness 0.000984251968503937
+</pre></div>
+</div>
+</div>
+</div>
+<p>Use this value to find a friction factor, easiest to use the Jain equation(s)</p>
+<div class="math notranslate nohighlight">
+\[f = \frac{0.25}{[log_{10}(\frac{K_s}{3.7D} + \frac{5.74}{Re^{0.9}})]^2}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">friction_fact</span><span class="p">(</span><span class="n">roughness</span><span class="p">,</span><span class="n">diameter</span><span class="p">,</span><span class="n">reynolds</span><span class="p">):</span>
+    <span class="kn">import</span> <span class="nn">math</span>
+    <span class="n">numerator</span> <span class="o">=</span> <span class="mf">0.25</span>
+    <span class="n">denominator</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">log10</span><span class="p">((</span><span class="n">roughness</span><span class="o">/</span><span class="p">(</span><span class="mf">3.7</span><span class="o">*</span><span class="n">diameter</span><span class="p">))</span> <span class="o">+</span> <span class="p">(</span><span class="mf">5.74</span><span class="o">/</span><span class="n">reynolds</span><span class="o">**</span><span class="mf">0.9</span><span class="p">))</span>
+    <span class="n">ratio</span> <span class="o">=</span> <span class="n">numerator</span><span class="o">/</span><span class="n">denominator</span><span class="o">**</span><span class="mi">2</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">ratio</span><span class="p">)</span>
+
+<span class="n">ff</span> <span class="o">=</span> <span class="n">friction_fact</span><span class="p">(</span><span class="n">roughness</span><span class="p">,</span><span class="n">diam</span><span class="p">,</span><span class="n">Re</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Friction factor :&quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">ff</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Friction factor : 0.0207
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we can compute the head loss</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">headloss</span> <span class="o">=</span> <span class="n">ff</span><span class="o">*</span><span class="p">(</span><span class="n">long</span><span class="o">/</span><span class="n">diam</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">vel</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">grav</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Head loss :&quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">headloss</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Head loss : 2.644
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now to find the pressure drop, we simply express the head loss as an equivalent pressure (assuming horizontal pipe) using the modified bernoulli equation.</p>
+<p>Start with:</p>
+<div class="math notranslate nohighlight">
+\[\frac{p_1}{\rho g}+\frac{V_1^2}{2g}+z_1+h_p = \frac{p_2}{\rho g}+\frac{V_2^2}{2g}+z_2+h_T +h_{loss}\]</div>
+<p>No pumps or turbines, horizontal, constant diameter pipe all thats left is</p>
+<div class="math notranslate nohighlight">
+\[\frac{p_1}{\rho g} = \frac{p_2}{\rho g} +h_{loss}\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[\frac{p_1}{\rho g} - \frac{p_2}{\rho g} = \frac{\Delta p}{\rho g} = h_{loss}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">deltap</span> <span class="o">=</span> <span class="n">headloss</span><span class="o">*</span><span class="mf">62.0</span> <span class="c1"># use density for 100F wasser</span>
+<span class="n">deltap</span> <span class="o">=</span> <span class="n">deltap</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">12</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">12</span><span class="p">)</span> <span class="c1"># convert psf to psi</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pressure drop&quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">deltap</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="s2">&quot; psi &quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pressure drop 1.138  psi 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="discussion-of-results">
+<h3>Discussion of Results<a class="headerlink" href="#discussion-of-results" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="example-2">
+<h2>Example 2:<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="readings">
+<h2>Readings<a class="headerlink" href="#readings" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>CE-3305-2022-1 Syllabus. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html">http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html</a></p></li>
+<li><p>Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 517-539</p></li>
+<li><p>DF Elger, BC Williams, Crowe, CT and JA Roberson, <em>Engineering Fluid Mechanics 10th edition</em>, John Wiley &amp; Sons, Inc., 2013. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-13.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-13.pdf</a></p></li>
+<li><p>Cleveland, T. G. (2014) <em>Fluid Mechanics Notes to Accompany CE 3305 at Jade-Holshule (TTU Study Abroad 2015-2019)</em>, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture13.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture13.pdf</a></p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons/lesson14"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../lesson13/lesson13.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Viscous Flow in a Duct</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../lesson15/lesson15.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Pipe Networks</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Theodore G. Cleveland<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
