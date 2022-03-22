@@ -354,6 +354,11 @@
      Analysis (Solution)
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Discussion of Results
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -646,6 +651,129 @@ Minor Loss Components: 2 Elbows <span class="math notranslate nohighlight">\(K_{
 </ul>
 <div class="math notranslate nohighlight">
 \[8 = (72f + 3.49)\frac{V^2}{64.4} \]</div>
+<p>Now we need to build a tool to iteratively solve the equation and compute <span class="math notranslate nohighlight">\(f\)</span> as it proceedes.  A simple trial-and-error method is shown below</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># properties</span>
+<span class="n">grav</span> <span class="o">=</span> <span class="mf">32.2</span>
+<span class="n">nugl</span> <span class="o">=</span> <span class="mf">1.22e-02</span>
+<span class="n">rough</span> <span class="o">=</span> <span class="mf">0.09</span><span class="o">/</span><span class="mf">25.4</span><span class="o">/</span><span class="mi">12</span>
+<span class="n">dia</span> <span class="o">=</span> <span class="mf">0.25</span> <span class="c1"># 3in==0.25feet</span>
+<span class="c1">#####  guess Velocity  ##########</span>
+<span class="n">vguess</span> <span class="o">=</span> <span class="mi">100</span>                   <span class="c1">##</span>
+<span class="c1">#################################</span>
+<span class="c1"># compute Re</span>
+<span class="n">Re_d</span> <span class="o">=</span> <span class="n">reynolds</span><span class="p">(</span><span class="n">vguess</span><span class="p">,</span><span class="n">dia</span><span class="p">,</span><span class="n">nugl</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">Re_d</span> <span class="o">&lt;</span> <span class="mi">2000</span><span class="p">:</span>
+    <span class="n">ffg</span> <span class="o">=</span> <span class="mi">64</span><span class="o">/</span><span class="n">Re_d</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">ffg</span> <span class="o">=</span> <span class="n">friction_fact</span><span class="p">(</span><span class="n">rough</span><span class="p">,</span><span class="n">dia</span><span class="p">,</span><span class="n">Re_d</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Re :&quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">Re_d</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="s2">&quot;f :&quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">ffg</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="c1"># evaluate formula</span>
+<span class="n">rhs</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mf">64.4</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">72</span><span class="o">*</span><span class="n">ffg</span><span class="o">+</span><span class="mf">3.49</span><span class="p">)</span><span class="o">*</span><span class="n">vguess</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">lhs</span> <span class="o">=</span> <span class="mi">8</span> <span class="c1"># given</span>
+<span class="n">tolerance</span> <span class="o">=</span> <span class="mf">0.001</span>
+<span class="k">if</span> <span class="n">rhs</span> <span class="o">-</span> <span class="n">lhs</span> <span class="o">&gt;</span> <span class="n">tolerance</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Guess :&quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">rhs</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="s2">&quot;Target :&quot;</span><span class="p">,</span><span class="n">lhs</span><span class="p">,</span><span class="s2">&quot;Reduce V and try again&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">rhs</span> <span class="o">-</span> <span class="n">lhs</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span><span class="o">*</span><span class="n">tolerance</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Guess :&quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">rhs</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="s2">&quot;Target :&quot;</span><span class="p">,</span><span class="n">lhs</span><span class="p">,</span><span class="s2">&quot;Increase V and try again&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Guess :&quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">rhs</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="s2">&quot;Target :&quot;</span><span class="p">,</span><span class="n">lhs</span><span class="p">,</span><span class="s2">&quot;Close enough!&quot;</span><span class="p">)</span>
+    <span class="n">flow</span> <span class="o">=</span> <span class="n">vguess</span><span class="o">*</span><span class="mf">0.25</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">dia</span><span class="o">**</span><span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Flow Rate :&quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">flow</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Re : 2049.18 f : 0.052
+Guess : 1119.93 Target : 8 Reduce V and try again
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># properties</span>
+<span class="n">grav</span> <span class="o">=</span> <span class="mf">32.2</span>
+<span class="n">nugl</span> <span class="o">=</span> <span class="mf">1.22e-02</span>
+<span class="n">rough</span> <span class="o">=</span> <span class="mf">0.09</span><span class="o">/</span><span class="mf">25.4</span><span class="o">/</span><span class="mi">12</span>
+<span class="n">dia</span> <span class="o">=</span> <span class="mf">0.25</span> <span class="c1"># 3in==0.25feet</span>
+<span class="c1">#####  guess Velocity  ##########</span>
+<span class="n">vguess</span> <span class="o">=</span> <span class="mf">1.0</span>                   <span class="c1">##</span>
+<span class="c1">#################################</span>
+<span class="c1"># compute Re</span>
+<span class="n">Re_d</span> <span class="o">=</span> <span class="n">reynolds</span><span class="p">(</span><span class="n">vguess</span><span class="p">,</span><span class="n">dia</span><span class="p">,</span><span class="n">nugl</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">Re_d</span> <span class="o">&lt;</span> <span class="mi">2000</span><span class="p">:</span>
+    <span class="n">ffg</span> <span class="o">=</span> <span class="mi">64</span><span class="o">/</span><span class="n">Re_d</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">ffg</span> <span class="o">=</span> <span class="n">friction_fact</span><span class="p">(</span><span class="n">rough</span><span class="p">,</span><span class="n">dia</span><span class="p">,</span><span class="n">Re_d</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Re :&quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">Re_d</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="s2">&quot;f :&quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">ffg</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="c1"># evaluate formula</span>
+<span class="n">rhs</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mf">64.4</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">72</span><span class="o">*</span><span class="n">ffg</span><span class="o">+</span><span class="mf">3.49</span><span class="p">)</span><span class="o">*</span><span class="n">vguess</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">lhs</span> <span class="o">=</span> <span class="mi">8</span> <span class="c1"># given</span>
+<span class="n">tolerance</span> <span class="o">=</span> <span class="mf">0.001</span>
+<span class="k">if</span> <span class="n">rhs</span> <span class="o">-</span> <span class="n">lhs</span> <span class="o">&gt;</span> <span class="n">tolerance</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Guess :&quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">rhs</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="s2">&quot;Target :&quot;</span><span class="p">,</span><span class="n">lhs</span><span class="p">,</span><span class="s2">&quot;Reduce V and try again&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">rhs</span> <span class="o">-</span> <span class="n">lhs</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span><span class="o">*</span><span class="n">tolerance</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Guess :&quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">rhs</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="s2">&quot;Target :&quot;</span><span class="p">,</span><span class="n">lhs</span><span class="p">,</span><span class="s2">&quot;Increase V and try again&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Guess :&quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">rhs</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="s2">&quot;Target :&quot;</span><span class="p">,</span><span class="n">lhs</span><span class="p">,</span><span class="s2">&quot;Close enough!&quot;</span><span class="p">)</span>
+    <span class="n">flow</span> <span class="o">=</span> <span class="n">vguess</span><span class="o">*</span><span class="mf">0.25</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">dia</span><span class="o">**</span><span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Flow Rate :&quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">flow</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Re : 20.49 f : 3.123
+Guess : 3.55 Target : 8 Increase V and try again
+</pre></div>
+</div>
+</div>
+</div>
+<p>A few more guesses to get close:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># properties</span>
+<span class="n">grav</span> <span class="o">=</span> <span class="mf">32.2</span>
+<span class="n">nugl</span> <span class="o">=</span> <span class="mf">1.22e-02</span>
+<span class="n">rough</span> <span class="o">=</span> <span class="mf">0.09</span><span class="o">/</span><span class="mf">25.4</span><span class="o">/</span><span class="mi">12</span>
+<span class="n">dia</span> <span class="o">=</span> <span class="mf">0.25</span> <span class="c1"># 3in==0.25feet</span>
+<span class="c1">#####  guess Velocity  ##########</span>
+<span class="n">vguess</span> <span class="o">=</span> <span class="mf">2.215</span>                 <span class="c1">##</span>
+<span class="c1">#################################</span>
+<span class="c1"># compute Re</span>
+<span class="n">Re_d</span> <span class="o">=</span> <span class="n">reynolds</span><span class="p">(</span><span class="n">vguess</span><span class="p">,</span><span class="n">dia</span><span class="p">,</span><span class="n">nugl</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">Re_d</span> <span class="o">&lt;</span> <span class="mi">2000</span><span class="p">:</span>
+    <span class="n">ffg</span> <span class="o">=</span> <span class="mi">64</span><span class="o">/</span><span class="n">Re_d</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">ffg</span> <span class="o">=</span> <span class="n">friction_fact</span><span class="p">(</span><span class="n">rough</span><span class="p">,</span><span class="n">dia</span><span class="p">,</span><span class="n">Re_d</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Re :&quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">Re_d</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="s2">&quot;f :&quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">ffg</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="c1"># evaluate formula</span>
+<span class="n">rhs</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mf">64.4</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">72</span><span class="o">*</span><span class="n">ffg</span><span class="o">+</span><span class="mf">3.49</span><span class="p">)</span><span class="o">*</span><span class="n">vguess</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">lhs</span> <span class="o">=</span> <span class="mi">8</span> <span class="c1"># given</span>
+<span class="n">tolerance</span> <span class="o">=</span> <span class="mf">0.001</span>
+<span class="k">if</span> <span class="n">rhs</span> <span class="o">-</span> <span class="n">lhs</span> <span class="o">&gt;</span> <span class="n">tolerance</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Guess :&quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">rhs</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="s2">&quot;Target :&quot;</span><span class="p">,</span><span class="n">lhs</span><span class="p">,</span><span class="s2">&quot;Reduce V and try again&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">rhs</span> <span class="o">-</span> <span class="n">lhs</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span><span class="o">*</span><span class="n">tolerance</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Guess :&quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">rhs</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="s2">&quot;Target :&quot;</span><span class="p">,</span><span class="n">lhs</span><span class="p">,</span><span class="s2">&quot;Increase V and try again&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Guess :&quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">rhs</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="s2">&quot;Target :&quot;</span><span class="p">,</span><span class="n">lhs</span><span class="p">,</span><span class="s2">&quot;Close enough!&quot;</span><span class="p">)</span>
+    <span class="n">flow</span> <span class="o">=</span> <span class="n">vguess</span><span class="o">*</span><span class="mf">0.25</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">dia</span><span class="o">**</span><span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Flow Rate :&quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">flow</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Re : 45.39 f : 1.41
+Guess : 8.0 Target : 8 Close enough!
+Flow Rate : 0.109
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>Discussion of Results<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 <div class="section" id="readings">

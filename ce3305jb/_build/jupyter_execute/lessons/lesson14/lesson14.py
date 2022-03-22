@@ -274,8 +274,110 @@ print("Pressure drop",round(deltap,3)," psi ")
 # - Algebra
 # 
 # $$8 = (72f + 3.49)\frac{V^2}{64.4} $$
+# 
+# Now we need to build a tool to iteratively solve the equation and compute $f$ as it proceedes.  A simple trial-and-error method is shown below
 
-# In[ ]:
+# In[7]:
+
+
+# properties
+grav = 32.2
+nugl = 1.22e-02
+rough = 0.09/25.4/12
+dia = 0.25 # 3in==0.25feet
+#####  guess Velocity  ##########
+vguess = 100                   ##
+#################################
+# compute Re
+Re_d = reynolds(vguess,dia,nugl)
+if Re_d < 2000:
+    ffg = 64/Re_d
+else:
+    ffg = friction_fact(rough,dia,Re_d)
+print("Re :",round(Re_d,2),"f :",round(ffg,3))
+# evaluate formula
+rhs = (1/64.4)*(72*ffg+3.49)*vguess**2
+lhs = 8 # given
+tolerance = 0.001
+if rhs - lhs > tolerance:
+    print("Guess :",round(rhs,2),"Target :",lhs,"Reduce V and try again")
+elif rhs - lhs < -1*tolerance:
+    print("Guess :",round(rhs,2),"Target :",lhs,"Increase V and try again")
+else:
+    print("Guess :",round(rhs,2),"Target :",lhs,"Close enough!")
+    flow = vguess*0.25*math.pi*dia**2
+    print("Flow Rate :",round(flow,3))
+
+
+# In[8]:
+
+
+# properties
+grav = 32.2
+nugl = 1.22e-02
+rough = 0.09/25.4/12
+dia = 0.25 # 3in==0.25feet
+#####  guess Velocity  ##########
+vguess = 1.0                   ##
+#################################
+# compute Re
+Re_d = reynolds(vguess,dia,nugl)
+if Re_d < 2000:
+    ffg = 64/Re_d
+else:
+    ffg = friction_fact(rough,dia,Re_d)
+print("Re :",round(Re_d,2),"f :",round(ffg,3))
+# evaluate formula
+rhs = (1/64.4)*(72*ffg+3.49)*vguess**2
+lhs = 8 # given
+tolerance = 0.001
+if rhs - lhs > tolerance:
+    print("Guess :",round(rhs,2),"Target :",lhs,"Reduce V and try again")
+elif rhs - lhs < -1*tolerance:
+    print("Guess :",round(rhs,2),"Target :",lhs,"Increase V and try again")
+else:
+    print("Guess :",round(rhs,2),"Target :",lhs,"Close enough!")
+    flow = vguess*0.25*math.pi*dia**2
+    print("Flow Rate :",round(flow,3))
+
+
+# A few more guesses to get close:
+
+# In[9]:
+
+
+# properties
+grav = 32.2
+nugl = 1.22e-02
+rough = 0.09/25.4/12
+dia = 0.25 # 3in==0.25feet
+#####  guess Velocity  ##########
+vguess = 2.215                 ##
+#################################
+# compute Re
+Re_d = reynolds(vguess,dia,nugl)
+if Re_d < 2000:
+    ffg = 64/Re_d
+else:
+    ffg = friction_fact(rough,dia,Re_d)
+print("Re :",round(Re_d,2),"f :",round(ffg,3))
+# evaluate formula
+rhs = (1/64.4)*(72*ffg+3.49)*vguess**2
+lhs = 8 # given
+tolerance = 0.001
+if rhs - lhs > tolerance:
+    print("Guess :",round(rhs,2),"Target :",lhs,"Reduce V and try again")
+elif rhs - lhs < -1*tolerance:
+    print("Guess :",round(rhs,2),"Target :",lhs,"Increase V and try again")
+else:
+    print("Guess :",round(rhs,2),"Target :",lhs,"Close enough!")
+    flow = vguess*0.25*math.pi*dia**2
+    print("Flow Rate :",round(flow,3))
+
+
+# ### Discussion of Results
+
+# In[34]:
 
 
 
