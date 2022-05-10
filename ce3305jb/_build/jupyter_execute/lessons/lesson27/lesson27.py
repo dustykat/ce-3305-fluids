@@ -385,7 +385,8 @@ print("Scaled Power ",round(p2,3))
 
 
 # #### Step 6
-# A quick comment, the step to check that the scaled head is at least big enough to overcome the required added head at the new flow rate is often forgotten
+# A quick comment, the step to check that the scaled head is at least big enough to overcome the required added head at the new flow rate is often forgotten but should be checked.
+# 
 
 # 
 # ## Readings
