@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Viscous External Flows &#8212; CE 3305 Mechanics of Fluids</title>
+    <title>Computational Hydraulics: Pipe Networks &#8212; CE 3305 Mechanics of Fluids</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,7 +51,6 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="Pipe Networks" href="../lesson15/lesson15.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -92,85 +91,10 @@
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../lesson01/lesson01.html">
-   Introduction
-  </a>
- </li>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../lesson02/lesson02.html">
-   Basic Fluid Properties
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lesson03/lesson03.html">
    Fluid Statics and Pressure
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lesson04/lesson04.html">
-   Fluid Statics and Pressure (continued)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lesson05/lesson05.html">
-   Euler and Bernoulli Equations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lesson06/lesson06.html">
-   Bernoulli Applications
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lesson07/lesson07.html">
-   Control Volume Analysis - Continunity
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lesson08/lesson08.html">
-   Bernoulli &amp; CV Applications
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lesson09/lesson09.html">
-   Conservation of Linear Momentum
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lesson10/lesson10.html">
-   Conservation of Angular Momentum
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lesson11/lesson11.html">
-   Conservation of Energy
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lesson12/lesson12.html">
-   Dimensional Analysis and Similitude
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lesson13/lesson13.html">
-   Viscous Flow in a Duct
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lesson14/lesson14.html">
-   Closed Conduit (Pipe) Flow
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lesson15/lesson15.html">
-   Pipe Networks
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Viscous External Flows
   </a>
  </li>
 </ul>
@@ -283,15 +207,66 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#background">
-     Background
+    <a class="reference internal nav-link" href="#topic-1">
+     Topic 1
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#subtopic">
+       Subtopic
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Subtopic
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#topic-2">
+     Topic 2
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Subtopic
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Subtopic
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#topic-3">
+     Topic 3
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id4">
+       Subtopic
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id5">
+       Subtopic
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#readings">
    Readings
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   Exercises
   </a>
  </li>
 </ul>
@@ -305,29 +280,63 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="viscous-external-flows">
-<h1>Viscous External Flows<a class="headerlink" href="#viscous-external-flows" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="computational-hydraulics-pipe-networks">
+<h1>Computational Hydraulics: Pipe Networks<a class="headerlink" href="#computational-hydraulics-pipe-networks" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="lesson-outline">
 <h2>Lesson Outline<a class="headerlink" href="#lesson-outline" title="Permalink to this headline">¶</a></h2>
-<p>– Laminar Boundary Layers</p>
 <ul class="simple">
-<li><p>Turbulent Boundary Layers</p></li>
-<li><p>Drag and Lift</p></li>
-<li><p>Flow over Flat Plate</p></li>
-<li><p>Flow around Cylinder</p></li>
+<li><p>topic 1</p></li>
+<li><p>topic 2</p></li>
+<li><p>topic 3</p></li>
 </ul>
-<div class="section" id="background">
-<h3>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="topic-1">
+<h3>Topic 1<a class="headerlink" href="#topic-1" title="Permalink to this headline">¶</a></h3>
+<p>ipsum lorem</p>
+<div class="section" id="subtopic">
+<h4>Subtopic<a class="headerlink" href="#subtopic" title="Permalink to this headline">¶</a></h4>
+<p>ipsum lorem</p>
+</div>
+<div class="section" id="id1">
+<h4>Subtopic<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>ipsum lorem</p>
+</div>
+</div>
+<div class="section" id="topic-2">
+<h3>Topic 2<a class="headerlink" href="#topic-2" title="Permalink to this headline">¶</a></h3>
+<p>ipsum lorem</p>
+<div class="section" id="id2">
+<h4>Subtopic<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p>ipsum lorem</p>
+</div>
+<div class="section" id="id3">
+<h4>Subtopic<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<p>ipsum lorem</p>
+</div>
+</div>
+<div class="section" id="topic-3">
+<h3>Topic 3<a class="headerlink" href="#topic-3" title="Permalink to this headline">¶</a></h3>
+<p>ipsum lorem</p>
+<div class="section" id="id4">
+<h4>Subtopic<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<p>ipsum lorem</p>
+</div>
+<div class="section" id="id5">
+<h4>Subtopic<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<p>ipsum lorem</p>
+</div>
 </div>
 </div>
 <div class="section" id="readings">
 <h2>Readings<a class="headerlink" href="#readings" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
-<li><p>CE-3305-2022-1 Syllabus. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html">http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html</a></p></li>
-<li><p>Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 569-596</p></li>
-<li><p>DF Elger, BC Williams, Crowe, CT and JA Roberson, <em>Engineering Fluid Mechanics 10th edition</em>, John Wiley &amp; Sons, Inc., 2013. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-20.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-20.pdf</a></p></li>
-<li><p>Cleveland, T. G. (2014) <em>Fluid Mechanics Notes to Accompany CE 3305 at Jade-Holshule (TTU Study Abroad 2015-2019)</em>, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture13.pdf">missing_link</a></p></li>
+<li><p><a class="reference external" href="http://54.243.252.9/ce-3305-webroot-su22/0-Syllabus/ce-3305-2022-1-syllabus.html">CE-3305-2022-2 (Summer2) Syllabus</a></p></li>
+<li><p>Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 3-14</p></li>
+<li><p>DF Elger, BC Williams, Crowe, CT and JA Roberson, <em>Engineering Fluid Mechanics 10th edition</em>, John Wiley &amp; Sons, Inc., 2013.  (placeholder file to get links working). <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-1.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-1.pdf</a></p></li>
+<li><p>Cleveland, T. G. (2014) <em>Fluid Mechanics Notes to Accompany CE 3305 at Jade-Holshule (TTU Study Abroad 2015-2019)</em>, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-001.1.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-001.1.pdf</a></p></li>
 </ol>
+</div>
+<div class="section" id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -360,15 +369,6 @@
 
 <div class='prev-next-bottom'>
     
-    <div id="prev">
-        <a class="left-prev" href="../lesson15/lesson15.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Pipe Networks</p>
-            </div>
-        </a>
-    </div>
 
 </div>
         

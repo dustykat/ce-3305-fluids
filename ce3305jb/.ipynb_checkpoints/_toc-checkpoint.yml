@@ -3,22 +3,36 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: lessons/lesson01/lesson01
-- file: lessons/lesson02/lesson02
-- file: lessons/lesson03/lesson03
-- file: lessons/lesson04/lesson04
-- file: lessons/lesson05/lesson05
-- file: lessons/lesson06/lesson06
-- file: lessons/lesson07/lesson07
-- file: lessons/lesson08/lesson08
-- file: lessons/lesson09/lesson09
-- file: lessons/lesson10/lesson10
-- file: lessons/lesson11/lesson11
-- file: lessons/lesson12/lesson12
-- file: lessons/lesson13/lesson13
-- file: lessons/lesson14/lesson14
-- file: lessons/lesson15/lesson15
-- file: lessons/lesson16/lesson16
-- file: lessons/lesson27/lesson27
+chapters: 
+#- file: lessons/lesson01/ # introduction, fluid properties
+  sections:
+  - file: lessons/lesson01/lesson01sec01
+#- file: lessons/lesson02/lesson02 # Fluid Statics and Pressure
+#- file: lessons/lesson03/lesson03 #
+#- file: lessons/lesson04/lesson04
+#
+#- file: lessons/lesson05/lesson05
+#- file: lessons/lesson06/lesson06
+#- file: lessons/lesson07/lesson07
+#- file: lessons/lesson08/lesson08
+#- file: lessons/lesson09/lesson09
+#
+#- file: lessons/lesson10/lesson10
+#- file: lessons/lesson11/lesson11
+#- file: lessons/lesson12/lesson12
+#- file: lessons/lesson12.1/lesson12.1
+#- file: lessons/lesson13/lesson13 #ClosedConduitFlow
+#- file: lessons/lesson14/lesson14 #ClosedConduitHeadLosses
+#
+#- file: lessons/lesson15/lesson15
+#- file: lessons/lesson16/lesson16
+#- file: lessons/lesson17/lesson17
+#- file: lessons/lesson18/lesson18 #OpenChannelSpecificEnergy
+#- file: lessons/lesson19/lesson19 #OpenChannelRapidVaryingFlow
+#
+#- file: lessons/lesson20/lesson20 #OpenChannelGradualVaryingFlow
+#- file: lessons/lesson21/lesson21 #CompHydWaterSurfaceProfiles
+#- file: lessons/lesson22/lesson22 #BLT-LaminarAndTurbulentBoundaryLayers
+#- file: lessons/lesson23/lesson23 #BLT-FlowOverFlatPlate
+#- file: lessons/lesson24/lesson24 #BLT-FlowAroundCylinder
 #- file: notebooks

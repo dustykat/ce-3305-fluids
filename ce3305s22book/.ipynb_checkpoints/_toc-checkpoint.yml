@@ -1,0 +1,62 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: lessons/lesson00/lesson00
+  sections:
+  - file: lessons/lesson00/1problemsolving # problem solving and documentation
+  - file: lessons/lesson00/2computation # computational considerations
+  - file: lessons/lesson00/3whatisfluids # what is fluid mechanics?
+  - file: lessons/lesson00/4units # dimensions and units
+  
+- file: lessons/lesson01/lesson01 # fluid properties
+  sections:
+  - file: lessons/lesson01/1properties # intensive/extensive fluid properties
+  - file: lessons/lesson01/2viscosity # viscosity
+#  - file: lessons/lesson01/lesson01section03 # viscosity examples
+  - file: lessons/lesson01/3liquids # liquid properties
+#  - file: lessons/lesson01/lesson01section05 # viscosity meters
+  - file: lessons/lesson01/4vaporpressure # vapor pressure/readings/exercises
+#            
+- file: lessons/lesson02/lesson02 # Fluid Statics and Pressure
+  sections:
+  - file: lessons/lesson02/2pressure # intensive/extensive fluid properties
+  - file: lessons/lesson02/3forces # viscosity
+  - file: lessons/lesson02/4references # viscosity
+  
+- file: lessons/lesson03/lesson03 #
+- file: lessons/lesson04/lesson04
+#
+- file: lessons/lesson05/lesson05
+- file: lessons/lesson06/lesson06
+- file: lessons/lesson07/lesson07
+- file: lessons/lesson08/lesson08
+- file: lessons/lesson09/lesson09
+#
+- file: lessons/lesson10/lesson10
+- file: lessons/lesson11/lesson11
+- file: lessons/lesson12/lesson12
+- file: lessons/lesson12.1/lesson12.1
+- file: lessons/lesson13/lesson13 #ClosedConduitFlow
+- file: lessons/lesson14/lesson14 #ClosedConduitHeadLosses
+#
+- file: lessons/lesson15/lesson15 #Hydraulic Machines
+  sections:
+  - file: lessons/lesson15/pumpoppoint
+  - file: lessons/lesson15/affinitylaws
+  
+- file: lessons/lesson16/lesson16
+- file: lessons/lesson17/lesson17
+- file: lessons/lesson18/lesson18 #OpenChannelSpecificEnergy
+- file: lessons/lesson19/lesson19 #OpenChannelRapidVaryingFlow
+#
+- file: lessons/lesson20/lesson20 #OpenChannelGradualVaryingFlow
+- file: lessons/lesson21/lesson21 #CompHydWaterSurfaceProfiles
+- file: lessons/lesson22/lesson22 #BLT-LaminarAndTurbulentBoundaryLayers
+- file: lessons/lesson23/lesson23 #BLT-FlowOverFlatPlate
+- file: lessons/lesson24/lesson24 #BLT-FlowAroundCylinder
+  sections:
+  - file: lessons/lesson24/windondrum
+# - file: notebooks

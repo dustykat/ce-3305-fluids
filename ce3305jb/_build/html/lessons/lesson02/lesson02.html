@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basic Fluid Properties &#8212; CE 3305 Mechanics of Fluids</title>
+    <title>Fluid Statics and Pressure &#8212; CE 3305 Mechanics of Fluids</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,8 +53,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Fluid Statics and Pressure" href="../lesson03/lesson03.html" />
-    <link rel="prev" title="Introduction" href="../lesson01/lesson01.html" />
+    <link rel="prev" title="Fluid Mechanics Notes to Accompany CE 3305 at TTU" href="../../intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -96,24 +95,9 @@
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../lesson01/lesson01.html">
-   Introduction
-  </a>
- </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Basic Fluid Properties
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lesson03/lesson03.html">
    Fluid Statics and Pressure
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lesson04/lesson04.html">
-   Fluid Statics and Pressure (continued)
   </a>
  </li>
 </ul>
@@ -226,131 +210,101 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fluid-properties">
-   Fluid Properties
+  <a class="reference internal nav-link" href="#fluid-statics">
+   Fluid Statics
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#density">
-     Density
+    <a class="reference internal nav-link" href="#pressure">
+     Pressure
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#specific-weight">
-     Specific Weight
+    <a class="reference internal nav-link" href="#absolute-and-gage-pressure">
+     Absolute and Gage Pressure
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#specific-gravity">
-     Specific Gravity
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#bulk-modulus-of-elasticity">
-     Bulk Modulus (of elasticity)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#constant-volume-specific-heat">
-     Constant Volume Specific Heat
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#constant-pressure-specific-heat">
-     Constant Pressure Specific Heat
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#specific-internal-energy">
-     Specific Internal Energy
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#specific-enthalpy">
-     Specific Enthalpy
+    <a class="reference internal nav-link" href="#hydrostatic-equation">
+     Hydrostatic Equation
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#equation-of-state">
-   Equation of State
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#viscosity">
-   Viscosity
+  <a class="reference internal nav-link" href="#pressure-measurements">
+   Pressure Measurements
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#absolute-viscosity">
-     Absolute Viscosity
+    <a class="reference internal nav-link" href="#barometer">
+     Barometer
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#apparent-viscosity">
-     Apparent Viscosity
+    <a class="reference internal nav-link" href="#piezometer">
+     Piezometer
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#kinematic-viscosity">
-     Kinematic Viscosity
+    <a class="reference internal nav-link" href="#manometer">
+     Manometer
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#general-comments">
-     General Comments
+    <a class="reference internal nav-link" href="#transducers">
+     Transducers
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#example-1">
-   Example 1
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#example-2-radial-geometry-kinematics">
-   Example 2 - Radial Geometry Kinematics
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#liquid-properties">
-   Liquid Properties
+  <a class="reference internal nav-link" href="#examples">
+   Examples
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#capillary-rise">
-     Capillary Rise
+    <a class="reference internal nav-link" href="#example-1">
+     Example 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-2">
+     Example 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-3">
+     Example 3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-4">
+     Example 4
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#example-3-capillary-tube">
-   Example 3 - Capillary Tube
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#viscometers">
-   Viscometers
+  <a class="reference internal nav-link" href="#pressure-force-on-submerged-objects">
+   Pressure Force on Submerged Objects
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-problem">
-     Example Problem
+    <a class="reference internal nav-link" href="#uniform-pressure">
+     Uniform Pressure
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#distributed-pressure">
+     Distributed Pressure
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#vapor-pressure">
-   Vapor Pressure
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#readings">
-   Readings
+  <a class="reference internal nav-link" href="#references">
+   References
   </a>
  </li>
 </ul>
@@ -364,353 +318,341 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="basic-fluid-properties">
-<h1>Basic Fluid Properties<a class="headerlink" href="#basic-fluid-properties" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="fluid-statics-and-pressure">
+<h1>Fluid Statics and Pressure<a class="headerlink" href="#fluid-statics-and-pressure" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="lesson-outline">
 <h2>Lesson Outline<a class="headerlink" href="#lesson-outline" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
-<li><p>Basic Fluid Properties</p></li>
+<li><p>Hydrostatic Equation</p></li>
+<li><p>Measuring Devices (Pressure)</p></li>
+<li><p>Force on a Plane Surface</p></li>
 </ol>
-<ul class="simple">
-<li><p>Intensive/Extensive Properties</p></li>
-<li><p>Typical physical and thermodynamic properties</p></li>
-<li><p>Equations of state (IGL)</p></li>
-</ul>
-<ol class="simple">
-<li><p>Viscosimiters</p></li>
-</ol>
-<ul class="simple">
-<li><p>Measuring viscosity</p></li>
-<li><p>Example problems</p></li>
-</ul>
-<ol class="simple">
-<li><p>Vapor Pressure</p></li>
-</ol>
-<ul class="simple">
-<li><p>Barometers</p></li>
-</ul>
 </div>
-<div class="section" id="fluid-properties">
-<h2>Fluid Properties<a class="headerlink" href="#fluid-properties" title="Permalink to this headline">¶</a></h2>
-<p>Extensive properties apply to a system and are associated with a fixed quantity of mass.</p>
-<p>Intensive properties apply to components of a system, and are defined with restect to a boundary in space.</p>
-<p>Imagine a gallon of water; its weight is an extensive property assocated with that gallon.  The specific weight, <span class="math notranslate nohighlight">\(\gamma\)</span>, is the weight per volume is an intensive property. The properties in the textboox (pp 14-19) are for the most part intensive properties (mostly defined per unit volume)</p>
-<div class="figure align-default" id="gallon-properties">
-<a class="reference internal image-reference" href="../../_images/gallon-properties.png"><img alt="../../_images/gallon-properties.png" src="../../_images/gallon-properties.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">One gallon, and a 30cc sample removed</span><a class="headerlink" href="#gallon-properties" title="Permalink to this image">¶</a></p>
+<div class="section" id="fluid-statics">
+<h2>Fluid Statics<a class="headerlink" href="#fluid-statics" title="Permalink to this headline">¶</a></h2>
+<p>Fluid statics deals with forces in fluids that are have no relative motion within the fluid.  The vessel containing the fluid may be at non-zero velocity or acceleration, but the fluid body within the vessel has no relative motion.</p>
+<p>Two principal types of forces involved are body and surface forces as shown in <a class="reference internal" href="#fluidstatics"><span class="std std-numref">Fig. 1</span></a></p>
+<div class="figure align-default" id="fluidstatics">
+<a class="reference internal image-reference" href="../../_images/FluidStatics.png"><img alt="../../_images/FluidStatics.png" src="../../_images/FluidStatics.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">A sphere of some fluid, depicting a local coordinate system, differential area and a normal and tangential force pair</span><a class="headerlink" href="#fluidstatics" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#gallon-properties"><span class="std std-numref">Fig. 9</span></a> is a schematic of a simple example to relate extensive and intensive properties.<br />
-We first weigh the entire gallon, 8.32 lbs. Then we weigh the 30cc subsample, 0.065 lbs.</p>
-<p>The extensive property of weight for the gallon is 8.32 lbs; the extensive property of weight for the 30cc is 0.065 lbs.</p>
-<p>If we now compute specific weights of each entity and adjust to a common basis volume:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spwt_gallon</span> <span class="o">=</span> <span class="mf">8.32</span> <span class="c1"># lbs per gallon</span>
-<span class="n">spwt_30cc</span> <span class="o">=</span> <span class="mf">0.065</span> <span class="c1"># lbs per 30 cc</span>
-<span class="c1"># convert to common volume</span>
-<span class="n">spwt_30cc</span> <span class="o">=</span> <span class="n">spwt_30cc</span><span class="o">*</span><span class="p">(</span><span class="mi">128</span><span class="o">/</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># 30cc==1oz; 128oz==1gal conversion to common volume basis.</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sp. Wt. of 1 gallon sample = &#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">spwt_gallon</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sp. Wt. of 30 cc sample = &#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">spwt_30cc</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-</pre></div>
+<p>Body forces are developed without contact and are distributed over the entire volume of a fluid.  In the sketch the weight of the sphere is a body force.</p>
+<p>Surface forces act at boundaries of a medium through contant.  The normal force in the sketch (which is the product of pressure and area) is a surface force, defined on the surface of the sphere.</p>
+<p>Stress is the limiting value of <span class="math notranslate nohighlight">\(\frac{dF}{dA}\)</span>; in the sketch there are two stresses: a normal stress (usually called pressure), and a tangential stress (usually called shear).</p>
+<p>Shear stresses are formed by friction, no-slip assumption, and other practically occuring situations.</p>
+<div class="figure align-default" id="stresses">
+<a class="reference internal image-reference" href="../../_images/Stresses.png"><img alt="../../_images/Stresses.png" src="../../_images/Stresses.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Shear and normal stresses on a plane parallel to x-y coordinate plane, at some value z.</span><a class="headerlink" href="#stresses" title="Permalink to this image">¶</a></p>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sp. Wt. of 1 gallon sample =  8.32
-Sp. Wt. of 30 cc sample =  8.32
-</pre></div>
-</div>
-</div>
-</div>
-<p>They are the same value (as anticipated); intensive properties are useful in most fluid mechanics problems because they are a property of a specific fluid, rather that some fixed volume of that fluid - however we must be comfortable using both.</p>
-<div class="section" id="density">
-<h3>Density<a class="headerlink" href="#density" title="Permalink to this headline">¶</a></h3>
-<p>Density (or mass density) is the mass per unit volume.  Typical symbol is <span class="math notranslate nohighlight">\(\rho\)</span>, sometimes subscripted to identify fluid in multiiple fluid problems.</p>
-<div class="math notranslate nohighlight">
-\[ \rho = \frac{m}{V} \]</div>
-</div>
-<div class="section" id="specific-weight">
-<h3>Specific Weight<a class="headerlink" href="#specific-weight" title="Permalink to this headline">¶</a></h3>
-<p>Specific weight is the weight per unit volume.  Typical symbol is <span class="math notranslate nohighlight">\(\gamma\)</span>.
-It is related to density by gravitational acceleration:</p>
-<div class="math notranslate nohighlight">
-\[\gamma = \rho g\]</div>
-</div>
-<div class="section" id="specific-gravity">
-<h3>Specific Gravity<a class="headerlink" href="#specific-gravity" title="Permalink to this headline">¶</a></h3>
-<p>Specific gravity is the ratio of density of a fluid to a reference fluid.  In Civil Engineering the reference fluid is typically liquid water. Typical symbol is <span class="math notranslate nohighlight">\(S\)</span></p>
-<div class="math notranslate nohighlight">
-\[ S =\frac{\rho_{i}}{\rho_{water}}=\frac{\gamma_{i}}{\gamma_{water}} \]</div>
-</div>
-<div class="section" id="bulk-modulus-of-elasticity">
-<h3>Bulk Modulus (of elasticity)<a class="headerlink" href="#bulk-modulus-of-elasticity" title="Permalink to this headline">¶</a></h3>
-<p>The bulk modulus relates the change in volume of a fluid element to a change in pressure.  For liquids it is quite high, gasses quite a bit smaller - it is essentially a Hooke’s law (springs) for a continuum element.  It conveys how much pressure change is needed to effect a incremental volume change.</p>
-<div class="math notranslate nohighlight">
-\[ E_v = -\frac{dp}{(\frac{dV}{V})} \]</div>
-<p>Dimensionally it is a pressure.  For water at terresterial pressure and temperature its value is upwards of 2.2 GPa (about 23 atmospheres); for solid steel well over 150 GPa (about 1550 atmospheres).</p>
-<p>In our practical sense, gas is compressible, water is not very compressible, steel smaller still.</p>
-<p>All the properties above are temperature dependent, and in gasses the compressibility is small, hence they are called compressible fluids.</p>
-<p>A few thermodynamic properties are useful too:</p>
-</div>
-<div class="section" id="constant-volume-specific-heat">
-<h3>Constant Volume Specific Heat<a class="headerlink" href="#constant-volume-specific-heat" title="Permalink to this headline">¶</a></h3>
-<p>The heat amount added to a unit mass of fluid to raise the temperature one degree (units system dependent!) while volume is held constant.<br />
-Typical symbol is <span class="math notranslate nohighlight">\(c_v\)</span>.</p>
-</div>
-<div class="section" id="constant-pressure-specific-heat">
-<h3>Constant Pressure Specific Heat<a class="headerlink" href="#constant-pressure-specific-heat" title="Permalink to this headline">¶</a></h3>
-<p>The heat amount added to a unit mass of fluid to raise the temperature one degree (units system dependent!) while pressure is held constant.</p>
-<p>Typical symbol is <span class="math notranslate nohighlight">\(c_p\)</span>.</p>
-</div>
-<div class="section" id="specific-internal-energy">
-<h3>Specific Internal Energy<a class="headerlink" href="#specific-internal-energy" title="Permalink to this headline">¶</a></h3>
-<p>Energy a unit mass possesses because of its state of molecular activity.  Typical symbol is <span class="math notranslate nohighlight">\(u\)</span></p>
+<p><a class="reference internal" href="#stresses"><span class="std std-numref">Fig. 2</span></a> is a diagram of a small planar element in a 3-D cartesian coordinate system that illustrate normal and shear stresses.  The tensor-like naming system is also indicated.</p>
+<p>A conventional notation is <span class="math notranslate nohighlight">\(\sigma_{n,i-k}\)</span> for normal stress, and <span class="math notranslate nohighlight">\(\tau_{n,i-k}\)</span> for shear stress.  The first subscript is the direction of the outward pointing normal vector from the application plane (in the drawing +z), the second subscript is the direction of force application, with the normal stress positive into the plane.  In the drawing the three stresses are <span class="math notranslate nohighlight">\(\sigma_{z,z}\)</span>,<span class="math notranslate nohighlight">\(\tau_{z,x}\)</span>, and <span class="math notranslate nohighlight">\(\tau_{z,y}\)</span>.</p>
+<div class="section" id="pressure">
+<h3>Pressure<a class="headerlink" href="#pressure" title="Permalink to this headline">¶</a></h3>
+<p>Fluid pressure (usual symbol <span class="math notranslate nohighlight">\(p\)</span>) is the normal stress applied to a fluid element, so in practice we simply make the direct substitution.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The symbol <span class="math notranslate nohighlight">\(u\)</span> is also commonly used for the x-component, or streamline component of velocity.  Be aware of context to avoid confusion.  In some documents <span class="math notranslate nohighlight">\(U\)</span> is the velocity vector - again the context should be a clue.</p>
+<p>The use of pressure in fluids and normal stress in solids is simply a convention - one could refer to solids pressure but that would confuse people.</p>
 </div>
-</div>
-<div class="section" id="specific-enthalpy">
-<h3>Specific Enthalpy<a class="headerlink" href="#specific-enthalpy" title="Permalink to this headline">¶</a></h3>
-<p>Energy a substance possesses because of internal energy and applied normal stress (aka pressure).  Typical symbol is <span class="math notranslate nohighlight">\(h = u + \frac{p}{\rho}\)</span></p>
-</div>
-</div>
-<div class="section" id="equation-of-state">
-<h2>Equation of State<a class="headerlink" href="#equation-of-state" title="Permalink to this headline">¶</a></h2>
-<p>The state of a fluid is the value of all its properties at specified temperature, pressure, and gravitational filed strength.  The Ideal Gas Law is a relatively simple equation of state for gasses.</p>
-<div class="figure align-default" id="pvnrt">
-<a class="reference internal image-reference" href="../../_images/pvnrt.png"><img alt="../../_images/pvnrt.png" src="../../_images/pvnrt.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Ideal Gas Law (Equation of State)</span><a class="headerlink" href="#pvnrt" title="Permalink to this image">¶</a></p>
-</div>
-<p><a class="reference internal" href="#pvnrt"><span class="std std-numref">Fig. 10</span></a> is the equation of state in two different forms for gasses. An equation of state allows prediction of state as temperature, pressure, or volume are changed.</p>
-</div>
-<div class="section" id="viscosity">
-<h2>Viscosity<a class="headerlink" href="#viscosity" title="Permalink to this headline">¶</a></h2>
-<p>“… a property of a fluid that relates the resistance to motion (in a thin layer) when a shear force is applied…”</p>
-<p>This somewhat useless definition is trying to convey how fluids deform under shear, and more importantly the rate of deformation.<br />
-Consider a steel sheet that we cut with a shear (like sicssors), if we want to cut fast we need a lot of force; using the same shears on an equal thickness of plastic sheet will take less force for the same rate of cut.<br />
-This solids analog to viscosity conveys that steel is more viscous than plastic (usually).</p>
-<div class="figure align-default" id="viscosity-one">
-<a class="reference internal image-reference" href="../../_images/viscosity-one.png"><img alt="../../_images/viscosity-one.png" src="../../_images/viscosity-one.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Viscosity Schematic</span><a class="headerlink" href="#viscosity-one" title="Permalink to this image">¶</a></p>
-</div>
-<p><a class="reference internal" href="#viscosity-one"><span class="std std-numref">Fig. 11</span></a> Is a diagram attempting to convey the concept of viscosity.  In the drawing the thickness <span class="math notranslate nohighlight">\(\partial y\)</span> and the deformation angle <span class="math notranslate nohighlight">\(\partial \alpha\)</span> are small, and the sine of the angle is approximated by the angle itself.</p>
-<div class="figure align-default" id="viscosity-two">
-<a class="reference internal image-reference" href="../../_images/viscosity-two.png"><img alt="../../_images/viscosity-two.png" src="../../_images/viscosity-two.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">Viscosity Trigonometry</span><a class="headerlink" href="#viscosity-two" title="Permalink to this image">¶</a></p>
-</div>
-<p><a class="reference internal" href="#viscosity-two"><span class="std std-numref">Fig. 12</span></a> shows the relevant trigonometry to relate deformation rate to shear stress.</p>
-<div class="section" id="absolute-viscosity">
-<h3>Absolute Viscosity<a class="headerlink" href="#absolute-viscosity" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-default" id="newtonian">
-<a class="reference internal image-reference" href="../../_images/newtonian.png"><img alt="../../_images/newtonian.png" src="../../_images/newtonian.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Absolute viscosity (definition)</span><a class="headerlink" href="#newtonian" title="Permalink to this image">¶</a></p>
-</div>
-<p><a class="reference internal" href="#newtonian"><span class="std std-numref">Fig. 13</span></a> defines a Newtonian fluid and introduces the absolute viscosity <span class="math notranslate nohighlight">\(\mu\)</span> in terms of the thin layer, cross-layer velocity profile <span class="math notranslate nohighlight">\(\frac{du}{dy}\)</span> and the applied shear stress <span class="math notranslate nohighlight">\(\tau\)</span>.  The viscosity has dimensions of <span class="math notranslate nohighlight">\(\frac{Force \cdot Time}{Area}\)</span></p>
-</div>
-<div class="section" id="apparent-viscosity">
-<h3>Apparent Viscosity<a class="headerlink" href="#apparent-viscosity" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-default" id="non-newtonian">
-<a class="reference internal image-reference" href="../../_images/non-newtonian.png"><img alt="../../_images/non-newtonian.png" src="../../_images/non-newtonian.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">Apparent viscosity (definition) power-law model</span><a class="headerlink" href="#non-newtonian" title="Permalink to this image">¶</a></p>
-</div>
-<p><a class="reference internal" href="#non-newtonian"><span class="std std-numref">Fig. 14</span></a> shows a typical power-law model of viscosity; the term is referred to as an apparent viscosity.  Many real fluids are Non-Newtonian and will have some type of viscosity model to explain the deformation behavior.</p>
-</div>
-<div class="section" id="kinematic-viscosity">
-<h3>Kinematic Viscosity<a class="headerlink" href="#kinematic-viscosity" title="Permalink to this headline">¶</a></h3>
-<p>The ratio of absolute (or apparent) viscosity to the fluid density is called the <em>kinematic</em> viscosity. The usual symbol is <span class="math notranslate nohighlight">\(\nu = \frac{\mu}{\rho}\)</span>  The kinematic viscosity has dimensions of <span class="math notranslate nohighlight">\(\frac{Area}{Time}\)</span></p>
-</div>
-<div class="section" id="general-comments">
-<h3>General Comments<a class="headerlink" href="#general-comments" title="Permalink to this headline">¶</a></h3>
-<p>Viscous effects cause a velocity gradient (profile) to develop across the fluid layers as shown in <a class="reference internal" href="#slip-profile"><span class="std std-numref">Fig. 15</span></a>.</p>
-<div class="figure align-default" id="slip-profile">
-<a class="reference internal image-reference" href="../../_images/slip-profile.png"><img alt="../../_images/slip-profile.png" src="../../_images/slip-profile.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">Velocity Profile Diagram</span><a class="headerlink" href="#slip-profile" title="Permalink to this image">¶</a></p>
-</div>
-<p><a class="reference internal" href="#slip-profile"><span class="std std-numref">Fig. 15</span></a> is a diagram of the cross-layer velocity profile. The slope of the profile is related to shear force and hence the apparent or absolute viscosity.</p>
+<p>Pressure is a normal force per unit area, so at any <strong>point</strong> within a fluid it is a scalar quantity. The dimensionality of pressure is the ratio of force to area; typical units are <span class="math notranslate nohighlight">\(\frac{N}{m^2} = Pa\)</span>,<span class="math notranslate nohighlight">\(\frac{lbs}{in^2}\)</span>.  Pressure is also expressed in atmospheres <span class="math notranslate nohighlight">\(1 atm = 101325Pa = 14.75psi\)</span> and liquid column height <span class="math notranslate nohighlight">\(1 atm \approx 10m_{water} \approx 29.92in_{Hg}\)</span></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The no-slip condition is deduced from experiments - in my opinion it is an assumption that velocity vanishes at the contact interface.  In your future studies keep this in mind; it is quite possible that slip occurs at some scale, however it is a useful and accepted boundary condition.</p>
+<p>Pressure is scalar (magnitude), the force it causes when pushing against an object is a vector (magnitude and direction)</p>
+</div>
+<div class="figure align-default" id="pressurewedge">
+<a class="reference internal image-reference" href="../../_images/PressureWedge.png"><img alt="../../_images/PressureWedge.png" src="../../_images/PressureWedge.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">FBD of small wedge of a static fluid.</span><a class="headerlink" href="#pressurewedge" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#pressurewedge"><span class="std std-numref">Fig. 3</span></a> is a free body diagram of a small wedge of fluid; analyzing the wedge we can demonstrate that pressure is a scalar (Pascal’s Law).</p>
+<p>First we will stipulate the fluid is a rest; no internal motion.  Next perform a force balance in each direction as in <a class="reference internal" href="#forcebalancewedge"><span class="std std-numref">Fig. 4</span></a></p>
+<div class="figure align-default" id="forcebalancewedge">
+<a class="reference internal image-reference" href="../../_images/ForceBalanceWedge.png"><img alt="../../_images/ForceBalanceWedge.png" src="../../_images/ForceBalanceWedge.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Force balance x,y, and z directions on fluid wedge.</span><a class="headerlink" href="#forcebalancewedge" title="Permalink to this image">¶</a></p>
+</div>
+<p>Notice we immediately invoke the definition of pressure to compute forces <span class="math notranslate nohighlight">\(F=p \cdot A\)</span> where <span class="math notranslate nohighlight">\(A = \Delta x \Delta z\)</span> and such, applying trigonometry to the wedge to resolve its force components. The directions are associated with the outward pointing normal vectors associated with the various planar areas.</p>
+<p>We complete the analysis by studying the requirement of zero motion (statics) and find that indeed pressure is a scalar as in <a class="reference internal" href="#fbcomplete"><span class="std std-numref">Fig. 5</span></a></p>
+<div class="figure align-default" id="fbcomplete">
+<a class="reference internal image-reference" href="../../_images/FBComplete.png"><img alt="../../_images/FBComplete.png" src="../../_images/FBComplete.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Analysis summary and demonstration pressure must be scalar.</span><a class="headerlink" href="#fbcomplete" title="Permalink to this image">¶</a></p>
+</div>
+<p>Because the three pressures are all the same at a point, we can drop the double subscript notation and simplify our notation herein.</p>
+<p>Some practical application of Pascal’s Law is that in a closed system a change in pressure is transmitted undiminished throughout the entire system.  This phenomenon is the basis of hydraulic machinery like pneumatic jacks (pg. 49 of the textbook)</p>
+</div>
+<div class="section" id="absolute-and-gage-pressure">
+<h3>Absolute and Gage Pressure<a class="headerlink" href="#absolute-and-gage-pressure" title="Permalink to this headline">¶</a></h3>
+<p>Pressure is usually measured against some reference value.  Two values in common use are a vaccum (zero pressure) and a standard atmosphere.</p>
+<p>If the measurement is referenced to a standard atmosphere the measure is called <em>gage pressure</em>.</p>
+<p>If the measurement is referenced to a vaccum, the measure is called <em>absolute pressure</em></p>
+<p>Gage pressures can be negative, but negative absolute pressures don’t make any sense.</p>
+<div class="figure align-default" id="absolutepressure">
+<a class="reference internal image-reference" href="../../_images/AbsolutePressure.png"><img alt="../../_images/AbsolutePressure.png" src="../../_images/AbsolutePressure.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Gage and absolute pressure.</span><a class="headerlink" href="#absolutepressure" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#absolutepressure"><span class="std std-numref">Fig. 6</span></a> is a diagram depicting the relationship of gage and absolute pressures.</p>
+</div>
+<div class="section" id="hydrostatic-equation">
+<h3>Hydrostatic Equation<a class="headerlink" href="#hydrostatic-equation" title="Permalink to this headline">¶</a></h3>
+<p>Here we develop the fundamental equation of fluid statics, and examine a couple of applications (pg. 52 is a condensed explaination).</p>
+<p>Recall fluid statics means no relative motion within the fluid - the entire fluid behaves as a rigid body. The absence of angular deformation implies absence of shear stress; static fluids only sustain normal stress (pressure)</p>
+<div class="figure align-default" id="fstatics-1">
+<a class="reference internal image-reference" href="../../_images/fstatics-1.png"><img alt="../../_images/fstatics-1.png" src="../../_images/fstatics-1.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Velocity gradient in static fluid</span><a class="headerlink" href="#fstatics-1" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#fstatics-1"><span class="std std-numref">Fig. 7</span></a> is the mathematical statement of these stipulations.</p>
+<div class="figure align-default" id="fruid-element">
+<a class="reference internal image-reference" href="../../_images/fruid-element.png"><img alt="../../_images/fruid-element.png" src="../../_images/fruid-element.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Small fluid element in space (the final frontier!)</span><a class="headerlink" href="#fruid-element" title="Permalink to this image">¶</a></p>
+</div>
+<p>Consider a fluid element as in <a class="reference internal" href="#fruid-element"><span class="std std-numref">Fig. 8</span></a>. We analyze the forces on the element taking limits as appropriate (continuum hypothesis) to recover the equation of a static fluid.</p>
+<div class="figure align-default" id="fstatics-2">
+<a class="reference internal image-reference" href="../../_images/fstatics-2.png"><img alt="../../_images/fstatics-2.png" src="../../_images/fstatics-2.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Force balance statement, and naming of forces</span><a class="headerlink" href="#fstatics-2" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#fstatics-2"><span class="std std-numref">Fig. 9</span></a></p>
+<p>Writing the surface and body forces of the element as a rigid body, and equating these forces to acceleration (Newton’s 2nd Law) produces a set of terms in <a class="reference internal" href="#fstatics-3"><span class="std std-numref">Fig. 10</span></a></p>
+<div class="figure align-default" id="fstatics-3">
+<a class="reference internal image-reference" href="../../_images/fstatics-3.png"><img alt="../../_images/fstatics-3.png" src="../../_images/fstatics-3.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Expansion of forces from centroid to front, back,left,right, top, bottom face of the small fluid element.</span><a class="headerlink" href="#fstatics-3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Using Taylor-series expansions about the centroid of the element</p>
+<div class="figure align-default" id="fstatics-4">
+<a class="reference internal image-reference" href="../../_images/fstatics-4.png"><img alt="../../_images/fstatics-4.png" src="../../_images/fstatics-4.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Substitution into force definition (surface forces)</span><a class="headerlink" href="#fstatics-4" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#fstatics-4"><span class="std std-numref">Fig. 11</span></a> is the substitution of our forces at each face into the equation of motion.</p>
+<div class="figure align-default" id="fstatics-5">
+<a class="reference internal image-reference" href="../../_images/fstatics-5.png"><img alt="../../_images/fstatics-5.png" src="../../_images/fstatics-5.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">Surface and body forces into balance equation; rescaling by element volume</span><a class="headerlink" href="#fstatics-5" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#fstatics-5"><span class="std std-numref">Fig. 12</span></a> is the balance equation divided by the small but non-vanishing element volume to produce the fluid equation at an arbitrary point.</p>
+<div class="figure align-default" id="fstatics-6">
+<a class="reference internal image-reference" href="../../_images/fstatics-6.png"><img alt="../../_images/fstatics-6.png" src="../../_images/fstatics-6.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Zero acceleration equation of fluid statics</span><a class="headerlink" href="#fstatics-6" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#fstatics-6"><span class="std std-numref">Fig. 13</span></a> is the equation of motion (this is actually Euler’s equation - but he does not need it anymore!) at zero acceleration.</p>
+<div class="figure align-default" id="fstatics-7">
+<a class="reference internal image-reference" href="../../_images/fstatics-7.png"><img alt="../../_images/fstatics-7.png" src="../../_images/fstatics-7.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">Decomposition into cartesian components</span><a class="headerlink" href="#fstatics-7" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#fstatics-7"><span class="std std-numref">Fig. 14</span></a> is the decomposition of the vector equation into its independent components, in this case cartesian coordinates. The <span class="math notranslate nohighlight">\(z\)</span>-axis equation is the only one conveying meaningful information (because of our choice of gravitational action).</p>
+<div class="figure align-default" id="fstatics-8">
+<a class="reference internal image-reference" href="../../_images/fstatics-8.png"><img alt="../../_images/fstatics-8.png" src="../../_images/fstatics-8.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">Hydrostatic equation in a liquid</span><a class="headerlink" href="#fstatics-8" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#fstatics-8"><span class="std std-numref">Fig. 15</span></a> is the hydrostatic equation for an incompressible liquid (like water).  Pressure increases moving down from the free surface.</p>
+<div class="figure align-default" id="fstatics-9">
+<a class="reference internal image-reference" href="../../_images/fstatics-9.png"><img alt="../../_images/fstatics-9.png" src="../../_images/fstatics-9.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">Hydrostatic approximation for compressible fluid (like the atmosphere)</span><a class="headerlink" href="#fstatics-9" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#fstatics-9"><span class="std std-numref">Fig. 16</span></a> is the hydrostatic approximation for compressible fluid. Here the ideal gas law is used as the equation of state.</p>
 </div>
 </div>
+<div class="section" id="pressure-measurements">
+<h2>Pressure Measurements<a class="headerlink" href="#pressure-measurements" title="Permalink to this headline">¶</a></h2>
+<p>Pressure is mesured by a variety of devices depending on the fluid.  Some of these are:</p>
+<ul class="simple">
+<li><p>barometer (for measuring atmospheric pressure)</p></li>
+<li><p>piezometer</p></li>
+<li><p>manometer</p></li>
+<li><p><a class="reference external" href="https://www.bourdon-instruments.com/us/en/product-overview/pressure-gauges/c/36822">Bourdon-type gages</a> The principle of <a class="reference external" href="https://www.sciencedirect.com/topics/engineering/bourdon-tube">operation</a> is the deformation of a curved tube in response to external pressure force change.</p></li>
+<li><p>pressure transducers</p></li>
+</ul>
+<div class="section" id="barometer">
+<h3>Barometer<a class="headerlink" href="#barometer" title="Permalink to this headline">¶</a></h3>
+<p>A barometer is a tube filled with liquid (oil,Hg,water), that is capped on one end, inverted into a basin and allowed to equilibrate as in <a class="reference internal" href="#id1"><span class="std std-numref">Fig. 17</span></a></p>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/barometer.png"><img alt="../../_images/barometer.png" src="../../_images/barometer.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">Schematic of a barometer.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
+<p>The height of rise is obtained from a force balance between the vapor pressure of the working fluid in the capped end and the surrounding atmospheric pressure.</p>
+</div>
+<div class="section" id="piezometer">
+<h3>Piezometer<a class="headerlink" href="#piezometer" title="Permalink to this headline">¶</a></h3>
+<p>A piezometer is a tube inserted into a fluid (usually liquid) which is open at both ends, large enough diameter so that capillary rise is negligible.  The height of rise of liquid in the tube is proportional to the static pressure in the liquid at the bottom of the tube.</p>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="../../_images/piezometer.png"><img alt="../../_images/piezometer.png" src="../../_images/piezometer.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">Schematic of a piezometer.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>A well in an aquifer is a common example of a piezometer that measures the water pressure at the bottom of the tube (or averaged over the well screen length)</p>
+</div>
+<div class="section" id="manometer">
+<h3>Manometer<a class="headerlink" href="#manometer" title="Permalink to this headline">¶</a></h3>
+<p>Manometers are like a hybrid of a barometer and piezometer.</p>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../../_images/manometer.png"><img alt="../../_images/manometer.png" src="../../_images/manometer.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">Schematic of a manometer.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Manometers are connected to a fluid (measured), via an immiscible working fluid (usually oil or Hg).  The force differential between the fluid and atmosphere is indicated by the working fluid.</p>
+<p>As with similar devices the <span class="math notranslate nohighlight">\(\frac{F}{A}\)</span> is equated to the column height differential in the working fluid through <span class="math notranslate nohighlight">\(h=\frac{p}{\rho_{w.f.}g}\)</span></p>
+<div class="figure align-default" id="manometer-rules">
+<a class="reference internal image-reference" href="../../_images/manometer-rules.png"><img alt="../../_images/manometer-rules.png" src="../../_images/manometer-rules.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">Reading a manometer.</span><a class="headerlink" href="#manometer-rules" title="Permalink to this image">¶</a></p>
+</div>
+<p>Multiple tube/fluid manometers follow 2 rules (Pascal’s law, and the hydrostatic equation)</p>
+<ol class="simple">
+<li><p>Any two points at the same elevation in a <strong>continuous</strong> length of the <strong>same</strong> fluid are at the same pressure.</p></li>
+<li><p>pressure <strong>increases</strong> with depth in a liquid column.</p></li>
+</ol>
+</div>
+<div class="section" id="transducers">
+<h3>Transducers<a class="headerlink" href="#transducers" title="Permalink to this headline">¶</a></h3>
+<p>[Insert link to sensor book here]</p>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>Below are a few examples applying the hydrostatic equation and Pascal’s law in a few different situations</p>
 <div class="section" id="example-1">
-<h2>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h2>
-<p>Here is a hand-worked example to illustrate viscosity concepts and problem solving protocol.</p>
-<p>We start with a problem statement:</p>
-<div class="figure align-default" id="problem-statement">
-<a class="reference internal image-reference" href="../../_images/problem-statement.png"><img alt="../../_images/problem-statement.png" src="../../_images/problem-statement.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">Block sliding on an inclined plane</span><a class="headerlink" href="#problem-statement" title="Permalink to this image">¶</a></p>
+<h3>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="example1-1">
+<a class="reference internal image-reference" href="../../_images/example1-1.png"><img alt="../../_images/example1-1.png" src="../../_images/example1-1.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">Pressure at the bottom of a vessel.</span><a class="headerlink" href="#example1-1" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#problem-statement"><span class="std std-numref">Fig. 16</span></a> is a problem statement of the problem we wish to solve.</p>
-<p>The next step is to sketch the situation, mindful of several different scales in the problem.</p>
-<div class="figure align-default" id="problem-sketch">
-<a class="reference internal image-reference" href="../../_images/problem-sketch.png"><img alt="../../_images/problem-sketch.png" src="../../_images/problem-sketch.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">Block sliding on an inclined plane (various definining sketches)</span><a class="headerlink" href="#problem-sketch" title="Permalink to this image">¶</a></p>
+<p><a class="reference internal" href="#example1-1"><span class="std std-numref">Fig. 21</span></a> is a classical pressure at the bottom of a vessel, using the problem solving protocol.</p>
 </div>
-<p><a class="reference internal" href="#problem-sketch"><span class="std std-numref">Fig. 17</span></a> is a set of sketches, showing the macro-scale conditions, as well as a free-body-diagram, and a sketch of the fluid layer between the block and the plane.</p>
-<p>Next we list knowns, unknowns, and governing equations:</p>
-<div class="figure align-default" id="problem-known">
-<a class="reference internal image-reference" href="../../_images/problem-known.png"><img alt="../../_images/problem-known.png" src="../../_images/problem-known.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">Known or given values</span><a class="headerlink" href="#problem-known" title="Permalink to this image">¶</a></p>
+<div class="section" id="example-2">
+<h3>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="example2-1">
+<a class="reference internal image-reference" href="../../_images/example2-1.png"><img alt="../../_images/example2-1.png" src="../../_images/example2-1.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">Pressure in a two-layer fluid system (1 of 2)</span><a class="headerlink" href="#example2-1" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#problem-known"><span class="std std-numref">Fig. 18</span></a> is a list of known or supplied (in the problem statement) values</p>
-<div class="figure align-default" id="problem-unknown">
-<a class="reference internal image-reference" href="../../_images/problem-unknown.png"><img alt="../../_images/problem-unknown.png" src="../../_images/problem-unknown.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">Unknown (sought) values</span><a class="headerlink" href="#problem-unknown" title="Permalink to this image">¶</a></p>
+<p><a class="reference internal" href="#example2-1"><span class="std std-numref">Fig. 22</span></a> is an analysis of a multi-phase system (Air, Oil, Water), using the problem solving protocol.</p>
+<div class="figure align-default" id="example2-2">
+<a class="reference internal image-reference" href="../../_images/example2-2.png"><img alt="../../_images/example2-2.png" src="../../_images/example2-2.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 23 </span><span class="caption-text">Pressure in a two-layer fluid system (2 of 2)</span><a class="headerlink" href="#example2-2" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#problem-unknown"><span class="std std-numref">Fig. 19</span></a> is a list of unknown or sought values</p>
-<div class="figure align-default" id="problem-governing-equations">
-<a class="reference internal image-reference" href="../../_images/problem-governing-equations.png"><img alt="../../_images/problem-governing-equations.png" src="../../_images/problem-governing-equations.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">Relevant equations</span><a class="headerlink" href="#problem-governing-equations" title="Permalink to this image">¶</a></p>
+<p><a class="reference internal" href="#example2-2"><span class="std std-numref">Fig. 23</span></a> is an analysis of a multi-phase system (Air, Oil, Water), using the problem solving protocol.</p>
 </div>
-<p><a class="reference internal" href="#problem-governing-equations"><span class="std std-numref">Fig. 20</span></a> is an initial list of applicable equations (we may add to this list as the analysis proceedes).</p>
-<p>Now we proceede with the analysis</p>
-<div class="figure align-default" id="problem-solution-1">
-<a class="reference internal image-reference" href="../../_images/problem-solution-1.png"><img alt="../../_images/problem-solution-1.png" src="../../_images/problem-solution-1.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">Solution</span><a class="headerlink" href="#problem-solution-1" title="Permalink to this image">¶</a></p>
+<div class="section" id="example-3">
+<h3>Example 3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="example3-1">
+<a class="reference internal image-reference" href="../../_images/example3-1.png"><img alt="../../_images/example3-1.png" src="../../_images/example3-1.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 24 </span><span class="caption-text">Manometer with three fluids (1 of 3)</span><a class="headerlink" href="#example3-1" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#problem-solution-1"><span class="std std-numref">Fig. 21</span></a> is our initial work towards a solution, ending with an expression relating shear force and viscosity.</p>
-<div class="figure align-default" id="problem-solution-2">
-<a class="reference internal image-reference" href="../../_images/problem-solution-2.png"><img alt="../../_images/problem-solution-2.png" src="../../_images/problem-solution-2.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">Solution(continued)</span><a class="headerlink" href="#problem-solution-2" title="Permalink to this image">¶</a></p>
+<p><a class="reference internal" href="#example3-1"><span class="std std-numref">Fig. 24</span></a> is a manometer system, with two working fluids (and the measured fluid for three total)</p>
+<div class="figure align-default" id="example3-2">
+<a class="reference internal image-reference" href="../../_images/example3-2.png"><img alt="../../_images/example3-2.png" src="../../_images/example3-2.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 25 </span><span class="caption-text">Manometer with three fluids (2 of 3)</span><a class="headerlink" href="#example3-2" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#problem-solution-2"><span class="std std-numref">Fig. 22</span></a> is the completion where the geomtric terms are inserted and a numerical answer is supplied.</p>
-<div class="figure align-default" id="problem-discussion">
-<a class="reference internal image-reference" href="../../_images/problem-discussion.png"><img alt="../../_images/problem-discussion.png" src="../../_images/problem-discussion.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 23 </span><span class="caption-text">Discussion of results</span><a class="headerlink" href="#problem-discussion" title="Permalink to this image">¶</a></p>
+<p><a class="reference internal" href="#example3-2"><span class="std std-numref">Fig. 25</span></a> is a manometer system, with two working fluids (and the measured fluid for three total)</p>
+<div class="figure align-default" id="example3-3">
+<a class="reference internal image-reference" href="../../_images/example3-3.png"><img alt="../../_images/example3-3.png" src="../../_images/example3-3.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 26 </span><span class="caption-text">Manometer with three fluids (3 of 3)</span><a class="headerlink" href="#example3-3" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#problem-discussion"><span class="std std-numref">Fig. 23</span></a> is a discussion of results; this part is important as part of professional documentation, esp. if the analysis is a first approximation and is being used to determine whether further work will be needed.</p>
+<p><a class="reference internal" href="#example3-3"><span class="std std-numref">Fig. 26</span></a> is a manometer system, with two working fluids (and the measured fluid for three total)</p>
 </div>
-<div class="section" id="example-2-radial-geometry-kinematics">
-<h2>Example 2 - Radial Geometry Kinematics<a class="headerlink" href="#example-2-radial-geometry-kinematics" title="Permalink to this headline">¶</a></h2>
-<p>A similar example is presented below, however the geometry is changed a bit.</p>
-<div class="figure align-default" id="example2-p1">
-<a class="reference internal image-reference" href="../../_images/example2-p1.png"><img alt="../../_images/example2-p1.png" src="../../_images/example2-p1.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 24 </span><span class="caption-text">Fluid drive problem (i.e how a transmission works!)</span><a class="headerlink" href="#example2-p1" title="Permalink to this image">¶</a></p>
+<div class="section" id="example-4">
+<h3>Example 4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="example4-1">
+<a class="reference internal image-reference" href="../../_images/example4-1.png"><img alt="../../_images/example4-1.png" src="../../_images/example4-1.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 27 </span><span class="caption-text">Pressure in a small drop (1 of 2)</span><a class="headerlink" href="#example4-1" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#example2-p1"><span class="std std-numref">Fig. 24</span></a> is a problem statement and list of known values and governing equations.</p>
-<div class="figure align-default" id="example2-p2">
-<a class="reference internal image-reference" href="../../_images/example2-p2.png"><img alt="../../_images/example2-p2.png" src="../../_images/example2-p2.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 25 </span><span class="caption-text">Schematic sketches to define problem terms</span><a class="headerlink" href="#example2-p2" title="Permalink to this image">¶</a></p>
+<p><a class="reference internal" href="#example4-1"><span class="std std-numref">Fig. 27</span></a> is the derivation of a formula to estimate the pressure in a small spherical droplet.</p>
+<div class="figure align-default" id="example4-2">
+<a class="reference internal image-reference" href="../../_images/example4-2.png"><img alt="../../_images/example4-2.png" src="../../_images/example4-2.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 28 </span><span class="caption-text">Pressure in a small drop (2 of 2)</span><a class="headerlink" href="#example4-2" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#example2-p2"><span class="std std-numref">Fig. 25</span></a> is a list of unknown values and defining sketches.  Notice the geometry poses some complexity, hence the varied drawings to guide analysis.</p>
-<div class="figure align-default" id="example2-p3">
-<a class="reference internal image-reference" href="../../_images/example2-p3.png"><img alt="../../_images/example2-p3.png" src="../../_images/example2-p3.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 26 </span><span class="caption-text">Schematic sketches to define problem terms (continued)</span><a class="headerlink" href="#example2-p3" title="Permalink to this image">¶</a></p>
+<p><a class="reference internal" href="#example4-2"><span class="std std-numref">Fig. 28</span></a> is the derivation of a formula to estimate the pressure in a small spherical droplet.</p>
 </div>
-<p><a class="reference internal" href="#example2-p3"><span class="std std-numref">Fig. 26</span></a> are continued defining sketches and associated analyses.</p>
-<div class="figure align-default" id="example2-p4">
-<a class="reference internal image-reference" href="../../_images/example2-p4.png"><img alt="../../_images/example2-p4.png" src="../../_images/example2-p4.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 27 </span><span class="caption-text">Results and Discussion</span><a class="headerlink" href="#example2-p4" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#example2-p4"><span class="std std-numref">Fig. 27</span></a> is the results in useful units, and a discussion of the findings. The problem parts are straightforward using concepts for prior classes, but the analyst does have to keep track of the steps to get to a useable solution.</p>
-</div>
-<div class="section" id="liquid-properties">
-<h2>Liquid Properties<a class="headerlink" href="#liquid-properties" title="Permalink to this headline">¶</a></h2>
-<p>A liquid is one kind of fluid, but it has a few added properties that are important.  One such property is surface tension, <span class="math notranslate nohighlight">\(\sigma\)</span>.</p>
-<p>Surface tension is the force per unit area required to separate two fluids.  It is measured with a ring tensiometer <a class="reference external" href="https://en.wikipedia.org/wiki/Du_No%C3%BCy_ring_method">https://en.wikipedia.org/wiki/Du_No%C3%BCy_ring_method</a>, and a few other ways.
-Dimensionally it is a force per unit length, and is one reason why liquids can rise up capillary tubes, or into porous materials (like a sponge).  Surface tension controls how liquids spread or bead up on a surface.</p>
-<div class="figure align-default" id="surface-tension">
-<a class="reference internal image-reference" href="../../_images/surface-tension.png"><img alt="../../_images/surface-tension.png" src="../../_images/surface-tension.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 28 </span><span class="caption-text">Wetting and non-wetting fluid-fluid-solid systems.</span><a class="headerlink" href="#surface-tension" title="Permalink to this image">¶</a></p>
-</div>
-<p><a class="reference internal" href="#surface-tension"><span class="std std-numref">Fig. 28</span></a> is a schematic of a wetting and non-wetting drop of fluid onto a surface.</p>
-<div class="section" id="capillary-rise">
-<h3>Capillary Rise<a class="headerlink" href="#capillary-rise" title="Permalink to this headline">¶</a></h3>
-<p>We can explain capillary rise using a force-balance and the concepts of wetting and non-wetting fluids.</p>
-<div class="figure align-default" id="capillary-fbd">
-<a class="reference internal image-reference" href="../../_images/capillary-fbd.png"><img alt="../../_images/capillary-fbd.png" src="../../_images/capillary-fbd.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 29 </span><span class="caption-text">Schematic of capillary tube</span><a class="headerlink" href="#capillary-fbd" title="Permalink to this image">¶</a></p>
-</div>
-<p><a class="reference internal" href="#capillary-fbd"><span class="std std-numref">Fig. 29</span></a></p>
-<div class="figure align-default" id="capillary-analysis">
-<a class="reference internal image-reference" href="../../_images/capillary-analysis.png"><img alt="../../_images/capillary-analysis.png" src="../../_images/capillary-analysis.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 30 </span><span class="caption-text">Force balance analysis of portion above free surface.</span><a class="headerlink" href="#capillary-analysis" title="Permalink to this image">¶</a></p>
-</div>
-<p><a class="reference internal" href="#capillary-analysis"><span class="std std-numref">Fig. 30</span></a></p>
+<div class="section" id="pressure-force-on-submerged-objects">
+<h2>Pressure Force on Submerged Objects<a class="headerlink" href="#pressure-force-on-submerged-objects" title="Permalink to this headline">¶</a></h2>
+<p>Now we consider the forces generated on submerged objects by hydrostatic pressure.  It’s the same force you feel on your <a class="reference external" href="https://translate.yandex.com/?lang=en-ja&amp;text=ears">耳</a> when you dive to the bottom of a <a class="reference external" href="https://dictionary.cambridge.org/us/dictionary/german-english/schwimmbad">schwimmbad</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Some of the intermediate algebra is shown below to illustrate the terms that are cancelled.  Many equations in the book are shown without intermediate steps; its up to you to trust explicitly, or check the intermediate steps yourselves - textbooks are a bit more reliable than Facebook for facts, but not much (even this notebook should be held suspect until you check the work for errors and ommissions!)</p>
-<div class="figure align-default" id="capillary-algebra">
-<a class="reference internal image-reference" href="../../_images/capillary-algebra.png"><img alt="../../_images/capillary-algebra.png" src="../../_images/capillary-algebra.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 31 </span><span class="caption-text">Intermediate algebra</span><a class="headerlink" href="#capillary-algebra" title="Permalink to this image">¶</a></p>
+<p>I am having a little fun with the language translators on Google; the sentance in English is “… It’s the same force you feel on your ears when you dive to the bottom of a swimming pool”.</p>
 </div>
-<p><a class="reference internal" href="#capillary-algebra"><span class="std std-numref">Fig. 31</span></a> is some of the intermediate algebra for capillary tubes.</p>
+<div class="section" id="uniform-pressure">
+<h3>Uniform Pressure<a class="headerlink" href="#uniform-pressure" title="Permalink to this headline">¶</a></h3>
+<p>Consider area <span class="math notranslate nohighlight">\(A\)</span> shown with <strong>uniform</strong> pressure as shown on <a class="reference internal" href="#panel-uniform"><span class="std std-numref">Fig. 29</span></a></p>
+<div class="figure align-default" id="panel-uniform">
+<a class="reference internal image-reference" href="../../_images/panel-uniform.png"><img alt="../../_images/panel-uniform.png" src="../../_images/panel-uniform.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 29 </span><span class="caption-text">Pressure force on some area.</span><a class="headerlink" href="#panel-uniform" title="Permalink to this image">¶</a></p>
 </div>
-<p>Using our equations and knowledge of contact angle for water in the note above we can calculate the rise in a capillary tube.</p>
+<p>The indicated force is the product of the area <span class="math notranslate nohighlight">\(A\)</span> and the pressure <span class="math notranslate nohighlight">\(p\)</span></p>
+<div class="math notranslate nohighlight">
+\[F=pA\]</div>
+</div>
+<div class="section" id="distributed-pressure">
+<h3>Distributed Pressure<a class="headerlink" href="#distributed-pressure" title="Permalink to this headline">¶</a></h3>
+<p>Now, consider the area <span class="math notranslate nohighlight">\(A\)</span> shown with <strong>distributed</strong> pressure as shown on <a class="reference internal" href="#panel-distributed"><span class="std std-numref">Fig. 30</span></a>.  As we move around the plate, the value of <span class="math notranslate nohighlight">\(p\)</span> changes with position (like going down in a column of water)</p>
+<div class="figure align-default" id="panel-distributed">
+<a class="reference internal image-reference" href="../../_images/panel-distributed.png"><img alt="../../_images/panel-distributed.png" src="../../_images/panel-distributed.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 30 </span><span class="caption-text">Pressure force on a small area in a variable pressure field</span><a class="headerlink" href="#panel-distributed" title="Permalink to this image">¶</a></p>
+</div>
+<p>In this instance, we use calculus to integrate all the little forces fo fine the aggregate (net) force on the entire plate.</p>
+<div class="math notranslate nohighlight">
+\[F = \int_{A} p \cdot dA\]</div>
+<p>Now lets extend the idea, to an arbitrary angle in the distributed pressure field, as in <a class="reference internal" href="#panel-angle"><span class="std std-numref">Fig. 31</span></a></p>
+<div class="figure align-default" id="panel-angle">
+<a class="reference internal image-reference" href="../../_images/panel-angle.png"><img alt="../../_images/panel-angle.png" src="../../_images/panel-angle.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 31 </span><span class="caption-text">Flat plate submerged at an arbitrary angle</span><a class="headerlink" href="#panel-angle" title="Permalink to this image">¶</a></p>
+</div>
+<p>Depth to an incremental portion of the plate <span class="math notranslate nohighlight">\(dy\)</span> is <span class="math notranslate nohighlight">\(h\)</span>. Distance along the <span class="math notranslate nohighlight">\(+y\)</span> axis is <span class="math notranslate nohighlight">\(y\)</span>.  The value of <span class="math notranslate nohighlight">\(y\)</span> is related to depth, <span class="math notranslate nohighlight">\(h\)</span>, by the angle <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We choose <span class="math notranslate nohighlight">\(\alpha\)</span> to represent the angle because it looks like a fish, and fish are found underwater!</p>
+</div>
+<p>Next looking at the plate from a viewing angle that is normal to the plate (the eyeball in the sketch)it might look like <a class="reference internal" href="#panel-normal"><span class="std std-numref">Fig. 32</span></a></p>
+<div class="figure align-default" id="panel-normal">
+<a class="reference internal image-reference" href="../../_images/panel-normal.png"><img alt="../../_images/panel-normal.png" src="../../_images/panel-normal.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 32 </span><span class="caption-text">Looking perpindicular to the flat plate. Width of the integrand is some function of <span class="math notranslate nohighlight">\(y\)</span></span><a class="headerlink" href="#panel-normal" title="Permalink to this image">¶</a></p>
+</div>
+<p>In this sketch the panel area is <span class="math notranslate nohighlight">\(dA = width(y) \cdot dy\)</span> when looking perpindicular to the <span class="math notranslate nohighlight">\(+y\)</span> axis.  The resultant net force on the submerged plate (perpindicular to the <span class="math notranslate nohighlight">\(y\)</span> axis) is simply</p>
+<div class="math notranslate nohighlight">
+\[F = \int_{A} p \cdot dA\]</div>
+<p>Now we apply some geometry and triggernometry to relate the integral to depth (and some moments).</p>
+<div class="figure align-default" id="panel-trig">
+<a class="reference internal image-reference" href="../../_images/panel-trig.png"><img alt="../../_images/panel-trig.png" src="../../_images/panel-trig.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 33 </span><span class="caption-text">Geometric/Trigonometric relationships.</span><a class="headerlink" href="#panel-trig" title="Permalink to this image">¶</a></p>
+</div>
+<p>Generally we will want to express pressure in terms of <span class="math notranslate nohighlight">\(y\)</span> or <span class="math notranslate nohighlight">\(h\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ p = \rho g h = \rho g y sin(\alpha)\]</div>
+<p>In practice the actual integration is a nusicance, instead we would likw to be able to deal in total area and depth.  The term in the red box is the <a class="reference external" href="https://en.wikipedia.org/wiki/First_moment_of_area">first moment of area</a> that you had in statics.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The observation of that the red box is the 1st moment of area, makes those tables of centroids and such for common geometric shapes quite useful in fluids!</p>
+</div>
+<p>If you recall from statics, the first moment of area is the distance to the centroid of the geometric object from the axis (in this case the <span class="math notranslate nohighlight">\(x\)</span> axis that is trying to poke your eye!)</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{A} \int_A y \cdot dA = \bar y\]</div>
+<p>Applying some trigonometry and algebraic substitution</p>
+<div class="math notranslate nohighlight">
+\[F = \rho g y sin(\alpha) A \bar y = \rho g A \bar h\]</div>
+<p>Where <span class="math notranslate nohighlight">\(\bar h\)</span> is the depth from the free surface to the centroid of the plate area.  So we now can express the magnitude of the force in terms of depth (to the centroid) and the plate area.</p>
+<div class="math notranslate nohighlight">
+\[F = \gamma A \bar h\]</div>
+<p>Now we have the magnitude, and sometimes that might be enough but usually we need to also know the line of action.  We find that by taking a moment to examine <a class="reference internal" href="#line-o-action"><span class="std std-numref">Fig. 34</span></a></p>
+<div class="figure align-default" id="line-o-action">
+<a class="reference internal image-reference" href="../../_images/line-o-action.png"><img alt="../../_images/line-o-action.png" src="../../_images/line-o-action.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 34 </span><span class="caption-text">Line of action of equivalent point load (equivalent to the actual distributed load)</span><a class="headerlink" href="#line-o-action" title="Permalink to this image">¶</a></p>
+</div>
+<p>We will simply require the moment generated by the total force we just determined (equivalent point load) to be equal the the moment generated by the distributed force (actual distributed load).</p>
+<p>Choosing the upper edge of the plate as a rotational axis we have</p>
+<div class="math notranslate nohighlight">
+\[ \sum M_A = \int_A y dF = y_P F\]</div>
+<p>Rearrangement gives</p>
+<div class="math notranslate nohighlight">
+\[ y_P = \frac{\int_A y dF}{F} = \frac{\int_A y^2sin(\alpha)dA}{\int_A y sin(\alpha)dA}\]</div>
+<p>Simplification gives</p>
+<div class="math notranslate nohighlight">
+\[ y_P = \frac{\int_A y^2dA}{\int_A y dA} = \frac{I_x}{A \bar y}\]</div>
+<p>The value <span class="math notranslate nohighlight">\(I_x\)</span> is the moment of inertia about the <span class="math notranslate nohighlight">\(x\)</span> axis. We will then recall the <a class="reference external" href="https://en.wikipedia.org/wiki/Parallel_axis_theorem">parallel axis theorem</a> to find the value in terms of our centroidal locations</p>
+<div class="math notranslate nohighlight">
+\[ y_P =  \frac{I_0}{A \bar y}+ \bar y\]</div>
+<p>Where <span class="math notranslate nohighlight">\(I_0\)</span> is the moment of inertia about the plate centroid (tabulated for common geometric shapes).</p>
+<p>The nice thing is that this calculus will work fine for any surface (shape and orientation), but at the expense of having to perform analysis to find the functions to integrate (or do numerical integrations which is easier if we can describe the geometry)</p>
 </div>
 </div>
-<div class="section" id="example-3-capillary-tube">
-<h2>Example 3 - Capillary Tube<a class="headerlink" href="#example-3-capillary-tube" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-default" id="capillary-water-1">
-<a class="reference internal image-reference" href="../../_images/capillary-water-1.png"><img alt="../../_images/capillary-water-1.png" src="../../_images/capillary-water-1.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 32 </span><span class="caption-text">Intermediate algebra</span><a class="headerlink" href="#capillary-water-1" title="Permalink to this image">¶</a></p>
-</div>
-<p><a class="reference internal" href="#capillary-water-1"><span class="std std-numref">Fig. 32</span></a> is a brief problem statement, sketch, and list of known values.</p>
-<div class="figure align-default" id="capillary-water-2">
-<a class="reference internal image-reference" href="../../_images/capillary-water-2.png"><img alt="../../_images/capillary-water-2.png" src="../../_images/capillary-water-2.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 33 </span><span class="caption-text">Intermediate algebra</span><a class="headerlink" href="#capillary-water-2" title="Permalink to this image">¶</a></p>
-</div>
-<p><a class="reference internal" href="#capillary-water-2"><span class="std std-numref">Fig. 33</span></a> is the remainder of the solution, with a list of unknowns, the governing equation, and worked out solution.  Notice the solution protocol is still followed but greatly simplified in this example.</p>
-</div>
-<div class="section" id="viscometers">
-<h2>Viscometers<a class="headerlink" href="#viscometers" title="Permalink to this headline">¶</a></h2>
-<p>A variety of <a class="reference external" href="https://en.wikipedia.org/wiki/Viscometer">instruments</a> are used to measure viscosity.</p>
-<p>They all operate on roughly the same principle - determine the force requires to make two solid planes move with a fluid between then; from the force and known geometry the viscosity can be inferred. The example problem below is a falling piston viscometer - with the question asked in an unusual fashion, but it could easily be used to measure viscosity based on a measured fall velocity.</p>
-<div class="section" id="example-problem">
-<h3>Example Problem<a class="headerlink" href="#example-problem" title="Permalink to this headline">¶</a></h3>
-<p>Figure <a class="reference internal" href="#fallingcylinderviscosity"><span class="std std-numref">Fig. 34</span></a> is a schematic of a cylinder falling inside a pipe that is filled with oil. The annular space between the cylinder and the pipe is lubricated with an oil film that has viscosity <span class="math notranslate nohighlight">\(\mu\)</span>.</p>
-<div class="figure align-default" id="fallingcylinderviscosity">
-<a class="reference internal image-reference" href="../../_images/FallingCylinderViscosity.png"><img alt="../../_images/FallingCylinderViscosity.png" src="../../_images/FallingCylinderViscosity.png" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 34 </span><span class="caption-text">Falling cylinder in an oil-filled pipe</span><a class="headerlink" href="#fallingcylinderviscosity" title="Permalink to this image">¶</a></p>
-</div>
-<ul class="simple">
-<li><p>Derive a formula for the steady rate of descent of a cylinder with weight <span class="math notranslate nohighlight">\(W\)</span> , diameter <span class="math notranslate nohighlight">\(d\)</span>, and length <span class="math notranslate nohighlight">\(l\)</span> sliding inside a vertical smooth pipe that has inside diameter <span class="math notranslate nohighlight">\(D\)</span>. Assume the cylinder remains concentric with the pipe as it falls.</p></li>
-<li><p>Use the general formula you develop to estimate the rate of descent for a cylinder 100 millimeters in diameter that slides inside a 100.5 millimeter inside diameter pipe. The cylinder is 200 millimeters long and weighs 15 Newtons. The lubricant is SAE 20W oil at <span class="math notranslate nohighlight">\(10^o~C\)</span>.</p></li>
-</ul>
-<p>Applying the problem solving methodology we have:</p>
-<div class="figure align-default" id="fallingcylinderviscosity-soln">
-<a class="reference internal image-reference" href="../../_images/FallingCylinderViscosity-Soln.png"><img alt="../../_images/FallingCylinderViscosity-Soln.png" src="../../_images/FallingCylinderViscosity-Soln.png" style="width: 400px;" /></a>
-</div>
-<p>We can easily script a tool for frequent application of a falling cylinder viscometer</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># falling piston viscometer</span>
-<span class="kn">import</span> <span class="nn">math</span>
-<span class="c1"># viscosity function for falling piston in a tube geometry</span>
-<span class="k">def</span> <span class="nf">viscosity</span><span class="p">(</span><span class="n">weight</span><span class="p">,</span><span class="n">spacing</span><span class="p">,</span><span class="n">dpiston</span><span class="p">,</span><span class="n">lpiston</span><span class="p">,</span><span class="n">velocity</span><span class="p">):</span>
-    <span class="n">viscosity</span> <span class="o">=</span> <span class="p">(</span><span class="n">weight</span><span class="o">*</span><span class="n">spacing</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">dpiston</span><span class="o">*</span><span class="n">lpiston</span><span class="o">*</span><span class="n">velocity</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">viscosity</span>
-<span class="c1"># Example Problem Values</span>
-<span class="n">weight</span> <span class="o">=</span> <span class="mi">15</span> <span class="c1">#newtons</span>
-<span class="n">spacing</span> <span class="o">=</span> <span class="mf">0.5e-03</span> <span class="c1">#meters spacing</span>
-<span class="n">dpiston</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="c1">#meters</span>
-<span class="n">lpiston</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="c1">#meters</span>
-<span class="n">velocity</span> <span class="o">=</span> <span class="mf">0.17</span> <span class="c1">#meters/sec</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Viscosity = &quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">viscosity</span><span class="p">(</span><span class="n">weight</span><span class="p">,</span><span class="n">spacing</span><span class="p">,</span><span class="n">dpiston</span><span class="p">,</span><span class="n">lpiston</span><span class="p">,</span><span class="n">velocity</span><span class="p">),</span><span class="mi">3</span><span class="p">),</span><span class="s2">&quot; Newtons per square meter&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Viscosity =  0.351  Newtons per square meter
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="vapor-pressure">
-<h2>Vapor Pressure<a class="headerlink" href="#vapor-pressure" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://en.wikipedia.org/wiki/Vapor_pressure">Vapor pressure</a> is the pressure exerted by a vapor in thermodynamic equilibrium with its condensed phases (solid or liquid) at a given temperature in a closed system.</p>
-<p>It varies by substance for example <a class="reference external" href="https://en.wikipedia.org/wiki/Vapour_pressure_of_water">water</a> is extensively tabulated, as is that for <a class="reference external" href="https://www.govinfo.gov/content/pkg/GOVPUB-C13-66a1ade54071892930184393b1802e69/pdf/GOVPUB-C13-66a1ade54071892930184393b1802e69.pdf">mercury</a>, and many other practically useful substances.  It matters most in barometers and pipelines that have negative gage pressures - if the negative pressure gets too large the liquid will flash into vapor and can stop flow or go boom!</p>
-</div>
-<div class="section" id="readings">
-<h2>Readings<a class="headerlink" href="#readings" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
+<li><p>Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 47-80</p></li>
+<li><p>Cleveland, T. G. (2014) <em>Fluid Mechanics Notes to Accompany CE 3305 at Jade-Holshule (TTU Study Abroad 2015-2019)</em>, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-003.1.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-003.1.pdf</a></p></li>
+<li><p>DF Elger, BC Williams, Crowe, CT and JA Roberson, <em>Engineering Fluid Mechanics 10th edition</em>, John Wiley &amp; Sons, Inc., 2013. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-3.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-3.pdf</a></p></li>
 <li><p>CE-3305-2022-1 Syllabus. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html">http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html</a></p></li>
-<li><p>Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 14-45</p></li>
-<li><p>DF Elger, BC Williams, Crowe, CT and JA Roberson, <em>Engineering Fluid Mechanics 10th edition</em>, John Wiley &amp; Sons, Inc., 2013. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-2.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-2.pdf</a></p></li>
-<li><p>Cleveland, T. G. (2014) <em>Fluid Mechanics Notes to Accompany CE 3305 at Jade-Holshule (TTU Study Abroad 2015-2019)</em>, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-002.1.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-002.1.pdf</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Pressure_measurement">Pressure Measurement</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Barometer">Barometer</a></p></li>
 </ol>
 </div>
 </div>
@@ -745,23 +687,14 @@ Dimensionally it is a force per unit length, and is one reason why liquids can r
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="../lesson01/lesson01.html" title="previous page">
+        <a class="left-prev" href="../../intro.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Introduction</p>
+                <p class="prevnext-title">Fluid Mechanics Notes to Accompany CE 3305 at TTU</p>
             </div>
         </a>
     </div>
-     <div id="next">
-        <a class="right-next" href="../lesson03/lesson03.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Fluid Statics and Pressure</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
 
 </div>
         

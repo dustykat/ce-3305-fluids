@@ -1,455 +1,510 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Basic Fluid Properties 
+# # Fluid Statics and Pressure 
 # 
 # ## Lesson Outline
-# 1. Basic Fluid Properties
-#   - Intensive/Extensive Properties
-#   - Typical physical and thermodynamic properties
-#   - Equations of state (IGL)
-# 2. Viscosimiters
-#   - Measuring viscosity
-#   - Example problems
-# 3. Vapor Pressure
-#   - Barometers
+# 1. Hydrostatic Equation
+# 2. Measuring Devices (Pressure)
+# 3. Force on a Plane Surface
 
-# ## Fluid Properties
+# ## Fluid Statics
 # 
-# Extensive properties apply to a system and are associated with a fixed quantity of mass.
+# Fluid statics deals with forces in fluids that are have no relative motion within the fluid.  The vessel containing the fluid may be at non-zero velocity or acceleration, but the fluid body within the vessel has no relative motion.
 # 
-# Intensive properties apply to components of a system, and are defined with restect to a boundary in space. 
+# Two principal types of forces involved are body and surface forces as shown in {numref}`FluidStatics` 
 # 
-# Imagine a gallon of water; its weight is an extensive property assocated with that gallon.  The specific weight, $\gamma$, is the weight per volume is an intensive property. The properties in the textboox (pp 14-19) are for the most part intensive properties (mostly defined per unit volume)
-# 
-# ```{figure} gallon-properties.png
+# ```{figure} FluidStatics.png
 # ---
-# width: 400px
-# name: gallon-properties
+# width: 500px
+# name: FluidStatics
 # ---
-# One gallon, and a 30cc sample removed
+# A sphere of some fluid, depicting a local coordinate system, differential area and a normal and tangential force pair
 # ```
-# {numref}`gallon-properties` is a schematic of a simple example to relate extensive and intensive properties.  
-# We first weigh the entire gallon, 8.32 lbs. Then we weigh the 30cc subsample, 0.065 lbs.
+# Body forces are developed without contact and are distributed over the entire volume of a fluid.  In the sketch the weight of the sphere is a body force.
 # 
-# The extensive property of weight for the gallon is 8.32 lbs; the extensive property of weight for the 30cc is 0.065 lbs.
+# Surface forces act at boundaries of a medium through contant.  The normal force in the sketch (which is the product of pressure and area) is a surface force, defined on the surface of the sphere.
 # 
-# If we now compute specific weights of each entity and adjust to a common basis volume:
+# Stress is the limiting value of $\frac{dF}{dA}$; in the sketch there are two stresses: a normal stress (usually called pressure), and a tangential stress (usually called shear).
+# 
+# Shear stresses are formed by friction, no-slip assumption, and other practically occuring situations.
 
-# In[1]:
-
-
-spwt_gallon = 8.32 # lbs per gallon
-spwt_30cc = 0.065 # lbs per 30 cc
-# convert to common volume
-spwt_30cc = spwt_30cc*(128/1)  # 30cc==1oz; 128oz==1gal conversion to common volume basis.
-print('Sp. Wt. of 1 gallon sample = ',round(spwt_gallon,3))
-print('Sp. Wt. of 30 cc sample = ',round(spwt_30cc,3))
-
-
-# They are the same value (as anticipated); intensive properties are useful in most fluid mechanics problems because they are a property of a specific fluid, rather that some fixed volume of that fluid - however we must be comfortable using both.
+# ```{figure} Stresses.png
+# ---
+# width: 500px
+# name: Stresses
+# ---
+# Shear and normal stresses on a plane parallel to x-y coordinate plane, at some value z.
+# ```
+# {numref}`Stresses` is a diagram of a small planar element in a 3-D cartesian coordinate system that illustrate normal and shear stresses.  The tensor-like naming system is also indicated.  
 # 
-# ### Density
-# Density (or mass density) is the mass per unit volume.  Typical symbol is $\rho$, sometimes subscripted to identify fluid in multiiple fluid problems.
+# A conventional notation is $\sigma_{n,i-k}$ for normal stress, and $\tau_{n,i-k}$ for shear stress.  The first subscript is the direction of the outward pointing normal vector from the application plane (in the drawing +z), the second subscript is the direction of force application, with the normal stress positive into the plane.  In the drawing the three stresses are $\sigma_{z,z}$,$\tau_{z,x}$, and $\tau_{z,y}$.
 # 
-# $$ \rho = \frac{m}{V} $$
+# ### Pressure
 # 
-# ### Specific Weight
-# Specific weight is the weight per unit volume.  Typical symbol is $\gamma$.
-# It is related to density by gravitational acceleration: 
-# 
-# $$\gamma = \rho g$$
-# 
-# ### Specific Gravity
-# 
-# Specific gravity is the ratio of density of a fluid to a reference fluid.  In Civil Engineering the reference fluid is typically liquid water. Typical symbol is $S$ 
-# 
-# $$ S =\frac{\rho_{i}}{\rho_{water}}=\frac{\gamma_{i}}{\gamma_{water}} $$
-# 
-# ### Bulk Modulus (of elasticity)
-# 
-# The bulk modulus relates the change in volume of a fluid element to a change in pressure.  For liquids it is quite high, gasses quite a bit smaller - it is essentially a Hooke's law (springs) for a continuum element.  It conveys how much pressure change is needed to effect a incremental volume change.
-# 
-# $$ E_v = -\frac{dp}{(\frac{dV}{V})} $$
-# 
-# Dimensionally it is a pressure.  For water at terresterial pressure and temperature its value is upwards of 2.2 GPa (about 23 atmospheres); for solid steel well over 150 GPa (about 1550 atmospheres).
-# 
-# In our practical sense, gas is compressible, water is not very compressible, steel smaller still.
-# 
-# All the properties above are temperature dependent, and in gasses the compressibility is small, hence they are called compressible fluids.
-# 
-# A few thermodynamic properties are useful too:
-# 
-# ### Constant Volume Specific Heat
-# 
-# The heat amount added to a unit mass of fluid to raise the temperature one degree (units system dependent!) while volume is held constant.  
-# Typical symbol is $c_v$.
-# 
-# ### Constant Pressure Specific Heat
-# 
-# The heat amount added to a unit mass of fluid to raise the temperature one degree (units system dependent!) while pressure is held constant.  
-# 
-# Typical symbol is $c_p$.
-# 
-# ### Specific Internal Energy
-# 
-# Energy a unit mass possesses because of its state of molecular activity.  Typical symbol is $u$
+# Fluid pressure (usual symbol $p$) is the normal stress applied to a fluid element, so in practice we simply make the direct substitution.
 # 
 # :::{note}
-# The symbol $u$ is also commonly used for the x-component, or streamline component of velocity.  Be aware of context to avoid confusion.  In some documents $U$ is the velocity vector - again the context should be a clue.
+# The use of pressure in fluids and normal stress in solids is simply a convention - one could refer to solids pressure but that would confuse people.
 # :::
 # 
-# ### Specific Enthalpy
-# 
-# Energy a substance possesses because of internal energy and applied normal stress (aka pressure).  Typical symbol is $h = u + \frac{p}{\rho}$
-# 
-# ## Equation of State
-# 
-# The state of a fluid is the value of all its properties at specified temperature, pressure, and gravitational filed strength.  The Ideal Gas Law is a relatively simple equation of state for gasses.
-# 
-# ```{figure} pvnrt.png
-# ---
-# width: 400px
-# name: pvnrt
-# ---
-# Ideal Gas Law (Equation of State)
-# ```
-# {numref}`pvnrt` is the equation of state in two different forms for gasses. An equation of state allows prediction of state as temperature, pressure, or volume are changed.  
-
-# ## Viscosity
-# 
-# "... a property of a fluid that relates the resistance to motion (in a thin layer) when a shear force is applied..."  
-# 
-# This somewhat useless definition is trying to convey how fluids deform under shear, and more importantly the rate of deformation.  
-# Consider a steel sheet that we cut with a shear (like sicssors), if we want to cut fast we need a lot of force; using the same shears on an equal thickness of plastic sheet will take less force for the same rate of cut.  
-# This solids analog to viscosity conveys that steel is more viscous than plastic (usually).
-# 
-# ```{figure} viscosity-one.png
-# ---
-# width: 400px
-# name: viscosity-one
-# ---
-# Viscosity Schematic
-# ```
-# {numref}`viscosity-one` Is a diagram attempting to convey the concept of viscosity.  In the drawing the thickness $\partial y$ and the deformation angle $\partial \alpha$ are small, and the sine of the angle is approximated by the angle itself.
-# 
-# ```{figure} viscosity-two.png
-# ---
-# width: 400px
-# name: viscosity-two
-# ---
-# Viscosity Trigonometry
-# ```
-# {numref}`viscosity-two` shows the relevant trigonometry to relate deformation rate to shear stress.
-# 
-# ### Absolute Viscosity
-# 
-# ```{figure} newtonian.png
-# ---
-# width: 400px
-# name: newtonian
-# ---
-# Absolute viscosity (definition) 
-# ```
-# {numref}`newtonian` defines a Newtonian fluid and introduces the absolute viscosity $\mu$ in terms of the thin layer, cross-layer velocity profile $\frac{du}{dy}$ and the applied shear stress $\tau$.  The viscosity has dimensions of $\frac{Force \cdot Time}{Area}$
-# 
-# ### Apparent Viscosity
-# 
-# ```{figure} non-newtonian.png
-# ---
-# width: 400px
-# name: non-newtonian
-# ---
-# Apparent viscosity (definition) power-law model
-# ```
-# {numref}`non-newtonian` shows a typical power-law model of viscosity; the term is referred to as an apparent viscosity.  Many real fluids are Non-Newtonian and will have some type of viscosity model to explain the deformation behavior.
-# 
-# ### Kinematic Viscosity
-# 
-# The ratio of absolute (or apparent) viscosity to the fluid density is called the *kinematic* viscosity. The usual symbol is $\nu = \frac{\mu}{\rho}$  The kinematic viscosity has dimensions of $\frac{Area}{Time}$
-# 
-# ### General Comments
-# Viscous effects cause a velocity gradient (profile) to develop across the fluid layers as shown in {numref}`slip-profile`.
-# 
-# ```{figure} slip-profile.png
-# ---
-# width: 400px
-# name: slip-profile
-# ---
-# Velocity Profile Diagram
-# ```
-# {numref}`slip-profile` is a diagram of the cross-layer velocity profile. The slope of the profile is related to shear force and hence the apparent or absolute viscosity.
+# Pressure is a normal force per unit area, so at any **point** within a fluid it is a scalar quantity. The dimensionality of pressure is the ratio of force to area; typical units are $\frac{N}{m^2} = Pa$,$\frac{lbs}{in^2}$.  Pressure is also expressed in atmospheres $1 atm = 101325Pa = 14.75psi$ and liquid column height $1 atm \approx 10m_{water} \approx 29.92in_{Hg}$
 # 
 # :::{note}
-# The no-slip condition is deduced from experiments - in my opinion it is an assumption that velocity vanishes at the contact interface.  In your future studies keep this in mind; it is quite possible that slip occurs at some scale, however it is a useful and accepted boundary condition.
+# Pressure is scalar (magnitude), the force it causes when pushing against an object is a vector (magnitude and direction)
 # :::
+
+# ```{figure} PressureWedge.png
+# ---
+# width: 500px
+# name: PressureWedge
+# ---
+# FBD of small wedge of a static fluid.
+# ```
+# {numref}`PressureWedge` is a free body diagram of a small wedge of fluid; analyzing the wedge we can demonstrate that pressure is a scalar (Pascal's Law).
 # 
+# First we will stipulate the fluid is a rest; no internal motion.  Next perform a force balance in each direction as in {numref}`ForceBalanceWedge`
+# 
+# ```{figure} ForceBalanceWedge.png
+# ---
+# width: 500px
+# name: ForceBalanceWedge
+# ---
+# Force balance x,y, and z directions on fluid wedge.
+# ```
+# Notice we immediately invoke the definition of pressure to compute forces $F=p \cdot A$ where $A = \Delta x \Delta z$ and such, applying trigonometry to the wedge to resolve its force components. The directions are associated with the outward pointing normal vectors associated with the various planar areas.
+# 
+# We complete the analysis by studying the requirement of zero motion (statics) and find that indeed pressure is a scalar as in {numref}`FBComplete`
+# 
+# ```{figure} FBComplete.png
+# ---
+# width: 500px
+# name: FBComplete
+# ---
+# Analysis summary and demonstration pressure must be scalar.
+# ```
+# 
+# Because the three pressures are all the same at a point, we can drop the double subscript notation and simplify our notation herein.
+# 
+# Some practical application of Pascal's Law is that in a closed system a change in pressure is transmitted undiminished throughout the entire system.  This phenomenon is the basis of hydraulic machinery like pneumatic jacks (pg. 49 of the textbook)
+
+# ### Absolute and Gage Pressure
+# Pressure is usually measured against some reference value.  Two values in common use are a vaccum (zero pressure) and a standard atmosphere.
+# 
+# If the measurement is referenced to a standard atmosphere the measure is called *gage pressure*.
+# 
+# If the measurement is referenced to a vaccum, the measure is called *absolute pressure*
+# 
+# Gage pressures can be negative, but negative absolute pressures don't make any sense.
+# 
+# ```{figure} AbsolutePressure.png
+# ---
+# width: 500px
+# name: AbsolutePressure
+# ---
+# Gage and absolute pressure.
+# ```
+# {numref}`AbsolutePressure` is a diagram depicting the relationship of gage and absolute pressures.
+# 
+# ### Hydrostatic Equation
+# Here we develop the fundamental equation of fluid statics, and examine a couple of applications (pg. 52 is a condensed explaination).
+# 
+# Recall fluid statics means no relative motion within the fluid - the entire fluid behaves as a rigid body. The absence of angular deformation implies absence of shear stress; static fluids only sustain normal stress (pressure)
+# 
+# ```{figure} fstatics-1.png
+# ---
+# width: 500px
+# name: fstatics-1
+# ---
+# Velocity gradient in static fluid
+# ```
+# {numref}`fstatics-1` is the mathematical statement of these stipulations. 
+# 
+# ```{figure} fruid-element.png
+# ---
+# width: 500px
+# name: fruid-element
+# ---
+# Small fluid element in space (the final frontier!)
+# ```
+# 
+# Consider a fluid element as in {numref}`fruid-element`. We analyze the forces on the element taking limits as appropriate (continuum hypothesis) to recover the equation of a static fluid.
+# 
+# ```{figure} fstatics-2.png
+# ---
+# width: 500px
+# name: fstatics-2
+# ---
+# Force balance statement, and naming of forces
+# ```
+# {numref}`fstatics-2` 
+# 
+# Writing the surface and body forces of the element as a rigid body, and equating these forces to acceleration (Newton's 2nd Law) produces a set of terms in {numref}`fstatics-3`
+# 
+# ```{figure} fstatics-3.png
+# ---
+# width: 500px
+# name: fstatics-3
+# ---
+# Expansion of forces from centroid to front, back,left,right, top, bottom face of the small fluid element.
+# ```
+# Using Taylor-series expansions about the centroid of the element 
+# 
+# ```{figure} fstatics-4.png
+# ---
+# width: 500px
+# name: fstatics-4
+# ---
+# Substitution into force definition (surface forces)
+# ```
+# {numref}`fstatics-4` is the substitution of our forces at each face into the equation of motion.
+# 
+# ```{figure} fstatics-5.png
+# ---
+# width: 500px
+# name: fstatics-5
+# ---
+# Surface and body forces into balance equation; rescaling by element volume
+# ```
+# {numref}`fstatics-5` is the balance equation divided by the small but non-vanishing element volume to produce the fluid equation at an arbitrary point.
+# 
+# ```{figure} fstatics-6.png
+# ---
+# width: 500px
+# name: fstatics-6
+# ---
+# Zero acceleration equation of fluid statics
+# ```
+# {numref}`fstatics-6` is the equation of motion (this is actually Euler's equation - but he does not need it anymore!) at zero acceleration.
+# 
+# ```{figure} fstatics-7.png
+# ---
+# width: 500px
+# name: fstatics-7
+# ---
+# Decomposition into cartesian components
+# ```
+# {numref}`fstatics-7` is the decomposition of the vector equation into its independent components, in this case cartesian coordinates. The $z$-axis equation is the only one conveying meaningful information (because of our choice of gravitational action).
+# 
+# ```{figure} fstatics-8.png
+# ---
+# width: 500px
+# name: fstatics-8
+# ---
+# Hydrostatic equation in a liquid
+# ```
+# {numref}`fstatics-8` is the hydrostatic equation for an incompressible liquid (like water).  Pressure increases moving down from the free surface.
+# 
+# ```{figure} fstatics-9.png
+# ---
+# width: 500px
+# name: fstatics-9
+# ---
+# Hydrostatic approximation for compressible fluid (like the atmosphere)
+# ```
+# {numref}`fstatics-9` is the hydrostatic approximation for compressible fluid. Here the ideal gas law is used as the equation of state.
+
+# ## Pressure Measurements
+# 
+# Pressure is mesured by a variety of devices depending on the fluid.  Some of these are:
+# 
+# - barometer (for measuring atmospheric pressure)
+# - piezometer
+# - manometer
+# - [Bourdon-type gages](https://www.bourdon-instruments.com/us/en/product-overview/pressure-gauges/c/36822) The principle of [operation](https://www.sciencedirect.com/topics/engineering/bourdon-tube) is the deformation of a curved tube in response to external pressure force change.
+# - pressure transducers
+# 
+# ### Barometer
+# 
+# A barometer is a tube filled with liquid (oil,Hg,water), that is capped on one end, inverted into a basin and allowed to equilibrate as in {numref}`barometer`
+# 
+# 
+# ```{figure} barometer.png
+# ---
+# width: 400px
+# name: barometer
+# ---
+# Schematic of a barometer.  
+# ```
+# 
+# The height of rise is obtained from a force balance between the vapor pressure of the working fluid in the capped end and the surrounding atmospheric pressure.
 # 
 
-# ## Example 1 
+# ### Piezometer
 # 
-# Here is a hand-worked example to illustrate viscosity concepts and problem solving protocol.
+# A piezometer is a tube inserted into a fluid (usually liquid) which is open at both ends, large enough diameter so that capillary rise is negligible.  The height of rise of liquid in the tube is proportional to the static pressure in the liquid at the bottom of the tube.  
 # 
-# We start with a problem statement:
 # 
-# ```{figure} problem-statement.png
+# ```{figure} piezometer.png
 # ---
-# width: 500px
-# name: problem-statement
+# width: 400px
+# name: piezometer
 # ---
-# Block sliding on an inclined plane
+# Schematic of a piezometer.  
 # ```
-# {numref}`problem-statement` is a problem statement of the problem we wish to solve. 
 # 
-# The next step is to sketch the situation, mindful of several different scales in the problem.
-# 
-# ```{figure} problem-sketch.png
-# ---
-# width: 500px
-# name: problem-sketch
-# ---
-# Block sliding on an inclined plane (various definining sketches)
-# ```
-# {numref}`problem-sketch` is a set of sketches, showing the macro-scale conditions, as well as a free-body-diagram, and a sketch of the fluid layer between the block and the plane.
-# 
-# Next we list knowns, unknowns, and governing equations:
-# 
-# ```{figure} problem-known.png
-# ---
-# width: 500px
-# name: problem-known
-# ---
-# Known or given values
-# ```
-# {numref}`problem-known` is a list of known or supplied (in the problem statement) values
-# 
-# ```{figure} problem-unknown.png
-# ---
-# width: 500px
-# name: problem-unknown
-# ---
-# Unknown (sought) values
-# ```
-# {numref}`problem-unknown` is a list of unknown or sought values
-# 
-# ```{figure} problem-governing-equations.png
-# ---
-# width: 500px
-# name: problem-governing-equations
-# ---
-# Relevant equations
-# ```
-# {numref}`problem-governing-equations` is an initial list of applicable equations (we may add to this list as the analysis proceedes).
-# 
-# Now we proceede with the analysis
-# 
-# ```{figure} problem-solution-1.png
-# ---
-# width: 500px
-# name: problem-solution-1
-# ---
-# Solution
-# ```
-# {numref}`problem-solution-1` is our initial work towards a solution, ending with an expression relating shear force and viscosity.
-# 
-# ```{figure} problem-solution-2.png
-# ---
-# width: 500px
-# name: problem-solution-2
-# ---
-# Solution(continued)
-# ```
-# {numref}`problem-solution-2` is the completion where the geomtric terms are inserted and a numerical answer is supplied.
-# 
-# ```{figure} problem-discussion.png
-# ---
-# width: 500px
-# name: problem-discussion
-# ---
-# Discussion of results
-# ```
-# {numref}`problem-discussion` is a discussion of results; this part is important as part of professional documentation, esp. if the analysis is a first approximation and is being used to determine whether further work will be needed.
+# A well in an aquifer is a common example of a piezometer that measures the water pressure at the bottom of the tube (or averaged over the well screen length)
 
-# ## Example 2 - Radial Geometry Kinematics
+# ### Manometer
 # 
-# A similar example is presented below, however the geometry is changed a bit. 
+# Manometers are like a hybrid of a barometer and piezometer.
 # 
-# ```{figure} example2-p1.png
+# ```{figure} manometer.png
 # ---
-# width: 600px
-# name: example2-p1
+# width: 400px
+# name: manometer
 # ---
-# Fluid drive problem (i.e how a transmission works!)
+# Schematic of a manometer.  
 # ```
-# {numref}`example2-p1` is a problem statement and list of known values and governing equations.
 # 
-# ```{figure} example2-p2.png
+# Manometers are connected to a fluid (measured), via an immiscible working fluid (usually oil or Hg).  The force differential between the fluid and atmosphere is indicated by the working fluid.
+# 
+# As with similar devices the $\frac{F}{A}$ is equated to the column height differential in the working fluid through $h=\frac{p}{\rho_{w.f.}g}$
+# 
+# ```{figure} manometer-rules.png
 # ---
-# width: 600px
-# name: example2-p2
+# width: 400px
+# name: manometer-rules
 # ---
-# Schematic sketches to define problem terms
+# Reading a manometer.  
 # ```
-# {numref}`example2-p2` is a list of unknown values and defining sketches.  Notice the geometry poses some complexity, hence the varied drawings to guide analysis.
 # 
-# ```{figure} example2-p3.png
-# ---
-# width: 600px
-# name: example2-p3
-# ---
-# Schematic sketches to define problem terms (continued)
-# ```
-# {numref}`example2-p3` are continued defining sketches and associated analyses.
+# Multiple tube/fluid manometers follow 2 rules (Pascal's law, and the hydrostatic equation)
 # 
-# ```{figure} example2-p4.png
-# ---
-# width: 600px
-# name: example2-p4
-# ---
-# Results and Discussion
-# ```
-# {numref}`example2-p4` is the results in useful units, and a discussion of the findings. The problem parts are straightforward using concepts for prior classes, but the analyst does have to keep track of the steps to get to a useable solution.
-# 
+# 1. Any two points at the same elevation in a **continuous** length of the **same** fluid are at the same pressure.
+# 2. pressure **increases** with depth in a liquid column.
 
-# ## Liquid Properties
+# ### Transducers
+# [Insert link to sensor book here]
+
+# ## Examples
+# Below are a few examples applying the hydrostatic equation and Pascal's law in a few different situations
 # 
-# A liquid is one kind of fluid, but it has a few added properties that are important.  One such property is surface tension, $\sigma$.
+# ### Example 1
 # 
-# Surface tension is the force per unit area required to separate two fluids.  It is measured with a ring tensiometer [https://en.wikipedia.org/wiki/Du_No%C3%BCy_ring_method](https://en.wikipedia.org/wiki/Du_No%C3%BCy_ring_method), and a few other ways.
-# Dimensionally it is a force per unit length, and is one reason why liquids can rise up capillary tubes, or into porous materials (like a sponge).  Surface tension controls how liquids spread or bead up on a surface.
-# 
-# ```{figure} surface-tension.png
+# ```{figure} example1-1.png
 # ---
-# width: 600px
-# name: surface-tension
+# width: 500px
+# name: example1-1
 # ---
-# Wetting and non-wetting fluid-fluid-solid systems.
+# Pressure at the bottom of a vessel.
 # ```
-# {numref}`surface-tension` is a schematic of a wetting and non-wetting drop of fluid onto a surface.
+# {numref}`example1-1` is a classical pressure at the bottom of a vessel, using the problem solving protocol.
+
+# ### Example 2
 # 
-# ### Capillary Rise
-# 
-# We can explain capillary rise using a force-balance and the concepts of wetting and non-wetting fluids.
-# 
-# ```{figure} capillary-fbd.png
+# ```{figure} example2-1.png
 # ---
-# width: 600px
-# name: capillary-fbd
+# width: 500px
+# name: example2-1
 # ---
-# Schematic of capillary tube
+# Pressure in a two-layer fluid system (1 of 2)
 # ```
-# {numref}`capillary-fbd`
+# {numref}`example2-1` is an analysis of a multi-phase system (Air, Oil, Water), using the problem solving protocol.
 # 
-# ```{figure} capillary-analysis.png
+# ```{figure} example2-2.png
 # ---
-# width: 600px
-# name: capillary-analysis
+# width: 500px
+# name: example2-2
 # ---
-# Force balance analysis of portion above free surface.
+# Pressure in a two-layer fluid system (2 of 2)
 # ```
-# {numref}`capillary-analysis`
+# {numref}`example2-2` is an analysis of a multi-phase system (Air, Oil, Water), using the problem solving protocol.
+
+# ### Example 3
+# 
+# ```{figure} example3-1.png
+# ---
+# width: 500px
+# name: example3-1
+# ---
+# Manometer with three fluids (1 of 3)
+# ```
+# {numref}`example3-1` is a manometer system, with two working fluids (and the measured fluid for three total)
+# 
+# ```{figure} example3-2.png
+# ---
+# width: 500px
+# name: example3-2
+# ---
+# Manometer with three fluids (2 of 3)
+# ```
+# {numref}`example3-2` is a manometer system, with two working fluids (and the measured fluid for three total)
+# 
+# ```{figure} example3-3.png
+# ---
+# width: 500px
+# name: example3-3
+# ---
+# Manometer with three fluids (3 of 3)
+# ```
+# {numref}`example3-3` is a manometer system, with two working fluids (and the measured fluid for three total)
+
+# ### Example 4
+# 
+# ```{figure} example4-1.png
+# ---
+# width: 500px
+# name: example4-1
+# ---
+# Pressure in a small drop (1 of 2)
+# ```
+# {numref}`example4-1` is the derivation of a formula to estimate the pressure in a small spherical droplet.
+# 
+# ```{figure} example4-2.png
+# ---
+# width: 500px
+# name: example4-2
+# ---
+# Pressure in a small drop (2 of 2)
+# ```
+# {numref}`example4-2` is the derivation of a formula to estimate the pressure in a small spherical droplet.
+
+# ## Pressure Force on Submerged Objects
+# 
+# Now we consider the forces generated on submerged objects by hydrostatic pressure.  It's the same force you feel on your [耳](https://translate.yandex.com/?lang=en-ja&text=ears) when you dive to the bottom of a [schwimmbad](https://dictionary.cambridge.org/us/dictionary/german-english/schwimmbad).
 # 
 # :::{note}
-# Some of the intermediate algebra is shown below to illustrate the terms that are cancelled.  Many equations in the book are shown without intermediate steps; its up to you to trust explicitly, or check the intermediate steps yourselves - textbooks are a bit more reliable than Facebook for facts, but not much (even this notebook should be held suspect until you check the work for errors and ommissions!)
-# 
-# ```{figure} capillary-algebra.png
-# ---
-# width: 400px
-# name: capillary-algebra
-# ---
-# Intermediate algebra
-# ```
-# {numref}`capillary-algebra` is some of the intermediate algebra for capillary tubes.
+# I am having a little fun with the language translators on Google; the sentance in English is "... It's the same force you feel on your ears when you dive to the bottom of a swimming pool".
 # :::
 # 
-# Using our equations and knowledge of contact angle for water in the note above we can calculate the rise in a capillary tube.
-
-# ## Example 3 - Capillary Tube
+# ### Uniform Pressure
 # 
-# ```{figure} capillary-water-1.png
+# Consider area $A$ shown with **uniform** pressure as shown on {numref}`panel-uniform` 
+# 
+# ```{figure} panel-uniform.png
 # ---
-# width: 600px
-# name: capillary-water-1
+# width: 500px
+# name: panel-uniform
 # ---
-# Intermediate algebra
+# Pressure force on some area.
 # ```
-# {numref}`capillary-water-1` is a brief problem statement, sketch, and list of known values.
+# The indicated force is the product of the area $A$ and the pressure $p$
 # 
-# ```{figure} capillary-water-2.png
+# $$F=pA$$
+# 
+# ### Distributed Pressure
+# 
+# Now, consider the area $A$ shown with **distributed** pressure as shown on {numref}`panel-distributed`.  As we move around the plate, the value of $p$ changes with position (like going down in a column of water)
+# 
+# ```{figure} panel-distributed.png
 # ---
-# width: 600px
-# name: capillary-water-2
+# width: 500px
+# name: panel-distributed
 # ---
-# Intermediate algebra
-# ```
-# {numref}`capillary-water-2` is the remainder of the solution, with a list of unknowns, the governing equation, and worked out solution.  Notice the solution protocol is still followed but greatly simplified in this example.
-
-# ## Viscometers
-# 
-# A variety of [instruments](https://en.wikipedia.org/wiki/Viscometer) are used to measure viscosity.
-# 
-# They all operate on roughly the same principle - determine the force requires to make two solid planes move with a fluid between then; from the force and known geometry the viscosity can be inferred. The example problem below is a falling piston viscometer - with the question asked in an unusual fashion, but it could easily be used to measure viscosity based on a measured fall velocity.
-# 
-# ### Example Problem
-# 
-# Figure {numref}`FallingCylinderViscosity` is a schematic of a cylinder falling inside a pipe that is filled with oil. The annular space between the cylinder and the pipe is lubricated with an oil film that has viscosity $\mu$.
-# 
-# ```{figure} FallingCylinderViscosity.png
-# ---
-# width: 300px
-# name: FallingCylinderViscosity
-# ---
-# Falling cylinder in an oil-filled pipe
+# Pressure force on a small area in a variable pressure field
 # ```
 # 
-# - Derive a formula for the steady rate of descent of a cylinder with weight $W$ , diameter $d$, and length $l$ sliding inside a vertical smooth pipe that has inside diameter $D$. Assume the cylinder remains concentric with the pipe as it falls.
-# - Use the general formula you develop to estimate the rate of descent for a cylinder 100 millimeters in diameter that slides inside a 100.5 millimeter inside diameter pipe. The cylinder is 200 millimeters long and weighs 15 Newtons. The lubricant is SAE 20W oil at $10^o~C$.
+# In this instance, we use calculus to integrate all the little forces fo fine the aggregate (net) force on the entire plate.
 # 
-# Applying the problem solving methodology we have:
+# $$F = \int_{A} p \cdot dA$$
 # 
-# ```{figure} FallingCylinderViscosity-Soln.png
+# Now lets extend the idea, to an arbitrary angle in the distributed pressure field, as in {numref}`panel-angle`
+# 
+# ```{figure} panel-angle.png
 # ---
-# width: 400px
-# name: FallingCylinderViscosity-Soln
+# width: 500px
+# name: panel-angle
 # ---
+# Flat plate submerged at an arbitrary angle
+# ```
+# Depth to an incremental portion of the plate $dy$ is $h$. Distance along the $+y$ axis is $y$.  The value of $y$ is related to depth, $h$, by the angle $\alpha$. 
 # 
+# :::{note}
+# We choose $\alpha$ to represent the angle because it looks like a fish, and fish are found underwater!
+# :::
+# 
+# Next looking at the plate from a viewing angle that is normal to the plate (the eyeball in the sketch)it might look like {numref}`panel-normal`
+# 
+# ```{figure} panel-normal.png
+# ---
+# width: 500px
+# name: panel-normal
+# ---
+# Looking perpindicular to the flat plate. Width of the integrand is some function of $y$
 # ```
 # 
-# We can easily script a tool for frequent application of a falling cylinder viscometer
-
-# In[2]:
-
-
-# falling piston viscometer
-import math
-# viscosity function for falling piston in a tube geometry
-def viscosity(weight,spacing,dpiston,lpiston,velocity):
-    viscosity = (weight*spacing)/(2*math.pi*dpiston*lpiston*velocity)
-    return viscosity
-# Example Problem Values
-weight = 15 #newtons
-spacing = 0.5e-03 #meters spacing
-dpiston = 0.1 #meters
-lpiston = 0.2 #meters
-velocity = 0.17 #meters/sec
-print("Viscosity = ",round(viscosity(weight,spacing,dpiston,lpiston,velocity),3)," Newtons per square meter")
-
-
-# ## Vapor Pressure
+# In this sketch the panel area is $dA = width(y) \cdot dy$ when looking perpindicular to the $+y$ axis.  The resultant net force on the submerged plate (perpindicular to the $y$ axis) is simply 
 # 
-# [Vapor pressure](https://en.wikipedia.org/wiki/Vapor_pressure) is the pressure exerted by a vapor in thermodynamic equilibrium with its condensed phases (solid or liquid) at a given temperature in a closed system.
+# $$F = \int_{A} p \cdot dA$$
 # 
-# It varies by substance for example [water](https://en.wikipedia.org/wiki/Vapour_pressure_of_water) is extensively tabulated, as is that for [mercury](https://www.govinfo.gov/content/pkg/GOVPUB-C13-66a1ade54071892930184393b1802e69/pdf/GOVPUB-C13-66a1ade54071892930184393b1802e69.pdf), and many other practically useful substances.  It matters most in barometers and pipelines that have negative gage pressures - if the negative pressure gets too large the liquid will flash into vapor and can stop flow or go boom!
+# Now we apply some geometry and triggernometry to relate the integral to depth (and some moments).
+# 
+# ```{figure} panel-trig.png
+# ---
+# width: 500px
+# name: panel-trig
+# ---
+# Geometric/Trigonometric relationships.
+# ```
+# Generally we will want to express pressure in terms of $y$ or $h$.
+# 
+# $$ p = \rho g h = \rho g y sin(\alpha)$$
+# 
+# In practice the actual integration is a nusicance, instead we would likw to be able to deal in total area and depth.  The term in the red box is the [first moment of area](https://en.wikipedia.org/wiki/First_moment_of_area) that you had in statics.
+# 
+# :::{note}
+# The observation of that the red box is the 1st moment of area, makes those tables of centroids and such for common geometric shapes quite useful in fluids!
+# :::
+# 
+# If you recall from statics, the first moment of area is the distance to the centroid of the geometric object from the axis (in this case the $x$ axis that is trying to poke your eye!)
+# 
+# $$ \frac{1}{A} \int_A y \cdot dA = \bar y$$
+# 
+# Applying some trigonometry and algebraic substitution
+# 
+# $$F = \rho g y sin(\alpha) A \bar y = \rho g A \bar h$$
+# 
+# Where $\bar h$ is the depth from the free surface to the centroid of the plate area.  So we now can express the magnitude of the force in terms of depth (to the centroid) and the plate area.
+# 
+# $$F = \gamma A \bar h$$
 
-# ## Readings
+# Now we have the magnitude, and sometimes that might be enough but usually we need to also know the line of action.  We find that by taking a moment to examine {numref}`line-o-action`
 # 
-# 1. CE-3305-2022-1 Syllabus. [http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html](http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html)
+# ```{figure} line-o-action.png
+# ---
+# width: 500px
+# name: line-o-action
+# ---
+# Line of action of equivalent point load (equivalent to the actual distributed load)
+# ```
+# We will simply require the moment generated by the total force we just determined (equivalent point load) to be equal the the moment generated by the distributed force (actual distributed load).
 # 
-# 2. Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 14-45
+# Choosing the upper edge of the plate as a rotational axis we have
 # 
-# 3. DF Elger, BC Williams, Crowe, CT and JA Roberson, *Engineering Fluid Mechanics 10th edition*, John Wiley & Sons, Inc., 2013. [http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-2.pdf](http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-2.pdf)
+# $$ \sum M_A = \int_A y dF = y_P F$$
 # 
-# 4. Cleveland, T. G. (2014) *Fluid Mechanics Notes to Accompany CE 3305 at Jade-Holshule (TTU Study Abroad 2015-2019)*, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering. [http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-002.1.pdf](http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-002.1.pdf)
+# Rearrangement gives
+# 
+# $$ y_P = \frac{\int_A y dF}{F} = \frac{\int_A y^2sin(\alpha)dA}{\int_A y sin(\alpha)dA}$$
+# 
+# Simplification gives
+# 
+# $$ y_P = \frac{\int_A y^2dA}{\int_A y dA} = \frac{I_x}{A \bar y}$$
+# 
+# The value $I_x$ is the moment of inertia about the $x$ axis. We will then recall the [parallel axis theorem](https://en.wikipedia.org/wiki/Parallel_axis_theorem) to find the value in terms of our centroidal locations
+# 
+# $$ y_P =  \frac{I_0}{A \bar y}+ \bar y$$
+# 
+# Where $I_0$ is the moment of inertia about the plate centroid (tabulated for common geometric shapes).
+# 
+# The nice thing is that this calculus will work fine for any surface (shape and orientation), but at the expense of having to perform analysis to find the functions to integrate (or do numerical integrations which is easier if we can describe the geometry)
+
+# 
+
+# ## References
+# 
+# 1. Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 47-80
+# 
+# 2. Cleveland, T. G. (2014) *Fluid Mechanics Notes to Accompany CE 3305 at Jade-Holshule (TTU Study Abroad 2015-2019)*, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering. [http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-003.1.pdf](http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-003.1.pdf)
+# 
+# 3. DF Elger, BC Williams, Crowe, CT and JA Roberson, *Engineering Fluid Mechanics 10th edition*, John Wiley & Sons, Inc., 2013. [http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-3.pdf](http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-3.pdf)
+# 
+# 4. CE-3305-2022-1 Syllabus. [http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html](http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html)
+# 
+# 5. [Pressure Measurement](https://en.wikipedia.org/wiki/Pressure_measurement)
+# 
+# 6. [Barometer](https://en.wikipedia.org/wiki/Barometer)
 
 # In[ ]:
 
