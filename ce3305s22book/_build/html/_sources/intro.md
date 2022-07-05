@@ -36,7 +36,7 @@ The graded components of the course are:
 - Exercises (collected on a learning management system); individual activity
 - Exams (administered on a learning management system); individual activity
 
-The complete syllabus is located at [http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html](http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html)
+The complete syllabus is located at [http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-2-syllabus.html](http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-2-syllabus.html)
 
 :::{admonition} Textbook
 Elger D.F., LeBret B.A., Crowe C.T., Roberson J.A. (2019) *Engineering Fluid Mechanics 12th Edition* John Wiley & Sons Inc. Hoboken, New Jersey. *ISBN-13: 978-1119723509* 
