@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Euler and Bernoulli Equations
+# # Flow Kinematics
 # 
 # ## Lesson Outline
 # - Background

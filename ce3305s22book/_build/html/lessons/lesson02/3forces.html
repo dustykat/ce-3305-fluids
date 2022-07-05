@@ -113,12 +113,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../lesson00/2computation.html">
-     Computational Considerations
+     Computational Hydraulics
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../lesson00/3whatisfluids.html">
-     What is Fluid Mechanics?
+     Fluid Mechanics - A definition
     </a>
    </li>
    <li class="toctree-l2">
@@ -162,7 +162,7 @@
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="lesson02.html">
-   Fluid Statics and Pressure
+   Fluid Statics and Pressure (1/2)
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -194,12 +194,12 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../lesson04/lesson04.html">
-   4. title
+   4. Fluid Statics and Pressure (2/2)
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../lesson05/lesson05.html">
-   Euler and Bernoulli Equations
+   Flow Kinematics
   </a>
  </li>
  <li class="toctree-l1">
@@ -465,10 +465,10 @@
 </div>
 <div class="section" id="uniform-pressure">
 <h2>Uniform Pressure<a class="headerlink" href="#uniform-pressure" title="Permalink to this headline">¶</a></h2>
-<p>Consider area <span class="math notranslate nohighlight">\(A\)</span> shown with <strong>uniform</strong> pressure as shown on <a class="reference internal" href="#panel-uniform"><span class="std std-numref">Fig. 55</span></a></p>
+<p>Consider area <span class="math notranslate nohighlight">\(A\)</span> shown with <strong>uniform</strong> pressure as shown on <a class="reference internal" href="#panel-uniform"><span class="std std-numref">Fig. 63</span></a></p>
 <div class="figure align-default" id="panel-uniform">
 <a class="reference internal image-reference" href="../../_images/panel-uniform.png"><img alt="../../_images/panel-uniform.png" src="../../_images/panel-uniform.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 55 </span><span class="caption-text">Pressure force on some area.</span><a class="headerlink" href="#panel-uniform" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 63 </span><span class="caption-text">Pressure force on some area.</span><a class="headerlink" href="#panel-uniform" title="Permalink to this image">¶</a></p>
 </div>
 <p>The indicated force is the product of the area <span class="math notranslate nohighlight">\(A\)</span> and the pressure <span class="math notranslate nohighlight">\(p\)</span></p>
 <div class="math notranslate nohighlight">
@@ -476,28 +476,28 @@
 </div>
 <div class="section" id="distributed-pressure">
 <h2>Distributed Pressure<a class="headerlink" href="#distributed-pressure" title="Permalink to this headline">¶</a></h2>
-<p>Now, consider the area <span class="math notranslate nohighlight">\(A\)</span> shown with <strong>distributed</strong> pressure as shown on <a class="reference internal" href="#panel-distributed"><span class="std std-numref">Fig. 56</span></a>.  As we move around the plate, the value of <span class="math notranslate nohighlight">\(p\)</span> changes with position (like going down in a column of water)</p>
+<p>Now, consider the area <span class="math notranslate nohighlight">\(A\)</span> shown with <strong>distributed</strong> pressure as shown on <a class="reference internal" href="#panel-distributed"><span class="std std-numref">Fig. 64</span></a>.  As we move around the plate, the value of <span class="math notranslate nohighlight">\(p\)</span> changes with position (like going down in a column of water)</p>
 <div class="figure align-default" id="panel-distributed">
 <a class="reference internal image-reference" href="../../_images/panel-distributed.png"><img alt="../../_images/panel-distributed.png" src="../../_images/panel-distributed.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 56 </span><span class="caption-text">Pressure force on a small area in a variable pressure field</span><a class="headerlink" href="#panel-distributed" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 64 </span><span class="caption-text">Pressure force on a small area in a variable pressure field</span><a class="headerlink" href="#panel-distributed" title="Permalink to this image">¶</a></p>
 </div>
 <p>In this instance, we use calculus to integrate all the little forces fo fine the aggregate (net) force on the entire plate.</p>
 <div class="math notranslate nohighlight">
 \[F = \int_{A} p \cdot dA\]</div>
-<p>Now lets extend the idea, to an arbitrary angle in the distributed pressure field, as in <a class="reference internal" href="#panel-angle"><span class="std std-numref">Fig. 57</span></a></p>
+<p>Now lets extend the idea, to an arbitrary angle in the distributed pressure field, as in <a class="reference internal" href="#panel-angle"><span class="std std-numref">Fig. 65</span></a></p>
 <div class="figure align-default" id="panel-angle">
 <a class="reference internal image-reference" href="../../_images/panel-angle.png"><img alt="../../_images/panel-angle.png" src="../../_images/panel-angle.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 57 </span><span class="caption-text">Flat plate submerged at an arbitrary angle</span><a class="headerlink" href="#panel-angle" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 65 </span><span class="caption-text">Flat plate submerged at an arbitrary angle</span><a class="headerlink" href="#panel-angle" title="Permalink to this image">¶</a></p>
 </div>
 <p>Depth to an incremental portion of the plate <span class="math notranslate nohighlight">\(dy\)</span> is <span class="math notranslate nohighlight">\(h\)</span>. Distance along the <span class="math notranslate nohighlight">\(+y\)</span> axis is <span class="math notranslate nohighlight">\(y\)</span>.  The value of <span class="math notranslate nohighlight">\(y\)</span> is related to depth, <span class="math notranslate nohighlight">\(h\)</span>, by the angle <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>We choose <span class="math notranslate nohighlight">\(\alpha\)</span> to represent the angle because it looks like a fish, and fish are found underwater!</p>
 </div>
-<p>Next looking at the plate from a viewing angle that is normal to the plate (the eyeball in the sketch)it might look like <a class="reference internal" href="#panel-normal"><span class="std std-numref">Fig. 58</span></a></p>
+<p>Next looking at the plate from a viewing angle that is normal to the plate (the eyeball in the sketch)it might look like <a class="reference internal" href="#panel-normal"><span class="std std-numref">Fig. 66</span></a></p>
 <div class="figure align-default" id="panel-normal">
 <a class="reference internal image-reference" href="../../_images/panel-normal.png"><img alt="../../_images/panel-normal.png" src="../../_images/panel-normal.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 58 </span><span class="caption-text">Looking perpindicular to the flat plate. Width of the integrand is some function of <span class="math notranslate nohighlight">\(y\)</span></span><a class="headerlink" href="#panel-normal" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 66 </span><span class="caption-text">Looking perpindicular to the flat plate. Width of the integrand is some function of <span class="math notranslate nohighlight">\(y\)</span></span><a class="headerlink" href="#panel-normal" title="Permalink to this image">¶</a></p>
 </div>
 <p>In this sketch the panel area is <span class="math notranslate nohighlight">\(dA = width(y) \cdot dy\)</span> when looking perpindicular to the <span class="math notranslate nohighlight">\(+y\)</span> axis.  The resultant net force on the submerged plate (perpindicular to the <span class="math notranslate nohighlight">\(y\)</span> axis) is simply</p>
 <div class="math notranslate nohighlight">
@@ -505,7 +505,7 @@
 <p>Now we apply some geometry and triggernometry to relate the integral to depth (and some moments).</p>
 <div class="figure align-default" id="panel-trig">
 <a class="reference internal image-reference" href="../../_images/panel-trig.png"><img alt="../../_images/panel-trig.png" src="../../_images/panel-trig.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 59 </span><span class="caption-text">Geometric/Trigonometric relationships.</span><a class="headerlink" href="#panel-trig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 67 </span><span class="caption-text">Geometric/Trigonometric relationships.</span><a class="headerlink" href="#panel-trig" title="Permalink to this image">¶</a></p>
 </div>
 <p>Generally we will want to express pressure in terms of <span class="math notranslate nohighlight">\(y\)</span> or <span class="math notranslate nohighlight">\(h\)</span>.</p>
 <div class="math notranslate nohighlight">
@@ -524,10 +524,10 @@
 <p>Where <span class="math notranslate nohighlight">\(\bar h\)</span> is the depth from the free surface to the centroid of the plate area.  So we now can express the magnitude of the force in terms of depth (to the centroid) and the plate area.</p>
 <div class="math notranslate nohighlight">
 \[F = \gamma A \bar h\]</div>
-<p>Now we have the magnitude, and sometimes that might be enough but usually we need to also know the line of action.  We find that by taking a moment to examine <a class="reference internal" href="#line-o-action"><span class="std std-numref">Fig. 60</span></a></p>
+<p>Now we have the magnitude, and sometimes that might be enough but usually we need to also know the line of action.  We find that by taking a moment to examine <a class="reference internal" href="#line-o-action"><span class="std std-numref">Fig. 68</span></a></p>
 <div class="figure align-default" id="line-o-action">
 <a class="reference internal image-reference" href="../../_images/line-o-action.png"><img alt="../../_images/line-o-action.png" src="../../_images/line-o-action.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 60 </span><span class="caption-text">Line of action of equivalent point load (equivalent to the actual distributed load)</span><a class="headerlink" href="#line-o-action" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 68 </span><span class="caption-text">Line of action of equivalent point load (equivalent to the actual distributed load)</span><a class="headerlink" href="#line-o-action" title="Permalink to this image">¶</a></p>
 </div>
 <p>We will simply require the moment generated by the total force we just determined (equivalent point load) to be equal the the moment generated by the distributed force (actual distributed load).</p>
 <p>Choosing the upper edge of the plate as a rotational axis we have</p>

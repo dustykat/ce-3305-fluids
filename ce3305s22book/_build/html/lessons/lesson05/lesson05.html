@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Euler and Bernoulli Equations &#8212; Instructor Notes CE 3305</title>
+    <title>Flow Kinematics &#8212; Instructor Notes CE 3305</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -52,7 +52,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Bernoulli Applications" href="../lesson06/lesson06.html" />
-    <link rel="prev" title="4. title" href="../lesson04/lesson04.html" />
+    <link rel="prev" title="4. Fluid Statics and Pressure (2/2)" href="../lesson04/lesson04.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -111,12 +111,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../lesson00/2computation.html">
-     Computational Considerations
+     Computational Hydraulics
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../lesson00/3whatisfluids.html">
-     What is Fluid Mechanics?
+     Fluid Mechanics - A definition
     </a>
    </li>
    <li class="toctree-l2">
@@ -160,7 +160,7 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../lesson02/lesson02.html">
-   Fluid Statics and Pressure
+   Fluid Statics and Pressure (1/2)
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -192,12 +192,12 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../lesson04/lesson04.html">
-   4. title
+   4. Fluid Statics and Pressure (2/2)
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Euler and Bernoulli Equations
+   Flow Kinematics
   </a>
  </li>
  <li class="toctree-l1">
@@ -502,8 +502,8 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="euler-and-bernoulli-equations">
-<h1>Euler and Bernoulli Equations<a class="headerlink" href="#euler-and-bernoulli-equations" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="flow-kinematics">
+<h1>Flow Kinematics<a class="headerlink" href="#flow-kinematics" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="lesson-outline">
 <h2>Lesson Outline<a class="headerlink" href="#lesson-outline" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -534,7 +534,7 @@
 <p>In steady flow streamlines, streaklines, and pathlines are coincident.  In unsteady (time-varying) flow this relationship is not preserved (and the three patterns will look different)</p>
 <div class="figure align-default" id="buckner-funnel">
 <a class="reference internal image-reference" href="../../_images/buckner-funnel.png"><img alt="../../_images/buckner-funnel.png" src="../../_images/buckner-funnel.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 73 </span><span class="caption-text">Flow in a tank with a holy bottom</span><a class="headerlink" href="#buckner-funnel" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 81 </span><span class="caption-text">Flow in a tank with a holy bottom</span><a class="headerlink" href="#buckner-funnel" title="Permalink to this image">¶</a></p>
 </div>
 <p>Consider the flow depicted in the tank above; is the flow field uniform or non-uniform?  What about the flow above the dashed line?</p>
 <p>Flow dimensions are classified by how many space coordinates are required to speciofy the velocity field.  All real flows are 3D, but useful results are possible with 2D and 1D approximations.</p>
@@ -545,7 +545,7 @@
 <p>Velocities are expressed in either a LaGrangian sense, or Eulerian sense.</p>
 <div class="figure align-default" id="id1">
 <a class="reference internal image-reference" href="../../_images/velocity-field.png"><img alt="../../_images/velocity-field.png" src="../../_images/velocity-field.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 74 </span><span class="caption-text">Coordinate systems for velocity description</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 82 </span><span class="caption-text">Coordinate systems for velocity description</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>Field is from the mathematical description of a field.  Various rules apply to fields, and these are used later on.</p>
 <ul class="simple">
@@ -557,11 +557,11 @@
 <p>Are examples of “things” that are fields.  The idea is that if you know location, you know behavior.</p>
 <div class="figure align-default" id="velocity-equation">
 <a class="reference internal image-reference" href="../../_images/velocity-equation.png"><img alt="../../_images/velocity-equation.png" src="../../_images/velocity-equation.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 75 </span><span class="caption-text">Parametric (in time) velocity field equation</span><a class="headerlink" href="#velocity-equation" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 83 </span><span class="caption-text">Parametric (in time) velocity field equation</span><a class="headerlink" href="#velocity-equation" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-default" id="velocity-stream">
 <a class="reference internal image-reference" href="../../_images/velocity-stream.png"><img alt="../../_images/velocity-stream.png" src="../../_images/velocity-stream.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 76 </span><span class="caption-text">Streamline coordinates for a velocity</span><a class="headerlink" href="#velocity-stream" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 84 </span><span class="caption-text">Streamline coordinates for a velocity</span><a class="headerlink" href="#velocity-stream" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="uniform-flow">
@@ -570,19 +570,19 @@
 <p>If geometry changes like in a nozzle, then non-uniform flow.  If at steady flowrate, non-uniform can have convective acceleration.</p>
 <div class="figure align-default" id="id2">
 <a class="reference internal image-reference" href="../../_images/uniform-flow.png"><img alt="../../_images/uniform-flow.png" src="../../_images/uniform-flow.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 77 </span><span class="caption-text">Uniform flow examples</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 85 </span><span class="caption-text">Uniform flow examples</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p>Laminar flow is where fluid in adjacent layers (think back to definition of viscosity) move smoothly with respect to each other (very little mixing across layers).  Turbulent flow has layers mixing substantially.</p>
 <p><strong>Viscous</strong> shear stresses impact the flow.</p>
 <p><strong>Inviscid</strong> shear stresses small enough to ignore.</p>
 <div class="figure align-default" id="boundary6-1">
 <a class="reference internal image-reference" href="../../_images/boundary6-1.png"><img alt="../../_images/boundary6-1.png" src="../../_images/boundary6-1.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 78 </span><span class="caption-text">Multiple flow regimes around a cylinder</span><a class="headerlink" href="#boundary6-1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 86 </span><span class="caption-text">Multiple flow regimes around a cylinder</span><a class="headerlink" href="#boundary6-1" title="Permalink to this image">¶</a></p>
 </div>
-<p>Different regimes can exist simultaneously in adjacent space as in <a class="reference internal" href="#boundary6-1"><span class="std std-numref">Fig. 78</span></a>. The approach region is nearly inviscid, at the boundary viscid flow along the interface, separation where flow leaves the interface, and a wake region.  Drag increases where there is separation - prevention is impossible but drag reduction by delaying sepaeration is possible.</p>
+<p>Different regimes can exist simultaneously in adjacent space as in <a class="reference internal" href="#boundary6-1"><span class="std std-numref">Fig. 86</span></a>. The approach region is nearly inviscid, at the boundary viscid flow along the interface, separation where flow leaves the interface, and a wake region.  Drag increases where there is separation - prevention is impossible but drag reduction by delaying sepaeration is possible.</p>
 <div class="figure align-default" id="canonball">
 <a class="reference internal image-reference" href="../../_images/cannonball.png"><img alt="../../_images/cannonball.png" src="../../_images/cannonball.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 79 </span><span class="caption-text">Surface modifications to delay separation</span><a class="headerlink" href="#canonball" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 87 </span><span class="caption-text">Surface modifications to delay separation</span><a class="headerlink" href="#canonball" title="Permalink to this image">¶</a></p>
 </div>
 <p>Acceleration occurs when there is a change in speed and/or direction.</p>
 <div class="figure align-default" id="acceleration1d1">
@@ -713,7 +713,7 @@
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">4. title</p>
+                <p class="prevnext-title">4. Fluid Statics and Pressure (2/2)</p>
             </div>
         </a>
     </div>

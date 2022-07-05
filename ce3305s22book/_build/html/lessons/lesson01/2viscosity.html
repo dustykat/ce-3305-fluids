@@ -113,12 +113,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../lesson00/2computation.html">
-     Computational Considerations
+     Computational Hydraulics
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../lesson00/3whatisfluids.html">
-     What is Fluid Mechanics?
+     Fluid Mechanics - A definition
     </a>
    </li>
    <li class="toctree-l2">
@@ -162,7 +162,7 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../lesson02/lesson02.html">
-   Fluid Statics and Pressure
+   Fluid Statics and Pressure (1/2)
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -194,12 +194,12 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../lesson04/lesson04.html">
-   4. title
+   4. Fluid Statics and Pressure (2/2)
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../lesson05/lesson05.html">
-   Euler and Bernoulli Equations
+   Flow Kinematics
   </a>
  </li>
  <li class="toctree-l1">
@@ -496,29 +496,29 @@ Consider a steel sheet that we cut with a shear (like sicssors), if we want to c
 This solids analog to viscosity conveys that steel is more viscous than plastic (usually).</p>
 <div class="figure align-default" id="viscosity-one">
 <a class="reference internal image-reference" href="../../_images/viscosity-one.png"><img alt="../../_images/viscosity-one.png" src="../../_images/viscosity-one.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Viscosity Schematic</span><a class="headerlink" href="#viscosity-one" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Viscosity Schematic</span><a class="headerlink" href="#viscosity-one" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#viscosity-one"><span class="std std-numref">Fig. 3</span></a> Is a diagram attempting to convey the concept of viscosity.  In the drawing the thickness <span class="math notranslate nohighlight">\(\partial y\)</span> and the deformation angle <span class="math notranslate nohighlight">\(\partial \alpha\)</span> are small, and the sine of the angle is approximated by the angle itself.</p>
+<p><a class="reference internal" href="#viscosity-one"><span class="std std-numref">Fig. 11</span></a> Is a diagram attempting to convey the concept of viscosity.  In the drawing the thickness <span class="math notranslate nohighlight">\(\partial y\)</span> and the deformation angle <span class="math notranslate nohighlight">\(\partial \alpha\)</span> are small, and the sine of the angle is approximated by the angle itself.</p>
 <div class="figure align-default" id="viscosity-two">
 <a class="reference internal image-reference" href="../../_images/viscosity-two.png"><img alt="../../_images/viscosity-two.png" src="../../_images/viscosity-two.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Viscosity Trigonometry</span><a class="headerlink" href="#viscosity-two" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">Viscosity Trigonometry</span><a class="headerlink" href="#viscosity-two" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#viscosity-two"><span class="std std-numref">Fig. 4</span></a> shows the relevant trigonometry to relate deformation rate to shear stress.</p>
+<p><a class="reference internal" href="#viscosity-two"><span class="std std-numref">Fig. 12</span></a> shows the relevant trigonometry to relate deformation rate to shear stress.</p>
 <div class="section" id="absolute-viscosity">
 <h2>Absolute Viscosity<a class="headerlink" href="#absolute-viscosity" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-default" id="newtonian">
 <a class="reference internal image-reference" href="../../_images/newtonian.png"><img alt="../../_images/newtonian.png" src="../../_images/newtonian.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Absolute viscosity (definition)</span><a class="headerlink" href="#newtonian" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Absolute viscosity (definition)</span><a class="headerlink" href="#newtonian" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#newtonian"><span class="std std-numref">Fig. 5</span></a> defines a Newtonian fluid and introduces the absolute viscosity <span class="math notranslate nohighlight">\(\mu\)</span> in terms of the thin layer, cross-layer velocity profile <span class="math notranslate nohighlight">\(\frac{du}{dy}\)</span> and the applied shear stress <span class="math notranslate nohighlight">\(\tau\)</span>.  The viscosity has dimensions of <span class="math notranslate nohighlight">\(\frac{Force \cdot Time}{Area}\)</span></p>
+<p><a class="reference internal" href="#newtonian"><span class="std std-numref">Fig. 13</span></a> defines a Newtonian fluid and introduces the absolute viscosity <span class="math notranslate nohighlight">\(\mu\)</span> in terms of the thin layer, cross-layer velocity profile <span class="math notranslate nohighlight">\(\frac{du}{dy}\)</span> and the applied shear stress <span class="math notranslate nohighlight">\(\tau\)</span>.  The viscosity has dimensions of <span class="math notranslate nohighlight">\(\frac{Force \cdot Time}{Area}\)</span></p>
 </div>
 <div class="section" id="apparent-viscosity">
 <h2>Apparent Viscosity<a class="headerlink" href="#apparent-viscosity" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-default" id="non-newtonian">
 <a class="reference internal image-reference" href="../../_images/non-newtonian.png"><img alt="../../_images/non-newtonian.png" src="../../_images/non-newtonian.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Apparent viscosity (definition) power-law model</span><a class="headerlink" href="#non-newtonian" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">Apparent viscosity (definition) power-law model</span><a class="headerlink" href="#non-newtonian" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#non-newtonian"><span class="std std-numref">Fig. 6</span></a> shows a typical power-law model of viscosity; the term is referred to as an apparent viscosity.  Many real fluids are Non-Newtonian and will have some type of viscosity model to explain the deformation behavior.</p>
+<p><a class="reference internal" href="#non-newtonian"><span class="std std-numref">Fig. 14</span></a> shows a typical power-law model of viscosity; the term is referred to as an apparent viscosity.  Many real fluids are Non-Newtonian and will have some type of viscosity model to explain the deformation behavior.</p>
 </div>
 <div class="section" id="kinematic-viscosity">
 <h2>Kinematic Viscosity<a class="headerlink" href="#kinematic-viscosity" title="Permalink to this headline">¶</a></h2>
@@ -526,12 +526,12 @@ This solids analog to viscosity conveys that steel is more viscous than plastic 
 </div>
 <div class="section" id="general-comments">
 <h2>General Comments<a class="headerlink" href="#general-comments" title="Permalink to this headline">¶</a></h2>
-<p>Viscous effects cause a velocity gradient (profile) to develop across the fluid layers as shown in <a class="reference internal" href="#slip-profile"><span class="std std-numref">Fig. 7</span></a>.</p>
+<p>Viscous effects cause a velocity gradient (profile) to develop across the fluid layers as shown in <a class="reference internal" href="#slip-profile"><span class="std std-numref">Fig. 15</span></a>.</p>
 <div class="figure align-default" id="slip-profile">
 <a class="reference internal image-reference" href="../../_images/slip-profile.png"><img alt="../../_images/slip-profile.png" src="../../_images/slip-profile.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Velocity Profile Diagram</span><a class="headerlink" href="#slip-profile" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">Velocity Profile Diagram</span><a class="headerlink" href="#slip-profile" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#slip-profile"><span class="std std-numref">Fig. 7</span></a> is a diagram of the cross-layer velocity profile. The slope of the profile is related to shear force and hence the apparent or absolute viscosity.</p>
+<p><a class="reference internal" href="#slip-profile"><span class="std std-numref">Fig. 15</span></a> is a diagram of the cross-layer velocity profile. The slope of the profile is related to shear force and hence the apparent or absolute viscosity.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The no-slip condition is deduced from experiments - in my opinion it is an assumption that velocity vanishes at the contact interface.  In your future studies keep this in mind; it is quite possible that slip occurs at some scale, however it is a useful and accepted boundary condition.</p>
@@ -543,71 +543,71 @@ This solids analog to viscosity conveys that steel is more viscous than plastic 
 <p>We start with a problem statement:</p>
 <div class="figure align-default" id="problem-statement">
 <a class="reference internal image-reference" href="../../_images/problem-statement.png"><img alt="../../_images/problem-statement.png" src="../../_images/problem-statement.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Block sliding on an inclined plane</span><a class="headerlink" href="#problem-statement" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">Block sliding on an inclined plane</span><a class="headerlink" href="#problem-statement" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#problem-statement"><span class="std std-numref">Fig. 8</span></a> is a problem statement of the problem we wish to solve.</p>
+<p><a class="reference internal" href="#problem-statement"><span class="std std-numref">Fig. 16</span></a> is a problem statement of the problem we wish to solve.</p>
 <p>The next step is to sketch the situation, mindful of several different scales in the problem.</p>
 <div class="figure align-default" id="problem-sketch">
 <a class="reference internal image-reference" href="../../_images/problem-sketch.png"><img alt="../../_images/problem-sketch.png" src="../../_images/problem-sketch.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Block sliding on an inclined plane (various definining sketches)</span><a class="headerlink" href="#problem-sketch" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">Block sliding on an inclined plane (various definining sketches)</span><a class="headerlink" href="#problem-sketch" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#problem-sketch"><span class="std std-numref">Fig. 9</span></a> is a set of sketches, showing the macro-scale conditions, as well as a free-body-diagram, and a sketch of the fluid layer between the block and the plane.</p>
+<p><a class="reference internal" href="#problem-sketch"><span class="std std-numref">Fig. 17</span></a> is a set of sketches, showing the macro-scale conditions, as well as a free-body-diagram, and a sketch of the fluid layer between the block and the plane.</p>
 <p>Next we list knowns, unknowns, and governing equations:</p>
 <div class="figure align-default" id="problem-known">
 <a class="reference internal image-reference" href="../../_images/problem-known.png"><img alt="../../_images/problem-known.png" src="../../_images/problem-known.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Known or given values</span><a class="headerlink" href="#problem-known" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">Known or given values</span><a class="headerlink" href="#problem-known" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#problem-known"><span class="std std-numref">Fig. 10</span></a> is a list of known or supplied (in the problem statement) values</p>
+<p><a class="reference internal" href="#problem-known"><span class="std std-numref">Fig. 18</span></a> is a list of known or supplied (in the problem statement) values</p>
 <div class="figure align-default" id="problem-unknown">
 <a class="reference internal image-reference" href="../../_images/problem-unknown.png"><img alt="../../_images/problem-unknown.png" src="../../_images/problem-unknown.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Unknown (sought) values</span><a class="headerlink" href="#problem-unknown" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">Unknown (sought) values</span><a class="headerlink" href="#problem-unknown" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#problem-unknown"><span class="std std-numref">Fig. 11</span></a> is a list of unknown or sought values</p>
+<p><a class="reference internal" href="#problem-unknown"><span class="std std-numref">Fig. 19</span></a> is a list of unknown or sought values</p>
 <div class="figure align-default" id="problem-governing-equations">
 <a class="reference internal image-reference" href="../../_images/problem-governing-equations.png"><img alt="../../_images/problem-governing-equations.png" src="../../_images/problem-governing-equations.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">Relevant equations</span><a class="headerlink" href="#problem-governing-equations" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">Relevant equations</span><a class="headerlink" href="#problem-governing-equations" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#problem-governing-equations"><span class="std std-numref">Fig. 12</span></a> is an initial list of applicable equations (we may add to this list as the analysis proceedes).</p>
+<p><a class="reference internal" href="#problem-governing-equations"><span class="std std-numref">Fig. 20</span></a> is an initial list of applicable equations (we may add to this list as the analysis proceedes).</p>
 <p>Now we proceede with the analysis</p>
 <div class="figure align-default" id="problem-solution-1">
 <a class="reference internal image-reference" href="../../_images/problem-solution-1.png"><img alt="../../_images/problem-solution-1.png" src="../../_images/problem-solution-1.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Solution</span><a class="headerlink" href="#problem-solution-1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">Solution</span><a class="headerlink" href="#problem-solution-1" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#problem-solution-1"><span class="std std-numref">Fig. 13</span></a> is our initial work towards a solution, ending with an expression relating shear force and viscosity.</p>
+<p><a class="reference internal" href="#problem-solution-1"><span class="std std-numref">Fig. 21</span></a> is our initial work towards a solution, ending with an expression relating shear force and viscosity.</p>
 <div class="figure align-default" id="problem-solution-2">
 <a class="reference internal image-reference" href="../../_images/problem-solution-2.png"><img alt="../../_images/problem-solution-2.png" src="../../_images/problem-solution-2.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">Solution(continued)</span><a class="headerlink" href="#problem-solution-2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">Solution(continued)</span><a class="headerlink" href="#problem-solution-2" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#problem-solution-2"><span class="std std-numref">Fig. 14</span></a> is the completion where the geomtric terms are inserted and a numerical answer is supplied.</p>
+<p><a class="reference internal" href="#problem-solution-2"><span class="std std-numref">Fig. 22</span></a> is the completion where the geomtric terms are inserted and a numerical answer is supplied.</p>
 <div class="figure align-default" id="problem-discussion">
 <a class="reference internal image-reference" href="../../_images/problem-discussion.png"><img alt="../../_images/problem-discussion.png" src="../../_images/problem-discussion.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">Discussion of results</span><a class="headerlink" href="#problem-discussion" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 23 </span><span class="caption-text">Discussion of results</span><a class="headerlink" href="#problem-discussion" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#problem-discussion"><span class="std std-numref">Fig. 15</span></a> is a discussion of results; this part is important as part of professional documentation, esp. if the analysis is a first approximation and is being used to determine whether further work will be needed.</p>
+<p><a class="reference internal" href="#problem-discussion"><span class="std std-numref">Fig. 23</span></a> is a discussion of results; this part is important as part of professional documentation, esp. if the analysis is a first approximation and is being used to determine whether further work will be needed.</p>
 </div>
 <div class="section" id="example-2-radial-geometry-kinematics">
 <h2>Example 2 - Radial Geometry Kinematics<a class="headerlink" href="#example-2-radial-geometry-kinematics" title="Permalink to this headline">¶</a></h2>
 <p>A similar example is presented below, however the geometry is changed a bit.</p>
 <div class="figure align-default" id="example2-p1">
 <a class="reference internal image-reference" href="../../_images/example2-p1.png"><img alt="../../_images/example2-p1.png" src="../../_images/example2-p1.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">Fluid drive problem (i.e how a transmission works!)</span><a class="headerlink" href="#example2-p1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 24 </span><span class="caption-text">Fluid drive problem (i.e how a transmission works!)</span><a class="headerlink" href="#example2-p1" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#example2-p1"><span class="std std-numref">Fig. 16</span></a> is a problem statement and list of known values and governing equations.</p>
+<p><a class="reference internal" href="#example2-p1"><span class="std std-numref">Fig. 24</span></a> is a problem statement and list of known values and governing equations.</p>
 <div class="figure align-default" id="example2-p2">
 <a class="reference internal image-reference" href="../../_images/example2-p2.png"><img alt="../../_images/example2-p2.png" src="../../_images/example2-p2.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">Schematic sketches to define problem terms</span><a class="headerlink" href="#example2-p2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 25 </span><span class="caption-text">Schematic sketches to define problem terms</span><a class="headerlink" href="#example2-p2" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#example2-p2"><span class="std std-numref">Fig. 17</span></a> is a list of unknown values and defining sketches.  Notice the geometry poses some complexity, hence the varied drawings to guide analysis.</p>
+<p><a class="reference internal" href="#example2-p2"><span class="std std-numref">Fig. 25</span></a> is a list of unknown values and defining sketches.  Notice the geometry poses some complexity, hence the varied drawings to guide analysis.</p>
 <div class="figure align-default" id="example2-p3">
 <a class="reference internal image-reference" href="../../_images/example2-p3.png"><img alt="../../_images/example2-p3.png" src="../../_images/example2-p3.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">Schematic sketches to define problem terms (continued)</span><a class="headerlink" href="#example2-p3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 26 </span><span class="caption-text">Schematic sketches to define problem terms (continued)</span><a class="headerlink" href="#example2-p3" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#example2-p3"><span class="std std-numref">Fig. 18</span></a> are continued defining sketches and associated analyses.</p>
+<p><a class="reference internal" href="#example2-p3"><span class="std std-numref">Fig. 26</span></a> are continued defining sketches and associated analyses.</p>
 <div class="figure align-default" id="example2-p4">
 <a class="reference internal image-reference" href="../../_images/example2-p4.png"><img alt="../../_images/example2-p4.png" src="../../_images/example2-p4.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">Results and Discussion</span><a class="headerlink" href="#example2-p4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 27 </span><span class="caption-text">Results and Discussion</span><a class="headerlink" href="#example2-p4" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#example2-p4"><span class="std std-numref">Fig. 19</span></a> is the results in useful units, and a discussion of the findings. The problem parts are straightforward using concepts for prior classes, but the analyst does have to keep track of the steps to get to a useable solution.</p>
+<p><a class="reference internal" href="#example2-p4"><span class="std std-numref">Fig. 27</span></a> is the results in useful units, and a discussion of the findings. The problem parts are straightforward using concepts for prior classes, but the analyst does have to keep track of the steps to get to a useable solution.</p>
 </div>
 <div class="section" id="viscometers">
 <h2>Viscometers<a class="headerlink" href="#viscometers" title="Permalink to this headline">¶</a></h2>
@@ -615,10 +615,10 @@ This solids analog to viscosity conveys that steel is more viscous than plastic 
 <p>They all operate on roughly the same principle - determine the force requires to make two solid planes move with a fluid between then; from the force and known geometry the viscosity can be inferred. The example problem below is a falling piston viscometer - with the question asked in an unusual fashion, but it could easily be used to measure viscosity based on a measured fall velocity.</p>
 <div class="section" id="example-problem">
 <h3>Example Problem<a class="headerlink" href="#example-problem" title="Permalink to this headline">¶</a></h3>
-<p>Figure <a class="reference internal" href="#fallingcylinderviscosity"><span class="std std-numref">Fig. 20</span></a> is a schematic of a cylinder falling inside a pipe that is filled with oil. The annular space between the cylinder and the pipe is lubricated with an oil film that has viscosity <span class="math notranslate nohighlight">\(\mu\)</span>.</p>
+<p>Figure <a class="reference internal" href="#fallingcylinderviscosity"><span class="std std-numref">Fig. 28</span></a> is a schematic of a cylinder falling inside a pipe that is filled with oil. The annular space between the cylinder and the pipe is lubricated with an oil film that has viscosity <span class="math notranslate nohighlight">\(\mu\)</span>.</p>
 <div class="figure align-default" id="fallingcylinderviscosity">
 <a class="reference internal image-reference" href="../../_images/FallingCylinderViscosity.png"><img alt="../../_images/FallingCylinderViscosity.png" src="../../_images/FallingCylinderViscosity.png" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">Falling cylinder in an oil-filled pipe</span><a class="headerlink" href="#fallingcylinderviscosity" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 28 </span><span class="caption-text">Falling cylinder in an oil-filled pipe</span><a class="headerlink" href="#fallingcylinderviscosity" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
 <li><p>Derive a formula for the steady rate of descent of a cylinder with weight <span class="math notranslate nohighlight">\(W\)</span> , diameter <span class="math notranslate nohighlight">\(d\)</span>, and length <span class="math notranslate nohighlight">\(l\)</span> sliding inside a vertical smooth pipe that has inside diameter <span class="math notranslate nohighlight">\(D\)</span>. Assume the cylinder remains concentric with the pipe as it falls.</p></li>

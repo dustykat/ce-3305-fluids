@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fluid Statics and Pressure &#8212; Instructor Notes CE 3305</title>
+    <title>Fluid Statics and Pressure (1/2) &#8212; Instructor Notes CE 3305</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -113,12 +113,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../lesson00/2computation.html">
-     Computational Considerations
+     Computational Hydraulics
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../lesson00/3whatisfluids.html">
-     What is Fluid Mechanics?
+     Fluid Mechanics - A definition
     </a>
    </li>
    <li class="toctree-l2">
@@ -162,7 +162,7 @@
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
-   Fluid Statics and Pressure
+   Fluid Statics and Pressure (1/2)
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -194,12 +194,12 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../lesson04/lesson04.html">
-   4. title
+   4. Fluid Statics and Pressure (2/2)
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../lesson05/lesson05.html">
-   Euler and Bernoulli Equations
+   Flow Kinematics
   </a>
  </li>
  <li class="toctree-l1">
@@ -456,8 +456,8 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="fluid-statics-and-pressure">
-<h1>Fluid Statics and Pressure<a class="headerlink" href="#fluid-statics-and-pressure" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="fluid-statics-and-pressure-1-2">
+<h1>Fluid Statics and Pressure (1/2)<a class="headerlink" href="#fluid-statics-and-pressure-1-2" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="lesson-outline">
 <h2>Lesson Outline<a class="headerlink" href="#lesson-outline" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
@@ -469,10 +469,10 @@
 <div class="section" id="fluid-statics">
 <h2>Fluid Statics<a class="headerlink" href="#fluid-statics" title="Permalink to this headline">¶</a></h2>
 <p>Fluid statics deals with forces in fluids that are have no relative motion within the fluid.  The vessel containing the fluid may be at non-zero velocity or acceleration, but the fluid body within the vessel has no relative motion.</p>
-<p>Two principal types of forces involved are body and surface forces as shown in <a class="reference internal" href="#fluidstatics"><span class="std std-numref">Fig. 27</span></a></p>
+<p>Two principal types of forces involved are body and surface forces as shown in <a class="reference internal" href="#fluidstatics"><span class="std std-numref">Fig. 35</span></a></p>
 <div class="figure align-default" id="fluidstatics">
 <a class="reference internal image-reference" href="../../_images/FluidStatics.png"><img alt="../../_images/FluidStatics.png" src="../../_images/FluidStatics.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 27 </span><span class="caption-text">A sphere of some fluid, depicting a local coordinate system, differential area and a normal and tangential force pair</span><a class="headerlink" href="#fluidstatics" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 35 </span><span class="caption-text">A sphere of some fluid, depicting a local coordinate system, differential area and a normal and tangential force pair</span><a class="headerlink" href="#fluidstatics" title="Permalink to this image">¶</a></p>
 </div>
 <p>Body forces are developed without contact and are distributed over the entire volume of a fluid.  In the sketch the weight of the sphere is a body force.</p>
 <p>Surface forces act at boundaries of a medium through contant.  The normal force in the sketch (which is the product of pressure and area) is a surface force, defined on the surface of the sphere.</p>
@@ -480,9 +480,9 @@
 <p>Shear stresses are formed by friction, no-slip assumption, and other practically occuring situations.</p>
 <div class="figure align-default" id="stresses">
 <a class="reference internal image-reference" href="../../_images/Stresses.png"><img alt="../../_images/Stresses.png" src="../../_images/Stresses.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 28 </span><span class="caption-text">Shear and normal stresses on a plane parallel to x-y coordinate plane, at some value z.</span><a class="headerlink" href="#stresses" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 36 </span><span class="caption-text">Shear and normal stresses on a plane parallel to x-y coordinate plane, at some value z.</span><a class="headerlink" href="#stresses" title="Permalink to this image">¶</a></p>
 </div>
-<p><a class="reference internal" href="#stresses"><span class="std std-numref">Fig. 28</span></a> is a diagram of a small planar element in a 3-D cartesian coordinate system that illustrate normal and shear stresses.  The tensor-like naming system is also indicated.</p>
+<p><a class="reference internal" href="#stresses"><span class="std std-numref">Fig. 36</span></a> is a diagram of a small planar element in a 3-D cartesian coordinate system that illustrate normal and shear stresses.  The tensor-like naming system is also indicated.</p>
 <p>A conventional notation is <span class="math notranslate nohighlight">\(\sigma_{n,i-k}\)</span> for normal stress, and <span class="math notranslate nohighlight">\(\tau_{n,i-k}\)</span> for shear stress.  The first subscript is the direction of the outward pointing normal vector from the application plane (in the drawing +z), the second subscript is the direction of force application, with the normal stress positive into the plane.  In the drawing the three stresses are <span class="math notranslate nohighlight">\(\sigma_{z,z}\)</span>,<span class="math notranslate nohighlight">\(\tau_{z,x}\)</span>, and <span class="math notranslate nohighlight">\(\tau_{z,y}\)</span>.</p>
 </div>
 <div class="toctree-wrapper compound">

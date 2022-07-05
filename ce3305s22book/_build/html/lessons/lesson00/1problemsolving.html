@@ -42,6 +42,8 @@
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -51,7 +53,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Computational Considerations" href="2computation.html" />
+    <link rel="next" title="Computational Hydraulics" href="2computation.html" />
     <link rel="prev" title="Introduction" href="lesson00.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -111,12 +113,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2computation.html">
-     Computational Considerations
+     Computational Hydraulics
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3whatisfluids.html">
-     What is Fluid Mechanics?
+     Fluid Mechanics - A definition
     </a>
    </li>
    <li class="toctree-l2">
@@ -160,7 +162,7 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../lesson02/lesson02.html">
-   Fluid Statics and Pressure
+   Fluid Statics and Pressure (1/2)
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -192,12 +194,12 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../lesson04/lesson04.html">
-   4. title
+   4. Fluid Statics and Pressure (2/2)
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../lesson05/lesson05.html">
-   Euler and Bernoulli Equations
+   Flow Kinematics
   </a>
  </li>
  <li class="toctree-l1">
@@ -428,6 +430,24 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#suggested-exercise-solution-format-paper-based">
+   Suggested Exercise Solution Format (Paper-Based)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#suggested-exercise-solution-format-jupyter-notebook">
+   Suggested Exercise Solution Format (Jupyter Notebook)
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -465,6 +485,111 @@
 <li><p>Discuss the results; validate when possible, examine effect of changing an assumption.</p></li>
 </ol>
 <p>There is also an issue of format or the visual structure of a solution.  The use of Jupyter Notebooks as your computation tool is expected - as part of a documentation process and the WCOE’s integration of computational thinking throughout the curriculum.  Most problems you will work a large part by hand then transfer the computational burden the the Jupyter Notebook.</p>
+<p>Throughtout the class do your best to adhere to this format, in some cases it will seem dumb, but thats the nature of training - embrace the “dumbness” now, so you dont have to be dumb later on.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some exercise sets have an “Easy-Button” which link to YouTube videos of the solutions worked out somewhat, by all means use the EZ button to help you with your exercises. Be aware the videos are kind of rambling, and are longish (nearly an hour in a few cases) - but you can fast forward as you see fit to efficiently work your exercises.</p>
+</div>
+<p>An illustrative example follows (It is a homework problem of sorts, so examine the format somewhat)</p>
+<div class="section" id="suggested-exercise-solution-format-paper-based">
+<h2>Suggested Exercise Solution Format (Paper-Based)<a class="headerlink" href="#suggested-exercise-solution-format-paper-based" title="Permalink to this headline">¶</a></h2>
+<p>The format will differ if you prepare a Notebook, or work the problem entirely by-hand. Here is an example worked out on paper which will be repeated in a Notebook.</p>
+<div class="figure align-default" id="ex1-1">
+<a class="reference internal image-reference" href="../../_images/example-1-1.png"><img alt="../../_images/example-1-1.png" src="../../_images/example-1-1.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Example of fluid mechanics homework problem solution format (page 1 of 4)</span><a class="headerlink" href="#ex1-1" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#ex1-1"><span class="std std-numref">Fig. 1</span></a> is a screen capture of the problem with the first four solution protocol items listed.  The author used headings (underlined) in the figure to keep track of the protocol items.  Also observe the simplistic sketch - a device to organize knowns and unknowns.</p>
+<div class="figure align-default" id="ex1-2">
+<a class="reference internal image-reference" href="../../_images/example-1-2.png"><img alt="../../_images/example-1-2.png" src="../../_images/example-1-2.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Example of fluid mechanics homework problem solution format (page 2 of 4)</span><a class="headerlink" href="#ex1-2" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#ex1-2"><span class="std std-numref">Fig. 2</span></a> is a screen capture of the solution process.  Here the author uses various definitions of volumes, mass, and the ideal gas law to try to find the sought after quantity.  Part way into the solution an additional quantity was needed - simply add that known or governing principle where needed and make a note as done in the example.</p>
+<div class="figure align-default" id="ex1-3">
+<a class="reference internal image-reference" href="../../_images/example-1-3.png"><img alt="../../_images/example-1-3.png" src="../../_images/example-1-3.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Example of fluid mechanics homework problem solution format (page 3 of 4)</span><a class="headerlink" href="#ex1-3" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#ex1-3"><span class="std std-numref">Fig. 3</span></a> is a screen capture of the solution.  Here the author uses the computed volumes, mass, and the ideal gas law to solve for the desired quantity.  Then a unit conversion is applied because the problem was stated in mixed (SI and Imperial) units.  Finally the results are discussed from a problem solving perspective; so years later anyone reading will understand the thinking process applied for the problem.</p>
+<div class="figure align-default" id="ex1-4">
+<a class="reference internal image-reference" href="../../_images/example-1-4.png"><img alt="../../_images/example-1-4.png" src="../../_images/example-1-4.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Example of fluid mechanics homework problem solution format (page 4 of 4)</span><a class="headerlink" href="#ex1-4" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#ex1-4"><span class="std std-numref">Fig. 4</span></a> is a screen capture of a Periodic Chart of Elements.  Here it is included as a citation for the source of the molar masses of the gasses in the problem.  The URL is circled on the chart, again establishing a persistent citation to the data source.</p>
+</div>
+<div class="section" id="suggested-exercise-solution-format-jupyter-notebook">
+<h2>Suggested Exercise Solution Format (Jupyter Notebook)<a class="headerlink" href="#suggested-exercise-solution-format-jupyter-notebook" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Here we will repeat the example.  Because this “lesson” is actually a Jupyter Notebook, I am embedding some code directly into the “lesson” - you will not need to mix markdown code blocks with actual code in <strong>your</strong> notebooks</p>
+</div>
+<hr class="docutils" />
+<p><strong>Name</strong><br>
+<strong>R Number</strong><br>
+<strong>Date</strong><br></p>
+<p><strong>Problem Statement</strong><br>
+Find the total weight of a 17 <span class="math notranslate nohighlight">\(ft^3\)</span> tank of nitrogen at 500 <span class="math notranslate nohighlight">\(psia\)</span>.  The vessel itself weighs 50 <span class="math notranslate nohighlight">\(lbf\)</span>.  The gas is stored at a temperature of 20 <span class="math notranslate nohighlight">\(^o~C\)</span><br>
+<strong>Sketch</strong><br>
+This is the hardest part, draw the sketch, then save as a png file and embed using</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>![](filename.png)
+</pre></div>
+</div>
+<p>like so:</p>
+<div class="figure align-default" id="fbd-tank">
+<a class="reference internal image-reference" href="../../_images/FBD-tank.png"><img alt="../../_images/FBD-tank.png" src="../../_images/FBD-tank.png" style="width: 400px;" /></a>
+</div>
+<p><strong>Known Quantities</strong><br>
+Here we will be mixing code and text</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a code cell</span>
+<span class="n">vol_tank</span> <span class="o">=</span> <span class="mi">17</span> <span class="c1"># tank volume in cubic feet</span>
+<span class="n">p_gas</span> <span class="o">=</span> <span class="mi">500</span> <span class="c1"># gas pressure in psi</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1"># gas temperature in celsius</span>
+<span class="n">wt_tank</span> <span class="o">=</span> <span class="mi">50</span> <span class="c1"># tank weight in pounds</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Unknown Quantities</strong>&gt;br&gt;</p>
+<p>Our unknowns are</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wt_gas</span>
+<span class="n">wt_total</span> <span class="o">=</span> <span class="n">wt_tank</span><span class="o">+</span><span class="n">wt_gas</span>
+</pre></div>
+</div>
+<p><strong>Governing Principles</strong><br></p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(pV=\frac{m}{M}RT\)</span> Ideal gas law</p></li>
+<li><p><span class="math notranslate nohighlight">\(wt_{total} = wt_{tank}+wt_{gas}\)</span> Duh!</p></li>
+<li><p><span class="math notranslate nohighlight">\(R = 0.0821 \frac{L \cdot atm}{K \cdot mol}\)</span> Definition of universal gas constant</p></li>
+<li><p><span class="math notranslate nohighlight">\(T_{K}=T_{C}+273\)</span> Definition of Kelvin temperature scale</p></li>
+<li><p><span class="math notranslate nohighlight">\(1 atm = 14.7 psi\)</span> Unit conversion</p></li>
+<li><p><span class="math notranslate nohighlight">\(M_{N_2} = 28.014 \frac{g}{mol}\)</span> Molar weight of nitrogen gas</p></li>
+</ol>
+<p><strong>Solution</strong><br>
+Now simply produce a sequential script to solve for total weight</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mwN2</span><span class="o">=</span><span class="mf">28.014</span> <span class="c1"># MW nitrogen</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mf">0.0821</span> <span class="c1"># universal gas constant</span>
+<span class="n">grabity</span> <span class="o">=</span> <span class="mf">9.8</span> <span class="c1"># acceleration of gravity</span>
+<span class="n">vol_tank_l</span><span class="o">=</span><span class="n">vol_tank</span><span class="o">*</span><span class="p">((</span><span class="mi">1</span><span class="o">/</span><span class="mf">3.28</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span> <span class="c1"># tank volume in liters</span>
+<span class="n">temp_k</span><span class="o">=</span><span class="n">temp</span><span class="o">+</span><span class="mi">273</span> <span class="c1"># temp in kelvin</span>
+<span class="n">p_atm</span><span class="o">=</span><span class="n">p_gas</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mf">14.7</span><span class="p">)</span> <span class="c1"># gas pressure in atmospheres</span>
+<span class="n">mass_gas</span> <span class="o">=</span> <span class="p">(</span><span class="n">p_atm</span><span class="o">*</span><span class="n">vol_tank_l</span><span class="o">*</span><span class="n">mwN2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">R</span><span class="o">*</span><span class="n">temp_k</span><span class="p">)</span> <span class="c1"># gas mass in grams</span>
+<span class="n">wt_gas</span> <span class="o">=</span> <span class="n">mass_gas</span><span class="o">*</span><span class="n">grabity</span><span class="o">/</span><span class="mi">1000</span> <span class="c1"># weight of gas in newtons</span>
+<span class="n">wt_total</span> <span class="o">=</span> <span class="n">wt_tank</span> <span class="o">+</span> <span class="n">wt_gas</span><span class="o">*</span><span class="p">(</span><span class="mf">2.2</span><span class="p">)</span><span class="o">/</span><span class="n">grabity</span> <span class="c1"># total weight in pounds</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Total weight = &#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">wt_total</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="s1">&#39; pounds&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total weight =  92.0  pounds
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Discussion</strong><br>
+Probably would want a little more description in the calculation sequence, notice units are reported with the answer. If we want to get fancy, could embed a database for common gasses, and some interactive inputs - but that’s overkill.  In practice, you will find a hybrid of paper-based and notebook-based problem solving is most useful.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -509,7 +634,7 @@
         <a class="right-next" href="2computation.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Computational Considerations</p>
+                <p class="prevnext-title">Computational Hydraulics</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Fluid Statics and Pressure 
+# # Fluid Statics and Pressure (1/2)
 # 
 # ## Lesson Outline
 # 1. Hydrostatic Equation
