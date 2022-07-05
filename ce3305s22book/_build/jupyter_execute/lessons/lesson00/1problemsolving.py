@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Problem Solving and Documentation
+# # Problem Solving and Documentation (pp 16-22)
 # 
 # Three major work components for the course are:
 # 

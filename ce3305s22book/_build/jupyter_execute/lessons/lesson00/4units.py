@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Dimensions and Units
+# # Dimensions and Units (pp. 6-12)
 # 
 # <font color=purple>Dimensions</font> are things that can be measured such as:
 # 
@@ -98,13 +98,6 @@ print("Applied force is",round(force,2),"lbf")
 # 
 # :::{note}
 # A pound mass is a very archaic unit, and used herein to illustrate unit conversions. Learn more at [Shedding those Pounds!](https://en.wikipedia.org/wiki/Pound_(force))
-# :::
-
-# :::{admonition} Exercise Set 1
-# 
-# Best access is through the Blackboard LMS
-# 
-# [http://54.243.252.9/ce-3305-webroot/2-Exercises/ES1/ES1.html](http://54.243.252.9/ce-3305-webroot/2-Exercises/ES1/ES1.html)
 # :::
 
 # In[ ]:

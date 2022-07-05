@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Fluid Mechanics - A definition
+# # Fluid Mechanics - A definition (pp 2-6)
 # Clearly to define fluid mechanics requires some discourse on various states of matter 
 # 
 # ## What is a Solid?

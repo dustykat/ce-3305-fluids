@@ -10,15 +10,16 @@ chapters:
   - file: lessons/lesson00/2computation # computational considerations
   - file: lessons/lesson00/3whatisfluids # what is fluid mechanics?
   - file: lessons/lesson00/4units # dimensions and units
+  - file: lessons/lesson00/5exercise # dimensions and units
   
 - file: lessons/lesson01/lesson01 # fluid properties
   sections:
   - file: lessons/lesson01/1properties # intensive/extensive fluid properties
   - file: lessons/lesson01/2viscosity # viscosity
-#  - file: lessons/lesson01/lesson01section03 # viscosity examples
   - file: lessons/lesson01/3liquids # liquid properties
-#  - file: lessons/lesson01/lesson01section05 # viscosity meters
   - file: lessons/lesson01/4vaporpressure # vapor pressure/readings/exercises
+  - file: lessons/lesson01/5exercise # vapor pressure/readings/exercises
+
 #            
 - file: lessons/lesson02/lesson02 # Fluid Statics and Pressure
   sections:
