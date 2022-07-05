@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## Liquid Properties
+# # Liquid Properties (pp. 46-52)
 # 
 # A liquid is one kind of fluid, but it has a few added properties that are important.  One such property is surface tension, $\sigma$.
 # 
@@ -17,7 +17,7 @@
 # ```
 # {numref}`surface-tension` is a schematic of a wetting and non-wetting drop of fluid onto a surface.
 # 
-# ### Capillary Rise
+# ## Capillary Rise
 # 
 # We can explain capillary rise using a force-balance and the concepts of wetting and non-wetting fluids.
 # 

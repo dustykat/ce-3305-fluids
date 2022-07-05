@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Intensive and Extensive Properties (pp. XXX-XXX)
+# # Intensive and Extensive Properties (pp. 28-35)
 # 
 # Extensive properties apply to a system and are associated with a fixed quantity of mass.
 # 
