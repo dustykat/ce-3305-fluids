@@ -23,9 +23,10 @@ chapters:
 #            
 - file: lessons/lesson02/lesson02 # Fluid Statics and Pressure
   sections:
-  - file: lessons/lesson02/2pressure # intensive/extensive fluid properties
-  - file: lessons/lesson02/3forces # viscosity
-  - file: lessons/lesson02/4references # viscosity
+  - file: lessons/lesson02/1statics # 
+  - file: lessons/lesson02/2pressure # 
+  - file: lessons/lesson02/3forces # 
+  - file: lessons/lesson02/5exercise 
   
 - file: lessons/lesson03/lesson03 #
 - file: lessons/lesson04/lesson04

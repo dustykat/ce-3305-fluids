@@ -42,8 +42,6 @@
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -53,8 +51,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Pressure (pp XXX-XXX)" href="2pressure.html" />
-    <link rel="prev" title="Vapor Pressure" href="../lesson01/4vaporpressure.html" />
+    <link rel="next" title="Fluid Statics" href="1statics.html" />
+    <link rel="prev" title="Exercise Set 2" href="../lesson01/5exercise.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -108,7 +106,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../lesson00/1problemsolving.html">
-     Problem Solving and Documentation
+     Problem Solving and Documentation (pp 16-22)
     </a>
    </li>
    <li class="toctree-l2">
@@ -118,12 +116,17 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../lesson00/3whatisfluids.html">
-     Fluid Mechanics - A definition
+     Fluid Mechanics - A definition (pp 2-6)
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../lesson00/4units.html">
-     Dimensions and Units
+     Dimensions and Units (pp. 6-12)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson00/5exercise.html">
+     Exercise Set 1
     </a>
    </li>
   </ul>
@@ -140,17 +143,17 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../lesson01/1properties.html">
-     Intensive and Extensive Properties (pp. XXX-XXX)
+     Intensive and Extensive Properties (pp. 28-35)
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../lesson01/2viscosity.html">
-     Viscosity
+     Viscosity (pp 36-45)
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../lesson01/3liquids.html">
-     Liquid Properties
+     Liquid Properties (pp. 46-52)
     </a>
    </li>
    <li class="toctree-l2">
@@ -158,34 +161,17 @@
      Vapor Pressure
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson01/5exercise.html">
+     Exercise Set 2
+    </a>
+   </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Fluid Statics and Pressure (1/2)
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2pressure.html">
-     Pressure (pp XXX-XXX)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3forces.html">
-     Pressure Force on Submerged Objects (pp XXX-XXX)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="4references.html">
-     References
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../lesson03/lesson03.html">
@@ -256,8 +242,8 @@
   <a class="reference internal" href="../lesson15/lesson15.html">
    Hydraulic Machines: Pumps
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -318,8 +304,8 @@
   <a class="reference internal" href="../lesson24/lesson24.html">
    BLT - Flow Around a Cylinder
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -435,14 +421,21 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lesson-outline">
-   Lesson Outline
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Fluid Statics and Pressure (1/2)
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lesson-outline">
+     Lesson Outline
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fluid-statics">
-   Fluid Statics
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#readings">
+   Readings
   </a>
  </li>
 </ul>
@@ -466,25 +459,16 @@
 <li><p>Force on a Plane Surface</p></li>
 </ol>
 </div>
-<div class="section" id="fluid-statics">
-<h2>Fluid Statics<a class="headerlink" href="#fluid-statics" title="Permalink to this headline">¶</a></h2>
-<p>Fluid statics deals with forces in fluids that are have no relative motion within the fluid.  The vessel containing the fluid may be at non-zero velocity or acceleration, but the fluid body within the vessel has no relative motion.</p>
-<p>Two principal types of forces involved are body and surface forces as shown in <a class="reference internal" href="#fluidstatics"><span class="std std-numref">Fig. 35</span></a></p>
-<div class="figure align-default" id="fluidstatics">
-<a class="reference internal image-reference" href="../../_images/FluidStatics.png"><img alt="../../_images/FluidStatics.png" src="../../_images/FluidStatics.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 35 </span><span class="caption-text">A sphere of some fluid, depicting a local coordinate system, differential area and a normal and tangential force pair</span><a class="headerlink" href="#fluidstatics" title="Permalink to this image">¶</a></p>
 </div>
-<p>Body forces are developed without contact and are distributed over the entire volume of a fluid.  In the sketch the weight of the sphere is a body force.</p>
-<p>Surface forces act at boundaries of a medium through contant.  The normal force in the sketch (which is the product of pressure and area) is a surface force, defined on the surface of the sphere.</p>
-<p>Stress is the limiting value of <span class="math notranslate nohighlight">\(\frac{dF}{dA}\)</span>; in the sketch there are two stresses: a normal stress (usually called pressure), and a tangential stress (usually called shear).</p>
-<p>Shear stresses are formed by friction, no-slip assumption, and other practically occuring situations.</p>
-<div class="figure align-default" id="stresses">
-<a class="reference internal image-reference" href="../../_images/Stresses.png"><img alt="../../_images/Stresses.png" src="../../_images/Stresses.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 36 </span><span class="caption-text">Shear and normal stresses on a plane parallel to x-y coordinate plane, at some value z.</span><a class="headerlink" href="#stresses" title="Permalink to this image">¶</a></p>
-</div>
-<p><a class="reference internal" href="#stresses"><span class="std std-numref">Fig. 36</span></a> is a diagram of a small planar element in a 3-D cartesian coordinate system that illustrate normal and shear stresses.  The tensor-like naming system is also indicated.</p>
-<p>A conventional notation is <span class="math notranslate nohighlight">\(\sigma_{n,i-k}\)</span> for normal stress, and <span class="math notranslate nohighlight">\(\tau_{n,i-k}\)</span> for shear stress.  The first subscript is the direction of the outward pointing normal vector from the application plane (in the drawing +z), the second subscript is the direction of force application, with the normal stress positive into the plane.  In the drawing the three stresses are <span class="math notranslate nohighlight">\(\sigma_{z,z}\)</span>,<span class="math notranslate nohighlight">\(\tau_{z,x}\)</span>, and <span class="math notranslate nohighlight">\(\tau_{z,y}\)</span>.</p>
-</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="readings">
+<h1>Readings<a class="headerlink" href="#readings" title="Permalink to this headline">¶</a></h1>
+<ol class="simple">
+<li><p>Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 47-80</p></li>
+<li><p>Cleveland, T. G. (2014) <em>Fluid Mechanics Notes to Accompany CE 3305 at Jade-Holshule (TTU Study Abroad 2015-2019)</em>, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-003.1.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-003.1.pdf</a></p></li>
+<li><p>DF Elger, BC Williams, Crowe, CT and JA Roberson, <em>Engineering Fluid Mechanics 10th edition</em>, John Wiley &amp; Sons, Inc., 2013. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-3.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-3.pdf</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Pressure_measurement">Pressure Measurement</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Barometer">Barometer</a></p></li>
+</ol>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -519,19 +503,19 @@
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="../lesson01/4vaporpressure.html" title="previous page">
+        <a class="left-prev" href="../lesson01/5exercise.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Vapor Pressure</p>
+                <p class="prevnext-title">Exercise Set 2</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="2pressure.html" title="next page">
+        <a class="right-next" href="1statics.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Pressure (pp XXX-XXX)</p>
+                <p class="prevnext-title">Fluid Statics</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

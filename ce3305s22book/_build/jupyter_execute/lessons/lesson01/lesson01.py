@@ -7,10 +7,7 @@
 # 1. Intensive and Extensive Properties
 # 2. Viscosity
 # 3. Liquid Properties
-# 4. topic
-# 5. topic
-# 6. topic
-# 
+# 4. Surface Tension, Vapor Pressure
 # 
 # ### Readings 
 # 

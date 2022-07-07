@@ -8,36 +8,14 @@
 # 2. Measuring Devices (Pressure)
 # 3. Force on a Plane Surface
 
-# ## Fluid Statics
+# # Readings
 # 
-# Fluid statics deals with forces in fluids that are have no relative motion within the fluid.  The vessel containing the fluid may be at non-zero velocity or acceleration, but the fluid body within the vessel has no relative motion.
+# 1. Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 47-80
 # 
-# Two principal types of forces involved are body and surface forces as shown in {numref}`FluidStatics` 
+# 2. Cleveland, T. G. (2014) *Fluid Mechanics Notes to Accompany CE 3305 at Jade-Holshule (TTU Study Abroad 2015-2019)*, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering. [http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-003.1.pdf](http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-003.1.pdf)
 # 
-# ```{figure} FluidStatics.png
-# ---
-# width: 500px
-# name: FluidStatics
-# ---
-# A sphere of some fluid, depicting a local coordinate system, differential area and a normal and tangential force pair
-# ```
-# Body forces are developed without contact and are distributed over the entire volume of a fluid.  In the sketch the weight of the sphere is a body force.
+# 3. DF Elger, BC Williams, Crowe, CT and JA Roberson, *Engineering Fluid Mechanics 10th edition*, John Wiley & Sons, Inc., 2013. [http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-3.pdf](http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-3.pdf)
 # 
-# Surface forces act at boundaries of a medium through contant.  The normal force in the sketch (which is the product of pressure and area) is a surface force, defined on the surface of the sphere.
+# 4. [Pressure Measurement](https://en.wikipedia.org/wiki/Pressure_measurement)
 # 
-# Stress is the limiting value of $\frac{dF}{dA}$; in the sketch there are two stresses: a normal stress (usually called pressure), and a tangential stress (usually called shear).
-# 
-# Shear stresses are formed by friction, no-slip assumption, and other practically occuring situations.
-
-# ```{figure} Stresses.png
-# ---
-# width: 500px
-# name: Stresses
-# ---
-# Shear and normal stresses on a plane parallel to x-y coordinate plane, at some value z.
-# ```
-# {numref}`Stresses` is a diagram of a small planar element in a 3-D cartesian coordinate system that illustrate normal and shear stresses.  The tensor-like naming system is also indicated.  
-# 
-# A conventional notation is $\sigma_{n,i-k}$ for normal stress, and $\tau_{n,i-k}$ for shear stress.  The first subscript is the direction of the outward pointing normal vector from the application plane (in the drawing +z), the second subscript is the direction of force application, with the normal stress positive into the plane.  In the drawing the three stresses are $\sigma_{z,z}$,$\tau_{z,x}$, and $\tau_{z,y}$.
-# 
-# 
+# 5. [Barometer](https://en.wikipedia.org/wiki/Barometer)
