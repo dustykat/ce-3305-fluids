@@ -25,10 +25,16 @@ chapters:
   sections:
   - file: lessons/lesson02/1statics # 
   - file: lessons/lesson02/2pressure # 
-  - file: lessons/lesson02/3forces # 
+#  - file: lessons/lesson02/3forces # 
   - file: lessons/lesson02/5exercise 
   
 - file: lessons/lesson03/lesson03 #
+  sections:
+  - file: lessons/lesson03/1forces # 
+  - file: lessons/lesson03/2lineofaction # 
+  - file: lessons/lesson03/3bouyancy # 
+  - file: lessons/lesson03/4stability # 
+  - file: lessons/lesson03/5exercise 
 #- file: lessons/lesson04/lesson04
 #
 - file: lessons/lesson05/lesson05

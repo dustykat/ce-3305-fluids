@@ -6,7 +6,6 @@
 # ## Lesson Outline
 # 1. Hydrostatic Equation
 # 2. Measuring Devices (Pressure)
-# 3. Force on a Plane Surface
 
 # # Readings
 # 
