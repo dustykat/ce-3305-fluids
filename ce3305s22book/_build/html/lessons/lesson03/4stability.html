@@ -212,10 +212,32 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lesson05/lesson05.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lesson04/lesson04.html">
    Flow Kinematics
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson04/1flowpattern.html">
+     Flow Patterns and Visualization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson04/2eulers.html">
+     Euler’s Equation and the Bernoulli Equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson04/5exercise.html">
+     Exercise Set 5
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../lesson06/lesson06.html">
@@ -271,8 +293,8 @@
   <a class="reference internal" href="../lesson15/lesson15.html">
    Hydraulic Machines: Pumps
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -333,8 +355,8 @@
   <a class="reference internal" href="../lesson24/lesson24.html">
    BLT - Flow Around a Cylinder
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -450,39 +472,42 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Stability
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#strategy-for-solving-buoyancy-stability-problems">
+   Strategy for solving buoyancy/stability problems
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#strategy-for-solving-buoyancy-stability-problems">
-     Strategy for solving buoyancy/stability problems
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example">
+   Example
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-known-quantities">
+     list known quantities
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example">
-     Example
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-unknown-quantities">
+     list unknown quantities
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#governing-principles">
-       governing principles
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-step-by-step">
-       solution (step-by-step)
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#governing-principles">
+     governing principles
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solution-step-by-step">
+     solution (step-by-step)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#discussion">
+     discussion
+    </a>
    </li>
   </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#discussion">
-   discussion
-  </a>
  </li>
 </ul>
 
@@ -560,36 +585,129 @@ shown in <a class="reference internal" href="#stability-example"><span class="st
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># list known quantities</span>
-</pre></div>
+<div class="section" id="list-known-quantities">
+<h3>list known quantities<a class="headerlink" href="#list-known-quantities" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>9800 N/m^3 specific weight of water</p></li>
+<li><p>11.3 SG lead</p></li>
+<li><p>0.5 SG wood</p></li>
+<li><p>1.03 SG sea water</p></li>
+<li><p>0.61 m diameter of spar</p></li>
+<li><p>0.15 m length of lead portion</p></li>
+<li><p>4.88 m length of wood portion</p></li>
+</ul>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># list unknown quantities</span>
-</pre></div>
-</div>
-</div>
+<div class="section" id="list-unknown-quantities">
+<h3>list unknown quantities<a class="headerlink" href="#list-unknown-quantities" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Metacentric height, MG and stability classification</p></li>
+</ul>
 </div>
 <div class="section" id="governing-principles">
 <h3>governing principles<a class="headerlink" href="#governing-principles" title="Permalink to this headline">¶</a></h3>
-<p>Weight of fluid displaced = Weight of body</p>
+<ul class="simple">
+<li><p>Definition of metacenter</p></li>
+<li><p>Definition of center of bouyancy</p></li>
+<li><p>Definition of canter of gravity</p></li>
+<li><p>Analytical geometry (as appropriate)</p></li>
+</ul>
 </div>
 <div class="section" id="solution-step-by-step">
 <h3>solution (step-by-step)<a class="headerlink" href="#solution-step-by-step" title="Permalink to this headline">¶</a></h3>
+<p>The solution is encoded below using principles of Computational Thinking (in this case sequential programming structure)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="n">rhog</span> <span class="o">=</span> <span class="mi">9800</span> <span class="c1">#N/m^3 sp. weight of water</span>
+<span class="n">sgpb</span> <span class="o">=</span> <span class="mf">11.3</span> <span class="c1">#SG lead</span>
+<span class="n">sgpine</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="c1">#SG wood</span>
+<span class="n">sgseaw</span> <span class="o">=</span> <span class="mf">1.03</span> <span class="c1">#SG sea water</span>
+<span class="n">D</span> <span class="o">=</span> <span class="mf">0.61</span> <span class="c1">#m diameter of spar</span>
+<span class="n">hpb</span> <span class="o">=</span> <span class="mf">0.15</span> <span class="c1">#m length of lead portion</span>
+<span class="n">hpine</span> <span class="o">=</span> <span class="mf">4.88</span> <span class="c1">#m length of wood portion</span>
+<span class="n">A</span> <span class="o">=</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">D</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span>
+<span class="n">weight_lead</span> <span class="o">=</span> <span class="n">hpb</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">sgpb</span><span class="o">*</span><span class="n">rhog</span>
+<span class="n">weight_pine</span> <span class="o">=</span> <span class="n">hpine</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">sgpine</span><span class="o">*</span><span class="n">rhog</span>
+<span class="n">weight_spar</span> <span class="o">=</span> <span class="n">weight_lead</span><span class="o">+</span><span class="n">weight_pine</span>
+<span class="n">hseaw</span><span class="o">=</span><span class="n">weight_spar</span><span class="o">/</span><span class="p">(</span><span class="n">A</span><span class="o">*</span><span class="n">sgseaw</span><span class="o">*</span><span class="n">rhog</span><span class="p">)</span>
+<span class="n">CG_bouy</span> <span class="o">=</span> <span class="p">(</span><span class="n">weight_lead</span><span class="o">*</span><span class="p">(</span><span class="n">hpb</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">weight_pine</span><span class="o">*</span><span class="p">(</span><span class="n">hpine</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="n">hpb</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">weight_spar</span><span class="p">)</span>
+<span class="n">CB_bouy</span> <span class="o">=</span> <span class="n">hseaw</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">GB</span> <span class="o">=</span> <span class="n">CG_bouy</span> <span class="o">-</span> <span class="n">CB_bouy</span> <span class="c1"># distance from CG to CB</span>
+<span class="n">I</span> <span class="o">=</span> <span class="n">A</span><span class="o">*</span><span class="p">(</span><span class="n">D</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">4</span><span class="o">/</span><span class="mi">64</span> <span class="c1">#2nd moment of area at waterline (for a circle this case)</span>
+<span class="n">VS</span> <span class="o">=</span> <span class="n">hseaw</span><span class="o">*</span><span class="n">A</span> <span class="c1">#Volume submerged portion</span>
+<span class="n">MB</span> <span class="o">=</span> <span class="n">I</span><span class="o">/</span><span class="n">VS</span> <span class="c1"># Distance from metacenter to center of bouyancy</span>
+<span class="n">MG</span><span class="o">=</span><span class="n">MB</span><span class="o">-</span><span class="n">GB</span> <span class="c1"># Compute metacentric height</span>
+<span class="k">if</span> <span class="n">MG</span> <span class="o">&gt;=</span> <span class="mf">0.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Metacentric height &quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">MG</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="s2">&quot; meters &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bouy is self-righting STABLE&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Metacentric height &quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">MG</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="s2">&quot; meters &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bouy is self-tipping UNSTABLE&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Metacentric height  0.454  meters 
+Bouy is self-righting STABLE
+</pre></div>
 </div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="discussion">
-<h1>discussion<a class="headerlink" href="#discussion" title="Permalink to this headline">¶</a></h1>
-<p>N
-become unstable? If the buoy is stable when MG &gt; 0 and unstable when MG &lt; 0, we can say that the
-limit between being stable or unstable is when MG = 0. In this case MB = GB. If you do the problem
-again, setting the length of the pine section as L (instead of 4.88m), and equating MB = GB, you can
-solve for L (by trial and error) to give the maximum length before instability sets in.</p>
+</div>
+<div class="section" id="discussion">
+<h3>discussion<a class="headerlink" href="#discussion" title="Permalink to this headline">¶</a></h3>
+<p>How tall can the pine portion be before the bouy becomes unstable?</p>
+<p>We could do analysis like:</p>
+<blockquote>
+<div><p>If the buoy is stable when MG &gt; 0 and unstable when MG &lt; 0, we can say that the limit between being stable or unstable is when MG = 0.
+In this case MB = GB. <br>
+One could redo the problem, setting the length of the pine section as L (instead of 4.88m), and equating MB = GB, you can
+solve for L (by trial and error) to give the maximum length before instability sets in. <br>
+Or we can simply use the script we just built and adjust the length of the pine portion until the classification is unstable like:</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="n">rhog</span> <span class="o">=</span> <span class="mi">9800</span> <span class="c1">#N/m^3 sp. weight of water</span>
+<span class="n">sgpb</span> <span class="o">=</span> <span class="mf">11.3</span> <span class="c1">#SG lead</span>
+<span class="n">sgpine</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="c1">#SG wood</span>
+<span class="n">sgseaw</span> <span class="o">=</span> <span class="mf">1.03</span> <span class="c1">#SG sea water</span>
+<span class="n">D</span> <span class="o">=</span> <span class="mf">0.61</span> <span class="c1">#m diameter of spar</span>
+<span class="n">hpb</span> <span class="o">=</span> <span class="mf">0.15</span> <span class="c1">#m length of lead portion</span>
+<span class="c1">#############################################</span>
+<span class="n">hpine</span> <span class="o">=</span> <span class="mf">7.207</span> <span class="c1">#m length of wood portion    ##</span>
+<span class="c1">#############################################</span>
+<span class="n">A</span> <span class="o">=</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">D</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span>
+<span class="n">weight_lead</span> <span class="o">=</span> <span class="n">hpb</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">sgpb</span><span class="o">*</span><span class="n">rhog</span>
+<span class="n">weight_pine</span> <span class="o">=</span> <span class="n">hpine</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">sgpine</span><span class="o">*</span><span class="n">rhog</span>
+<span class="n">weight_spar</span> <span class="o">=</span> <span class="n">weight_lead</span><span class="o">+</span><span class="n">weight_pine</span>
+<span class="n">hseaw</span><span class="o">=</span><span class="n">weight_spar</span><span class="o">/</span><span class="p">(</span><span class="n">A</span><span class="o">*</span><span class="n">sgseaw</span><span class="o">*</span><span class="n">rhog</span><span class="p">)</span>
+<span class="n">CG_bouy</span> <span class="o">=</span> <span class="p">(</span><span class="n">weight_lead</span><span class="o">*</span><span class="p">(</span><span class="n">hpb</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">weight_pine</span><span class="o">*</span><span class="p">(</span><span class="n">hpine</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="n">hpb</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">weight_spar</span><span class="p">)</span>
+<span class="n">CB_bouy</span> <span class="o">=</span> <span class="n">hseaw</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">GB</span> <span class="o">=</span> <span class="n">CG_bouy</span> <span class="o">-</span> <span class="n">CB_bouy</span> <span class="c1"># distance from CG to CB</span>
+<span class="n">I</span> <span class="o">=</span> <span class="n">A</span><span class="o">*</span><span class="p">(</span><span class="n">D</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">4</span><span class="o">/</span><span class="mi">64</span> <span class="c1">#2nd moment of area at waterline (for a circle this case)</span>
+<span class="n">VS</span> <span class="o">=</span> <span class="n">hseaw</span><span class="o">*</span><span class="n">A</span> <span class="c1">#Volume submerged portion</span>
+<span class="n">MB</span> <span class="o">=</span> <span class="n">I</span><span class="o">/</span><span class="n">VS</span> <span class="c1"># Distance from metacenter to center of bouyancy</span>
+<span class="n">MG</span><span class="o">=</span><span class="n">MB</span><span class="o">-</span><span class="n">GB</span> <span class="c1"># Compute metacentric height</span>
+<span class="k">if</span> <span class="n">MG</span> <span class="o">&gt;=</span> <span class="mf">0.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Metacentric height &quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">MG</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="s2">&quot; meters &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bouy is self-righting STABLE&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Metacentric height &quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">MG</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="s2">&quot; meters &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bouy is self-tipping UNSTABLE&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Metacentric height  -0.0  meters 
+Bouy is self-tipping UNSTABLE
+</pre></div>
+</div>
+</div>
+</div>
+<p>So for this problem a 7.21+ meter long pine spar is unstable, anything shorter will work as desired.</p>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">

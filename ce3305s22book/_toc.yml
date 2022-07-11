@@ -35,9 +35,14 @@ chapters:
   - file: lessons/lesson03/3bouyancy # 
   - file: lessons/lesson03/4stability # 
   - file: lessons/lesson03/5exercise 
-#- file: lessons/lesson04/lesson04
+  
+- file: lessons/lesson04/lesson04
+  sections:
+  - file: lessons/lesson04/1flowpattern # 
+  - file: lessons/lesson04/2eulers # 
+  - file: lessons/lesson04/5exercise 
 #
-- file: lessons/lesson05/lesson05
+#- file: lessons/lesson05/lesson05
 - file: lessons/lesson06/lesson06
 - file: lessons/lesson07/lesson07
 - file: lessons/lesson08/lesson08

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4. Fluid Statics and Pressure (2/2) &#8212; Instructor Notes CE 3305</title>
+    <title>Flow Kinematics &#8212; Instructor Notes CE 3305</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Flow Kinematics" href="../lesson05/lesson05.html" />
-    <link rel="prev" title="Pressure Forces, Bouyancy, Stability" href="../lesson03/lesson03.html" />
+    <link rel="next" title="Flow Patterns and Visualization" href="1flowpattern.html" />
+    <link rel="prev" title="Exercise Set 4" href="../lesson03/5exercise.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -106,22 +106,27 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../lesson00/1problemsolving.html">
-     Problem Solving and Documentation
+     Problem Solving and Documentation (pp 16-22)
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../lesson00/2computation.html">
-     Computational Considerations
+     Computational Hydraulics
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../lesson00/3whatisfluids.html">
-     What is Fluid Mechanics?
+     Fluid Mechanics - A definition (pp 2-6)
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../lesson00/4units.html">
-     Dimensions and Units
+     Dimensions and Units (pp. 6-12)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson00/5exercise.html">
+     Exercise Set 1
     </a>
    </li>
   </ul>
@@ -138,17 +143,17 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../lesson01/1properties.html">
-     Intensive and Extensive Properties (pp. XXX-XXX)
+     Intensive and Extensive Properties (pp. 28-35)
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../lesson01/2viscosity.html">
-     Viscosity
+     Viscosity (pp 36-45)
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../lesson01/3liquids.html">
-     Liquid Properties
+     Liquid Properties (pp. 46-52)
     </a>
    </li>
    <li class="toctree-l2">
@@ -156,11 +161,21 @@
      Vapor Pressure
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson01/5exercise.html">
+     Exercise Set 2
+    </a>
+   </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../lesson02/lesson02.html">
    Fluid Statics and Pressure (1/2)
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lesson03/lesson03.html">
+   Fluid Statics and Pressure (2/2)
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -169,36 +184,58 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../lesson02/2pressure.html">
-     Pressure (pp XXX-XXX)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lesson02/3forces.html">
+    <a class="reference internal" href="../lesson03/1forces.html">
      Pressure Force on Submerged Objects (pp XXX-XXX)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../lesson02/4references.html">
-     References
+    <a class="reference internal" href="../lesson03/2lineofaction.html">
+     Line of Action of Equivalent Point Force
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson03/3bouyancy.html">
+     Bouyancy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson03/4stability.html">
+     Stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson03/5exercise.html">
+     Exercise Set 4
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lesson03/lesson03.html">
-   Pressure Forces, Bouyancy, Stability
-  </a>
- </li>
- <li class="toctree-l1 current active">
+ <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
-   4. Fluid Statics and Pressure (2/2)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lesson05/lesson05.html">
    Flow Kinematics
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1flowpattern.html">
+     Flow Patterns and Visualization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2eulers.html">
+     Euler’s Equation and the Bernoulli Equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5exercise.html">
+     Exercise Set 5 (Forces on Submerged Objects)
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../lesson06/lesson06.html">
@@ -254,8 +291,8 @@
   <a class="reference internal" href="../lesson15/lesson15.html">
    Hydraulic Machines: Pumps
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -316,8 +353,8 @@
   <a class="reference internal" href="../lesson24/lesson24.html">
    BLT - Flow Around a Cylinder
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -442,6 +479,13 @@
   <a class="reference internal nav-link" href="#readings">
    Readings
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#background">
+     Background
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -454,24 +498,33 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="fluid-statics-and-pressure-2-2">
-<h1>4. Fluid Statics and Pressure (2/2)<a class="headerlink" href="#fluid-statics-and-pressure-2-2" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="flow-kinematics">
+<h1>Flow Kinematics<a class="headerlink" href="#flow-kinematics" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="lesson-outline">
 <h2>Lesson Outline<a class="headerlink" href="#lesson-outline" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>Forces on Submerged Objects</p></li>
-<li><p>Bouyancy</p></li>
-<li><p>Stability</p></li>
-</ol>
+<ul class="simple">
+<li><p>Background</p></li>
+<li><p>Constant velocity; constant acceleration</p></li>
+<li><p>Translation</p></li>
+<li><p>Rotation</p></li>
+</ul>
 </div>
 <div class="section" id="readings">
 <h2>Readings<a class="headerlink" href="#readings" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
-<li><p>CE-3305-2022-1 Syllabus. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html">http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html</a></p></li>
-<li><p>Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 3-14</p></li>
-<li><p>DF Elger, BC Williams, Crowe, CT and JA Roberson, <em>Engineering Fluid Mechanics 10th edition</em>, John Wiley &amp; Sons, Inc., 2013.  (placeholder file to get links working). <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-4.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-1.pdf</a></p></li>
-<li><p>Cleveland, T. G. (2014) <em>Fluid Mechanics Notes to Accompany CE 3305 at Jade-Holshule (TTU Study Abroad 2015-2019)</em>, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-004.0.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-004.0.pdf</a></p></li>
+<li><p>Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 93-177</p></li>
+<li><p>DF Elger, BC Williams, Crowe, CT and JA Roberson, <em>Engineering Fluid Mechanics 10th edition</em>, John Wiley &amp; Sons, Inc., 2013.  (placeholder file to get links working). <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-5.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-5.pdf</a></p></li>
+<li><p>Cleveland, T. G. (2014) <em>Fluid Mechanics Notes to Accompany CE 3305 at Jade-Holshule (TTU Study Abroad 2015-2019)</em>, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-005.0.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-005.0.pdf</a></p></li>
+<li><p>De Lima, R. P., Cleveland, T. G., De Carvalho, R.P., 2014. <em>Infrared thermography as a heat tracer method for velocity estimation in shallow flows</em> <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/Thermal-Image.PDF">Die Bodenkultur, Journal for Land Management, Food, and Envrionment, Vol 65, No. 3-4, pp. 71-77. ISSN 006-5471</a></p></li>
 </ol>
+<div class="section" id="background">
+<h3>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h3>
+<p>This lesson introduces the Euler (and Bernoulli) equations which arefundamental in applied fluid mechanics.</p>
+<p>The lesson also examines lagrangian and eularian reference frames in the contaext of variational gonckulus as applied to fluid mechanics.</p>
+<p>Start with flow patterns</p>
+</div>
+</div>
+<div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -505,19 +558,19 @@
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="../lesson03/lesson03.html" title="previous page">
+        <a class="left-prev" href="../lesson03/5exercise.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Pressure Forces, Bouyancy, Stability</p>
+                <p class="prevnext-title">Exercise Set 4</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="../lesson05/lesson05.html" title="next page">
+        <a class="right-next" href="1flowpattern.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Flow Kinematics</p>
+                <p class="prevnext-title">Flow Patterns and Visualization</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

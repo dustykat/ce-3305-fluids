@@ -72,6 +72,7 @@
 # ```
 # 
 # Determine: 
+# 
 # 1. The equilibrium position (i.e. depth of immersion) of the buoy in seawater (SG=1.03). 
 # 2. The metacentric height and show that the buoy is stable.
 
@@ -81,28 +82,108 @@
 # sketch here
 
 
+# ### list known quantities
+# - 9800 N/m^3 specific weight of water
+# - 11.3 SG lead
+# - 0.5 SG wood
+# - 1.03 SG sea water
+# - 0.61 m diameter of spar
+# - 0.15 m length of lead portion
+# - 4.88 m length of wood portion
+
+# ### list unknown quantities
+# - Metacentric height, MG and stability classification
+
+# ### governing principles
+# - Definition of metacenter
+# - Definition of center of bouyancy
+# - Definition of canter of gravity
+# - Analytical geometry (as appropriate)
+
+# ### solution (step-by-step)
+# 
+# The solution is encoded below using principles of Computational Thinking (in this case sequential programming structure)
+
 # In[2]:
 
 
-# list known quantities
+import math
+rhog = 9800 #N/m^3 sp. weight of water
+sgpb = 11.3 #SG lead
+sgpine = 0.5 #SG wood
+sgseaw = 1.03 #SG sea water
+D = 0.61 #m diameter of spar
+hpb = 0.15 #m length of lead portion
+hpine = 4.88 #m length of wood portion
+A = (math.pi*D**2)/4
+weight_lead = hpb*A*sgpb*rhog
+weight_pine = hpine*A*sgpine*rhog
+weight_spar = weight_lead+weight_pine
+hseaw=weight_spar/(A*sgseaw*rhog)
+CG_bouy = (weight_lead*(hpb/2) + weight_pine*(hpine/2+hpb))/(weight_spar)
+CB_bouy = hseaw/2
+GB = CG_bouy - CB_bouy # distance from CG to CB
+I = A*(D**2)*4/64 #2nd moment of area at waterline (for a circle this case)
+VS = hseaw*A #Volume submerged portion
+MB = I/VS # Distance from metacenter to center of bouyancy
+MG=MB-GB # Compute metacentric height
+if MG >= 0.0:
+    print("Metacentric height ",round(MG,3)," meters ")
+    print("Bouy is self-righting STABLE")
+else:
+    print("Metacentric height ",round(MG,3)," meters ")
+    print("Bouy is self-tipping UNSTABLE")
 
+
+# ### discussion
+# 
+# How tall can the pine portion be before the bouy becomes unstable? 
+# 
+# We could do analysis like:
+# 
+# >If the buoy is stable when MG > 0 and unstable when MG < 0, we can say that the limit between being stable or unstable is when MG = 0. 
+# > In this case MB = GB. <br>
+# > One could redo the problem, setting the length of the pine section as L (instead of 4.88m), and equating MB = GB, you can
+# solve for L (by trial and error) to give the maximum length before instability sets in. <br>
+# > Or we can simply use the script we just built and adjust the length of the pine portion until the classification is unstable like:
 
 # In[3]:
 
 
-# list unknown quantities
+import math
+rhog = 9800 #N/m^3 sp. weight of water
+sgpb = 11.3 #SG lead
+sgpine = 0.5 #SG wood
+sgseaw = 1.03 #SG sea water
+D = 0.61 #m diameter of spar
+hpb = 0.15 #m length of lead portion
+#############################################
+hpine = 7.207 #m length of wood portion    ##
+#############################################
+A = (math.pi*D**2)/4
+weight_lead = hpb*A*sgpb*rhog
+weight_pine = hpine*A*sgpine*rhog
+weight_spar = weight_lead+weight_pine
+hseaw=weight_spar/(A*sgseaw*rhog)
+CG_bouy = (weight_lead*(hpb/2) + weight_pine*(hpine/2+hpb))/(weight_spar)
+CB_bouy = hseaw/2
+GB = CG_bouy - CB_bouy # distance from CG to CB
+I = A*(D**2)*4/64 #2nd moment of area at waterline (for a circle this case)
+VS = hseaw*A #Volume submerged portion
+MB = I/VS # Distance from metacenter to center of bouyancy
+MG=MB-GB # Compute metacentric height
+if MG >= 0.0:
+    print("Metacentric height ",round(MG,3)," meters ")
+    print("Bouy is self-righting STABLE")
+else:
+    print("Metacentric height ",round(MG,3)," meters ")
+    print("Bouy is self-tipping UNSTABLE")
 
 
-# ### governing principles
-# Weight of fluid displaced = Weight of body
+# So for this problem a 7.21+ meter long pine spar is unstable, anything shorter will work as desired.
 
-# ### solution (step-by-step)
-# 
+# In[ ]:
 
-# # discussion
-# 
-# N
-# become unstable? If the buoy is stable when MG > 0 and unstable when MG < 0, we can say that the
-# limit between being stable or unstable is when MG = 0. In this case MB = GB. If you do the problem
-# again, setting the length of the pine section as L (instead of 4.88m), and equating MB = GB, you can
-# solve for L (by trial and error) to give the maximum length before instability sets in. 
+
+
+
