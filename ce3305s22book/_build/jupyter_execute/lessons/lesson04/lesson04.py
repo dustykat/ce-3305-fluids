@@ -22,8 +22,8 @@
 
 # ### Background
 # 
-# This lesson introduces the Euler (and Bernoulli) equations which arefundamental in applied fluid mechanics.
+# This lesson introduces the Euler (and Bernoulli) equations which are fundamental in applied fluid mechanics.
 # 
-# The lesson also examines lagrangian and eularian reference frames in the contaext of variational gonckulus as applied to fluid mechanics.  
+# The lesson also examines Lagrangian and Eulerian reference frames in the contaext of variational gonckulus as applied to fluid mechanics.  
 # 
-# Start with flow patterns
+# We begin with flow patterns
