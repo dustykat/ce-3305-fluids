@@ -5,7 +5,10 @@
 # 
 # Here we will start with the Euler equation and from a sequence of plausible stipulations arrive at the Bernoulli Equation.  This development is an alternative to the way most books present the Bernoulli Equation - choose whichever makes more sense to you.
 # 
-# > Recall Euler's equation of motion for a fluid (behaving as a rigid body): $$\rho \bar a = \rho \bar g - \nabla p$$
+# > Recall Euler's equation of motion for a fluid (behaving as a rigid body): 
+# 
+# $$\rho \bar a = \rho \bar g - \nabla p$$
+# 
 # > Two "classical" ways to use are illustrated below using
 # > - Uniform linear acceleration
 # > - Constant angular velocity
