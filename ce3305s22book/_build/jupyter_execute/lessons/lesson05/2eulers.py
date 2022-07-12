@@ -5,14 +5,6 @@
 # 
 # Here we will start with the Euler equation and from a sequence of plausible stipulations arrive at the Bernoulli Equation.  This development is an alternative to the way most books present the Bernoulli Equation - choose whichever makes more sense to you.
 # 
-# ```{figure} euler-one.png
-# ---
-# width: 500px
-# name: euler-one
-# ---
-# 
-# ```
-# 
 # > Recall Euler's equation of motion for a fluid (behaving as a rigid body): $$\rho \bar a = \rho \bar g - \nabla p$$
 # > Two "classical" ways to use are illustrated below using
 # > - Uniform linear acceleration
@@ -99,9 +91,11 @@
 # 
 # Next we will stipulate that the flow is irrotational (we will study rotation soon) for the time being, irrotational means that the **curl** of the velocity field is zero.  Typical notation is
 # 
-# $$ curl(\bar V) = \bar 0$$  notice the capital $\bar V$, this is the vector field function that provides the components $(u,v,w)$ at any location and time.
+# $$ curl(\bar V) = \bar 0 $$  
 # 
-# If $ curl(\bar V) = \bar 0$ then the following relationships hold:
+# notice the capital $\bar V$, this is the vector field function that provides the components $(u,v,w)$ at any location and time.
+# 
+# If $ curl(\bar V) = \bar 0 $ then the following relationships hold:
 # 
 # $$ \frac{\partial w}{\partial y}  = \frac{\partial v}{\partial z} $$
 # $$ \frac{\partial u}{\partial z}  = \frac{\partial w}{\partial x} $$
