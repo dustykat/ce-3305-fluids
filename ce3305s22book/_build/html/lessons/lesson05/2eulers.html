@@ -42,6 +42,8 @@
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -487,15 +489,39 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#example-fluid-surface-under-constant-linear-acceleration">
-   Example: Fluid surface under constant linear acceleration
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Euler’s Equation and the Bernoulli Equation
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-fluid-surface-under-constant-linear-acceleration">
+     Example: Fluid surface under constant linear acceleration
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-constant-angular-velocity">
+     Example: Constant Angular Velocity
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#example-constant-angular-velocity">
-   Example: Constant Angular Velocity
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#derivation-of-bernoulli-s-equation-from-euler-s-equation">
+   Derivation of Bernoulli’s Equation from Euler’s Equation
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-application-of-bernoulli-s-equation">
+     Example: Application of Bernoulli’s Equation
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Example: Application of Bernoulli’s Equation
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -514,6 +540,14 @@
 <div class="figure align-default" id="euler-one">
 <a class="reference internal image-reference" href="../../_images/euler-one.png"><img alt="../../_images/euler-one.png" src="../../_images/euler-one.png" style="width: 500px;" /></a>
 </div>
+<blockquote>
+<div><p>Recall Euler’s equation of motion for a fluid (behaving as a rigid body): $<span class="math notranslate nohighlight">\(\rho \bar a = \rho \bar g - \nabla p\)</span>$
+Two “classical” ways to use are illustrated below using</p>
+<ul class="simple">
+<li><p>Uniform linear acceleration</p></li>
+<li><p>Constant angular velocity</p></li>
+</ul>
+</div></blockquote>
 <div class="section" id="example-fluid-surface-under-constant-linear-acceleration">
 <h2>Example: Fluid surface under constant linear acceleration<a class="headerlink" href="#example-fluid-surface-under-constant-linear-acceleration" title="Permalink to this headline">¶</a></h2>
 <p>Here is an example combining hydrostatic pressure equation and acceleration.  Identify the problem solving steps depicted.</p>
@@ -532,24 +566,159 @@
 <div class="figure align-default" id="ang-vel-2">
 <a class="reference internal image-reference" href="../../_images/ang-vel-2.png"><img alt="../../_images/ang-vel-2.png" src="../../_images/ang-vel-2.png" style="width: 600px;" /></a>
 </div>
-<p>Now to continue to onward to the Bernoulli Equation.</p>
-<div class="figure align-default" id="euler-two">
-<a class="reference internal image-reference" href="../../_images/euler-two.png"><img alt="../../_images/euler-two.png" src="../../_images/euler-two.png" style="width: 500px;" /></a>
 </div>
-<div class="figure align-default" id="euler-three">
-<a class="reference internal image-reference" href="../../_images/euler-three.png"><img alt="../../_images/euler-three.png" src="../../_images/euler-three.png" style="width: 500px;" /></a>
 </div>
-<div class="figure align-default" id="euler-four">
-<a class="reference internal image-reference" href="../../_images/euler-four.png"><img alt="../../_images/euler-four.png" src="../../_images/euler-four.png" style="width: 500px;" /></a>
+<div class="tex2jax_ignore mathjax_ignore section" id="derivation-of-bernoulli-s-equation-from-euler-s-equation">
+<h1>Derivation of Bernoulli’s Equation from Euler’s Equation<a class="headerlink" href="#derivation-of-bernoulli-s-equation-from-euler-s-equation" title="Permalink to this headline">¶</a></h1>
+<p>Now to continue to onward to the Bernoulli Equation; what appears herein is more of a plausibility argument than a proper derivation, however the goal is to illustrate the relationship of the two.  The textbook has an entirely different approach to accomplish the same task, and choose the explaination that makes the most sense to you, and helps you remember how to use the results better.</p>
+<p>Starting with Euler’s Equation, and neglect viscous forces (no internal shear) we have:</p>
+<div class="math notranslate nohighlight">
+\[\rho \bar a = \rho \bar g - \nabla p\]</div>
+<p>Stipulate that <span class="math notranslate nohighlight">\(\bar g = -g \bar k\)</span>  (we are simply stating that  +z is up!)</p>
+<div class="math notranslate nohighlight">
+\[\rho \bar a = \rho \bar g - \nabla p = - \nabla (p + \rho g z)\]</div>
+<p>Next we will require that <span class="math notranslate nohighlight">\(\rho g =\text{constant}\)</span> (incompressible fluid!) which allows</p>
+<div class="math notranslate nohighlight">
+\[ \frac{\rho \bar a}{\rho g} =  - \frac{\nabla (p + \rho g z)}{\rho g}\]</div>
+<p>and simplified becomes</p>
+<div class="math notranslate nohighlight">
+\[ \frac{\bar a}{ g} =  - \nabla (\frac{p}{\rho g} + z)\]</div>
+<p>Now write <span class="math notranslate nohighlight">\(\bar a\)</span> in differential form (Eulerian reference system); as a set of cartesian component equations we have:</p>
+<div class="math notranslate nohighlight">
+\[ a_x = u\frac{\partial u}{\partial x}  +v \frac{\partial u}{\partial y}  + w \frac{\partial u}{\partial z} + \frac{\partial u}{\partial t}\]</div>
+<div class="math notranslate nohighlight">
+\[ a_y = u\frac{\partial v}{\partial x}  +v \frac{\partial v}{\partial y}  + w \frac{\partial v}{\partial z}  + \frac{\partial v}{\partial t}\]</div>
+<div class="math notranslate nohighlight">
+\[ a_z = u\frac{\partial w}{\partial x}  +v \frac{\partial w}{\partial y}  + w \frac{\partial w}{\partial z} +\frac{\partial w}{\partial t}\]</div>
+<p>Next we will consider steady flow only which will cause the local acceleration terms to vanish that is:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{\partial u}{\partial t}  = \frac{\partial v}{\partial t}  = \frac{\partial w}{\partial t} = 0\]</div>
+<p>Make the necessary substitution and simplifications and express the vector equation as a set of component equations as</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{g}(u\frac{\partial u}{\partial x}  +v \frac{\partial u}{\partial y}  + w \frac{\partial u}{\partial z}) = -\frac{\partial}{\partial x}(\frac{p}{\rho g} + z)\]</div>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{g}(u\frac{\partial v}{\partial x}  +v \frac{\partial v}{\partial y}  + w \frac{\partial v}{\partial z})= -\frac{\partial}{\partial y}(\frac{p}{\rho g} + z)\]</div>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{g}(u\frac{\partial w}{\partial x}  +v \frac{\partial w}{\partial y}  + w \frac{\partial w}{\partial z}) = -\frac{\partial}{\partial z}(\frac{p}{\rho g} + z)\]</div>
+<p>Next we will stipulate that the flow is irrotational (we will study rotation soon) for the time being, irrotational means that the <strong>curl</strong> of the velocity field is zero.  Typical notation is</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned} curl(\bar V) = \bar 0$$  notice the capital $\bar V$, this is the vector field function that provides the components $(u,v,w)$ at any location and time.\\If $ curl(\bar V) = \bar 0$ then the following relationships hold:\\$$ \frac{\partial w}{\partial y}  = \frac{\partial v}{\partial z} \end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight">
+\[ \frac{\partial u}{\partial z}  = \frac{\partial w}{\partial x} \]</div>
+<div class="math notranslate nohighlight">
+\[ \frac{\partial v}{\partial x}  = \frac{\partial u}{\partial y} \]</div>
+<p>So we will make these substitutions to obtain</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{g}(u\frac{\partial u}{\partial x}  +v \frac{\partial v}{\partial x}  + w \frac{\partial w}{\partial x}) = -\frac{\partial}{\partial x}(\frac{p}{\rho g} + z)\]</div>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{g}(u\frac{\partial u}{\partial y}  +v \frac{\partial v}{\partial y}  + w \frac{\partial w}{\partial y})= -\frac{\partial}{\partial y}(\frac{p}{\rho g} + z)\]</div>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{g}(u\frac{\partial w}{\partial x}  +v \frac{\partial w}{\partial y}  + w \frac{\partial w}{\partial z}) = -\frac{\partial}{\partial z}(\frac{p}{\rho g} + z)\]</div>
+<p>Now recall that <span class="math notranslate nohighlight">\(y\frac{\partial y}{\partial x} = \frac{1}{2}\frac{\partial y^2}{\partial x}\)</span> and apply this rule on the expressions on the left side of the equation set;</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{g}[\frac{\partial}{\partial x}(\frac{u^2}{2}+\frac{v^2}{2}+\frac{w^2}{2})] = -\frac{\partial}{\partial x}(\frac{p}{\rho g} + z)\]</div>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{g}[(\frac{\partial}{\partial y}(\frac{u^2}{2}+\frac{v^2}{2}+\frac{w^2}{2})]= -\frac{\partial}{\partial y}(\frac{p}{\rho g} + z)\]</div>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{g}[(\frac{\partial}{\partial z}(\frac{u^2}{2}+\frac{v^2}{2}+\frac{w^2}{2})] = -\frac{\partial}{\partial z}(\frac{p}{\rho g} + z)\]</div>
+<p>Rearrange as</p>
+<div class="math notranslate nohighlight">
+\[0 = -\frac{\partial}{\partial x}(\frac{p}{\rho g} + z + \frac{u^2+v^2+w^2}{2g} ) \]</div>
+<div class="math notranslate nohighlight">
+\[0 = -\frac{\partial}{\partial y}(\frac{p}{\rho g} + z + \frac{u^2+v^2+w^2}{2g} ) \]</div>
+<div class="math notranslate nohighlight">
+\[0 = -\frac{\partial}{\partial z}(\frac{p}{\rho g} + z + \frac{u^2+v^2+w^2}{2g} ) \]</div>
+<p>The sum <span class="math notranslate nohighlight">\(u^2+v^2+w^2\)</span> is simply the magnitude of the velocity vector (speed) at a point squared; so we will simply make that substitution as:</p>
+<div class="math notranslate nohighlight">
+\[0 = -\frac{\partial}{\partial x}(\frac{p}{\rho g} + z + \frac{V^2}{2g} ) \]</div>
+<div class="math notranslate nohighlight">
+\[0 = -\frac{\partial}{\partial y}(\frac{p}{\rho g} + z + \frac{V^2}{2g} ) \]</div>
+<div class="math notranslate nohighlight">
+\[0 = -\frac{\partial}{\partial z}(\frac{p}{\rho g} + z + \frac{V^2}{2g} )\]</div>
+<p>Now recall that <span class="math notranslate nohighlight">\(\frac{dy}{dx} = 0\)</span> if <span class="math notranslate nohighlight">\(y\)</span> is a constant with respect to <span class="math notranslate nohighlight">\(x\)</span>.  Thus all three equations must equal the same constant.</p>
+<p>So anywhere in our flow field (that satisfies all the stipulations and assumptions) we have</p>
+<div class="math notranslate nohighlight">
+\[\frac{p}{\rho g} + z + \frac{V^2}{2g} = C\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> is some constant (its often called the total head - but that’s getting ahead of ourselves!)</p>
+<p>Often the equation is written along a streamline where in the absence of friction the constant is unchanging and we would have</p>
+<div class="math notranslate nohighlight">
+\[\frac{p_1}{\rho g} + z_1 + \frac{V_1^2}{2g} = \frac{p_2}{\rho g} + z_2 + \frac{V_2^2}{2g}\]</div>
+<p>This is the most useful form of Bernoulli’s equation, where the subscripts <span class="math notranslate nohighlight">\(_1\)</span> and <span class="math notranslate nohighlight">\(_2\)</span> indicate different locations on the streamline.</p>
+<div class="section" id="example-application-of-bernoulli-s-equation">
+<h2>Example: Application of Bernoulli’s Equation<a class="headerlink" href="#example-application-of-bernoulli-s-equation" title="Permalink to this headline">¶</a></h2>
+<p>A tank with water drains through a small hole to the atmosphere as shown.  The depth in the tank is maintained by external addition of fluid.</p>
+<div class="figure align-default" id="tank-drain-l5">
+<a class="reference internal image-reference" href="../../_images/tank-drain-L5.png"><img alt="../../_images/tank-drain-L5.png" src="../../_images/tank-drain-L5.png" style="width: 500px;" /></a>
 </div>
-<div class="figure align-default" id="euler-five">
-<a class="reference internal image-reference" href="../../_images/euler-five.png"><img alt="../../_images/euler-five.png" src="../../_images/euler-five.png" style="width: 500px;" /></a>
+<p>Determine the speed of the flow in the small hole.</p>
+<p><strong>Known</strong></p>
+<ul class="simple">
+<li><p>pressure at free surface and at the exit jet</p></li>
+<li><p>depth in the tank</p></li>
+</ul>
+<p><strong>Unknown</strong></p>
+<ul class="simple">
+<li><p>speed of the jet in the exit hole</p></li>
+</ul>
+<p><strong>Governing Principles</strong></p>
+<ul class="simple">
+<li><p>Bernoulli’s equation</p></li>
+<li><p>Assume inviscid, irrotational flow</p></li>
+</ul>
+<p><strong>Solution</strong></p>
+<div class="math notranslate nohighlight">
+\[\frac{p_1}{\rho g} + z_1 + \frac{V_1^2}{2g} = \frac{p_2}{\rho g} + z_2 + \frac{V_2^2}{2g}\]</div>
+<p>Pressure at surface and jet are the same so they cancel. The make-up fluid in problem statement implies the velocity at point 1 is negligible.  We can choose to set the jet elevation to zero.  Thus the free surface elevation is <span class="math notranslate nohighlight">\(z_1=H\)</span></p>
+<p>So all that remains in the equation is</p>
+<div class="math notranslate nohighlight">
+\[ H  = \frac{V_2^2}{2g}\]</div>
+<p>Solving for <span class="math notranslate nohighlight">\(V\)</span> we have</p>
+<div class="math notranslate nohighlight">
+\[ V  = \sqrt{2 g H}\]</div>
 </div>
-<div class="figure align-default" id="euler-six">
-<a class="reference internal image-reference" href="../../_images/euler-six.png"><img alt="../../_images/euler-six.png" src="../../_images/euler-six.png" style="width: 500px;" /></a>
+<div class="section" id="id1">
+<h2>Example: Application of Bernoulli’s Equation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Water issues vertically from a fountain.  The water velocity at the exit is 20 feet per second.  Assuming irrotational flow, how high will the fountain rise?</p>
+<div class="figure align-default" id="fountain-l5">
+<a class="reference internal image-reference" href="../../_images/fountain-L5.png"><img alt="../../_images/fountain-L5.png" src="../../_images/fountain-L5.png" style="width: 500px;" /></a>
 </div>
-<div class="figure align-default" id="bernoulli-one">
-<a class="reference internal image-reference" href="../../_images/bernoulli-one.png"><img alt="../../_images/bernoulli-one.png" src="../../_images/bernoulli-one.png" style="width: 500px;" /></a>
+<p><strong>Known</strong></p>
+<ul class="simple">
+<li><p>pressure at apogee of fountain stream (location 2)</p></li>
+<li><p>velocity at the exit (location 1)</p></li>
+<li><p>elevation of the exit (location 1)</p></li>
+</ul>
+<p><strong>Unknown</strong></p>
+<ul class="simple">
+<li><p>elevation of the apogee of the fountain stream (location 2)</p></li>
+</ul>
+<p><strong>Governing Principles</strong></p>
+<ul class="simple">
+<li><p>Bernoulli’s equation</p></li>
+<li><p>Assume inviscid, irrotational flow</p></li>
+</ul>
+<p><strong>Solution</strong></p>
+<div class="math notranslate nohighlight">
+\[\frac{p_1}{\rho g} + z_1 + \frac{V_1^2}{2g} = \frac{p_2}{\rho g} + z_2 + \frac{V_2^2}{2g}\]</div>
+<p>Pressure at apogee and jet are the same (assume jet has small cross section; it is atmospheric just after exiting) so they cancel.  We can choose to set the jet elevation to zero.  At the apogee, the fountain stream has zero velocity just before it begins its fall back to earth.</p>
+<p>So all that remains in the equation is</p>
+<div class="math notranslate nohighlight">
+\[ z_2  = \frac{V_1^2}{2g}\]</div>
+<p>If we desire a numerical result, we simply use our Jupyter Notebook</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jet_velocity</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1">#feet/second</span>
+<span class="n">gravity</span> <span class="o">=</span> <span class="mf">32.2</span> <span class="c1">#ft/second/second</span>
+<span class="n">jet_height</span> <span class="o">=</span> <span class="n">jet_velocity</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="mf">2.0</span><span class="o">*</span><span class="n">gravity</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fountain height is&quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">jet_height</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="s2">&quot; feet&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fountain height is 6.211  feet
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 </div>
