@@ -48,6 +48,12 @@ chapters:
   - file: lessons/lesson05/5exercise 
   
 - file: lessons/lesson06/lesson06
+  sections:
+  - file: lessons/lesson06/1bernoulli
+  - file: lessons/lesson06/2rotation
+  - file: lessons/lesson06/3flowrate
+  - file: lessons/lesson06/5exercise   
+  
 - file: lessons/lesson07/lesson07
 - file: lessons/lesson08/lesson08
 - file: lessons/lesson09/lesson09

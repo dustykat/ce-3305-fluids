@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fluid Rotation and Vorticity &#8212; Instructor Notes CE 3305</title>
+    <title>Volumetric and Mass Flow Rate &#8212; Instructor Notes CE 3305</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -42,6 +42,8 @@
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -51,8 +53,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Bernoulli Equation Applications" href="1bernoulli.html" />
-    <link rel="prev" title="Exercise Set 6 (Flow Kinematics; Acceleration etc.)" href="../lesson05/5exercise.html" />
+    <link rel="next" title="Exercise Set 7 (Bernoulli Applications)" href="5exercise.html" />
+    <link rel="prev" title="Rotation of a Fluid" href="2rotation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -254,37 +256,10 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson06.html">
    Fluid Rotation and Vorticity
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="1bernoulli.html">
-     Bernoulli Equation Applications
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2rotation.html">
-     Rotation of a Fluid
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3flowrate.html">
-     Volumetric and Mass Flow Rate
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="5exercise.html">
-     Exercise Set 7 (Bernoulli Applications)
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../lesson07/lesson07.html">
@@ -335,8 +310,8 @@
   <a class="reference internal" href="../lesson15/lesson15.html">
    Hydraulic Machines: Pumps
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -397,8 +372,8 @@
   <a class="reference internal" href="../lesson24/lesson24.html">
    BLT - Flow Around a Cylinder
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -451,7 +426,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/lessons/lesson06/lesson06.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/lessons/lesson06/3flowrate.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -471,7 +446,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flessons/lesson06/lesson06.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flessons/lesson06/3flowrate.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -492,7 +467,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/lessons/lesson06/lesson06.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/lessons/lesson06/3flowrate.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -515,18 +490,13 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lesson-outline">
-   Lesson Outline
+  <a class="reference internal nav-link" href="#example-flow-in-a-rectangular-conduit">
+   Example: Flow in a Rectangular Conduit
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#readings">
-   Readings
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#background">
-   Background
+  <a class="reference internal nav-link" href="#example-flow-in-a-triangular-conduit">
+   Example: Flow in a Triangular Conduit
   </a>
  </li>
 </ul>
@@ -540,34 +510,42 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="fluid-rotation-and-vorticity">
-<h1>Fluid Rotation and Vorticity<a class="headerlink" href="#fluid-rotation-and-vorticity" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="lesson-outline">
-<h2>Lesson Outline<a class="headerlink" href="#lesson-outline" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Applications</p></li>
-<li><p>Fluid Rotation</p></li>
-<li><p>Vorticity</p></li>
-<li><p>Volumetric Flow Rate</p></li>
-</ul>
-<blockquote>
-<div><p>Concepts of Flux (a prelude to Reynolds Transport Theorem)</p>
-</div></blockquote>
+  <div class="tex2jax_ignore mathjax_ignore section" id="volumetric-and-mass-flow-rate">
+<h1>Volumetric and Mass Flow Rate<a class="headerlink" href="#volumetric-and-mass-flow-rate" title="Permalink to this headline">¶</a></h1>
+<p>Consider a conduit with cross section area, <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>The volume of fluid that passes area <span class="math notranslate nohighlight">\(A\)</span> at location <span class="math notranslate nohighlight">\(x\)</span> in some time interval <span class="math notranslate nohighlight">\(\Delta t\)</span> is given by
+<span class="math notranslate nohighlight">\( A \Delta x = V\)</span></p>
+<div class="figure align-default" id="discharge">
+<a class="reference internal image-reference" href="../../_images/discharge.png"><img alt="../../_images/discharge.png" src="../../_images/discharge.png" style="width: 600px;" /></a>
 </div>
-<div class="section" id="readings">
-<h2>Readings<a class="headerlink" href="#readings" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 141-177</p></li>
-<li><p>DF Elger, BC Williams, Crowe, CT and JA Roberson, <em>Engineering Fluid Mechanics 10th edition</em>, John Wiley &amp; Sons, Inc., 2013.  Chapter 4. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-5.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-5.pdf</a></p></li>
-<li><p>Cleveland, T. G. (2014) <em>Fluid Mechanics Notes to Accompany CE 3305 at Jade-Holshule (TTU Study Abroad 2015-2019)</em>, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-2022-lesson006.modified.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-006.0.pdf</a></p></li>
-</ol>
+<p>The flow rate is <span class="math notranslate nohighlight">\(Q = \frac{V}{\Delta t} = \frac{\Delta x}{\Delta t}A\)</span>, the “velocity term” <span class="math notranslate nohighlight">\(u = \frac{\Delta x}{\Delta t}\)</span> is the “mean section velocity”.</p>
+<p>If the velocity varies over the cross section one can obtain the mean section velocity by integration; and in fact this is how streamflow is determined.</p>
+<div class="figure align-default" id="velocity-dist">
+<a class="reference internal image-reference" href="../../_images/velocity-dist.png"><img alt="../../_images/velocity-dist.png" src="../../_images/velocity-dist.png" style="width: 600px;" /></a>
 </div>
-<div class="section" id="background">
-<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
-<p>The last lesson introduced the Euler (and Bernoulli) equations which are fundamental in applied fluid mechanics.</p>
-<p>This lesson also examines applications using the equations as-is.</p>
+<p>If the orientation is not orthogonal the integrals are the result of the inner product of the velocity vector <span class="math notranslate nohighlight">\(\bar V\)</span> and the area vector <span class="math notranslate nohighlight">\(\bar {dA}\)</span></p>
+<div class="figure align-default" id="q-flux">
+<a class="reference internal image-reference" href="../../_images/q-flux.png"><img alt="../../_images/q-flux.png" src="../../_images/q-flux.png" style="width: 600px;" /></a>
 </div>
-<div class="toctree-wrapper compound">
+<p>The mass flow rate is the product of the volumetric rate and the fluid density</p>
+<div class="figure align-default" id="mass-flow">
+<a class="reference internal image-reference" href="../../_images/mass-flow.png"><img alt="../../_images/mass-flow.png" src="../../_images/mass-flow.png" style="width: 600px;" /></a>
+</div>
+<p>As with volume, the mass flows also are obtained by inner products as:</p>
+<div class="figure align-default" id="frux-integrals">
+<a class="reference internal image-reference" href="../../_images/frux-integrals.png"><img alt="../../_images/frux-integrals.png" src="../../_images/frux-integrals.png" style="width: 600px;" /></a>
+</div>
+<div class="section" id="example-flow-in-a-rectangular-conduit">
+<h2>Example: Flow in a Rectangular Conduit<a class="headerlink" href="#example-flow-in-a-rectangular-conduit" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="rect-channel">
+<a class="reference internal image-reference" href="../../_images/rect-channel.png"><img alt="../../_images/rect-channel.png" src="../../_images/rect-channel.png" style="width: 600px;" /></a>
+</div>
+</div>
+<div class="section" id="example-flow-in-a-triangular-conduit">
+<h2>Example: Flow in a Triangular Conduit<a class="headerlink" href="#example-flow-in-a-triangular-conduit" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="v-channel">
+<a class="reference internal image-reference" href="../../_images/v-channel.png"><img alt="../../_images/v-channel.png" src="../../_images/v-channel.png" style="width: 600px;" /></a>
+</div>
 </div>
 </div>
 
@@ -601,19 +579,19 @@
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="../lesson05/5exercise.html" title="previous page">
+        <a class="left-prev" href="2rotation.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Exercise Set 6 (Flow Kinematics; Acceleration etc.)</p>
+                <p class="prevnext-title">Rotation of a Fluid</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="1bernoulli.html" title="next page">
+        <a class="right-next" href="5exercise.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Bernoulli Equation Applications</p>
+                <p class="prevnext-title">Exercise Set 7 (Bernoulli Applications)</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
