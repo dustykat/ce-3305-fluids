@@ -42,8 +42,6 @@
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -53,8 +51,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Bernoulli &amp; CV Applications" href="../lesson08/lesson08.html" />
-    <link rel="prev" title="Bernoulli Applications" href="../lesson06/lesson06.html" />
+    <link rel="next" title="Control Volumes" href="1controlvolumes.html" />
+    <link rel="prev" title="Exercise Set 7 (Bernoulli Applications)" href="../lesson06/5exercise.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -108,22 +106,27 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../lesson00/1problemsolving.html">
-     Problem Solving and Documentation
+     Problem Solving and Documentation (pp 16-22)
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../lesson00/2computation.html">
-     Computational Considerations
+     Computational Hydraulics
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../lesson00/3whatisfluids.html">
-     What is Fluid Mechanics?
+     Fluid Mechanics - A definition (pp 2-6)
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../lesson00/4units.html">
-     Dimensions and Units
+     Dimensions and Units (pp. 6-12)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson00/5exercise.html">
+     Exercise Set 1
     </a>
    </li>
   </ul>
@@ -140,17 +143,17 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../lesson01/1properties.html">
-     Intensive and Extensive Properties (pp. XXX-XXX)
+     Intensive and Extensive Properties (pp. 28-35)
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../lesson01/2viscosity.html">
-     Viscosity
+     Viscosity (pp 36-45)
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../lesson01/3liquids.html">
-     Liquid Properties
+     Liquid Properties (pp. 46-52)
     </a>
    </li>
    <li class="toctree-l2">
@@ -158,11 +161,21 @@
      Vapor Pressure
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson01/5exercise.html">
+     Exercise Set 2
+    </a>
+   </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../lesson02/lesson02.html">
-   Fluid Statics and Pressure
+   Fluid Statics and Pressure (1/2)
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lesson03/lesson03.html">
+   Fluid Statics and Pressure (2/2)
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -171,50 +184,143 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../lesson02/2pressure.html">
-     Pressure (pp XXX-XXX)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lesson02/3forces.html">
+    <a class="reference internal" href="../lesson03/1forces.html">
      Pressure Force on Submerged Objects (pp XXX-XXX)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../lesson02/4references.html">
-     References
+    <a class="reference internal" href="../lesson03/2lineofaction.html">
+     Line of Action of Equivalent Point Force
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson03/3bouyancy.html">
+     Bouyancy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson03/4stability.html">
+     Stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson03/5exercise.html">
+     Exercise Set 4
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lesson04/lesson04.html">
+   Flow Kinematics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson04/1flowpattern.html">
+     Flow Patterns and Visualization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson04/5exercise.html">
+     Exercise Set 5 (Forces on Submerged Objects)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lesson05/lesson05.html">
+   Euler’s and Bernoulli’s Equation(s)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson05/2eulers.html">
+     Euler’s Equation and the Bernoulli Equation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson05/5exercise.html">
+     Exercise Set 6 (Flow Kinematics; Acceleration etc.)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lesson06/lesson06.html">
+   Fluid Rotation and Vorticity
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson06/1bernoulli.html">
+     Bernoulli Equation Applications
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson06/2rotation.html">
+     Rotation of a Fluid
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson06/3flowrate.html">
+     Volumetric and Mass Flow Rate
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson06/5exercise.html">
+     Exercise Set 7 (Bernoulli Applications)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   Control Volume Analysis - Continunity
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="1controlvolumes.html">
+     Control Volumes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2conservationmass.html">
+     CV Relationships for Mass Conservation (Continunity)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3examples.html">
+     Example Applications of Continunity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5exercise.html">
+     Exercise Set 8 (Conservation of Mass)
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../lesson03/lesson03.html">
-   Pressure Forces, Bouyancy, Stability
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lesson04/lesson04.html">
-   4. title
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lesson05/lesson05.html">
-   Euler and Bernoulli Equations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lesson06/lesson06.html">
-   Bernoulli Applications
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Control Volume Analysis - Continunity
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../lesson08/lesson08.html">
-   Bernoulli &amp; CV Applications
+   Conservation of Linear Momentum
   </a>
  </li>
  <li class="toctree-l1">
@@ -256,8 +362,8 @@
   <a class="reference internal" href="../lesson15/lesson15.html">
    Hydraulic Machines: Pumps
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -318,8 +424,8 @@
   <a class="reference internal" href="../lesson24/lesson24.html">
    BLT - Flow Around a Cylinder
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -439,60 +545,18 @@
   <a class="reference internal nav-link" href="#lesson-outline">
    Lesson Outline
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#readings">
+   Readings
+  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#background">
      Background
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#control-volumes">
-     Control Volumes
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#conservation-of-mass-continunity">
-       Conservation of mass (continunity)
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#conservation-of-linear-momentum">
-       Conservation of linear momentum
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#conservation-of-angular-momentum">
-       Conservation of angular momentum
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#conservation-of-energy">
-       Conservation of energy
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#entropy-principle">
-       Entropy principle
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cv-relationships-for-mass-conservation-continunity">
-     CV Relationships for Mass Conservation (Continunity)
-    </a>
-   </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#example-1-appliocation-of-continunity-to-a-holy-grail">
-   Example 1: Appliocation of Continunity to a Holy Grail
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#readings">
-   Readings
-  </a>
  </li>
 </ul>
 
@@ -512,154 +576,22 @@
 <ul class="simple">
 <li><p>Control Volumes</p></li>
 <li><p>Concepts of Flux (a prelude to Reynolds Transport Theorem)</p></li>
+<li><p>Conservation of Mass (aka Continunity!)</p></li>
 </ul>
-<div class="section" id="background">
-<h3>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h3>
-<p>This lesson introduces the concept of control volumes for analysis of fluids problems.</p>
-</div>
-<div class="section" id="control-volumes">
-<h3>Control Volumes<a class="headerlink" href="#control-volumes" title="Permalink to this headline">¶</a></h3>
-<p>A control volume (CV) is the equivalent of a free-body diagram in other fields of engineering mechanics (statics, dynamics).</p>
-<p>A control volume is some defined area in space, as depicted by the cube below.</p>
-<div class="figure align-default" id="control-volume">
-<a class="reference internal image-reference" href="../../_images/control-volume.png"><img alt="../../_images/control-volume.png" src="../../_images/control-volume.png" style="width: 600px;" /></a>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The control volume is the basis of reynold’s transport theorem that is employed to allow analysis from a Eulerian reference frame rather than tracking individual particles.  The goal is to describe fundamental laws of mechanics in integral form</p>
-</div>
-<p>The bounding surface is called the <em>control surface</em> (CS)</p>
-<div class="figure align-default" id="cs-areas">
-<a class="reference internal image-reference" href="../../_images/cs-areas.png"><img alt="../../_images/cs-areas.png" src="../../_images/cs-areas.png" style="width: 600px;" /></a>
-</div>
-<p>The outward pointing area vectors for each face are shown above; these play an important role in application of CV analysis.</p>
-<p>The principle is to express various conservation principles in integral form including:</p>
-<div class="section" id="conservation-of-mass-continunity">
-<h4>Conservation of mass (continunity)<a class="headerlink" href="#conservation-of-mass-continunity" title="Permalink to this headline">¶</a></h4>
-<p><span class="math notranslate nohighlight">\(\frac{dm}{dt}|_{sys} = 0\)</span></p>
-</div>
-<div class="section" id="conservation-of-linear-momentum">
-<h4>Conservation of linear momentum<a class="headerlink" href="#conservation-of-linear-momentum" title="Permalink to this headline">¶</a></h4>
-<p><span class="math notranslate nohighlight">\(m\frac{d\bar V}{dt}|_{sys} = \sum \bar F\)</span></p>
-</div>
-<div class="section" id="conservation-of-angular-momentum">
-<h4>Conservation of angular momentum<a class="headerlink" href="#conservation-of-angular-momentum" title="Permalink to this headline">¶</a></h4>
-<p><span class="math notranslate nohighlight">\(m\frac{d\bar \omega}{dt}|_{sys} = \sum (\bar r \times \bar F)\)</span></p>
-</div>
-<div class="section" id="conservation-of-energy">
-<h4>Conservation of energy<a class="headerlink" href="#conservation-of-energy" title="Permalink to this headline">¶</a></h4>
-<p><span class="math notranslate nohighlight">\(\frac{E}{dt}|_{sys} = \frac{dQ}{dt} - \frac{dW}{dt}\)</span></p>
-<p>where <span class="math notranslate nohighlight">\(Q\)</span> is heat flow into the system and <span class="math notranslate nohighlight">\(W\)</span> is work done by the system.</p>
-</div>
-<div class="section" id="entropy-principle">
-<h4>Entropy principle<a class="headerlink" href="#entropy-principle" title="Permalink to this headline">¶</a></h4>
-<p><span class="math notranslate nohighlight">\(\frac{S}{dt}|_{sys} &gt;= \frac{1}{T}\frac{dQ}{dt}\)</span></p>
-<p>where <span class="math notranslate nohighlight">\(Q\)</span> is heat flow into the system, S is entropy, and T is the absolute temperature of the system.</p>
-</div>
-<p>The first four conservation principles are the most useful in fluid mechanics problems.</p>
-</div>
-<div class="section" id="cv-relationships-for-mass-conservation-continunity">
-<h3>CV Relationships for Mass Conservation (Continunity)<a class="headerlink" href="#cv-relationships-for-mass-conservation-continunity" title="Permalink to this headline">¶</a></h3>
-<p>To use CV analysis the system equations are converted to volume variation relations.</p>
-<p>Recall that extensive properties are defined throughout an entire mass of a fluid (a system) whereas intensive properties are an amount of property per unit mass.</p>
-<p>Starting with mass itself, the extensive property is mass <span class="math notranslate nohighlight">\(m\)</span></p>
-<p>The mass per unit mass is unity; <span class="math notranslate nohighlight">\(\frac{m}{m}=1\)</span></p>
-<p>The mass per unit volume is density; <span class="math notranslate nohighlight">\(\frac{m}{V}=\rho\)</span></p>
-<!--
-The fundamental relationship of the system is:
-
-$B_{sys} = \int \beta dm = \int \beta \rho dV$ -->
-<p>In the case of mass we have</p>
-<div class="figure align-default" id="rtt-mass">
-<a class="reference internal image-reference" href="../../_images/rtt-mass.png"><img alt="../../_images/rtt-mass.png" src="../../_images/rtt-mass.png" style="width: 600px;" /></a>
-</div>
-<p>Now consider a system (gold cube in the figure at time <span class="math notranslate nohighlight">\(t=t_0\)</span></p>
-<div class="figure align-default" id="rtt-mass-t0">
-<a class="reference internal image-reference" href="../../_images/rtt-mass-t0.png"><img alt="../../_images/rtt-mass-t0.png" src="../../_images/rtt-mass-t0.png" style="width: 600px;" /></a>
-</div>
-<p>A short time (<span class="math notranslate nohighlight">\(t+\Delta t\)</span>) later the system has moved, some parts have left the CV.</p>
-<div class="figure align-default" id="rtt-mass-tdt">
-<a class="reference internal image-reference" href="../../_images/rtt-mass-tdt.png"><img alt="../../_images/rtt-mass-tdt.png" src="../../_images/rtt-mass-tdt.png" style="width: 600px;" /></a>
-</div>
-<p>Examination of the three zones and the system total mass gives:</p>
-<div class="figure align-default" id="rtt-mass-tdt-1">
-<a class="reference internal image-reference" href="../../_images/rtt-mass-tdt-1.png"><img alt="../../_images/rtt-mass-tdt-1.png" src="../../_images/rtt-mass-tdt-1.png" style="width: 600px;" /></a>
-</div>
-<p>Inserting these into the system to volume expression:</p>
-<div class="figure align-default" id="rtt-mass-tdt-2">
-<a class="reference internal image-reference" href="../../_images/rtt-mass-tdt-2.png"><img alt="../../_images/rtt-mass-tdt-2.png" src="../../_images/rtt-mass-tdt-2.png" style="width: 600px;" /></a>
-</div>
-<p>Now using the divergence theroem to cope with the terms in Parts I and III of space in the drawing</p>
-<div class="figure align-default" id="divergence">
-<a class="reference internal image-reference" href="../../_images/divergence.png"><img alt="../../_images/divergence.png" src="../../_images/divergence.png" style="width: 600px;" /></a>
-</div>
-<p>The application of Gauss’ divergence theorem produces the “flux integrals”.</p>
-<div class="figure align-default" id="divergence-2">
-<a class="reference internal image-reference" href="../../_images/divergence-2.png"><img alt="../../_images/divergence-2.png" src="../../_images/divergence-2.png" style="width: 600px;" /></a>
-</div>
-<p>Now examine the relationship between velocity and area in the flux integrals</p>
-<div class="figure align-default" id="vdotda">
-<a class="reference internal image-reference" href="../../_images/vdotDA.png"><img alt="../../_images/vdotDA.png" src="../../_images/vdotDA.png" style="width: 600px;" /></a>
-</div>
-<p>Collect the terms together into the Reynolds Transport Expression for Mass</p>
-<div class="figure align-default" id="rtt-massbalance">
-<a class="reference internal image-reference" href="../../_images/RTT-MassBalance.png"><img alt="../../_images/RTT-MassBalance.png" src="../../_images/RTT-MassBalance.png" style="width: 600px;" /></a>
-</div>
-<p>To summarize:</p>
-<div class="figure align-default" id="rtt-summary">
-<a class="reference internal image-reference" href="../../_images/rtt-summary.png"><img alt="../../_images/rtt-summary.png" src="../../_images/rtt-summary.png" style="width: 600px;" /></a>
-</div>
-</div>
-</div>
-<div class="section" id="example-1-appliocation-of-continunity-to-a-holy-grail">
-<h2>Example 1: Appliocation of Continunity to a Holy Grail<a class="headerlink" href="#example-1-appliocation-of-continunity-to-a-holy-grail" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-default" id="example-1">
-<a class="reference internal image-reference" href="../../_images/example-1.png"><img alt="../../_images/example-1.png" src="../../_images/example-1.png" style="width: 600px;" /></a>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># problem statement - above Yay!</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># sketch</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># known</span>
-<span class="n">V_in</span> <span class="o">=</span> <span class="mi">7</span> <span class="c1"># m/s</span>
-<span class="n">A_in</span> <span class="o">=</span> <span class="mf">0.0025</span> <span class="c1"># m^2</span>
-<span class="n">Q_out</span> <span class="o">=</span> <span class="mf">0.003</span> <span class="c1">#m^3/s</span>
-<span class="c1"># rho = 1000 # kg/m3</span>
-<span class="c1"># grabity = 9.8 # m/s/s</span>
-
-<span class="c1"># change in storage</span>
-<span class="n">dSdt</span> <span class="o">=</span> <span class="n">V_in</span><span class="o">*</span><span class="n">A_in</span> <span class="o">-</span> <span class="n">Q_out</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;storage accumulation is .... wait for it ...&#39;</span><span class="p">,</span><span class="n">dSdt</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>storage accumulation is .... wait for it ... 0.014500000000000002
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 <div class="section" id="readings">
 <h2>Readings<a class="headerlink" href="#readings" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
-<li><p>CE-3305-2022-1 Syllabus. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html">http://54.243.252.9/ce-3305-webroot/0-Syllabus/ce-3305-2022-1-syllabus.html</a></p></li>
 <li><p>Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 177-</p></li>
-<li><p>DF Elger, BC Williams, Crowe, CT and JA Roberson, <em>Engineering Fluid Mechanics 10th edition</em>, John Wiley &amp; Sons, Inc., 2013.  (placeholder file to get links working). <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-8.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-8.pdf</a></p></li>
+<li><p>DF Elger, BC Williams, Crowe, CT and JA Roberson, <em>Engineering Fluid Mechanics 10th edition</em>, John Wiley &amp; Sons, Inc., 2013.  Chapter 5. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-8.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-8.pdf</a></p></li>
 <li><p>Cleveland, T. G. (2014) <em>Fluid Mechanics Notes to Accompany CE 3305 at Jade-Holshule (TTU Study Abroad 2015-2019)</em>, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-7.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture-7.pdf</a></p></li>
 </ol>
+<div class="section" id="background">
+<h3>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h3>
+<p>This lesson introduces the concept of control volumes for analysis of fluids problems.</p>
+</div>
+</div>
+<div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -693,19 +625,19 @@ $B_{sys} = \int \beta dm = \int \beta \rho dV$ -->
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="../lesson06/lesson06.html" title="previous page">
+        <a class="left-prev" href="../lesson06/5exercise.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Bernoulli Applications</p>
+                <p class="prevnext-title">Exercise Set 7 (Bernoulli Applications)</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="../lesson08/lesson08.html" title="next page">
+        <a class="right-next" href="1controlvolumes.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Bernoulli &amp; CV Applications</p>
+                <p class="prevnext-title">Control Volumes</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

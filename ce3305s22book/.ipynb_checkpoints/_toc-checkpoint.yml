@@ -55,8 +55,19 @@ chapters:
   - file: lessons/lesson06/5exercise   
   
 - file: lessons/lesson07/lesson07
+  sections:
+  - file: lessons/lesson07/1controlvolumes
+  - file: lessons/lesson07/2conservationmass
+  - file: lessons/lesson07/3examples
+  - file: lessons/lesson07/5exercise  
+  
 - file: lessons/lesson08/lesson08
-- file: lessons/lesson09/lesson09
+  sections:
+  - file: lessons/lesson08/1linearmomentum
+  - file: lessons/lesson08/2examples
+  - file: lessons/lesson08/5exercise 
+
+# - file: lessons/lesson09/lesson09
 #
 - file: lessons/lesson10/lesson10
 - file: lessons/lesson11/lesson11
