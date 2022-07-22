@@ -72,7 +72,7 @@ chapters:
 - file: lessons/lesson10/lesson10
 - file: lessons/lesson11/lesson11
 - file: lessons/lesson12/lesson12
-- file: lessons/lesson12.1/lesson12.1
+# - file: lessons/lesson12.1/lesson12.1
 - file: lessons/lesson13/lesson13 #ClosedConduitFlow
 - file: lessons/lesson14/lesson14 #ClosedConduitHeadLosses
 #
