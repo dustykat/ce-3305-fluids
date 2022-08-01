@@ -40,6 +40,7 @@
 # 
 # Rearrangement to isolate $\Delta x$ produces an explicit update equation that can be evaluated to find the different values of $\Delta x$ associated with different flow depths. The plot of the accumulated spatial changes versus the sum of the flow depth and bottom elevation is the water surface profile.
 # $$ \Delta x = \frac{(y_{i+1}+\frac{V_{i+1}^2}{2g} )- (y_{i}+\frac{V_{i}^2}{2g} )}{S_0-\bar S_f} $$
+# 
 # The distance between two sections with known discharges is computed using the
 # equation, all the terms on the left hand side are known values. The mean energy
 # gradient ($\bar S_f$ ) is computed from the mean of the velocity, depth, area, and hydraulic radius for the two sections.
