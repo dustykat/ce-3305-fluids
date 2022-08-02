@@ -8,8 +8,8 @@
 # Figure XX is a schematic of wind blowing on a traffic barrier drum (A 55-gallon drum painted orange). Estimate the wind speed needed to tip the drum over. The weight of the drum is 48 lbs, the diameter is 22.5 inches, and the height is 34.5 inches.
 # 
 # <figure align="center">
-# <img src="./trafficdrum.png" width="400" > 
-# <!--<img src="http://54.243.252.9/ce-3305-webroot/5-Exams/EX4/trafficdrum.png" width="400">-->
+# <!--<img src="./trafficdrum.png" width="400" > -->
+# <img src="http://54.243.252.9/ce-3305-webroot/ce3305s22book/lessons/lesson24/trafficdrum.png" width="400"> 
 # <figcaption>Figure XX. Traffic Barrier Drum </figcaption>
 # </figure>
 # 
@@ -21,16 +21,16 @@
 # The first sketch is really a side view of the original conceptualization above.
 # 
 # <figure align="center">
-# <img src="./drumsketch.png" width="400" > 
-# <!--<img src="http://54.243.252.9/ce-3305-webroot/5-Exams/EX4/trafficdrum.png" width="400">-->
+# <!--<img src="./drumsketch.png" width="400" > -->
+# <img src="http://54.243.252.9/ce-3305-webroot/ce3305s22book/lessons/lesson24/drumsketch.png" width="400">
 # <figcaption>Figure XX. Schematic of Situation </figcaption>
 # </figure>
 # 
 # The next sketch is key, when the drum starts to tip over there is a moment of a single point of contact which is important to the analysis/
 # 
 # <figure align="center">
-# <img src="./tippingdrum.png" width="400" > 
-# <!--<img src="http://54.243.252.9/ce-3305-webroot/5-Exams/EX4/trafficdrum.png" width="400">-->
+# <!--<img src="./tippingdrum.png" width="400" > -->
+#     <img src="http://54.243.252.9/ce-3305-webroot/ce3305s22book/lessons/lesson24/tippingdrum.png" width="400">
 # <figcaption>Figure XX. Drum at Moment of Tipping </figcaption>
 # </figure>
 # 
@@ -74,9 +74,8 @@
 # Next we will need a way to estimate $C_D$ values and using the chart below should suffice.
 # 
 # <figure align="center">
-# <img src="./cddiagram.png" width="400" > 
-# <!--<img src="http://54.243.252.9/ce-3305-webroot/5-Exams/EX4/trafficdrum.png" width="400">-->
-# <figcaption>Figure XX. $C_D$ Chart </figcaption>
+# <!--<img src="./cddiagram.png" width="400" > -->
+# <img src="http://54.243.252.9/ce-3305-webroot/ce3305s22book/lessons/lesson24/cddiagram.png" width="400"> <figcaption>Figure XX. $C_D$ Chart </figcaption>
 # </figure>
 # 
 # We will simply guess a value for $C_D$ and solve for velocity, then check the Reynolds number and change the coefficient accordingly.
@@ -103,8 +102,8 @@ air_viscosity = 1.81e-05 #m^2/s
 ######### trial-error-correction ############
 target = mass*gravity*(diameter/height)
 area = diameter*height
-cd = 0.38
-vel = 34.9
+cd = .28
+vel = 40
 print("Computed Drag Force = ",drag(cd,area,rho,vel),"Target Force = ",target)
 print("Computed Reynolds Number = ",reynolds(vel,diameter,air_viscosity,rho))
 

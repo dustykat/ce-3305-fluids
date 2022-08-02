@@ -623,8 +623,9 @@ A prismatic channel is a channel of uniform cross sectional geometry with consta
 <div class="math notranslate nohighlight">
 \[ \frac{\frac{V_{i+1}^2}{2g}-\frac{V_i^2}{2g}}{\Delta x} + \frac{h_{i+1}-h_i}{\Delta x} = S_0 - \bar S_f\]</div>
 <p>where <span class="math notranslate nohighlight">\(\bar S\)</span> is the average slope of the energy grade line between two sections (along a reach of length <span class="math notranslate nohighlight">\(\Delta x\)</span>, the unknown value).</p>
-<p>Rearrangement to isolate <span class="math notranslate nohighlight">\(\Delta x\)</span> produces an explicit update equation that can be evaluated to find the different values of <span class="math notranslate nohighlight">\(\Delta x\)</span> associated with different flow depths. The plot of the accumulated spatial changes versus the sum of the flow depth and bottom elevation is the water surface profile.
-$<span class="math notranslate nohighlight">\( \Delta x = \frac{(y_{i+1}+\frac{V_{i+1}^2}{2g} )- (y_{i}+\frac{V_{i}^2}{2g} )}{S_0-\bar S_f} \)</span>$</p>
+<p>Rearrangement to isolate <span class="math notranslate nohighlight">\(\Delta x\)</span> produces an explicit update equation that can be evaluated to find the different values of <span class="math notranslate nohighlight">\(\Delta x\)</span> associated with different flow depths. The plot of the accumulated spatial changes versus the sum of the flow depth and bottom elevation is the water surface profile.</p>
+<div class="math notranslate nohighlight">
+\[\Delta x = \frac{(y_{i+1}+\frac{V_{i+1}^2}{2g} )- (y_{i}+\frac{V_{i}^2}{2g} )}{S_0-\bar S_f}\]</div>
 <p>The distance between two sections with known discharges is computed using the
 equation, all the terms on the left hand side are known values. The mean energy
 gradient (<span class="math notranslate nohighlight">\(\bar S_f\)</span> ) is computed from the mean of the velocity, depth, area, and hydraulic radius for the two sections.</p>
