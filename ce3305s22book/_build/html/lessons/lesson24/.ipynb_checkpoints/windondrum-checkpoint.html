@@ -1,0 +1,665 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application of Drag &#8212; Instructor Notes CE 3305</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="BLT - Flow Around a Cylinder" href="lesson24.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/I5-fluidos.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Instructor Notes CE 3305</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Instructor Notes to Accompany Engineering Fluid Mechanics CE 3305 at TTU
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lesson00/lesson00.html">
+   Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson00/1problemsolving.html">
+     Problem Solving and Documentation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson00/2computation.html">
+     Computational Considerations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson00/3whatisfluids.html">
+     What is Fluid Mechanics?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson00/4units.html">
+     Dimensions and Units
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lesson01/lesson01.html">
+   Fluid Properties
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson01/1properties.html">
+     Intensive and Extensive Properties (pp. XXX-XXX)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson01/2viscosity.html">
+     Viscosity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson01/3liquids.html">
+     Liquid Properties
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson01/4vaporpressure.html">
+     Vapor Pressure
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lesson02/lesson02.html">
+   Fluid Statics and Pressure
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson02/2pressure.html">
+     Pressure (pp XXX-XXX)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson02/3forces.html">
+     Pressure Force on Submerged Objects (pp XXX-XXX)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson02/4references.html">
+     References
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson03/lesson03.html">
+   Pressure Forces, Bouyancy, Stability
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson04/lesson04.html">
+   4. title
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson05/lesson05.html">
+   Euler and Bernoulli Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson06/lesson06.html">
+   Bernoulli Applications
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson07/lesson07.html">
+   Control Volume Analysis - Continunity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson08/lesson08.html">
+   Bernoulli &amp; CV Applications
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson09/lesson09.html">
+   Conservation of Linear Momentum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson10/lesson10.html">
+   Conservation of Angular Momentum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson11/lesson11.html">
+   Conservation of Energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson12/lesson12.html">
+   Dimensional Analysis and Similitude
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson12.1/lesson12.1.html">
+   12.1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson13/lesson13.html">
+   Closed Conduit Flow
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson14/lesson14.html">
+   Closed Conduit Head Loss Models
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lesson15/lesson15.html">
+   Hydraulic Machines: Pumps
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson15/pumpoppoint.html">
+     Example: Pump Operating Point
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lesson15/affinitylaws.html">
+     Pump Affinity Laws
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson16/lesson16.html">
+   Computational Hydraulics: Pipe Networks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson17/lesson17.html">
+   Title
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson18/lesson18.html">
+   Open Conduit Flow
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson19/lesson19.html">
+   Open Conduits (Rapidly Varying Flow)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson20/lesson20.html">
+   Open Conduits: Gradually Varied Flow
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson21/lesson21.html">
+   Computational Hydraulics : Water Surface Profiles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson22/lesson22.html">
+   Boundary Layers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lesson23/lesson23.html">
+   BLT - Flow Over a Flat Plate
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="lesson24.html">
+   BLT - Flow Around a Cylinder
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Application of Drag
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/lessons/lesson24/windondrum.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flessons/lesson24/windondrum.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/lessons/lesson24/windondrum.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-bang-the-drum-slowly">
+   Example: Bang the Drum Slowly
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-1-problem-statement">
+     Step 1: Problem Statement
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-2-sketch-s">
+     Step 2: Sketch(s)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-3-list-knowns-and-unknowns">
+     Step 3: List knowns and unknowns
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-4-governing-principles">
+     Step 4: Governing Principles
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-5-analysis">
+     Step 5: Analysis
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="application-of-drag">
+<h1>Application of Drag<a class="headerlink" href="#application-of-drag" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="example-bang-the-drum-slowly">
+<h2>Example: Bang the Drum Slowly<a class="headerlink" href="#example-bang-the-drum-slowly" title="Permalink to this headline">¶</a></h2>
+<p>Figure XX is a schematic of wind blowing on a traffic barrier drum (A 55-gallon drum painted orange). Estimate the wind speed needed to tip the drum over. The weight of the drum is 48 lbs, the diameter is 22.5 inches, and the height is 34.5 inches.</p>
+<figure align="center">
+<img src="./trafficdrum.png" width="400" > 
+<!--<img src="http://54.243.252.9/ce-3305-webroot/5-Exams/EX4/trafficdrum.png" width="400">-->
+<figcaption>Figure XX. Traffic Barrier Drum </figcaption>
+</figure>
+<div class="section" id="step-1-problem-statement">
+<h3>Step 1: Problem Statement<a class="headerlink" href="#step-1-problem-statement" title="Permalink to this headline">¶</a></h3>
+<p>The statement above is good enough, to suppliment we will notice this is a fluids problem as well as a static problem.</p>
+</div>
+<div class="section" id="step-2-sketch-s">
+<h3>Step 2: Sketch(s)<a class="headerlink" href="#step-2-sketch-s" title="Permalink to this headline">¶</a></h3>
+<p>The first sketch is really a side view of the original conceptualization above.</p>
+<figure align="center">
+<img src="./drumsketch.png" width="400" > 
+<!--<img src="http://54.243.252.9/ce-3305-webroot/5-Exams/EX4/trafficdrum.png" width="400">-->
+<figcaption>Figure XX. Schematic of Situation </figcaption>
+</figure>
+<p>The next sketch is key, when the drum starts to tip over there is a moment of a single point of contact which is important to the analysis/</p>
+<figure align="center">
+<img src="./tippingdrum.png" width="400" > 
+<!--<img src="http://54.243.252.9/ce-3305-webroot/5-Exams/EX4/trafficdrum.png" width="400">-->
+<figcaption>Figure XX. Drum at Moment of Tipping </figcaption>
+</figure>
+</div>
+<div class="section" id="step-3-list-knowns-and-unknowns">
+<h3>Step 3: List knowns and unknowns<a class="headerlink" href="#step-3-list-knowns-and-unknowns" title="Permalink to this headline">¶</a></h3>
+<p>Known:</p>
+<ul class="simple">
+<li><p>Mass of drum</p></li>
+<li><p>Dimensions of drum</p></li>
+<li><p>Fluid (air)</p></li>
+<li><p>Fluid properties (table look-up)</p></li>
+</ul>
+<p>Unknown:</p>
+<ul class="simple">
+<li><p>Wind speed to tip over drum as per drawing above</p></li>
+</ul>
+</div>
+<div class="section" id="step-4-governing-principles">
+<h3>Step 4: Governing Principles<a class="headerlink" href="#step-4-governing-principles" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Drag force formula: <span class="math notranslate nohighlight">\(F_D = C_D A \frac{\rho V^2}{2}\)</span></p></li>
+<li><p>Static Force Balance: <span class="math notranslate nohighlight">\(\sum F = 0\)</span></p></li>
+<li><p>Static Moment Balance: <span class="math notranslate nohighlight">\(\sum M_A = 0\)</span></p></li>
+</ul>
+</div>
+<div class="section" id="step-5-analysis">
+<h3>Step 5: Analysis<a class="headerlink" href="#step-5-analysis" title="Permalink to this headline">¶</a></h3>
+<p>From the force balance we conclude if the drum does not slide then at the point of contact the drag force forms the couple shown.  The moment balance at the tipping point (see the pun there!) is</p>
+<p><span class="math notranslate nohighlight">\(\sum M_A = 0 = W(\frac{D}{2}) - F_D (\frac{H}{2})\)</span></p>
+<p>Do some of that algebra to obtain<br></p>
+<p><span class="math notranslate nohighlight">\(W(\frac{D}{2}) = F_D (\frac{H}{2})\)</span></p>
+<p>substutite in the definition of weight<br></p>
+<p><span class="math notranslate nohighlight">\(mg(\frac{D}{2}) = F_D (\frac{H}{2})\)</span></p>
+<p>more of that algebra and substitute in the drag force formula <br></p>
+<p><span class="math notranslate nohighlight">\(mg(\frac{D}{H}) = C_D A \frac{\rho V^2}{2} \)</span></p>
+<p>Next we will need a way to estimate <span class="math notranslate nohighlight">\(C_D\)</span> values and using the chart below should suffice.</p>
+<figure align="center">
+<img src="./cddiagram.png" width="400" > 
+<!--<img src="http://54.243.252.9/ce-3305-webroot/5-Exams/EX4/trafficdrum.png" width="400">-->
+<figcaption>Figure XX. $C_D$ Chart </figcaption>
+</figure>
+<p>We will simply guess a value for <span class="math notranslate nohighlight">\(C_D\)</span> and solve for velocity, then check the Reynolds number and change the coefficient accordingly.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">drag</span><span class="p">(</span><span class="n">cd</span><span class="p">,</span><span class="n">area</span><span class="p">,</span><span class="n">rho</span><span class="p">,</span><span class="n">vel</span><span class="p">):</span>
+    <span class="n">drag</span> <span class="o">=</span> <span class="n">cd</span><span class="o">*</span><span class="n">area</span><span class="o">*</span><span class="n">rho</span><span class="o">*</span><span class="n">vel</span><span class="o">*</span><span class="n">vel</span><span class="o">*</span><span class="mf">0.5</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">drag</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">reynolds</span><span class="p">(</span><span class="n">velocity</span><span class="p">,</span><span class="n">diameter</span><span class="p">,</span><span class="n">viscosity</span><span class="p">,</span><span class="n">rho</span><span class="p">):</span>
+    <span class="n">reynolds</span> <span class="o">=</span> <span class="n">rho</span><span class="o">*</span><span class="n">velocity</span><span class="o">*</span><span class="n">diameter</span><span class="o">/</span><span class="n">viscosity</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">reynolds</span><span class="p">)</span>
+<span class="c1">######## problem data ###########</span>
+<span class="n">weightus</span> <span class="o">=</span> <span class="mi">48</span> <span class="c1"># lbs, given</span>
+<span class="n">weightsi</span> <span class="o">=</span> <span class="n">weightus</span><span class="o">/</span><span class="mf">2.2</span> <span class="c1"># kilos</span>
+<span class="n">gravity</span>  <span class="o">=</span> <span class="mf">9.8</span> <span class="c1"># ft/sec*sec</span>
+<span class="n">mass</span> <span class="o">=</span> <span class="n">weightsi</span>
+<span class="n">height</span> <span class="o">=</span> <span class="p">(</span><span class="mf">34.5</span><span class="o">/</span><span class="mi">12</span><span class="p">)</span><span class="o">/</span><span class="mf">3.28</span> <span class="c1"># meters</span>
+<span class="n">diameter</span> <span class="o">=</span> <span class="p">(</span><span class="mf">22.5</span><span class="o">/</span><span class="mi">12</span><span class="p">)</span><span class="o">/</span><span class="mf">3.28</span> <span class="c1"># meters</span>
+<span class="n">rho</span> <span class="o">=</span> <span class="mf">1.2</span> <span class="c1">#kg/cu.m.</span>
+<span class="n">air_viscosity</span> <span class="o">=</span> <span class="mf">1.81e-05</span> <span class="c1">#m^2/s</span>
+<span class="c1">######### trial-error-correction ############</span>
+<span class="n">target</span> <span class="o">=</span> <span class="n">mass</span><span class="o">*</span><span class="n">gravity</span><span class="o">*</span><span class="p">(</span><span class="n">diameter</span><span class="o">/</span><span class="n">height</span><span class="p">)</span>
+<span class="n">area</span> <span class="o">=</span> <span class="n">diameter</span><span class="o">*</span><span class="n">height</span>
+<span class="n">cd</span> <span class="o">=</span> <span class="mf">0.38</span>
+<span class="n">vel</span> <span class="o">=</span> <span class="mf">34.9</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Computed Drag Force = &quot;</span><span class="p">,</span><span class="n">drag</span><span class="p">(</span><span class="n">cd</span><span class="p">,</span><span class="n">area</span><span class="p">,</span><span class="n">rho</span><span class="p">,</span><span class="n">vel</span><span class="p">),</span><span class="s2">&quot;Target Force = &quot;</span><span class="p">,</span><span class="n">target</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Computed Reynolds Number = &quot;</span><span class="p">,</span><span class="n">reynolds</span><span class="p">(</span><span class="n">vel</span><span class="p">,</span><span class="n">diameter</span><span class="p">,</span><span class="n">air_viscosity</span><span class="p">,</span><span class="n">rho</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Computed Drag Force =  139.14805320726128 Target Force =  139.44664031620553
+Computed Reynolds Number =  1322682.2530656245
+</pre></div>
+</div>
+</div>
+</div>
+<p>Our value above after a few manual iterations and updates is <span class="math notranslate nohighlight">\(Re_D = 1.3 \times 10^6\)</span> which produces a drag coefficient of <span class="math notranslate nohighlight">\(C_D = 0.38\)</span></p>
+<p>If we had a functional form for <span class="math notranslate nohighlight">\(C_D\)</span> we could simply incorporate it directly into the calculations above and use a quasi-Newton’s method to search for the velocity.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">velmph</span> <span class="o">=</span> <span class="n">vel</span><span class="o">*</span><span class="mf">3.28</span><span class="o">*</span><span class="mi">3600</span><span class="o">/</span><span class="mi">5280</span> <span class="c1"># report in miles/hour</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Estimated Velocity to Tip Barrel &quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">velmph</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="s2">&quot; mph&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Estimated Velocity to Tip Barrel  78.049  mph
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons/lesson24"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="lesson24.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">BLT - Flow Around a Cylinder</p>
+            </div>
+        </a>
+    </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Theodore G, Cleveland<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
