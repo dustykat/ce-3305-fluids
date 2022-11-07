@@ -102,8 +102,8 @@ air_viscosity = 1.81e-05 #m^2/s
 ######### trial-error-correction ############
 target = mass*gravity*(diameter/height)
 area = diameter*height
-cd = .38
-vel = 34.937
+cd = 0.38
+vel = 34.9
 print("Computed Drag Force = ",drag(cd,area,rho,vel),"Target Force = ",target)
 print("Computed Reynolds Number = ",reynolds(vel,diameter,air_viscosity,rho))
 
