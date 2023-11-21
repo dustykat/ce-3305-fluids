@@ -3,11 +3,7 @@
 
 # # Introduction
 # 
-# :::{admonition} Class Website
-# [Class Website](http://54.243.252.9/ce-3305-webroot/)
-# :::
-# 
-# ## [Class Website](http://54.243.252.9/ce-3305-webroot/)
+# ## [Website Link](http://54.243.252.9/ce-3305-webroot/)
 # 
 # :::{admonition} Hints, Notes, and Warnings
 # Throughout this book, sections like this one appear containing either "Notes", or some kind of "Hint".   
