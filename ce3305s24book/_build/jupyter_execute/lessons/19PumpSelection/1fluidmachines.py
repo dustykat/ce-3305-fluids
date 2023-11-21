@@ -3,8 +3,10 @@
 
 # # Hydraulic Machines: Pumps
 # 
-# ## [http://54.243.252.9/ce-3305-webroot/](http://54.243.252.9/ce-3305-webroot/)
-# 
+# :::{admonition} Course Website
+# [http://54.243.252.9/ce-3305-webroot/](http://54.243.252.9/ce-3305-webroot/)
+# :::
+
 # ## Readings
 # 
 # 1. Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 569-596
@@ -12,9 +14,7 @@
 # 2. DF Elger, BC Williams, Crowe, CT and JA Roberson, *Engineering Fluid Mechanics 10th edition*, John Wiley & Sons, Inc., 2013. [http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-20.pdf](http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-20.pdf)
 # 
 # 3. Cleveland, T. G. (2014) *Fluid Mechanics Notes to Accompany CE 3305 at Jade-Holshule (TTU Study Abroad 2015-2019)*, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering. [missing_link](http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture13.pdf)
-# 
-# 
-# 
+
 # ## Videos
 # 
 # 1. [Explaination of Centrifugal Pump](https://www.youtube.com/watch?v=BaEHVpKc-1Q)
@@ -25,7 +25,7 @@
 # 4. [Pump Affinity Laws (YouTube)](https://www.youtube.com/watch?v=f2F74cMx97w)
 # 5. [About Net Positive Suction Head (You Tube)](https://www.youtube.com/watch?v=4aFlSEf8C0A)
 # 6. [Net Positive Suction Head Calacuations (You Tube)](https://www.youtube.com/watch?v=753twe9saKg)
-# 
+
 # ## Lesson Outline
 # - Pumps
 # - System Curves

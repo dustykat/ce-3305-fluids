@@ -5,7 +5,9 @@
 # 
 # In fluid dynamics, pipe network analysis is the analysis of the fluid flow through a hydraulics network, containing several or many interconnected branches. The aim is to determine the flow rates and pressure drops in the individual sections of the network. This is a common problem in hydraulic design.
 # 
-# ## [http://54.243.252.9/ce-3305-webroot/](http://54.243.252.9/ce-3305-webroot/)
+# :::{admonition} Course Website
+# [http://54.243.252.9/ce-3305-webroot/](http://54.243.252.9/ce-3305-webroot/)
+# :::
 
 # ## Readings
 # 
