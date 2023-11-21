@@ -1,4 +1,4 @@
-# Instructor Notes to Accompany Engineering Fluid Mechanics CE 3305 at TTU
+# Instructor notes to accompany CE 3305 at TTU
 
 This e-book is a working copy of the instructor notes. <br>
 

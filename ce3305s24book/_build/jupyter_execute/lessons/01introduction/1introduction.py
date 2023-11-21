@@ -9,15 +9,11 @@
 # 
 # :::{admonition} Hints, Notes, and Warnings
 # Throughout this book, sections like this one appear containing either "Notes", or some kind of "Hint".   
-# Warnings are probably not relevant in this book, but are more useful for a operations manual.  There might be a few to caution against something dumb.
-# :::
-# 
-# :::{note}
-# Here is a note. This Jupyter Book is a work in progress, but has the distinct advantage of being able to share working scripts, plus always be available as long as AWS is in business. 
+# Generally if the heading is a Note - its like a footnote, other labels should be context evident.  The *Course Website* link should appear at the top of chapter pages so it is easy to navigate back to the class server.  This book is hosted on AWS so is accessible when the TTU servers fail (pretty rare - but it does happen)
 # :::
 # 
 # :::{warning}
-# Here is a warning block.  In the future, when I learn how, this Jupyter Book will be interactive so you can run the scripts directy on your browser.
+# Here is a warning block.  Warnings are probably not relevant in this book, but are useful for a operations manual.
 # :::
 # 
 # The usual layout is:
