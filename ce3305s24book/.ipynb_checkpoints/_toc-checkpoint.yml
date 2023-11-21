@@ -11,15 +11,16 @@ chapters:
   - file: lessons/01introduction/2computation      # computational considerations
   - file: lessons/01introduction/5whatisfluids     # what is fluid mechanics?
   - file: lessons/01introduction/4units            # dimensions and units
-  - file: lessons/01introduction/6exercise         # dimensions and units
+
 
 - file: lessons/02fluidproperties/0fluidproperties # fluid properties
   sections:
   - file: lessons/02fluidproperties/1properties    # intensive/extensive fluid properties
   - file: lessons/02fluidproperties/2viscosity     # viscosity
+  - file: lessons/02fluidproperties/6exercise      # density,ideal gas law,compressibility
   - file: lessons/02fluidproperties/3liquids       # liquid properties
   - file: lessons/02fluidproperties/4vaporpressure # vapor pressure/readings/exercises
-  - file: lessons/02fluidproperties/5exercise      # vapor pressure/readings/exercises
+  - file: lessons/02fluidproperties/5exercise      # viscosity, radial geometry viscosity, capillary
   
 - file: lessons/04fluidstaticsandpressure/0fluidstaticsandpressure # fluid statics and pressure part2
   sections:
