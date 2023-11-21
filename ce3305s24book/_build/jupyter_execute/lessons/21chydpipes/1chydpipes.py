@@ -5,6 +5,8 @@
 # 
 # In fluid dynamics, pipe network analysis is the analysis of the fluid flow through a hydraulics network, containing several or many interconnected branches. The aim is to determine the flow rates and pressure drops in the individual sections of the network. This is a common problem in hydraulic design.
 # 
+# ## [http://54.243.252.9/ce-3305-webroot/](http://54.243.252.9/ce-3305-webroot/)
+
 # ## Readings
 # 
 # 1. Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 469-490
@@ -28,14 +30,13 @@
 # 9. Computational Hydraulics in R (for CE 3305) [PCHinR](http://54.243.252.9/ce-3372-webroot/3-Readings/CFMinR/)
 # 
 # 10. Yoo, D.H. and Singh V. P. (2005) Two Methods for the Computation of Commercial Pipe Friction Factors. ASCE Journal of Hydraulic Engineering, 2005, 131(8): 694-704 [FrictionFactors](http://54.243.252.9/ce-3372-webroot/3-Readings/FrictionFactor/)
-# 
-# 
+
 # ## Videos
 # 
 # 1. [Pipe Network Analysis: Hardy-Cross Method (YouTube) ](https://www.youtube.com/watch?v=OwZuT-LwPFw)
 # 2. [Pipe Network Analysis: Jeppson Loop Method (YouTube) ](https://www.youtube.com/watch?v=llTSX9lPEuo)
 # 3. [Pipe Network Analysis: Hamam and Brameller (YouTube) ](https://www.youtube.com/watch?v=UA3gr4lV2T8)
-# 
+
 # ## Lesson Outline
 # - Network Hydraulics Background
 # - Hamam, Y.M., and Brameller, A. (1971) Solution Method
@@ -45,6 +46,12 @@
 # 
 # :::{note}
 # This lesson introduces multi-variate Newton's Methods for solving well behaved non-linear systems.  A key feature of pipeline networks is that the Jacobian is relatively easy to construct and is essentially analytical.  To generalize the method one would have to employ numerical derivatives to construct the Jacobian matrix at each step - that's for readers to learn in other courses.
+# 
+# Most content in this section is derived from a short course taught in Finland:
+# 
+# - Cleveland, T.G. (2023). Hydraulic Network Simulation with EPANET and Python. *Notes to accompany Metropolia ICT Summer School 2023 Course TX00FJ07* [http://freeswmm.ddns.net/ects-epanet/ects-epanet-notes/_build/html/intro.html](http://freeswmm.ddns.net/ects-epanet/ects-epanet-notes/_build/html/intro.html)
+# 
+# 
 # :::
 # 
 # 

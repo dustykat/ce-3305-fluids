@@ -3,6 +3,8 @@
 
 # # Hydraulic Machines: Pumps
 # 
+# ## [http://54.243.252.9/ce-3305-webroot/](http://54.243.252.9/ce-3305-webroot/)
+# 
 # ## Readings
 # 
 # 1. Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 569-596
