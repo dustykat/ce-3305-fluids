@@ -44,7 +44,7 @@
 # - Hamam, Y.M., and Brameller, A. (1971) Solution Method
 # - Worked Examples (Using Python)
 
-# # Background
+# ## Background
 # 
 # :::{note}
 # This lesson introduces multi-variate Newton's Methods for solving well behaved non-linear systems.  A key feature of pipeline networks is that the Jacobian is relatively easy to construct and is essentially analytical.  To generalize the method one would have to employ numerical derivatives to construct the Jacobian matrix at each step - that's for readers to learn in other courses.
@@ -59,7 +59,7 @@
 # 
 # 
 
-# ## Pipeline Network Simulation
+# <!--## Pipeline Network Simulation
 # 
 # ```{note}
 # The network simulator uses input files to convey the network to the program One such file is listed below.
@@ -82,8 +82,8 @@
 # 0 4 3 1 -100 0 0 0 0 0 
 # 
 # ```
-# 
-# ### Background: Pipelines and Networks
+# -->
+# ### Pipelines and Networks
 # Pipe networks are analyzed for head losses in order to size pumps, determine demand management strategies, and precict minimum pressures in the system.   
 # 
 # ### Pipe Networks -- Topology

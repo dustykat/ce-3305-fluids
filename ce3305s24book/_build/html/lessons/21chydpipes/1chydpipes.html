@@ -320,301 +320,287 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Computational Hydraulics: Pipe Networks
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#readings">
+   Readings
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#readings">
-     Readings
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#videos">
+   Videos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lesson-outline">
+   Lesson Outline
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#background">
+   Background
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pipelines-and-networks">
+     Pipelines and Networks
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#videos">
-     Videos
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pipe-networks-topology">
+     Pipe Networks – Topology
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#lesson-outline">
-     Lesson Outline
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#continunity-at-a-node">
+     Continunity (at a node)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#energy-loss-along-a-link">
+     Energy Loss (along a link)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#velocity-head">
+     Velocity Head
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#added-head-pumps">
+     Added Head — Pumps
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#extracted-head-turbines">
+     Extracted Head — Turbines
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pipe-head-loss-models">
+     Pipe Head Loss Models
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#laminar-flow-eqn-2-36-pg-17-chin-d-2006">
+       Laminar flow (Eqn 2.36, pg. 17 Chin, D. (2006)) :
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#hydraulically-smooth-pipes-eqn-2-34-pg-16-chin-d-2006">
+       Hydraulically Smooth Pipes(Eqn 2.34 pg. 16 Chin, D. (2006)):
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#hydraulically-rough-pipes-eqn-2-34-pg-16-chin-d-2006">
+       Hydraulically Rough Pipes(Eqn 2.34 pg. 16 Chin, D. (2006)):
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#transitional-pipes-colebrook-white-formula-eqn-2-35-pg-17-chin-d-2006">
+       Transitional Pipes (Colebrook-White Formula)(Eqn 2.35 pg. 17 Chin, D. (2006)):
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#transitional-pipes-jain-formula-eqn-2-39-pg-19-chin-d-2006">
+       Transitional Pipes (Jain Formula)(Eqn 2.39 pg. 19 Chin, D. (2006)):
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pipe-networks-solution-methods">
+     Pipe Networks Solution Methods
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#network-analysis-example">
+     Network Analysis Example
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#script-structure">
+       Script Structure
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#support-functions">
+       Support Functions
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#augmented-and-jacobian-matrices">
+       Augmented and Jacobian Matrices
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#stopping-criteria-and-solution-report">
+       Stopping Criteria, and Solution Report:
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-1">
+   Example 1:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#problem-statement">
+     Problem Statement
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sketch">
+     Sketch
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#known">
+     Known
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unknown">
+     Unknown
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#governing-principles">
+     Governing Principles
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analysis">
+     Analysis
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#build-input-file">
+       Build Input File
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modify-the-script-to-use-the-new-input-file">
+     Modify the script to use the new input file
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#background">
-   Background
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-2">
+   Example 2:
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pipeline-network-simulation">
-     Pipeline Network Simulation
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Known
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#background-pipelines-and-networks">
-       Background: Pipelines and Networks
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#pipe-networks-topology">
-       Pipe Networks – Topology
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#continunity-at-a-node">
-       Continunity (at a node)
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#energy-loss-along-a-link">
-       Energy Loss (along a link)
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#velocity-head">
-       Velocity Head
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#added-head-pumps">
-       Added Head — Pumps
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#extracted-head-turbines">
-       Extracted Head — Turbines
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#pipe-head-loss-models">
-       Pipe Head Loss Models
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#laminar-flow-eqn-2-36-pg-17-chin-d-2006">
-         Laminar flow (Eqn 2.36, pg. 17 Chin, D. (2006)) :
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#hydraulically-smooth-pipes-eqn-2-34-pg-16-chin-d-2006">
-         Hydraulically Smooth Pipes(Eqn 2.34 pg. 16 Chin, D. (2006)):
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#hydraulically-rough-pipes-eqn-2-34-pg-16-chin-d-2006">
-         Hydraulically Rough Pipes(Eqn 2.34 pg. 16 Chin, D. (2006)):
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#transitional-pipes-colebrook-white-formula-eqn-2-35-pg-17-chin-d-2006">
-         Transitional Pipes (Colebrook-White Formula)(Eqn 2.35 pg. 17 Chin, D. (2006)):
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#transitional-pipes-jain-formula-eqn-2-39-pg-19-chin-d-2006">
-         Transitional Pipes (Jain Formula)(Eqn 2.39 pg. 19 Chin, D. (2006)):
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#pipe-networks-solution-methods">
-       Pipe Networks Solution Methods
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#network-analysis-example">
-       Network Analysis Example
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#script-structure">
-         Script Structure
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#support-functions">
-         Support Functions
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#augmented-and-jacobian-matrices">
-         Augmented and Jacobian Matrices
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#stopping-criteria-and-solution-report">
-         Stopping Criteria, and Solution Report:
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-1">
-     Example 1:
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Unknown
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Governing Principles
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Analysis
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#problem-statement">
-       Problem Statement
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#sketch">
-       Sketch
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#known">
-       Known
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#unknown">
-       Unknown
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#governing-principles">
-       Governing Principles
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#analysis">
-       Analysis
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#build-input-file">
-         Build Input File
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#modify-the-script-to-use-the-new-input-file">
-       Modify the script to use the new input file
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id5">
+       Build Input File
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-2">
-     Example 2:
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-       Known
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id2">
-       Unknown
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id3">
-       Governing Principles
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id4">
-       Analysis
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id5">
-         Build Input File
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#interpret-results-and-discussion">
-       Interpret Results and Discussion
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-3">
-     Example 3:
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id6">
-       Interpret Results and Discussion
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#topic-1">
-       Topic 1
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#subtopic">
-         Subtopic
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id7">
-         Subtopic
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#topic-2">
-       Topic 2
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id8">
-         Subtopic
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id9">
-         Subtopic
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#topic-3">
-       Topic 3
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id10">
-         Subtopic
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id11">
-         Subtopic
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id12">
-     Readings
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercises">
-     Exercises
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interpret-results-and-discussion">
+     Interpret Results and Discussion
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-3">
+   Example 3:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     Interpret Results and Discussion
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#topic-1">
+     Topic 1
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#subtopic">
+       Subtopic
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id7">
+       Subtopic
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#topic-2">
+     Topic 2
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id8">
+       Subtopic
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id9">
+       Subtopic
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#topic-3">
+     Topic 3
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id10">
+       Subtopic
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id11">
+       Subtopic
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id12">
+   Readings
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   Exercises
+  </a>
  </li>
 </ul>
 
@@ -666,9 +652,8 @@
 <li><p>Worked Examples (Using Python)</p></li>
 </ul>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="background">
-<h1>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This lesson introduces multi-variate Newton’s Methods for solving well behaved non-linear systems.  A key feature of pipeline networks is that the Jacobian is relatively easy to construct and is essentially analytical.  To generalize the method one would have to employ numerical derivatives to construct the Jacobian matrix at each step - that’s for readers to learn in other courses.</p>
@@ -677,33 +662,32 @@
 <li><p>Cleveland, T.G. (2023). Hydraulic Network Simulation with EPANET and Python. <em>Notes to accompany Metropolia ICT Summer School 2023 Course TX00FJ07</em> <a class="reference external" href="http://freeswmm.ddns.net/ects-epanet/ects-epanet-notes/_build/html/intro.html">http://freeswmm.ddns.net/ects-epanet/ects-epanet-notes/_build/html/intro.html</a></p></li>
 </ul>
 </div>
-<div class="section" id="pipeline-network-simulation">
-<h2>Pipeline Network Simulation<a class="headerlink" href="#pipeline-network-simulation" title="Permalink to this headline">¶</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The network simulator uses input files to convey the network to the program One such file is listed below.</p>
-</div>
-<blockquote>
-<div><p>PipeNetworkLesson15.txt</p>
-</div></blockquote>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span>
-<span class="mi">6</span>
-<span class="mi">200</span> <span class="mi">200</span> <span class="mi">200</span> <span class="mi">200</span> <span class="mi">200</span>
-<span class="mf">1.00</span> <span class="mf">0.67</span> <span class="mf">0.67</span> <span class="mf">0.67</span> <span class="mf">0.67</span> <span class="mf">0.5</span>
-<span class="mi">800</span> <span class="mi">800</span> <span class="mi">700</span> <span class="mi">700</span> <span class="mi">800</span> <span class="mi">600</span>
-<span class="mf">0.00001</span> <span class="mf">0.00001</span> <span class="mf">0.00001</span> <span class="mf">0.00001</span> <span class="mf">0.00001</span> <span class="mf">0.00001</span>
-<span class="mf">0.000011</span>
-<span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span>
-<span class="mi">1</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span>
-<span class="mi">0</span> <span class="mi">1</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">1</span>
-<span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">1</span> <span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="mi">1</span>
-<span class="mi">0</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">0</span>
-<span class="mi">0</span> <span class="mi">4</span> <span class="mi">3</span> <span class="mi">1</span> <span class="o">-</span><span class="mi">100</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> 
+<!--## Pipeline Network Simulation
 
-</pre></div>
-</div>
-<div class="section" id="background-pipelines-and-networks">
-<h3>Background: Pipelines and Networks<a class="headerlink" href="#background-pipelines-and-networks" title="Permalink to this headline">¶</a></h3>
+```{note}
+The network simulator uses input files to convey the network to the program One such file is listed below.
+```
+
+> PipeNetworkLesson15.txt
+```
+4
+6
+200 200 200 200 200
+1.00 0.67 0.67 0.67 0.67 0.5
+800 800 700 700 800 600
+0.00001 0.00001 0.00001 0.00001 0.00001 0.00001
+0.000011
+1 1 1 1 1 1
+1 -1 0 -1 0 0
+0 1 -1 0 0 1
+0 0 0 1 -1 -1
+0 0 1 0 1 0
+0 4 3 1 -100 0 0 0 0 0 
+
+```
+-->
+<div class="section" id="pipelines-and-networks">
+<h3>Pipelines and Networks<a class="headerlink" href="#pipelines-and-networks" title="Permalink to this headline">¶</a></h3>
 <p>Pipe networks are analyzed for head losses in order to size pumps, determine demand management strategies, and precict minimum pressures in the system.</p>
 </div>
 <div class="section" id="pipe-networks-topology">
