@@ -7,6 +7,8 @@
 # [Class Website](http://54.243.252.9/ce-3305-webroot/)
 # :::
 # 
+# ## [Class Website](http://54.243.252.9/ce-3305-webroot/)
+# 
 # :::{admonition} Hints, Notes, and Warnings
 # Throughout this book, sections like this one appear containing either "Notes", or some kind of "Hint".   
 # Warnings are probably not relevant in this book, but are more useful for a operations manual.  There might be a few to caution against something dumb.
