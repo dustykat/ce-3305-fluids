@@ -3,6 +3,10 @@
 
 # # Introduction
 # 
+# :::{admonition} Class Website
+# [Class Website](http://54.243.252.9/ce-3305-webroot/)
+# :::
+# 
 # :::{admonition} Hints, Notes, and Warnings
 # Throughout this book, sections like this one appear containing either "Notes", or some kind of "Hint".   
 # Warnings are probably not relevant in this book, but are more useful for a operations manual.  There might be a few to caution against something dumb.
@@ -25,7 +29,7 @@
 # Then the contents following the outline structure are presented
 # 
 # ## Readings 
-# 1. Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 3-18
+# 1. Hibbeler, R.C, Fluid Mechanics, 3ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 3-18
 # 
 # 1. DF Elger, BC Williams, Crowe, CT and JA Roberson, *Engineering Fluid Mechanics 10th edition*, John Wiley & Sons, Inc., 2013. [Engineering Fluid Mechanics 10-th Ed. Chapter 1](http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-1.pdf)
 # 
