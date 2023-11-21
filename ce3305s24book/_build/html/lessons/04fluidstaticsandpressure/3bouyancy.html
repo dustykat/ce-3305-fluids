@@ -1,0 +1,519 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bouyancy &#8212; Instructor Notes CE 3305</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Stability" href="4stability.html" />
+    <link rel="prev" title="Line of Action of Equivalent Point Force" href="2lineofaction.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/I5-fluidos.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Instructor Notes CE 3305</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../01introduction/1introduction.html">
+   Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01introduction/3problemsolving.html">
+     Problem Solving and Documentation (pp 16-22)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01introduction/2computation.html">
+     Computational Hydraulics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01introduction/5whatisfluids.html">
+     Fluid Mechanics - A definition (pp 2-6)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01introduction/4units.html">
+     Dimensions and Units (pp. 6-12)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01introduction/6exercise.html">
+     Exercise Set 1
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../02fluidproperties/0fluidproperties.html">
+   Fluid Properties
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02fluidproperties/1properties.html">
+     Intensive and Extensive Properties (pp. 28-35)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02fluidproperties/2viscosity.html">
+     Viscosity (pp 36-45)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02fluidproperties/3liquids.html">
+     Liquid Properties (pp. 46-52)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02fluidproperties/4vaporpressure.html">
+     Vapor Pressure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02fluidproperties/5exercise.html">
+     Exercise Set 2
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="0fluidstaticsandpressure.html">
+   Fluid Statics and Pressure (2/2)
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="1forces.html">
+     Pressure Force on Submerged Objects (pp XXX-XXX)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2lineofaction.html">
+     Line of Action of Equivalent Point Force
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Bouyancy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="4stability.html">
+     Stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5exercise.html">
+     Exercise Set 4
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/lessons/04fluidstaticsandpressure/3bouyancy.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flessons/04fluidstaticsandpressure/3bouyancy.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/lessons/04fluidstaticsandpressure/3bouyancy.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#will-it-float">
+   Will it float?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example">
+   Example
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#state-the-problem">
+     State the problem
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sketch-and-list-knowns">
+     Sketch and list knowns
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unknowns">
+     Unknowns
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#governing-principles">
+     Governing Principles
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solve-for-unknowns">
+     Solve for unknowns
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#validate-discuss">
+     Validate/Discuss
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#videos">
+   Videos
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="bouyancy">
+<h1>Bouyancy<a class="headerlink" href="#bouyancy" title="Permalink to this headline">¶</a></h1>
+<p>Buoyancy is the upward force exerted by a fluid on a partially or fully immersed object. In a column of liquid, pressure increases with depth as a result of the weight of the overlying liquid. Thus the pressure at the bottom of a column of liquid is greater than at the top of the column. Similarly, the pressure at the bottom of an object submerged in a liquid is greater than at the top of the object. The pressure difference results in a net upward force on the object. The magnitude of the force is proportional to the pressure difference, and (as explained by Archimedes’ principle) is equivalent to the weight of the displaced fluid.</p>
+<div class="section" id="will-it-float">
+<h2>Will it float?<a class="headerlink" href="#will-it-float" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.google.com/search?client=firefox-b-1-d&amp;q=will+it+float">Will it float?</a> was a popular TV segment on Late Night with David Letterman.  It is a direct appeal to bouyancy in terms of everyday objects, of course its purpose was entertainment.</p>
+<p>We can use bouyancy principles to answer the question for most things (not nearly as fun as the TV show’s way to answer the question).</p>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>Imagine a cube of material, 1-foot on each side.  Further imagine the cube has specific weight (<span class="math notranslate nohighlight">\(\gamma = 40 \frac{lbf}{ft^3}\)</span>).  The cube is placed in the “will it float” tank. The tank is filled with water.  How deep will it float (or will it sink)?</p>
+<p>Now recall our problem protocol.</p>
+<ol class="simple">
+<li><p>State the problem</p></li>
+<li><p>Sketch the situation (sketching no matter how ugly helps organize thoughts!). Identify (list) known quantities</p></li>
+<li><p>Identify (list) unknown quantities</p></li>
+<li><p>Identify (list) governing principles and equations that appear relevant to the problem</p></li>
+<li><p>Starting from one or more governing principles and the known quantities solve for the unknowns.</p></li>
+<li><p>Validate/discuss results</p></li>
+</ol>
+<div class="section" id="state-the-problem">
+<h3>State the problem<a class="headerlink" href="#state-the-problem" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="will-it-float-setup">
+<a class="reference internal image-reference" href="../../_images/will-it-float-setup.png"><img alt="../../_images/will-it-float-setup.png" src="../../_images/will-it-float-setup.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 48 </span><span class="caption-text">Cube floating in water; problem statement</span><a class="headerlink" href="#will-it-float-setup" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="sketch-and-list-knowns">
+<h3>Sketch and list knowns<a class="headerlink" href="#sketch-and-list-knowns" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="will-it-floatfbd">
+<a class="reference internal image-reference" href="../../_images/will-it-floatFBD.png"><img alt="../../_images/will-it-floatFBD.png" src="../../_images/will-it-floatFBD.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 49 </span><span class="caption-text">Vertical force balance on the cube</span><a class="headerlink" href="#will-it-floatfbd" title="Permalink to this image">¶</a></p>
+</div>
+<p>The known values are:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\rho g = 40 \frac{lbf}{ft^3}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(V_{block} = (1ft)(1ft)(1ft) = 1 ft^3\)</span></p></li>
+</ul>
+</div>
+<div class="section" id="unknowns">
+<h3>Unknowns<a class="headerlink" href="#unknowns" title="Permalink to this headline">¶</a></h3>
+<p>Draft of the block (<span class="math notranslate nohighlight">\(d\)</span> in the drawing)</p>
+</div>
+<div class="section" id="governing-principles">
+<h3>Governing Principles<a class="headerlink" href="#governing-principles" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="will-it-float-gov-eqn">
+<a class="reference internal image-reference" href="../../_images/will-it-float-gov-eqn.png"><img alt="../../_images/will-it-float-gov-eqn.png" src="../../_images/will-it-float-gov-eqn.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 50 </span><span class="caption-text">Governing principles (vertical force balance, and definition of bouyant force)</span><a class="headerlink" href="#will-it-float-gov-eqn" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="solve-for-unknowns">
+<h3>Solve for unknowns<a class="headerlink" href="#solve-for-unknowns" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="will-it-float-soln1">
+<a class="reference internal image-reference" href="../../_images/will-it-float-soln1.png"><img alt="../../_images/will-it-float-soln1.png" src="../../_images/will-it-float-soln1.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 51 </span><span class="caption-text">Finding the volume displaced to make bouyant force and weight of block equal</span><a class="headerlink" href="#will-it-float-soln1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="will-it-float-soln2">
+<a class="reference internal image-reference" href="../../_images/will-it-float-soln2.png"><img alt="../../_images/will-it-float-soln2.png" src="../../_images/will-it-float-soln2.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 52 </span><span class="caption-text">Insert numerical values and compute draft</span><a class="headerlink" href="#will-it-float-soln2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="validate-discuss">
+<h3>Validate/Discuss<a class="headerlink" href="#validate-discuss" title="Permalink to this headline">¶</a></h3>
+<p>Now you can do “will it float” on your own, so if there is ever a revival of the sketch you can win serious prizes!</p>
+<p>This kind of computation is vital in near shore vessel (boat) operations to prevent running aground.  It also plays a role in offshore oil platforms in controlling their stability in rough seas.</p>
+</div>
+</div>
+<div class="section" id="videos">
+<h2>Videos<a class="headerlink" href="#videos" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=6UWx2LVy61g">Bouyancy (YouTube)</a></p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons/04fluidstaticsandpressure"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="2lineofaction.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Line of Action of Equivalent Point Force</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="4stability.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Stability</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Theodore G, Cleveland<br/>
+        
+            &copy; Copyright 2023.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

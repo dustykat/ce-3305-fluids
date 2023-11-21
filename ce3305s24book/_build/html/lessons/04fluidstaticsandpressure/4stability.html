@@ -1,0 +1,639 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stability &#8212; Instructor Notes CE 3305</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Exercise Set 4" href="5exercise.html" />
+    <link rel="prev" title="Bouyancy" href="3bouyancy.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/I5-fluidos.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Instructor Notes CE 3305</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../01introduction/1introduction.html">
+   Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01introduction/3problemsolving.html">
+     Problem Solving and Documentation (pp 16-22)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01introduction/2computation.html">
+     Computational Hydraulics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01introduction/5whatisfluids.html">
+     Fluid Mechanics - A definition (pp 2-6)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01introduction/4units.html">
+     Dimensions and Units (pp. 6-12)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01introduction/6exercise.html">
+     Exercise Set 1
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../02fluidproperties/0fluidproperties.html">
+   Fluid Properties
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02fluidproperties/1properties.html">
+     Intensive and Extensive Properties (pp. 28-35)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02fluidproperties/2viscosity.html">
+     Viscosity (pp 36-45)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02fluidproperties/3liquids.html">
+     Liquid Properties (pp. 46-52)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02fluidproperties/4vaporpressure.html">
+     Vapor Pressure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02fluidproperties/5exercise.html">
+     Exercise Set 2
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="0fluidstaticsandpressure.html">
+   Fluid Statics and Pressure (2/2)
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="1forces.html">
+     Pressure Force on Submerged Objects (pp XXX-XXX)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2lineofaction.html">
+     Line of Action of Equivalent Point Force
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3bouyancy.html">
+     Bouyancy
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5exercise.html">
+     Exercise Set 4
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/lessons/04fluidstaticsandpressure/4stability.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flessons/04fluidstaticsandpressure/4stability.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/lessons/04fluidstaticsandpressure/4stability.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#strategy-for-solving-buoyancy-stability-problems">
+   Strategy for solving buoyancy/stability problems
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example">
+   Example
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-known-quantities">
+     list known quantities
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-unknown-quantities">
+     list unknown quantities
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#governing-principles">
+     governing principles
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solution-step-by-step">
+     solution (step-by-step)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#discussion">
+     discussion
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#videos">
+   Videos
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="stability">
+<h1>Stability<a class="headerlink" href="#stability" title="Permalink to this headline">¶</a></h1>
+<p>A floating body is STABLE if, when it is displaced, it returns to equilibrium.
+A floating body is UNSTABLE if, when it is displaced, it continues to move to a new equilibrium.</p>
+<div class="figure align-default" id="stability-1">
+<a class="reference internal image-reference" href="../../_images/stability-1.png"><img alt="../../_images/stability-1.png" src="../../_images/stability-1.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 53 </span><span class="caption-text">Object floating in some liquid; tilted a bit - if the bouyancy-weight couple tends to return to initial position, then stable - otherwise will continue to overturn.</span><a class="headerlink" href="#stability-1" title="Permalink to this image">¶</a></p>
+</div>
+<p>Consider a floating body tilted by an angle <span class="math notranslate nohighlight">\(\Delta \Theta\)</span>, as shown in <a class="reference internal" href="#stability-1"><span class="std std-numref">Fig. 53</span></a>. For the untilted body the point G is
+the centre of gravity of the body where the body weight, W, acts. The point B is the center of buoyancy
+(the centroid of the displaced volume of fluid) where the upward buoyancy force, FB, acts.</p>
+<p>When the body is tilted the centre of buoyancy moves to a new position, B’, because the shape of the
+displaced volume changes. A new point, M, may be defined, called the METACENTRE. This is the
+point where a vertical line drawn upwards from the new centre of buoyancy, B’, of the tilted body
+intersects the line of symmetry of the body. The buoyancy force, FB, now acts through B’.</p>
+<p>From the center diagram in the figure we observe that W and FB generate a RESTORING MOMENT (Righting Moment) that
+rotates the body back to its untilted position. From the right hand diagram in the figure we can see that
+W and FB generate an OVERTURNING MOMENT that rotates the body even further in the tilted direction (the body gets too turnt!).</p>
+<p>Thus; if the metacenter, M, lies above the center of gravity, G, then the body is stable. In
+other words the METACENTRIC HEIGHT, MG, is positive (<span class="math notranslate nohighlight">\(MG = z_M - z_G &gt; 0\)</span>). If the metacentre, M,
+lies below the centre of gravity, G, then the body is unstable. In other words the metacentric height, MG, is negative (MG &lt; 0).</p>
+<div class="figure align-default" id="stability-2">
+<a class="reference internal image-reference" href="../../_images/stability-2.png"><img alt="../../_images/stability-2.png" src="../../_images/stability-2.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 54 </span><span class="caption-text">Reference sketch for center of bouyancy and metacenter distances.</span><a class="headerlink" href="#stability-2" title="Permalink to this image">¶</a></p>
+</div>
+<p>The metacentric height, MG, is given by</p>
+<p><span class="math notranslate nohighlight">\(MG = MB - GB = \frac{I}{V_s} - GB\)</span></p>
+<p>where where I is the 2nd moment of area of the plan section of the body
+where it cuts the waterline (this is the solid plane surface you’d see
+if you cut horizontally through a solid body at the water surface
+lifted the top part up and looked at the bottom of it!), VS is the
+submerged volume (i.e. volume of fluid displaced) and GB is the
+distance between the centre of gravity and the centre of buoyancy
+(<span class="math notranslate nohighlight">\(= z_G – z_B\)</span>). <a class="reference internal" href="#stability-2"><span class="std std-numref">Fig. 54</span></a> is a reference sketch for the various distances.</p>
+<div class="section" id="strategy-for-solving-buoyancy-stability-problems">
+<h2>Strategy for solving buoyancy/stability problems<a class="headerlink" href="#strategy-for-solving-buoyancy-stability-problems" title="Permalink to this headline">¶</a></h2>
+<p>The usual problem solving protocol works fine, but the additional governing principles/solution algorithm include:</p>
+<ol class="simple">
+<li><p>From geometry of body and density of fluid and body equate; Weight of displaced fluid = Total weight of body. This gives the depth of immersion of the body or the weight of the body, whichever is unknown.</p></li>
+<li><p>To assess stability, first find the location of the centre of gravity G of the body.</p></li>
+<li><p>Then, find the location of the centre of buoyancy B (centroid of displaced volume). For a regularly shaped body this will be at half the height of the immersed portion of the body.</p></li>
+<li><p>Calculate the distance GB.</p></li>
+<li><p>Calculate MB, using MB = I / VS. Note <span class="math notranslate nohighlight">\(I = \pi \frac{D^4}{64}\)</span> for a circular section body and <span class="math notranslate nohighlight">\(\frac{bd^3}{12}\)</span> for a rectangular section body (D is diameter, b and d are the sides of the rectangle).</p></li>
+<li><p>Calculate metacentric height, <span class="math notranslate nohighlight">\(MG (= z_M – z_G)\)</span>, from MG = MB – GB. If MG &gt; 0 then body is stable. If MG &lt; 0 then body is unstable.</p></li>
+</ol>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>A solid cylindrical pine (SG=0.5) <a class="reference external" href="https://norfloat.com/aids-to-navigation/navigation-buoys-intro/channel-marker-spar-buoys/">spar buoy</a> has a cylindrical lead (SG=11.3) weight attached as
+shown in <a class="reference internal" href="#stability-example"><span class="std std-numref">Fig. 55</span></a>.</p>
+<div class="figure align-default" id="stability-example">
+<a class="reference internal image-reference" href="../../_images/stability-example.png"><img alt="../../_images/stability-example.png" src="../../_images/stability-example.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 55 </span><span class="caption-text">Schematic of a spar buoy.</span><a class="headerlink" href="#stability-example" title="Permalink to this image">¶</a></p>
+</div>
+<p>Determine:</p>
+<ol class="simple">
+<li><p>The equilibrium position (i.e. depth of immersion) of the buoy in seawater (SG=1.03).</p></li>
+<li><p>The metacentric height and show that the buoy is stable.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># sketch here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="list-known-quantities">
+<h3>list known quantities<a class="headerlink" href="#list-known-quantities" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>9800 N/m^3 specific weight of water</p></li>
+<li><p>11.3 SG lead</p></li>
+<li><p>0.5 SG wood</p></li>
+<li><p>1.03 SG sea water</p></li>
+<li><p>0.61 m diameter of spar</p></li>
+<li><p>0.15 m length of lead portion</p></li>
+<li><p>4.88 m length of wood portion</p></li>
+</ul>
+</div>
+<div class="section" id="list-unknown-quantities">
+<h3>list unknown quantities<a class="headerlink" href="#list-unknown-quantities" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Metacentric height, MG and stability classification</p></li>
+</ul>
+</div>
+<div class="section" id="governing-principles">
+<h3>governing principles<a class="headerlink" href="#governing-principles" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Definition of metacenter</p></li>
+<li><p>Definition of center of bouyancy</p></li>
+<li><p>Definition of canter of gravity</p></li>
+<li><p>Analytical geometry (as appropriate)</p></li>
+</ul>
+</div>
+<div class="section" id="solution-step-by-step">
+<h3>solution (step-by-step)<a class="headerlink" href="#solution-step-by-step" title="Permalink to this headline">¶</a></h3>
+<p>The solution is encoded below using principles of Computational Thinking (in this case sequential programming structure)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="n">rhog</span> <span class="o">=</span> <span class="mi">9800</span> <span class="c1">#N/m^3 sp. weight of water</span>
+<span class="n">sgpb</span> <span class="o">=</span> <span class="mf">11.3</span> <span class="c1">#SG lead</span>
+<span class="n">sgpine</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="c1">#SG wood</span>
+<span class="n">sgseaw</span> <span class="o">=</span> <span class="mf">1.03</span> <span class="c1">#SG sea water</span>
+<span class="n">D</span> <span class="o">=</span> <span class="mf">0.61</span> <span class="c1">#m diameter of spar</span>
+<span class="n">hpb</span> <span class="o">=</span> <span class="mf">0.15</span> <span class="c1">#m length of lead portion</span>
+<span class="n">hpine</span> <span class="o">=</span> <span class="mf">4.88</span> <span class="c1">#m length of wood portion</span>
+<span class="n">A</span> <span class="o">=</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">D</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span>
+<span class="n">weight_lead</span> <span class="o">=</span> <span class="n">hpb</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">sgpb</span><span class="o">*</span><span class="n">rhog</span>
+<span class="n">weight_pine</span> <span class="o">=</span> <span class="n">hpine</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">sgpine</span><span class="o">*</span><span class="n">rhog</span>
+<span class="n">weight_spar</span> <span class="o">=</span> <span class="n">weight_lead</span><span class="o">+</span><span class="n">weight_pine</span>
+<span class="n">hseaw</span><span class="o">=</span><span class="n">weight_spar</span><span class="o">/</span><span class="p">(</span><span class="n">A</span><span class="o">*</span><span class="n">sgseaw</span><span class="o">*</span><span class="n">rhog</span><span class="p">)</span>
+<span class="n">CG_bouy</span> <span class="o">=</span> <span class="p">(</span><span class="n">weight_lead</span><span class="o">*</span><span class="p">(</span><span class="n">hpb</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">weight_pine</span><span class="o">*</span><span class="p">(</span><span class="n">hpine</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="n">hpb</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">weight_spar</span><span class="p">)</span>
+<span class="n">CB_bouy</span> <span class="o">=</span> <span class="n">hseaw</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">GB</span> <span class="o">=</span> <span class="n">CG_bouy</span> <span class="o">-</span> <span class="n">CB_bouy</span> <span class="c1"># distance from CG to CB</span>
+<span class="n">I</span> <span class="o">=</span> <span class="n">A</span><span class="o">*</span><span class="p">(</span><span class="n">D</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">4</span><span class="o">/</span><span class="mi">64</span> <span class="c1">#2nd moment of area at waterline (for a circle this case)</span>
+<span class="n">VS</span> <span class="o">=</span> <span class="n">hseaw</span><span class="o">*</span><span class="n">A</span> <span class="c1">#Volume submerged portion</span>
+<span class="n">MB</span> <span class="o">=</span> <span class="n">I</span><span class="o">/</span><span class="n">VS</span> <span class="c1"># Distance from metacenter to center of bouyancy</span>
+<span class="n">MG</span><span class="o">=</span><span class="n">MB</span><span class="o">-</span><span class="n">GB</span> <span class="c1"># Compute metacentric height</span>
+<span class="k">if</span> <span class="n">MG</span> <span class="o">&gt;=</span> <span class="mf">0.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Metacentric height &quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">MG</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="s2">&quot; meters &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bouy is self-righting STABLE&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Metacentric height &quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">MG</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="s2">&quot; meters &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bouy is self-tipping UNSTABLE&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Metacentric height  0.454  meters 
+Bouy is self-righting STABLE
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="discussion">
+<h3>discussion<a class="headerlink" href="#discussion" title="Permalink to this headline">¶</a></h3>
+<p>How tall can the pine portion be before the bouy becomes unstable?</p>
+<p>We could do analysis like:</p>
+<blockquote>
+<div><p>If the buoy is stable when MG &gt; 0 and unstable when MG &lt; 0, we can say that the limit between being stable or unstable is when MG = 0.
+In this case MB = GB. <br>
+One could redo the problem, setting the length of the pine section as L (instead of 4.88m), and equating MB = GB, you can
+solve for L (by trial and error) to give the maximum length before instability sets in. <br>
+Or we can simply use the script we just built and adjust the length of the pine portion until the classification is unstable like:</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="n">rhog</span> <span class="o">=</span> <span class="mi">9800</span> <span class="c1">#N/m^3 sp. weight of water</span>
+<span class="n">sgpb</span> <span class="o">=</span> <span class="mf">11.3</span> <span class="c1">#SG lead</span>
+<span class="n">sgpine</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="c1">#SG wood</span>
+<span class="n">sgseaw</span> <span class="o">=</span> <span class="mf">1.03</span> <span class="c1">#SG sea water</span>
+<span class="n">D</span> <span class="o">=</span> <span class="mf">0.61</span> <span class="c1">#m diameter of spar</span>
+<span class="n">hpb</span> <span class="o">=</span> <span class="mf">0.15</span> <span class="c1">#m length of lead portion</span>
+<span class="c1">#############################################</span>
+<span class="n">hpine</span> <span class="o">=</span> <span class="mf">7.207</span> <span class="c1">#m length of wood portion    ##</span>
+<span class="c1">#############################################</span>
+<span class="n">A</span> <span class="o">=</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">D</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span>
+<span class="n">weight_lead</span> <span class="o">=</span> <span class="n">hpb</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">sgpb</span><span class="o">*</span><span class="n">rhog</span>
+<span class="n">weight_pine</span> <span class="o">=</span> <span class="n">hpine</span><span class="o">*</span><span class="n">A</span><span class="o">*</span><span class="n">sgpine</span><span class="o">*</span><span class="n">rhog</span>
+<span class="n">weight_spar</span> <span class="o">=</span> <span class="n">weight_lead</span><span class="o">+</span><span class="n">weight_pine</span>
+<span class="n">hseaw</span><span class="o">=</span><span class="n">weight_spar</span><span class="o">/</span><span class="p">(</span><span class="n">A</span><span class="o">*</span><span class="n">sgseaw</span><span class="o">*</span><span class="n">rhog</span><span class="p">)</span>
+<span class="n">CG_bouy</span> <span class="o">=</span> <span class="p">(</span><span class="n">weight_lead</span><span class="o">*</span><span class="p">(</span><span class="n">hpb</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">weight_pine</span><span class="o">*</span><span class="p">(</span><span class="n">hpine</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="n">hpb</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">weight_spar</span><span class="p">)</span>
+<span class="n">CB_bouy</span> <span class="o">=</span> <span class="n">hseaw</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">GB</span> <span class="o">=</span> <span class="n">CG_bouy</span> <span class="o">-</span> <span class="n">CB_bouy</span> <span class="c1"># distance from CG to CB</span>
+<span class="n">I</span> <span class="o">=</span> <span class="n">A</span><span class="o">*</span><span class="p">(</span><span class="n">D</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">4</span><span class="o">/</span><span class="mi">64</span> <span class="c1">#2nd moment of area at waterline (for a circle this case)</span>
+<span class="n">VS</span> <span class="o">=</span> <span class="n">hseaw</span><span class="o">*</span><span class="n">A</span> <span class="c1">#Volume submerged portion</span>
+<span class="n">MB</span> <span class="o">=</span> <span class="n">I</span><span class="o">/</span><span class="n">VS</span> <span class="c1"># Distance from metacenter to center of bouyancy</span>
+<span class="n">MG</span><span class="o">=</span><span class="n">MB</span><span class="o">-</span><span class="n">GB</span> <span class="c1"># Compute metacentric height</span>
+<span class="k">if</span> <span class="n">MG</span> <span class="o">&gt;=</span> <span class="mf">0.0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Metacentric height &quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">MG</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="s2">&quot; meters &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bouy is self-righting STABLE&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Metacentric height &quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">MG</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="s2">&quot; meters &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bouy is self-tipping UNSTABLE&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Metacentric height  -0.0  meters 
+Bouy is self-tipping UNSTABLE
+</pre></div>
+</div>
+</div>
+</div>
+<p>So for this problem a 7.21+ meter long pine spar is unstable, anything shorter will work as desired.</p>
+</div>
+</div>
+<div class="section" id="videos">
+<h2>Videos<a class="headerlink" href="#videos" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=QUgXf2Rj2YQ">Metacenter (YouTube)</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=MJnYZ6s-LsQ">Bouyancy and Stability (YouTube)</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=AYBnabJXumU">Bouyancy and Stability Demonstration (YouTube)</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=dJIeNvhSW4o">Stability of Floating Bodies (YouTube)</a></p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons/04fluidstaticsandpressure"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="3bouyancy.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Bouyancy</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="5exercise.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Exercise Set 4</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Theodore G, Cleveland<br/>
+        
+            &copy; Copyright 2023.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

@@ -1,0 +1,34 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+
+- file: lessons/01introduction/1introduction       # introduction
+  sections:
+  - file: lessons/01introduction/3problemsolving   # problem solving and documentation
+  - file: lessons/01introduction/2computation      # computational considerations
+  - file: lessons/01introduction/5whatisfluids     # what is fluid mechanics?
+  - file: lessons/01introduction/4units            # dimensions and units
+  - file: lessons/01introduction/6exercise         # dimensions and units
+
+- file: lessons/02fluidproperties/0fluidproperties # fluid properties
+  sections:
+  - file: lessons/02fluidproperties/1properties    # intensive/extensive fluid properties
+  - file: lessons/02fluidproperties/2viscosity     # viscosity
+  - file: lessons/02fluidproperties/3liquids       # liquid properties
+  - file: lessons/02fluidproperties/4vaporpressure # vapor pressure/readings/exercises
+  - file: lessons/02fluidproperties/5exercise      # vapor pressure/readings/exercises
+  
+- file: lessons/04fluidstaticsandpressure/0fluidstaticsandpressure # fluid statics and pressure part2
+  sections:
+  - file: lessons/04fluidstaticsandpressure/1forces    # intensive/extensive fluid properties
+  - file: lessons/04fluidstaticsandpressure/2lineofaction     # viscosity
+  - file: lessons/04fluidstaticsandpressure/3bouyancy       # liquid properties
+  - file: lessons/04fluidstaticsandpressure/4stability # vapor pressure/readings/exercises
+  - file: lessons/04fluidstaticsandpressure/5exercise      # vapor pressure/readings/exercises
+  
+- file: lessons/19PumpSelection/1fluidmachines # fluid statics and pressure part2
+
+- file: lessons/21chydpipes/1chydpipes # fluid statics and pressure part2

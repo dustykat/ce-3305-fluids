@@ -1,0 +1,507 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Applications of Linear Momentum &#8212; Instructor Notes CE 3305</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/I5-fluidos.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Instructor Notes CE 3305</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../01introduction/1introduction.html">
+   Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01introduction/6exercise.html">
+     Exercise Set 1
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/lessons/lesson08/2examples.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flessons/lesson08/2examples.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/lessons/lesson08/2examples.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#application-of-momentum-to-a-jet-pump">
+   Application of Momentum to a Jet Pump
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#application-of-momentum-to-find-forces-in-a-pipe-fitting">
+   Application of Momentum to Find Forces in a Pipe Fitting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#application-of-momentum-to-find-force-on-a-sluice-gate">
+   Application of Momentum to Find Force on a Sluice Gate
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sluce-gate-calculations">
+     Sluce Gate Calculations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#application-of-momentum-to-estimate-shallow-wave-speed-in-a-channel">
+   Application of Momentum to Estimate Shallow Wave Speed in a Channel
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="applications-of-linear-momentum">
+<h1>Applications of Linear Momentum<a class="headerlink" href="#applications-of-linear-momentum" title="Permalink to this headline">¶</a></h1>
+<p>The linear momentum principle is used to find forces on objects that are changing the flow field, or forces from the flow field on those objects</p>
+<ul class="simple">
+<li><p>Objects introducing forces are things like pumps</p></li>
+</ul>
+<p>Forces of flow on objects are things like</p>
+<ul class="simple">
+<li><p>Flow effects on bridge piers</p></li>
+<li><p>Flow effects on wind turbine support columns</p></li>
+<li><p>Flow effects on projectiles</p></li>
+</ul>
+<p>Static forces were studied earlier such as</p>
+<ul class="simple">
+<li><p>Retaining walls</p></li>
+<li><p>Dams</p></li>
+</ul>
+<div class="section" id="application-of-momentum-to-a-jet-pump">
+<h2>Application of Momentum to a Jet Pump<a class="headerlink" href="#application-of-momentum-to-a-jet-pump" title="Permalink to this headline">¶</a></h2>
+<p>A water jet pump has jet area of 0.01 sq.m. and jet speed of 30 m/s. The jet is within a secondary stream of water having speed 3 m/sec.  The total duct area is 0.075 sq.m. The water is completely mixed in the pump and exits at uniform velocity; find the speed at the pump exit and the pressure rise in the pump.</p>
+<p>The problem statement is explicitly repeated in <code class="xref std std-numref docutils literal notranslate"><span class="pre">momentum-ex1-1</span></code></p>
+<div class="figure align-default" id="momentum-ex1-1">
+<a class="reference internal image-reference" href="../../_images/momentum-ex1-1.png"><img alt="../../_images/momentum-ex1-1.png" src="../../_images/momentum-ex1-1.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Caption</span><a class="headerlink" href="#momentum-ex1-1" title="Permalink to this image">¶</a></p>
+</div>
+<p>Apply our problem solving protocol as in <code class="xref std std-numref docutils literal notranslate"><span class="pre">momentum-ex1-2</span></code></p>
+<div class="figure align-default" id="momentum-ex1-2">
+<a class="reference internal image-reference" href="../../_images/momentum-ex1-2.png"><img alt="../../_images/momentum-ex1-2.png" src="../../_images/momentum-ex1-2.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Caption</span><a class="headerlink" href="#momentum-ex1-2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Note on the CV diagram to draw:</p>
+<ul class="simple">
+<li><p>the +/- directions</p></li>
+<li><p>the CV/CS</p></li>
+<li><p>the <span class="math notranslate nohighlight">\(\bar dA \)</span> vectors, and</p></li>
+<li><p>the <span class="math notranslate nohighlight">\(\bar V \)</span> vector(s)</p></li>
+</ul>
+<p>Then apply continunity and momentum to find the unknown values as in <code class="xref std std-numref docutils literal notranslate"><span class="pre">momentum-ex1-3</span></code></p>
+<div class="figure align-default" id="momentum-ex1-3">
+<a class="reference internal image-reference" href="../../_images/momentum-ex1-3.png"><img alt="../../_images/momentum-ex1-3.png" src="../../_images/momentum-ex1-3.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Caption</span><a class="headerlink" href="#momentum-ex1-3" title="Permalink to this image">¶</a></p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># computational thinning</span>
+<span class="n">u_jet</span> <span class="o">=</span> <span class="mf">30.0</span>
+<span class="n">u_approach</span> <span class="o">=</span> <span class="mf">3.0</span>
+<span class="n">a_jet</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">a_approach</span> <span class="o">=</span> <span class="mf">0.065</span>
+<span class="n">a_total</span> <span class="o">=</span> <span class="mf">0.075</span>
+<span class="n">rho</span> <span class="o">=</span> <span class="mf">1000.0</span>
+<span class="c1"># continunity</span>
+<span class="n">u_exit</span> <span class="o">=</span> <span class="p">(</span><span class="n">u_jet</span><span class="o">*</span><span class="n">a_jet</span><span class="o">+</span><span class="n">u_approach</span><span class="o">*</span><span class="n">a_approach</span><span class="p">)</span><span class="o">/</span><span class="n">a_total</span>
+<span class="c1"># momentum</span>
+<span class="n">delta_p</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">rho</span><span class="o">/</span><span class="n">a_total</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">a_total</span><span class="o">*</span><span class="n">u_exit</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">a_jet</span><span class="o">*</span><span class="n">u_jet</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">a_approach</span><span class="o">*</span><span class="n">u_approach</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># results</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pump exit velocity &quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">u_exit</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="s2">&quot;     meters per second&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Added pressure     &quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">delta_p</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="s2">&quot; Pascals&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pump exit velocity  6.6      meters per second
+Added pressure      84240.0  Pascals
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="application-of-momentum-to-find-forces-in-a-pipe-fitting">
+<h2>Application of Momentum to Find Forces in a Pipe Fitting<a class="headerlink" href="#application-of-momentum-to-find-forces-in-a-pipe-fitting" title="Permalink to this headline">¶</a></h2>
+<p>Consider a pipe fitting as depicted in <code class="xref std std-numref docutils literal notranslate"><span class="pre">momentum-ex2-1</span></code></p>
+<div class="figure align-default" id="momentum-ex2-1">
+<a class="reference internal image-reference" href="../../_images/momentum-ex2-1.png"><img alt="../../_images/momentum-ex2-1.png" src="../../_images/momentum-ex2-1.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Caption</span><a class="headerlink" href="#momentum-ex2-1" title="Permalink to this image">¶</a></p>
+</div>
+<p>Apply our problem solving protocol as in <code class="xref std std-numref docutils literal notranslate"><span class="pre">momentum-ex2-2</span></code></p>
+<div class="figure align-default" id="momentum-ex2-2">
+<a class="reference internal image-reference" href="../../_images/momentum-ex2-2.png"><img alt="../../_images/momentum-ex2-2.png" src="../../_images/momentum-ex2-2.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Problem Solving Protocol: Sketch, CV Definition, Governing Principles, Knowns and Unknowns</span><a class="headerlink" href="#momentum-ex2-2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Apply our analysis tools as in <code class="xref std std-numref docutils literal notranslate"><span class="pre">momentum-ex2-3</span></code></p>
+<div class="figure align-default" id="momentum-ex2-3">
+<a class="reference internal image-reference" href="../../_images/momentum-ex2-3.png"><img alt="../../_images/momentum-ex2-3.png" src="../../_images/momentum-ex2-3.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Application of linear momentum in the two coordinate directions</span><a class="headerlink" href="#momentum-ex2-3" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="application-of-momentum-to-find-force-on-a-sluice-gate">
+<h2>Application of Momentum to Find Force on a Sluice Gate<a class="headerlink" href="#application-of-momentum-to-find-force-on-a-sluice-gate" title="Permalink to this headline">¶</a></h2>
+<p>Consider finding the force on a sluice gate (underflow from a powerhouse) as depicted in <code class="xref std std-numref docutils literal notranslate"><span class="pre">momentum-p2-1</span></code></p>
+<div class="figure align-default" id="momentum-p2-1">
+<a class="reference internal image-reference" href="../../_images/momentum-p2-1.png"><img alt="../../_images/momentum-p2-1.png" src="../../_images/momentum-p2-1.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Schematic elevation view of a sluice gate</span><a class="headerlink" href="#momentum-p2-1" title="Permalink to this image">¶</a></p>
+</div>
+<p>Upon first inspection one would be tempted to treat the gate as a submerged plate and use hydrostatic calculations, except at point A the pressure is atmospheric, same as at the free surface just upstream of the gate, so the required conditions for hydrostatic analysis do not apply in this case.</p>
+<p>So instead of trying to find pressure on the gate, find force of gate on the water, then by eth equal-opposite action-reaction (Newtons’s 2nd law) we can find force of water on the gate .</p>
+<p>A first step is to draw a control volume as depicted in <code class="xref std std-numref docutils literal notranslate"><span class="pre">momentum-p2-2</span></code></p>
+<div class="figure align-default" id="momentum-p2-2">
+<a class="reference internal image-reference" href="../../_images/momentum-p2-2.png"><img alt="../../_images/momentum-p2-2.png" src="../../_images/momentum-p2-2.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">CV/CS for sluice gate</span><a class="headerlink" href="#momentum-p2-2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Using the figure as a guide draw:</p>
+<ul class="simple">
+<li><p>the +/- directions</p></li>
+<li><p>the CV/CS</p></li>
+<li><p>the forces</p></li>
+<li><p>the <span class="math notranslate nohighlight">\(\bar dA \)</span> vectors, and</p></li>
+<li><p>the <span class="math notranslate nohighlight">\(\bar V \)</span> vector(s)</p></li>
+</ul>
+<p>The resulting sketch is shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">momentum-p2-3</span></code></p>
+<div class="figure align-default" id="momentum-p2-3">
+<a class="reference internal image-reference" href="../../_images/momentum-p2-3.png"><img alt="../../_images/momentum-p2-3.png" src="../../_images/momentum-p2-3.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">CV/CS for sluice gate</span><a class="headerlink" href="#momentum-p2-3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Some assumptions are in order; in particular the distance upstream and downstream are relatively small (a few hundred feet) and the frictional contribution is small by virtue of having only a short distance to act, so we neglect the frictional component.  Using the velocity and area directions to resolve the inner products in the flux integrals produces the diagram in <code class="xref std std-numref docutils literal notranslate"><span class="pre">momentum-p2-4</span></code></p>
+<div class="figure align-default" id="momentum-p2-4">
+<a class="reference internal image-reference" href="../../_images/momentum-p2-4.png"><img alt="../../_images/momentum-p2-4.png" src="../../_images/momentum-p2-4.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">CV/CS for sluice gate</span><a class="headerlink" href="#momentum-p2-4" title="Permalink to this image">¶</a></p>
+</div>
+<p>The two pressure forces are some distance from the gate and are hydrostatic and computed using that equation.</p>
+<p><span class="math notranslate nohighlight">\(p = \gamma \bar h\)</span> as depicted in <code class="xref std std-numref docutils literal notranslate"><span class="pre">momentum-p2-5</span></code></p>
+<div class="figure align-default" id="momentum-p2-5">
+<a class="reference internal image-reference" href="../../_images/momentum-p2-5.png"><img alt="../../_images/momentum-p2-5.png" src="../../_images/momentum-p2-5.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Pressure force diagram</span><a class="headerlink" href="#momentum-p2-5" title="Permalink to this image">¶</a></p>
+</div>
+<p><code class="xref std std-numref docutils literal notranslate"><span class="pre">momentum-p2-6</span></code> is a skecth showing the collection of forces on the CV</p>
+<div class="figure align-default" id="momentum-p2-6">
+<a class="reference internal image-reference" href="../../_images/momentum-p2-6.png"><img alt="../../_images/momentum-p2-6.png" src="../../_images/momentum-p2-6.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Forces on CV</span><a class="headerlink" href="#momentum-p2-6" title="Permalink to this image">¶</a></p>
+</div>
+<p><code class="xref std std-numref docutils literal notranslate"><span class="pre">momentum-p2-7</span></code> completes the analysis; then we can generalize for any sluice gate (in rectangular channles) using ENGR-1330 principles as shown in the script below.</p>
+<div class="figure align-default" id="momentum-p2-7">
+<a class="reference internal image-reference" href="../../_images/momentum-p2-7.png"><img alt="../../_images/momentum-p2-7.png" src="../../_images/momentum-p2-7.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Forces on CV</span><a class="headerlink" href="#momentum-p2-7" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="sluce-gate-calculations">
+<h3>Sluce Gate Calculations<a class="headerlink" href="#sluce-gate-calculations" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d1</span> <span class="o">=</span> <span class="mf">1.5</span> <span class="c1"># depth upstream</span>
+<span class="n">d2</span> <span class="o">=</span> <span class="mf">0.0563</span> <span class="c1"># depth downstream</span>
+<span class="n">u1</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="c1"># upstream velocity</span>
+<span class="n">u2</span> <span class="o">=</span> <span class="mf">5.33</span> <span class="c1"># downstream velocity</span>
+<span class="n">rho</span> <span class="o">=</span> <span class="mf">1000.0</span> <span class="c1"># density</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.8</span> <span class="c1"># gravitational acceleration</span>
+<span class="n">w</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="c1"># channel width</span>
+<span class="n">Rg</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.5</span><span class="o">*</span><span class="n">rho</span><span class="o">*</span><span class="n">g</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">d1</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">d2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="n">rho</span><span class="o">*</span><span class="p">(</span><span class="n">d1</span><span class="o">*</span><span class="n">u1</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">d2</span><span class="o">*</span><span class="n">u2</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Upstream Depth&#39;</span><span class="p">,</span><span class="n">d1</span><span class="p">,</span><span class="s1">&#39; m&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Upstream Speed&#39;</span><span class="p">,</span><span class="n">u1</span><span class="p">,</span><span class="s1">&#39;m/s&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Downstream Depth&#39;</span><span class="p">,</span><span class="n">d2</span><span class="p">,</span><span class="s1">&#39; m&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Downstream Speed&#39;</span><span class="p">,</span><span class="n">u2</span><span class="p">,</span><span class="s1">&#39;m/s&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Force/width&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">Rg</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;N/m&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Upstream Depth 1.5  m
+Upstream Speed 0.2 m/s
+Downstream Depth 0.0563  m
+Downstream Speed 5.33 m/s
+Force/width 9470.05 N/m
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="application-of-momentum-to-estimate-shallow-wave-speed-in-a-channel">
+<h2>Application of Momentum to Estimate Shallow Wave Speed in a Channel<a class="headerlink" href="#application-of-momentum-to-estimate-shallow-wave-speed-in-a-channel" title="Permalink to this headline">¶</a></h2>
+<p>Consider a shallow wave in a rectangular channel as in <code class="xref std std-numref docutils literal notranslate"><span class="pre">momentum-ex3-1</span></code></p>
+<div class="figure align-default" id="momentum-ex3-1">
+<a class="reference internal image-reference" href="../../_images/momentum-ex3-1.png"><img alt="../../_images/momentum-ex3-1.png" src="../../_images/momentum-ex3-1.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Problem Statement</span><a class="headerlink" href="#momentum-ex3-1" title="Permalink to this image">¶</a></p>
+</div>
+<p>First we draw a control volume as in <code class="xref std std-numref docutils literal notranslate"><span class="pre">momentum-ex3-2</span></code></p>
+<div class="figure align-default" id="momentum-ex3-2">
+<a class="reference internal image-reference" href="../../_images/momentum-ex3-2.png"><img alt="../../_images/momentum-ex3-2.png" src="../../_images/momentum-ex3-2.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Sketch</span><a class="headerlink" href="#momentum-ex3-2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Then apply continunity to find the apparent velocities as in <code class="xref std std-numref docutils literal notranslate"><span class="pre">momentum-ex3-3</span></code></p>
+<div class="figure align-default" id="momentum-ex3-3">
+<a class="reference internal image-reference" href="../../_images/momentum-ex3-3.png"><img alt="../../_images/momentum-ex3-3.png" src="../../_images/momentum-ex3-3.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Continunity application</span><a class="headerlink" href="#momentum-ex3-3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Then apply momentum as in <code class="xref std std-numref docutils literal notranslate"><span class="pre">momentum-ex3-4</span></code></p>
+<div class="figure align-default" id="momentum-ex3-4">
+<a class="reference internal image-reference" href="../../_images/momentum-ex3-4.png"><img alt="../../_images/momentum-ex3-4.png" src="../../_images/momentum-ex3-4.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Momentum application</span><a class="headerlink" href="#momentum-ex3-4" title="Permalink to this image">¶</a></p>
+</div>
+<p>Complete the analysis to find the shallow wave speed as in <code class="xref std std-numref docutils literal notranslate"><span class="pre">momentum-ex3-5</span></code></p>
+<div class="figure align-default" id="momentum-ex3-5">
+<a class="reference internal image-reference" href="../../_images/momentum-ex3-5.png"><img alt="../../_images/momentum-ex3-5.png" src="../../_images/momentum-ex3-5.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Analysis results</span><a class="headerlink" href="#momentum-ex3-5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons/lesson08"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Theodore G, Cleveland<br/>
+        
+            &copy; Copyright 2023.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

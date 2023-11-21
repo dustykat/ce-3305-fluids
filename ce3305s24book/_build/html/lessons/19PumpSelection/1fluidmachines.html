@@ -1,0 +1,1298 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hydraulic Machines: Pumps &#8212; Instructor Notes CE 3305</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Exercise Set 4" href="../04fluidstaticsandpressure/5exercise.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/I5-fluidos.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Instructor Notes CE 3305</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../01introduction/1introduction.html">
+   Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01introduction/3problemsolving.html">
+     Problem Solving and Documentation (pp 16-22)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01introduction/2computation.html">
+     Computational Hydraulics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01introduction/5whatisfluids.html">
+     Fluid Mechanics - A definition (pp 2-6)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01introduction/4units.html">
+     Dimensions and Units (pp. 6-12)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01introduction/6exercise.html">
+     Exercise Set 1
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../02fluidproperties/0fluidproperties.html">
+   Fluid Properties
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02fluidproperties/1properties.html">
+     Intensive and Extensive Properties (pp. 28-35)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02fluidproperties/2viscosity.html">
+     Viscosity (pp 36-45)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02fluidproperties/3liquids.html">
+     Liquid Properties (pp. 46-52)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02fluidproperties/4vaporpressure.html">
+     Vapor Pressure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02fluidproperties/5exercise.html">
+     Exercise Set 2
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../04fluidstaticsandpressure/0fluidstaticsandpressure.html">
+   Fluid Statics and Pressure (2/2)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04fluidstaticsandpressure/1forces.html">
+     Pressure Force on Submerged Objects (pp XXX-XXX)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04fluidstaticsandpressure/2lineofaction.html">
+     Line of Action of Equivalent Point Force
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04fluidstaticsandpressure/3bouyancy.html">
+     Bouyancy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04fluidstaticsandpressure/4stability.html">
+     Stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04fluidstaticsandpressure/5exercise.html">
+     Exercise Set 4
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Hydraulic Machines: Pumps
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/lessons/19PumpSelection/1fluidmachines.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flessons/19PumpSelection/1fluidmachines.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/lessons/19PumpSelection/1fluidmachines.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Hydraulic Machines: Pumps
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#readings">
+     Readings
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#videos">
+     Videos
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lesson-outline">
+     Lesson Outline
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pumps">
+   Pumps
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#background">
+     Background
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#types">
+     Types
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#positive-fixed-displacement-pumps">
+       Positive (Fixed) Displacement Pumps
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#variable-displacement-pumps">
+       Variable Displacement Pumps
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#examples-of-fixed-displacement-pumps">
+       Examples of Fixed Displacement Pumps
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#images-of-positive-displacement-pumps">
+       Images of Positive Displacement Pumps
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#examples-of-variable-displacement-pumps">
+       Examples of Variable Displacement Pumps
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#images-of-variable-displacement-pumps">
+       Images of Variable Displacement Pumps
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#system-curve">
+   System Curve
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pump-curve-s">
+   Pump Curve(s)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operating-point">
+   Operating Point
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pump-selection">
+     Pump Selection
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#example-pump-operating-point">
+       Example: Pump Operating Point
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#step-1">
+         Step 1
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#step-2">
+         Step 2
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#step-3">
+         Step 3
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#step-4">
+         Step 4
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#step-5">
+         Step 5
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#step-6">
+         Step 6
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pump-affinity-laws">
+   Pump Affinity Laws
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-pump-performance-with-speed-rpm-increase">
+     Example: Pump Performance with Speed (RPM) Increase
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Step 1
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Step 2
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Step 3
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id4">
+       Step 4
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id5">
+       Step 5
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id6">
+       Step 6
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#net-positive-suction-head-npsh">
+   Net Positive Suction Head (NPSH)
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#npsha-example">
+     NPSHa Example
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#problem-statement">
+       Problem Statement
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#solution-part-1">
+       Solution (part 1)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#solution-part-2">
+       Solution (part 2)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#solution-part-3">
+       Solution (part 3)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#solution-part-4">
+       Solution (part 4)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#solution-part-5">
+       Solution (part 5)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#solution-summary">
+       Solution Summary
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   Exercises
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="hydraulic-machines-pumps">
+<h1>Hydraulic Machines: Pumps<a class="headerlink" href="#hydraulic-machines-pumps" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="readings">
+<h2>Readings<a class="headerlink" href="#readings" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 569-596</p></li>
+<li><p>DF Elger, BC Williams, Crowe, CT and JA Roberson, <em>Engineering Fluid Mechanics 10th edition</em>, John Wiley &amp; Sons, Inc., 2013. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-20.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-20.pdf</a></p></li>
+<li><p>Cleveland, T. G. (2014) <em>Fluid Mechanics Notes to Accompany CE 3305 at Jade-Holshule (TTU Study Abroad 2015-2019)</em>, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture13.pdf">missing_link</a></p></li>
+</ol>
+</div>
+<div class="section" id="videos">
+<h2>Videos<a class="headerlink" href="#videos" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=BaEHVpKc-1Q">Explaination of Centrifugal Pump</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?feature=player_detailpage&amp;v=ECv1VwW6RTo#t=122">Lab-Scale model of a flexible impeller pump(Variable-Cavity;Positive Displacement)</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=m3i_5xP9PYU">Pump Curves (YouTube)</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=LARQGDHpVgg">System Curves (YouTube)</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=HoGfZQU15vg">Operating Point (YouTube)</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=f2F74cMx97w">Pump Affinity Laws (YouTube)</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=4aFlSEf8C0A">About Net Positive Suction Head (You Tube)</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=753twe9saKg">Net Positive Suction Head Calacuations (You Tube)</a></p></li>
+</ol>
+</div>
+<div class="section" id="lesson-outline">
+<h2>Lesson Outline<a class="headerlink" href="#lesson-outline" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Pumps</p></li>
+<li><p>System Curves</p></li>
+<li><p>Pump Curves</p></li>
+<li><p>Operating Point</p></li>
+<li><p>Affinity Laws</p></li>
+<li><p>Specific Speed</p></li>
+<li><p>Net Positive Suction Head</p></li>
+</ul>
+<hr>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="pumps">
+<h1>Pumps<a class="headerlink" href="#pumps" title="Permalink to this headline">¶</a></h1>
+<p>Fluids (such as water - a liquid) flows from higher to lower energy</p>
+<ul class="simple">
+<li><p>Path of least resistance</p></li>
+<li><p>Head is energy per unit weight of a fluid</p></li>
+<li><p>Pumps are used to add energy to move liquids to a higher elevation, or over a barrier, or to increase system pressure.</p></li>
+</ul>
+<div class="section" id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<p>A <strong>pump</strong> is a mechanical device that transfers energy into a liquid; used to</p>
+<ul class="simple">
+<li><p>Lift from lower to higher elevation (Lift stations)</p></li>
+<li><p>Increase pressure (Booster stations)</p></li>
+</ul>
+<p><img alt="" src="../../_images/pumpone.png" /></p>
+<p>The gas phase equivalent is a <strong>compressor</strong> (also called a blower), which works on <em>similar</em>, but <span class="math notranslate nohighlight">\(\underline{\text{not identical principles}}\)</span> - the goal is the same!</p>
+<p>Pumps range substantially in size depending on application</p>
+<ul class="simple">
+<li><p>Small <br>
+<img alt="" src="../../_images/pumplittle.png" /></p></li>
+<li><p>Big <br>
+<img alt="" src="../../_images/pumpbig.png" /></p></li>
+</ul>
+</div>
+<div class="section" id="types">
+<h2>Types<a class="headerlink" href="#types" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="positive-fixed-displacement-pumps">
+<h3>Positive (Fixed) Displacement Pumps<a class="headerlink" href="#positive-fixed-displacement-pumps" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Fixed volume of fluid is displaced each cycle regardless of
+system static head/pressure</p></li>
+<li><p>Lower flow rates and higher head than non-positive pumps</p></li>
+</ul>
+</div>
+<div class="section" id="variable-displacement-pumps">
+<h3>Variable Displacement Pumps<a class="headerlink" href="#variable-displacement-pumps" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Varying volume of fluid is displaced dependent on system static
+head/pressure (back pressure)</p></li>
+</ul>
+</div>
+<div class="section" id="examples-of-fixed-displacement-pumps">
+<h3>Examples of Fixed Displacement Pumps<a class="headerlink" href="#examples-of-fixed-displacement-pumps" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Screw Pumps</p></li>
+<li><p>Progressive Cavity Pumps</p></li>
+<li><p>Reciprocating Pumps</p></li>
+</ul>
+</div>
+<div class="section" id="images-of-positive-displacement-pumps">
+<h3>Images of Positive Displacement Pumps<a class="headerlink" href="#images-of-positive-displacement-pumps" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Screw Pumps <br> <img alt="" src="../../_images/screwpump.png" /></p></li>
+<li><p>Progressive Cavity Pumps <img alt="" src="../../_images/cavitypump.png" /></p></li>
+<li><p>Reciprocating Pumps <img alt="" src="../../_images/pistonpump.png" /></p></li>
+</ul>
+</div>
+<div class="section" id="examples-of-variable-displacement-pumps">
+<h3>Examples of Variable Displacement Pumps<a class="headerlink" href="#examples-of-variable-displacement-pumps" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Centrifugal (Radial-Flow) Pumps</p></li>
+<li><p>Propeller Pumps (Axial-Flow)</p></li>
+<li><p>Jet Pumps (Mixed-Flow)</p></li>
+</ul>
+<p><img alt="" src="../../_images/pumpclassification.png" /></p>
+</div>
+<div class="section" id="images-of-variable-displacement-pumps">
+<h3>Images of Variable Displacement Pumps<a class="headerlink" href="#images-of-variable-displacement-pumps" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Centrifugal (Radial-Flow) Pumps <img alt="" src="../../_images/centifrugalpump.png" /></p></li>
+<li><p>Propeller Pumps (Axial-Flow) <img alt="" src="../../_images/axialfrowpump.png" /></p></li>
+</ul>
+<hr>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="system-curve">
+<h1>System Curve<a class="headerlink" href="#system-curve" title="Permalink to this headline">¶</a></h1>
+<p>A system (characteristic) curve is a plot of required head versus flow rate in a hydraulic system.  The curve depicts how much energy is needed to maintain a steady flow under the supplied conditions.</p>
+<p>The curve is constructed at the pump location and relates the required added head (at a particular flowrate) needed to be supplied by some pump.</p>
+<div class="math notranslate nohighlight">
+\[ H_p(Q) = h_{elev} + h_{loss}(Q)\]</div>
+<p>For example if the system schematic is</p>
+<p><img alt="" src="../../_images/system-schematic.png" /></p>
+<p>An equation of required head and discharge is</p>
+<p><img alt="" src="../../_images/system-equation.png" /></p>
+<p>The equation tells us that the added head has to be at least 30 meters just to keep the reservoirs at the two levels shown, if any flow is to occur the pump must supply more than 30 meters of head at a prescribed flow rate.  The zero flow head value is called the shutoff head.  The equation plots as the figure below</p>
+<p><img alt="" src="../../_images/system-curve.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The design depicted is poor, a real design would have a backflow prevention device (a one-way valve) and an air-gap at the upper reservoir.
+Nonetheless, the conceptualization is adequate for understanding the construction and purpose of a system curve)</p>
+</div>
+<hr>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="pump-curve-s">
+<h1>Pump Curve(s)<a class="headerlink" href="#pump-curve-s" title="Permalink to this headline">¶</a></h1>
+<p>Pump curves are supplied by the manufacturer and convey performance of a specific pump.
+Information ususally includes:</p>
+<ul class="simple">
+<li><p>Discharge (Q) on the x-axis</p></li>
+<li><p>Head (<span class="math notranslate nohighlight">\(H_p\)</span>) on the left y-axis</p></li>
+<li><p>Pump power input on the right y-axis</p></li>
+<li><p>Pump efficiency (wire-to-water) as a percentage</p></li>
+<li><p>The speed of the pump (RPM)</p></li>
+<li><p>The required Net Positive Suction Head (<span class="math notranslate nohighlight">\(NPSH_r\)</span>)</p></li>
+</ul>
+<p>An example pump curve is shown below</p>
+<p><img alt="" src="../../_images/pump-curve.png" /></p>
+<p>Another example curve for a different pump</p>
+<p><img alt="" src="../../_images/pump-curve-two.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In fluids lab you will make pump curves for a small pair of pumps in various configurations (single pump, pair in series, pair in papallel) <a class="reference external" href="http://54.243.252.9/ce-3105-webroot/ce3105notes/_build/html/lessons/laboratory7/laboratory7.html">Pump Performance Laboratory</a></p>
+</div>
+<hr>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="operating-point">
+<h1>Operating Point<a class="headerlink" href="#operating-point" title="Permalink to this headline">¶</a></h1>
+<p>The pump operating point or duty point is the intersection of pump characteristic and piping system characteristic. The pump will always operate where the system and pump curves intersect. At that point, there is a balance between what the system demands and what the pump can deliver.</p>
+<div class="section" id="pump-selection">
+<h2>Pump Selection<a class="headerlink" href="#pump-selection" title="Permalink to this headline">¶</a></h2>
+<p>A primary design activity is selecting or sizing a pump for a specific application.  The protocol is:</p>
+<ul class="simple">
+<li><p>Design conditions are specified by system hydraulics (i.e. energy equation at desired flow rate)</p></li>
+<li><p>Pump is selected from manufacturer catalogs that appears to meet nominal conditions</p></li>
+<li><p>A hydraulic system curve (Head vs Discharge) is prepared</p></li>
+<li><p>The system curve (or equation) is plotted onto the pump curve (manufacturer supplied)</p></li>
+<li><p>The matching point where the two curves intersect is the anticipated operating point</p></li>
+</ul>
+<p>A few secondary checks are:</p>
+<ul class="simple">
+<li><p>Is there some head range remaining?</p></li>
+<li><p>Flow range remaining?</p></li>
+<li><p>Is pump efficiency close to optimal for the particular pump?</p></li>
+<li><p>Is Net Positive Suction Head Available (NPSHa) large enough for the particular pump at the operating point (and start-up)?</p></li>
+</ul>
+<div class="section" id="example-pump-operating-point">
+<h3>Example: Pump Operating Point<a class="headerlink" href="#example-pump-operating-point" title="Permalink to this headline">¶</a></h3>
+<p>A pump with the characteristic curve shown in the accompanying graph is to be installed as shown.</p>
+<div class="figure align-default" id="example27-1">
+<a class="reference internal image-reference" href="../../_images/example27-1.png"><img alt="../../_images/example27-1.png" src="../../_images/example27-1.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 56 </span><span class="caption-text">Caption</span><a class="headerlink" href="#example27-1" title="Permalink to this image">¶</a></p>
+</div>
+<p>Determine the anticipated discharge in the system?</p>
+<div class="section" id="step-1">
+<h4>Step 1<a class="headerlink" href="#step-1" title="Permalink to this headline">¶</a></h4>
+<p>State the problem, done above! But seriously we need to create a system curve <span class="math notranslate nohighlight">\(h_p(Q)\)</span> and superimpose it onto the pump characteristic curve shown to find the operating point.</p>
+</div>
+<div class="section" id="step-2">
+<h4>Step 2<a class="headerlink" href="#step-2" title="Permalink to this headline">¶</a></h4>
+<p>The sketch is pretty much done for us; so not much to add here.</p>
+</div>
+<div class="section" id="step-3">
+<h4>Step 3<a class="headerlink" href="#step-3" title="Permalink to this headline">¶</a></h4>
+<p>Knowns:</p>
+<ul class="simple">
+<li><p>Pool elevations</p></li>
+<li><p>Working fluid (water)</p></li>
+<li><p>Pipe lengths and diameters, and friction factors (unusual to know these, but we could determine from material properties if needed)</p></li>
+<li><p>Pump “location”</p></li>
+<li><p>Fitting types</p></li>
+</ul>
+<p>Unknowns:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(h_p(Q)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(Q\)</span></p></li>
+</ul>
+</div>
+<div class="section" id="step-4">
+<h4>Step 4<a class="headerlink" href="#step-4" title="Permalink to this headline">¶</a></h4>
+<p>Governing equations:</p>
+<ul class="simple">
+<li><p>Modified bernoulli: <span class="math notranslate nohighlight">\(\frac{p_1}{\gamma}+z_1+\frac{V_1^2}{2g}+h_p(Q) = \frac{p_2}{\gamma}+z_2+\frac{V_2^2}{2g}+\frac{fL}{D}\frac{V^2}{2g}+K_{entrance}\frac{V^2}{2g}+K_{bend}\frac{V^2}{2g}+K_{exit}\frac{V^2}{2g}\)</span></p></li>
+<li><p>Darcy-Weisass pipeline loss model:  <span class="math notranslate nohighlight">\(h_{pipe loss} = \frac{fL}{D}\frac{V^2}{2g}\)</span></p></li>
+<li><p>Continunity: <span class="math notranslate nohighlight">\(Q=VA\)</span></p></li>
+</ul>
+</div>
+<div class="section" id="step-5">
+<h4>Step 5<a class="headerlink" href="#step-5" title="Permalink to this headline">¶</a></h4>
+<p>Analysis</p>
+<p>Using modified bernoulli, observe constant diameter pipes and start and end at each reservoir pool surface so that</p>
+<div class="math notranslate nohighlight">
+\[V_1=V_2\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[p_1 = p_2\]</div>
+<p>Rearrange what remains into</p>
+<div class="math notranslate nohighlight">
+\[h_p(V) = (z_2 - z_1) + \frac{V^2}{2g}[\frac{fL}{D}+K_{entrance}+K_{bend}+K_{exit}]\]</div>
+<p>We will also need to employ continunity to relate <span class="math notranslate nohighlight">\(Q\)</span> and <span class="math notranslate nohighlight">\(V\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[V = \frac{Q}{(\pi D^2)/4)}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">velocity</span><span class="p">(</span><span class="n">flow</span><span class="p">,</span><span class="n">diameter</span><span class="p">):</span>
+    <span class="kn">import</span> <span class="nn">math</span>
+    <span class="n">velocity</span> <span class="o">=</span> <span class="p">(</span><span class="n">flow</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mf">0.25</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">diameter</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">velocity</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">system_curve</span><span class="p">(</span><span class="n">z1</span><span class="p">,</span><span class="n">z2</span><span class="p">,</span><span class="n">flow</span><span class="p">,</span><span class="n">plength</span><span class="p">,</span><span class="n">pdiameter</span><span class="p">,</span><span class="n">pfriction_factor</span><span class="p">,</span><span class="n">k1</span><span class="p">,</span><span class="n">k2</span><span class="p">,</span><span class="n">k3</span><span class="p">,</span><span class="n">gravity</span><span class="p">):</span>
+    <span class="n">lift</span> <span class="o">=</span> <span class="p">(</span><span class="n">z2</span><span class="o">-</span><span class="n">z1</span><span class="p">)</span>
+    <span class="n">velocity_head</span> <span class="o">=</span> <span class="p">(</span><span class="n">velocity</span><span class="p">(</span><span class="n">flow</span><span class="p">,</span><span class="n">pdiameter</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">gravity</span><span class="p">)</span>
+    <span class="n">pipe_loss</span> <span class="o">=</span> <span class="p">(</span><span class="n">pfriction_factor</span><span class="o">*</span><span class="n">plength</span><span class="o">/</span><span class="n">pdiameter</span><span class="p">)</span><span class="o">*</span><span class="n">velocity_head</span>
+    <span class="n">fitting_loss</span> <span class="o">=</span> <span class="p">(</span><span class="n">k1</span><span class="o">+</span><span class="n">k2</span><span class="o">+</span><span class="n">k3</span><span class="p">)</span><span class="o">*</span><span class="n">velocity_head</span>
+    <span class="n">system_curve</span> <span class="o">=</span> <span class="n">lift</span><span class="o">+</span><span class="n">pipe_loss</span><span class="o">+</span><span class="n">fitting_loss</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">system_curve</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">gpm2cfs</span><span class="p">(</span><span class="n">flowgpm</span><span class="p">):</span>
+    <span class="n">gpm2cfs</span> <span class="o">=</span> <span class="n">flowgpm</span><span class="o">/</span><span class="p">(</span><span class="mf">7.48</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span> <span class="c1"># 1 cfs = 7.48gal/cf * 60 sec/min</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">gpm2cfs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now use these scripts to make a table of system curve values</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">flowgpm</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3750</span><span class="p">,</span><span class="mi">250</span><span class="p">)]</span> <span class="c1"># list of flowrates</span>
+<span class="n">flowcfs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">flowgpm</span><span class="p">))]</span> <span class="c1"># empty list for conversion</span>
+<span class="c1"># convert to cfs</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">flowgpm</span><span class="p">)):</span>
+    <span class="n">flowcfs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">gpm2cfs</span><span class="p">(</span><span class="n">flowgpm</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="n">addedheads</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">flowgpm</span><span class="p">)):</span>
+    <span class="n">addedheads</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">system_curve</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="n">flowcfs</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="mi">1000</span><span class="p">,</span><span class="mf">10.</span><span class="o">/</span><span class="mf">12.</span><span class="p">,</span><span class="mf">0.020</span><span class="p">,</span><span class="mf">0.03</span><span class="p">,</span><span class="mf">0.35</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">32.2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- System Curve Table --- </span><span class="se">\n</span><span class="s2"> Flow (gpm)  Added Head (ft)&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">flowgpm</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">flowgpm</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="mi">1</span><span class="p">),</span><span class="s2">&quot;        &quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">addedheads</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- System Curve Table --- 
+ Flow (gpm)  Added Head (ft)
+  0          10.0
+  250          10.4
+  500          11.6
+  750          13.7
+  1000          16.6
+  1250          20.3
+  1500          24.8
+  1750          30.1
+  2000          36.3
+  2250          43.3
+  2500          51.1
+  2750          59.7
+  3000          69.2
+  3250          79.5
+  3500          90.6
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now use this table to find operating point from the pump performance curve (draw system curve on the pump curve).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pumpflow</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">1000</span><span class="p">,</span><span class="mi">1500</span><span class="p">,</span><span class="mi">2000</span><span class="p">,</span><span class="mi">2500</span><span class="p">,</span><span class="mi">3000</span><span class="p">,</span><span class="mi">3500</span><span class="p">,</span><span class="mi">4000</span><span class="p">,</span><span class="mi">4500</span><span class="p">,</span><span class="mi">4900</span><span class="p">]</span>
+<span class="n">pumphead</span> <span class="o">=</span> <span class="p">[</span><span class="mi">76</span><span class="p">,</span><span class="mi">75</span><span class="p">,</span><span class="mi">74</span><span class="p">,</span><span class="mi">73</span><span class="p">,</span><span class="mi">72</span><span class="p">,</span><span class="mi">70</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span><span class="mi">59</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pumpflow</span><span class="p">,</span><span class="n">pumphead</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">flowgpm</span><span class="p">,</span><span class="n">addedheads</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s2">&quot;Pump Curve&quot;</span><span class="p">,</span><span class="s2">&quot;System Curve&quot;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Operating Conditions for Example System&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Discharge (gpm)&#39;</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Head (ft)&#39;</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/1fluidmachines_14_0.png" src="../../_images/1fluidmachines_14_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="step-6">
+<h4>Step 6<a class="headerlink" href="#step-6" title="Permalink to this headline">¶</a></h4>
+<p>We are done, and would report that the operating point is <span class="math notranslate nohighlight">\(Q \approx~3000 \text{gpm } &#64; 70~\text{feet of head}\)</span></p>
+<hr>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="pump-affinity-laws">
+<h1>Pump Affinity Laws<a class="headerlink" href="#pump-affinity-laws" title="Permalink to this headline">¶</a></h1>
+<p>Pump affinity laws are similar to fan laws and were derived from similarity modeling considerations.</p>
+<div class="figure align-default" id="fanlaws">
+<a class="reference internal image-reference" href="../../_images/fanlaws.png"><img alt="../../_images/fanlaws.png" src="../../_images/fanlaws.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 57 </span><span class="caption-text">Fan Laws Excerpt from CITE</span><a class="headerlink" href="#fanlaws" title="Permalink to this image">¶</a></p>
+</div>
+<p>A class of pumps that have geometrically similar shape and operation type (centrifugal, axial-flow, mixed-flow) are anticipated to behave according to the same correlations.  Such a set of pumps is called a homologous series.  For homologous pumps (say a collection of centrifugal pumps) the affinity relations are:</p>
+<ul class="simple">
+<li><p>Discharge scaling: <span class="math notranslate nohighlight">\((\frac{Q}{nD^3})_1 = (\frac{Q}{nD^3})_2\)</span></p></li>
+<li><p>Added head scaling: <span class="math notranslate nohighlight">\((\frac{h_p}{n^2D^2})_1 = (\frac{h_p}{n^2D^2})_2\)</span></p></li>
+<li><p>Power scaling: <span class="math notranslate nohighlight">\((\frac{P}{n^3D^5})_1 = (\frac{P}{n^3D^5})_2\)</span></p></li>
+</ul>
+<p>Affinity laws are especially useful for estimating performance change with changes in speed (<span class="math notranslate nohighlight">\(n\)</span> in the formulas), which is the easiest to control variable (using a variable frequency drive controller for example).  An illustrative example follows:</p>
+<div class="section" id="example-pump-performance-with-speed-rpm-increase">
+<h2>Example: Pump Performance with Speed (RPM) Increase<a class="headerlink" href="#example-pump-performance-with-speed-rpm-increase" title="Permalink to this headline">¶</a></h2>
+<p>The pump in the system depicted in numref<code class="docutils literal notranslate"><span class="pre">{example27-2}</span></code> has the characteristics given in numref<code class="docutils literal notranslate"><span class="pre">{example27-2-pmp}</span></code>.  Determine the discharge that will occur and the power required.</p>
+<div class="figure align-default" id="example27-2">
+<a class="reference internal image-reference" href="../../_images/example27-2.png"><img alt="../../_images/example27-2.png" src="../../_images/example27-2.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 58 </span><span class="caption-text">Canal Lift Schematic</span><a class="headerlink" href="#example27-2" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="example27-2-pmp">
+<a class="reference internal image-reference" href="../../_images/example27-2-pmp.png"><img alt="../../_images/example27-2-pmp.png" src="../../_images/example27-2-pmp.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 59 </span><span class="caption-text">Canal Pump Performance Curves</span><a class="headerlink" href="#example27-2-pmp" title="Permalink to this image">¶</a></p>
+</div>
+<p>What will the discharge be if the pump speed is changed to 900 RPM?</p>
+<div class="section" id="id1">
+<h3>Step 1<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>State the problem; not much to add here - we will first find the operating point assuming the nominal pump speed on the performance curve, then use affinity laws to scale to the new speed.  As before we will approximate the curves using tabulations taken by visual examination of the supplied graphs.</p>
+</div>
+<div class="section" id="id2">
+<h3>Step 2<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Sketch the system; this too is also done for us - we stipulate that point 1 is the pool elevation in the lower canal, and point 2 is the centerline of the discharge pipe.</p>
+</div>
+<div class="section" id="id3">
+<h3>Step 3<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Known:</p>
+<ul class="simple">
+<li><p>water elevation</p></li>
+<li><p>discharge elevation</p></li>
+<li><p>pump curve</p></li>
+<li><p>pump speed (from the curve)</p></li>
+<li><p>pipe material, diameter, length
+Unknown:</p></li>
+<li><p>Discharge <span class="math notranslate nohighlight">\(Q\)</span></p></li>
+<li><p>Power <span class="math notranslate nohighlight">\(P\)</span></p></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>Step 4<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Governing equations</p>
+<ul class="simple">
+<li><p>Modified bernoulli: <span class="math notranslate nohighlight">\(\frac{p_1}{\gamma}+z_1+\frac{V_1^2}{2g}+h_p(Q) = \frac{p_2}{\gamma}+z_2+\frac{V_2^2}{2g}+\frac{fL}{D}\frac{V^2}{2g}+K_{entrance}\frac{V^2}{2g}+K_{bend}\frac{V^2}{2g}+K_{exit}\frac{V^2}{2g}\)</span></p></li>
+<li><p>Darcy-Weisbach pipeline loss model:  <span class="math notranslate nohighlight">\(h_{pipe loss} = \frac{fL}{D}\frac{V^2}{2g}\)</span></p></li>
+<li><p>Continunity: <span class="math notranslate nohighlight">\(Q=VA\)</span></p></li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h3>Step 5<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>Analysis/Solution Set-up<br></p>
+<p>Apply the modified Bernoulli equation from 1 to 2 <br></p>
+<p><span class="math notranslate nohighlight">\(\frac{p_1}{\gamma}+z_1+\frac{V_1^2}{2g}+h_p(Q) = \frac{p_2}{\gamma}+z_2+\frac{V_2^2}{2g}+\frac{fL}{D}\frac{V^2}{2g}+K_{entrance}\frac{V^2}{2g}+K_{bend}\frac{V^2}{2g}+K_{exit}\frac{V^2}{2g}\)</span></p>
+<p>and observe that</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(V_1 \approx~0\)</span> at the free surface</p></li>
+<li><p><span class="math notranslate nohighlight">\(p_1 = p_2 = 0 \text{ gage}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(K_{entrance} = 0.01\)</span> table look-up or the mighty internet</p></li>
+<li><p><span class="math notranslate nohighlight">\(K_{bend} = 0.35\)</span> table look-up or the mighty internet</p></li>
+<li><p><span class="math notranslate nohighlight">\(K_{exit} = 0.0\)</span> no fitting here.</p></li>
+</ul>
+<p>so our added head equation in this case becomes</p>
+<div class="math notranslate nohighlight">
+\[h_p(V) = (z_2 - z_1) + \frac{V^2}{2g}[\frac{fL}{D}+K_{entrance}+K_{bend}]\]</div>
+<p>Unlike the prior example, this time we will need to compute friction factors based on pipe material and discharge so we will need auxiliary functions to compute Reynolds’ number and friction factors.  By far the easiest is to use the Jain approximation, repeated below from earlier lessons:</p>
+<p><span class="math notranslate nohighlight">\(Re_d(Q) = \frac{16 \rho D Q^2}{\mu \pi^2 D^4}\)</span><br></p>
+<p>and<br></p>
+<p><span class="math notranslate nohighlight">\(f=\frac{0.25}{[log_{10}(\frac{k_s}{3.7D}+\frac{5.74}{Re_d^{0.9}})]^2}\)</span><br></p>
+<p>For this example we look up values for water for the Reynolds’ number computations <br></p>
+<p><span class="math notranslate nohighlight">\(\rho = 1000~\frac{kg}{m^3}\)</span> and <span class="math notranslate nohighlight">\(\mu = 1.14\times10^{-3}~\frac{N s}{m^2}\)</span></p>
+<p>Now we write our prototype functions</p>
+<p>Using the same approach as before, except in SI units</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">reynolds</span><span class="p">(</span><span class="n">flow</span><span class="p">,</span><span class="n">rho</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">diameter</span><span class="p">):</span>
+    <span class="kn">import</span> <span class="nn">math</span>
+    <span class="n">reynolds</span> <span class="o">=</span> <span class="n">rho</span><span class="o">*</span><span class="n">velocity</span><span class="p">(</span><span class="n">flow</span><span class="p">,</span><span class="n">diameter</span><span class="p">)</span><span class="o">*</span><span class="n">diameter</span><span class="o">/</span><span class="n">mu</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">reynolds</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">jainff</span><span class="p">(</span><span class="n">roughness</span><span class="p">,</span><span class="n">diameter</span><span class="p">,</span><span class="n">reynolds</span><span class="p">):</span>
+    <span class="kn">import</span> <span class="nn">math</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="mf">0.25</span>
+    <span class="n">den</span><span class="o">=</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span>  <span class="p">(</span><span class="mf">3.7</span><span class="o">*</span><span class="n">roughness</span><span class="o">/</span><span class="n">diameter</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="mf">5.74</span><span class="o">/</span><span class="p">(</span><span class="n">reynolds</span><span class="o">**</span><span class="mf">0.9</span><span class="p">))</span> <span class="p">))</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">jainff</span><span class="o">=</span><span class="n">num</span><span class="o">/</span><span class="n">den</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">jainff</span><span class="p">)</span>
+    
+<span class="k">def</span> <span class="nf">velocity</span><span class="p">(</span><span class="n">flow</span><span class="p">,</span><span class="n">diameter</span><span class="p">):</span>
+    <span class="kn">import</span> <span class="nn">math</span>
+    <span class="n">velocity</span> <span class="o">=</span> <span class="p">(</span><span class="n">flow</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mf">0.25</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">diameter</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">velocity</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">system_curve</span><span class="p">(</span><span class="n">z1</span><span class="p">,</span><span class="n">z2</span><span class="p">,</span><span class="n">flow</span><span class="p">,</span><span class="n">plength</span><span class="p">,</span><span class="n">pdiameter</span><span class="p">,</span><span class="n">pfriction_factor</span><span class="p">,</span><span class="n">k1</span><span class="p">,</span><span class="n">k2</span><span class="p">,</span><span class="n">k3</span><span class="p">,</span><span class="n">gravity</span><span class="p">):</span>
+    <span class="n">lift</span> <span class="o">=</span> <span class="p">(</span><span class="n">z2</span><span class="o">-</span><span class="n">z1</span><span class="p">)</span>
+    <span class="n">velocity_head</span> <span class="o">=</span> <span class="p">(</span><span class="n">velocity</span><span class="p">(</span><span class="n">flow</span><span class="p">,</span><span class="n">pdiameter</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">gravity</span><span class="p">)</span>
+    <span class="n">pipe_loss</span> <span class="o">=</span> <span class="p">(</span><span class="n">pfriction_factor</span><span class="o">*</span><span class="n">plength</span><span class="o">/</span><span class="n">pdiameter</span><span class="p">)</span><span class="o">*</span><span class="n">velocity_head</span>
+    <span class="n">fitting_loss</span> <span class="o">=</span> <span class="p">(</span><span class="n">k1</span><span class="o">+</span><span class="n">k2</span><span class="o">+</span><span class="n">k3</span><span class="p">)</span><span class="o">*</span><span class="n">velocity_head</span>
+    <span class="n">system_curve</span> <span class="o">=</span> <span class="n">lift</span><span class="o">+</span><span class="n">pipe_loss</span><span class="o">+</span><span class="n">fitting_loss</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">system_curve</span><span class="p">)</span>
+
+<span class="n">length</span> <span class="o">=</span> <span class="mf">62.5</span> <span class="c1"># overall length includes the bend and a little extra to clear the berm</span>
+<span class="n">zone</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">ztwo</span> <span class="o">=</span> <span class="mf">21.5</span>
+<span class="n">rho</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="mf">1.14e-03</span>
+<span class="n">diameter</span> <span class="o">=</span> <span class="mf">0.356</span>
+<span class="n">roughness</span> <span class="o">=</span> <span class="mf">0.0000265</span> <span class="c1"># table lookup for steel in meters!</span>
+<span class="n">k1</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">k2</span> <span class="o">=</span> <span class="mf">0.35</span>
+<span class="n">k3</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">gravity</span> <span class="o">=</span> <span class="mf">9.8</span>
+<span class="n">flowcms</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">16</span><span class="p">)]</span> <span class="c1"># list of flowrates</span>
+<span class="c1"># convert to floating point</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">flowcms</span><span class="p">)):</span>
+    <span class="n">flowcms</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mf">0.00001</span><span class="o">+</span><span class="n">i</span><span class="o">*</span><span class="mf">0.025</span> <span class="c1"># sneaky way to get a list from 0 to 1 in steps of 0.1</span>
+<span class="n">addedheads</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">flowcms</span><span class="p">)):</span>
+    <span class="n">red</span> <span class="o">=</span> <span class="n">reynolds</span><span class="p">(</span><span class="n">flowcms</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">rho</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">diameter</span><span class="p">)</span>
+    <span class="n">ff</span> <span class="o">=</span> <span class="n">jainff</span><span class="p">(</span><span class="n">roughness</span><span class="p">,</span><span class="n">diameter</span><span class="p">,</span><span class="n">red</span><span class="p">)</span>
+    <span class="n">addedheads</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">system_curve</span><span class="p">(</span><span class="n">zone</span><span class="p">,</span><span class="n">ztwo</span><span class="p">,</span><span class="n">flowcms</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">length</span><span class="p">,</span><span class="n">diameter</span><span class="p">,</span><span class="n">ff</span><span class="p">,</span><span class="n">k1</span><span class="p">,</span><span class="n">k2</span><span class="p">,</span><span class="n">k3</span><span class="p">,</span><span class="n">gravity</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- System Curve Table --- </span><span class="se">\n</span><span class="s2"> Flow (cms)  Added Head (m)&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">flowcms</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">flowcms</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="mi">3</span><span class="p">),</span><span class="s2">&quot;        &quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">addedheads</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- System Curve Table --- 
+ Flow (cms)  Added Head (m)
+  0.0          1.5
+  0.025          1.514
+  0.05          1.553
+  0.075          1.618
+  0.1          1.706
+  0.125          1.82
+  0.15          1.958
+  0.175          2.121
+  0.2          2.309
+  0.225          2.521
+  0.25          2.758
+  0.275          3.019
+  0.3          3.305
+  0.325          3.616
+  0.35          3.952
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pumpflow</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.025</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.075</span><span class="p">,</span><span class="mf">0.10</span><span class="p">,</span><span class="mf">0.125</span><span class="p">,</span><span class="mf">0.15</span><span class="p">,</span><span class="mf">0.20</span><span class="p">,</span><span class="mf">0.25</span><span class="p">,</span><span class="mf">0.275</span><span class="p">,</span><span class="mf">0.30</span><span class="p">]</span>
+<span class="n">pumphead</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mf">4.9</span><span class="p">,</span><span class="mf">4.6</span><span class="p">,</span><span class="mf">4.1</span><span class="p">,</span><span class="mf">3.35</span><span class="p">,</span><span class="mf">3.24</span><span class="p">,</span><span class="mf">3.14</span><span class="p">,</span><span class="mf">2.86</span><span class="p">,</span><span class="mf">2.54</span><span class="p">,</span><span class="mf">2.23</span><span class="p">,</span><span class="mf">1.8</span><span class="p">]</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pumpflow</span><span class="p">,</span><span class="n">pumphead</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">flowcms</span><span class="p">,</span><span class="n">addedheads</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s2">&quot;Pump Curve&quot;</span><span class="p">,</span><span class="s2">&quot;System Curve&quot;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Operating Conditions for Example System&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Discharge (cms)&#39;</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Head (m)&#39;</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/1fluidmachines_19_0.png" src="../../_images/1fluidmachines_19_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">myflow</span><span class="o">=</span><span class="mf">0.24</span>
+<span class="n">myhead</span><span class="o">=</span><span class="nb">round</span><span class="p">(</span><span class="n">system_curve</span><span class="p">(</span><span class="n">zone</span><span class="p">,</span><span class="n">ztwo</span><span class="p">,</span><span class="n">myflow</span><span class="p">,</span><span class="n">length</span><span class="p">,</span><span class="n">diameter</span><span class="p">,</span><span class="n">ff</span><span class="p">,</span><span class="n">k1</span><span class="p">,</span><span class="n">k2</span><span class="p">,</span><span class="n">k3</span><span class="p">,</span><span class="n">gravity</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Added head is &quot;</span><span class="p">,</span><span class="n">myhead</span><span class="p">,</span><span class="s2">&quot; meters for discharge of &quot;</span><span class="p">,</span><span class="n">myflow</span><span class="o">*</span><span class="mi">1000</span><span class="p">,</span><span class="s2">&quot; liters per second&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Added head is  2.65  meters for discharge of  240.0  liters per second
+</pre></div>
+</div>
+</div>
+</div>
+<p>So from the graphs, the operating point is at about <span class="math notranslate nohighlight">\(Q=0.24~\frac{m^3}{sec}\)</span> with an operating head of <span class="math notranslate nohighlight">\(2.65~m\)</span><br></p>
+<p>Next the power requirement is <span class="math notranslate nohighlight">\(P=\frac{Q\gamma h}{\eta}\)</span>  From the supplied curves, the efficiency at the design flowrate is about 80%.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">power</span> <span class="o">=</span> <span class="mf">0.24</span><span class="o">*</span><span class="n">system_curve</span><span class="p">(</span><span class="n">zone</span><span class="p">,</span><span class="n">ztwo</span><span class="p">,</span><span class="mf">0.24</span><span class="p">,</span><span class="n">length</span><span class="p">,</span><span class="n">diameter</span><span class="p">,</span><span class="n">ff</span><span class="p">,</span><span class="n">k1</span><span class="p">,</span><span class="n">k2</span><span class="p">,</span><span class="n">k3</span><span class="p">,</span><span class="n">gravity</span><span class="p">)</span><span class="o">*</span><span class="mi">9800</span><span class="o">/</span><span class="mf">0.8</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wire-to-water power in watts : &quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">power</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Wire-to-water power in watts :  7798.802
+</pre></div>
+</div>
+</div>
+</div>
+<p>So the first part is done, now to adjust for a different pump speed.</p>
+<p>The affinity laws in this case are:</p>
+<p><strong>Discharge scaling:</strong> <br></p>
+<p><span class="math notranslate nohighlight">\((\frac{Q}{nD^3})_1 = (\frac{Q}{nD^3})_2\)</span> which after rearrangement for <span class="math notranslate nohighlight">\(Q_2\)</span> the higher speed operation</p>
+<p><span class="math notranslate nohighlight">\(Q_2 = Q_1\frac{n_2}{n_1}\frac{D_2^3}{D_1^3}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n1</span> <span class="o">=</span> <span class="mi">690</span>
+<span class="n">n2</span> <span class="o">=</span> <span class="mi">900</span>
+<span class="n">d1</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">d2</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">q1</span> <span class="o">=</span> <span class="mf">0.24</span>
+<span class="n">q2</span> <span class="o">=</span> <span class="n">q1</span><span class="o">*</span><span class="p">(</span><span class="n">n2</span><span class="o">/</span><span class="n">n1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">d2</span><span class="o">**</span><span class="mi">3</span><span class="o">/</span><span class="n">d1</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Scaled pump discharge &quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">q2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Scaled pump discharge  0.313
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now determine the increased head loss</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Increased RPM added head&quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">system_curve</span><span class="p">(</span><span class="n">zone</span><span class="p">,</span><span class="n">ztwo</span><span class="p">,</span><span class="mf">0.31</span><span class="p">,</span><span class="n">length</span><span class="p">,</span><span class="n">diameter</span><span class="p">,</span><span class="n">ff</span><span class="p">,</span><span class="n">k1</span><span class="p">,</span><span class="n">k2</span><span class="p">,</span><span class="n">k3</span><span class="p">,</span><span class="n">gravity</span><span class="p">),</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Increased RPM added head 3.423
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now check that the pump will produce this much head using</p>
+<p><strong>Added head scaling:</strong></p>
+<p><span class="math notranslate nohighlight">\((\frac{h_p}{n^2D^2})_1 = (\frac{h_p}{n^2D^2})_2\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">h1</span> <span class="o">=</span> <span class="mf">2.65</span>
+<span class="n">h2</span> <span class="o">=</span> <span class="n">h1</span><span class="o">*</span><span class="p">(</span><span class="n">n2</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">n1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">d2</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">d1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Scaled Pump Head &quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">h2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Scaled Pump Head  4.509
+</pre></div>
+</div>
+</div>
+</div>
+<p>So the pump appears to be able to produceeough head, now scale the power using</p>
+<p><strong>Power scaling:</strong></p>
+<p><span class="math notranslate nohighlight">\((\frac{P}{n^3D^5})_1 = (\frac{P}{n^3D^5})_2\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p1</span> <span class="o">=</span> <span class="mi">7798</span><span class="o">*</span><span class="mf">0.8</span> <span class="c1"># we are working with mechanical power here</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">p1</span><span class="o">*</span><span class="p">(</span><span class="n">n2</span><span class="o">**</span><span class="mi">3</span><span class="o">/</span><span class="n">n1</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">d2</span><span class="o">**</span><span class="mi">5</span><span class="o">/</span><span class="n">d1</span><span class="o">**</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Scaled Power &quot;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">p2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Scaled Power  13843.741
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>Step 6<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>A quick comment, the step to check that the scaled head is at least big enough to overcome the required added head at the new flow rate is often forgotten but should be checked.</p>
+<hr>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="net-positive-suction-head-npsh">
+<h1>Net Positive Suction Head (NPSH)<a class="headerlink" href="#net-positive-suction-head-npsh" title="Permalink to this headline">¶</a></h1>
+<p>The most common cause of pumping system failure is poor suction conditions.</p>
+<p>Cavitation occurs when liquid pressure is reduced to the vapor pressure of the liquid, then the liquid flashes to make small gas bubbles, which are unstable and collapse back into liquid - this rapid localized phase change process imparts large destructive energy into the pump impeller and housing and quickly destroys the pump itself in addition to creating loss of priming.</p>
+<p>In a pipe system with a pump, cavitation will occur when the absolute pressure at the inlet (eye) falls below the vapor pressure of the water.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The pump destruction described is not usually instant, but does happen pretty fast.  For example weeks to failure when the designer expects years between overhauls.</p>
+<p>High speed turbopumps  can fail in seconds when they are supposed to run for minutes.  Cavitation is a big deal in things like rocket ships, nuclear power plants (cooling system), and other high-risk applications; less so in Civil Engineering, usually our failures just cost time and money - a lift station failure during a flood could cause death, so we are not risk-free</p>
+</div>
+<p>Considerations</p>
+<ul class="simple">
+<li><p>Liquid must enter the pump eye under some pressure; this pressure is dictated by the hydraulic system and is called the Available Net Positive Suction Head <span class="math notranslate nohighlight">\(NPSH_a\)</span>.</p></li>
+<li><p>A centrifugal pump cannot lift water unless it is primed; the first stage impellers must be below the static HGL in the suction pit at startup.</p></li>
+<li><p>The manufacturer supplies a value for the minimum pressure the pump needs to operate; this pressure is called the Required Net Positive Suction Head <span class="math notranslate nohighlight">\(NPSH_r\)</span></p></li>
+<li><p>Proper pump operation without cavitation demands that $<span class="math notranslate nohighlight">\( NPSH_r &lt; NPSH_a \)</span>$</p></li>
+<li><p>Can calculate <span class="math notranslate nohighlight">\(NPSH_a\)</span> from</p></li>
+</ul>
+<p><img alt="" src="../../_images/npsha-formula.png" /></p>
+<ul class="simple">
+<li><p>An on-line calculator is located at <a class="reference external" href="http://54.243.252.9/toolbox/pipehydraulics/NPSHCalculatorUS/NPSHCalculatorUS.html">http://54.243.252.9/toolbox/pipehydraulics/NPSHCalculatorUS/NPSHCalculatorUS.html</a> ; the calculator is specific for US Customary Units, but would easily be adaptabe for SI units. The interface looks like</p></li>
+</ul>
+<p><img alt="" src="../../_images/npsha-calc.png" /></p>
+<div class="section" id="npsha-example">
+<h2>NPSHa Example<a class="headerlink" href="#npsha-example" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="problem-statement">
+<h3>Problem Statement<a class="headerlink" href="#problem-statement" title="Permalink to this headline">¶</a></h3>
+<p><img alt="" src="../../_images/NPSA-ex1.png" /></p>
+</div>
+<div class="section" id="solution-part-1">
+<h3>Solution (part 1)<a class="headerlink" href="#solution-part-1" title="Permalink to this headline">¶</a></h3>
+<p><img alt="" src="../../_images/NPSA-ex2.png" /></p>
+</div>
+<div class="section" id="solution-part-2">
+<h3>Solution (part 2)<a class="headerlink" href="#solution-part-2" title="Permalink to this headline">¶</a></h3>
+<p><img alt="" src="../../_images/NPSA-ex3.png" /></p>
+</div>
+<div class="section" id="solution-part-3">
+<h3>Solution (part 3)<a class="headerlink" href="#solution-part-3" title="Permalink to this headline">¶</a></h3>
+<p><img alt="" src="../../_images/NPSA-ex4.png" /></p>
+</div>
+<div class="section" id="solution-part-4">
+<h3>Solution (part 4)<a class="headerlink" href="#solution-part-4" title="Permalink to this headline">¶</a></h3>
+<p><img alt="" src="../../_images/NPSA-ex5.png" /></p>
+<p>We look up the liquid properties at <a class="reference external" href="http://54.243.252.9/toolbox/fluidmechanics/WaterPropertiesUS/WaterPropertiesUS.html">http://54.243.252.9/toolbox/fluidmechanics/WaterPropertiesUS/WaterPropertiesUS.html</a></p>
+</div>
+<div class="section" id="solution-part-5">
+<h3>Solution (part 5)<a class="headerlink" href="#solution-part-5" title="Permalink to this headline">¶</a></h3>
+<p>Now insert these intermediate values into the equation for <span class="math notranslate nohighlight">\(NPSH_a\)</span> paying close attention to how the equation is written in the calculator (the <span class="math notranslate nohighlight">\(H_{static}\)</span> sign is changed in the calculator in comparison to the equation presented above, the remaining terms are unchanged.</p>
+<p><img alt="" src="../../_images/NPSA-soln.png" /></p>
+</div>
+<div class="section" id="solution-summary">
+<h3>Solution Summary<a class="headerlink" href="#solution-summary" title="Permalink to this headline">¶</a></h3>
+<p><img alt="" src="../../_images/NPSA-soln2.png" /></p>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="exercises">
+<h1>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h1>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons/19PumpSelection"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../04fluidstaticsandpressure/5exercise.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Exercise Set 4</p>
+            </div>
+        </a>
+    </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Theodore G, Cleveland<br/>
+        
+            &copy; Copyright 2023.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

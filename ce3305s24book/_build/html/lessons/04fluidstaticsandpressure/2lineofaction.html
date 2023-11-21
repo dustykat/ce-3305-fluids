@@ -1,0 +1,574 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Line of Action of Equivalent Point Force &#8212; Instructor Notes CE 3305</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Bouyancy" href="3bouyancy.html" />
+    <link rel="prev" title="Pressure Force on Submerged Objects (pp XXX-XXX)" href="1forces.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/I5-fluidos.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Instructor Notes CE 3305</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../01introduction/1introduction.html">
+   Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01introduction/3problemsolving.html">
+     Problem Solving and Documentation (pp 16-22)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01introduction/2computation.html">
+     Computational Hydraulics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01introduction/5whatisfluids.html">
+     Fluid Mechanics - A definition (pp 2-6)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01introduction/4units.html">
+     Dimensions and Units (pp. 6-12)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01introduction/6exercise.html">
+     Exercise Set 1
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../02fluidproperties/0fluidproperties.html">
+   Fluid Properties
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02fluidproperties/1properties.html">
+     Intensive and Extensive Properties (pp. 28-35)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02fluidproperties/2viscosity.html">
+     Viscosity (pp 36-45)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02fluidproperties/3liquids.html">
+     Liquid Properties (pp. 46-52)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02fluidproperties/4vaporpressure.html">
+     Vapor Pressure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02fluidproperties/5exercise.html">
+     Exercise Set 2
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="0fluidstaticsandpressure.html">
+   Fluid Statics and Pressure (2/2)
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="1forces.html">
+     Pressure Force on Submerged Objects (pp XXX-XXX)
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Line of Action of Equivalent Point Force
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3bouyancy.html">
+     Bouyancy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="4stability.html">
+     Stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5exercise.html">
+     Exercise Set 4
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/lessons/04fluidstaticsandpressure/2lineofaction.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flessons/04fluidstaticsandpressure/2lineofaction.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/lessons/04fluidstaticsandpressure/2lineofaction.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-1-concrete-retaining-wall-form-specification">
+   Example 1: Concrete retaining wall form specification
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#state-the-problem">
+     State the problem
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sketch-the-situation">
+     Sketch the situation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#identify-list-unknown-quantities">
+     Identify (list) unknown quantities
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#identify-list-governing-principles">
+     Identify (list) governing principles
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solve-for-the-unknowns">
+     Solve for the unknowns
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#forces-on-submerged-objects">
+   Forces on Submerged Objects
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="line-of-action-of-equivalent-point-force">
+<h1>Line of Action of Equivalent Point Force<a class="headerlink" href="#line-of-action-of-equivalent-point-force" title="Permalink to this headline">¶</a></h1>
+<p>Now we have the magnitude, and sometimes that might be enough but usually we need to also know the line of action.  We find that by taking a moment to examine <a class="reference internal" href="#line-o-action"><span class="std std-numref">Fig. 40</span></a></p>
+<div class="figure align-default" id="line-o-action">
+<a class="reference internal image-reference" href="../../_images/line-o-action.png"><img alt="../../_images/line-o-action.png" src="../../_images/line-o-action.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 40 </span><span class="caption-text">Line of action of equivalent point load (equivalent to the actual distributed load)</span><a class="headerlink" href="#line-o-action" title="Permalink to this image">¶</a></p>
+</div>
+<p>We will simply require the moment generated by the total force we just determined (equivalent point load) to be equal the the moment generated by the distributed force (actual distributed load).</p>
+<p>Choosing the upper edge of the plate as a rotational axis we have</p>
+<div class="math notranslate nohighlight">
+\[ \sum M_A = \int_A y dF = y_P F\]</div>
+<p>Rearrangement gives</p>
+<div class="math notranslate nohighlight">
+\[ y_P = \frac{\int_A y dF}{F} = \frac{\int_A y^2sin(\alpha)dA}{\int_A y sin(\alpha)dA}\]</div>
+<p>Simplification gives</p>
+<div class="math notranslate nohighlight">
+\[ y_P = \frac{\int_A y^2dA}{\int_A y dA} = \frac{I_x}{A \bar y}\]</div>
+<p>The value <span class="math notranslate nohighlight">\(I_x\)</span> is the moment of inertia about the <span class="math notranslate nohighlight">\(x\)</span> axis. We will then recall the <a class="reference external" href="https://en.wikipedia.org/wiki/Parallel_axis_theorem">parallel axis theorem</a> to find the value in terms of our centroidal locations</p>
+<div class="math notranslate nohighlight">
+\[ y_P =  \frac{I_0}{A \bar y}+ \bar y\]</div>
+<p>Where <span class="math notranslate nohighlight">\(I_0\)</span> is the moment of inertia about the plate centroid (tabulated for common geometric shapes).</p>
+<p>The nice thing is that this calculus will work fine for any surface (shape and orientation), but at the expense of having to perform analysis to find the functions to integrate (or do numerical integrations which is easier if we can describe the geometry)</p>
+<p>Below are some example applications of the force and line-of-action expressions follow.</p>
+<div class="section" id="example-1-concrete-retaining-wall-form-specification">
+<h2>Example 1: Concrete retaining wall form specification<a class="headerlink" href="#example-1-concrete-retaining-wall-form-specification" title="Permalink to this headline">¶</a></h2>
+<p>Assuming that concrete behaves as a liquid (<span class="math notranslate nohighlight">\(\gamma = 150\frac{lbf}{ft^3}\)</span>) just after placement, determine the force per foot of length exherted on a form by the concrete if it is poured into forms for a wall that is to be 9 feet tall.</p>
+<div class="figure align-default" id="wall-setup">
+<a class="reference internal image-reference" href="../../_images/wall-setup.png"><img alt="../../_images/wall-setup.png" src="../../_images/wall-setup.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 41 </span><span class="caption-text">Concrete retaining wall form design</span><a class="headerlink" href="#wall-setup" title="Permalink to this image">¶</a></p>
+</div>
+<p>If the forms are held in place as shown in <a class="reference internal" href="#wall-setup"><span class="std std-numref">Fig. 41</span></a>, with ties between vertical braces spaced every 2 feet, what force is exherted on the bottom tie?</p>
+<p>Now recall our problem protocol.</p>
+<ol class="simple">
+<li><p>State the problem</p></li>
+<li><p>Sketch the situation (sketching no matter how ugly helps organize thoughts!). Identify (list) known quantities</p></li>
+<li><p>Identify (list) unknown quantities</p></li>
+<li><p>Identify (list) governing principles and equations that appear relevant to the problem</p></li>
+<li><p>Starting from one or more governing principles and the known quantities solve for the unknowns.</p></li>
+<li><p>Validate/discuss results</p></li>
+</ol>
+<div class="section" id="state-the-problem">
+<h3>State the problem<a class="headerlink" href="#state-the-problem" title="Permalink to this headline">¶</a></h3>
+<p>Essentially same as above, but there is some simplification in <a class="reference internal" href="#pr-state"><span class="std std-numref">Fig. 42</span></a></p>
+<div class="figure align-default" id="pr-state">
+<a class="reference internal image-reference" href="../../_images/pr-state.png"><img alt="../../_images/pr-state.png" src="../../_images/pr-state.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 42 </span><span class="caption-text">Concrete retaining wall form design, problem statement</span><a class="headerlink" href="#pr-state" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="sketch-the-situation">
+<h3>Sketch the situation<a class="headerlink" href="#sketch-the-situation" title="Permalink to this headline">¶</a></h3>
+<p>A sketch of one side of the form is shown in <a class="reference internal" href="#wall-side"><span class="std std-numref">Fig. 43</span></a></p>
+<div class="figure align-default" id="wall-side">
+<a class="reference internal image-reference" href="../../_images/wall-side.png"><img alt="../../_images/wall-side.png" src="../../_images/wall-side.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 43 </span><span class="caption-text">Concrete retaining wall FBD and force identification.</span><a class="headerlink" href="#wall-side" title="Permalink to this image">¶</a></p>
+</div>
+<p>Using the sketch as a guide our known quantities are the dimensions, the specific weight of concrete as a liquid.</p>
+</div>
+<div class="section" id="identify-list-unknown-quantities">
+<h3>Identify (list) unknown quantities<a class="headerlink" href="#identify-list-unknown-quantities" title="Permalink to this headline">¶</a></h3>
+<p>The unknown quantities are the resultant force (the equivalent point load) <span class="math notranslate nohighlight">\(F_R\)</span>. per unit length.</p>
+</div>
+<div class="section" id="identify-list-governing-principles">
+<h3>Identify (list) governing principles<a class="headerlink" href="#identify-list-governing-principles" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>hydrostatic equation of a liquid</p></li>
+<li><p>centroid of a rectangle (to find magnitude of the pressure force)</p></li>
+<li><p>centroid of a triangle (to find point of application in the pressure prism</p></li>
+<li><p>moment balance to find how force is resisted by the ties</p></li>
+</ul>
+</div>
+<div class="section" id="solve-for-the-unknowns">
+<h3>Solve for the unknowns<a class="headerlink" href="#solve-for-the-unknowns" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="unknowns-1">
+<a class="reference internal image-reference" href="../../_images/unknowns-1.png"><img alt="../../_images/unknowns-1.png" src="../../_images/unknowns-1.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 44 </span><span class="caption-text">Solve for pressure force per unit length (foot of wall)</span><a class="headerlink" href="#unknowns-1" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#unknowns-1"><span class="std std-numref">Fig. 44</span></a> shows the analysis and solution for pressure force and line of application for each foot of wall.</p>
+<div class="figure align-default" id="unknowns-2">
+<a class="reference internal image-reference" href="../../_images/unknowns-2.png"><img alt="../../_images/unknowns-2.png" src="../../_images/unknowns-2.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 45 </span><span class="caption-text">Solve for load distribution in upper and lower ties per unit length (foot of wall)</span><a class="headerlink" href="#unknowns-2" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#unknowns-2"><span class="std std-numref">Fig. 45</span></a> shows the analysis and solution for load distribution in the ties for each foot of wall. Each tie pair must support 2-feet of wall (except for the end pairs) which gives the end result of 8100 lbs for the lower ties.  Using this value we can decide what size rods to use as ties.  For example</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.google.com/search?client=firefox-b-1-d&amp;q=What+is+the+tensile+strength+of+1/4+threaded+rod%3F&amp;sa=X&amp;ved=2ahUKEwin-YjDlLf1AhVfl2oFHRmHDI0Qzmd6BAgdEAU&amp;biw=1063&amp;bih=882&amp;dpr=1">1/4 all-thread tensile strength</a> has an upper limit strength of 150000 psi, so we multiply by the rod cross sectional area to see if it is strong enough.</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?q=What+is+the+tensile+strength+of+1%2F2+threaded+rod%3F&amp;client=firefox-b-1-d&amp;biw=1063&amp;bih=882&amp;ei=1obkYbjvD_qzqtsP8dSo0Aw&amp;ved=0ahUKEwi4ssvTlLf1AhX6mWoFHXEqCsoQ4dUDCA0&amp;uact=5&amp;oq=What+is+the+tensile+strength+of+1%2F2+threaded+rod%3F&amp;gs_lcp=Cgdnd3Mtd2l6EAMyBAgAEB4yBQgAEIYDMgUIABCGAzoHCAAQRxCwA0oECEEYAEoECEYYAFD_BVj_BWDlD2gBcAJ4AIABR4gBR5IBATGYAQCgAQHIAQjAAQE&amp;sclient=gws-wiz">1/2 all-thread tensile strength</a>
+has an upper limit strength of 60000 psi, so we multiply by the rod cross sectional area to see if it is strong enough.</p></li>
+</ul>
+<p>The scripts to compute the strength are below; 1/4-inch is suitable for the upper ties; 1/2-inch is plenty strong for the lower ties.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="n">tensile</span> <span class="o">=</span> <span class="mi">150000</span> <span class="c1">#psi</span>
+<span class="n">diameter</span> <span class="o">=</span> <span class="mf">0.25</span> <span class="c1">#inches</span>
+<span class="n">area</span> <span class="o">=</span> <span class="mf">0.25</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">diameter</span><span class="o">**</span><span class="mi">2</span> <span class="c1">#area in inches</span>
+<span class="n">force</span> <span class="o">=</span> <span class="n">tensile</span><span class="o">*</span><span class="n">area</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1/4 inch tie rod strength = &#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">force</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="s1">&#39;lbs&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1/4 inch tie rod strength =  7363.108 lbs
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="n">tensile</span> <span class="o">=</span> <span class="mi">60000</span> <span class="c1">#psi</span>
+<span class="n">diameter</span> <span class="o">=</span> <span class="mf">0.50</span> <span class="c1">#inches</span>
+<span class="n">area</span> <span class="o">=</span> <span class="mf">0.25</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">diameter</span><span class="o">**</span><span class="mi">2</span> <span class="c1">#area in inches</span>
+<span class="n">force</span> <span class="o">=</span> <span class="n">tensile</span><span class="o">*</span><span class="n">area</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1/2 inch tie rod strength = &#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">force</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="s1">&#39;lbs&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1/2 inch tie rod strength =  11780.972 lbs
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="forces-on-submerged-objects">
+<h2>Forces on Submerged Objects<a class="headerlink" href="#forces-on-submerged-objects" title="Permalink to this headline">¶</a></h2>
+<p>The integral methods will always work, but an easier approach for common geometries is a projection of volumes approach.</p>
+<div class="figure align-default" id="fd-4-1">
+<a class="reference internal image-reference" href="../../_images/fd-4.1.png"><img alt="../../_images/fd-4.1.png" src="../../_images/fd-4.1.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 46 </span><span class="caption-text">Force diagram submerged plate</span><a class="headerlink" href="#fd-4-1" title="Permalink to this image">¶</a></p>
+</div>
+<p>The idea is that the distributed force as depicted in <a class="reference internal" href="#fd-4-1"><span class="std std-numref">Fig. 46</span></a> is equivalent to the vertical and horizontal component forces depicted in <a class="reference internal" href="#fd-4-2"><span class="std std-numref">Fig. 47</span></a>.  The horizontal component is found using the hydrostatic equation applied to the projection of the object onto a vertical plane.</p>
+<div class="figure align-default" id="fd-4-2">
+<a class="reference internal image-reference" href="../../_images/fd-4.2.png"><img alt="../../_images/fd-4.2.png" src="../../_images/fd-4.2.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 47 </span><span class="caption-text">Resultant forces by displacement</span><a class="headerlink" href="#fd-4-2" title="Permalink to this image">¶</a></p>
+</div>
+<p>The vertical component is found as the weight of the volume of liquid above the object.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons/04fluidstaticsandpressure"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="1forces.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Pressure Force on Submerged Objects (pp XXX-XXX)</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="3bouyancy.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Bouyancy</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Theodore G, Cleveland<br/>
+        
+            &copy; Copyright 2023.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

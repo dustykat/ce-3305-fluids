@@ -1,0 +1,553 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problem Solving and Documentation (pp 11-13) &#8212; Instructor Notes CE 3305</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Computational Hydraulics (pg. 9 - 10)" href="2computation.html" />
+    <link rel="prev" title="Introduction" href="1introduction.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/I5-fluidos.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Instructor Notes CE 3305</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="1introduction.html">
+   Introduction
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Problem Solving and Documentation (pp 11-13)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2computation.html">
+     Computational Hydraulics (pg. 9 - 10)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5whatisfluids.html">
+     Fluid Mechanics - A definition (pp. 3-6, and p. 18)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="4units.html">
+     Dimensions and Units (pp. 6-8)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="6exercise.html">
+     Exercise Set 1
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../02fluidproperties/0fluidproperties.html">
+   Fluid Properties
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02fluidproperties/1properties.html">
+     Intensive and Extensive Properties (pp. 28-35)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02fluidproperties/2viscosity.html">
+     Viscosity (pp 36-45)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02fluidproperties/3liquids.html">
+     Liquid Properties (pp. 46-52)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02fluidproperties/4vaporpressure.html">
+     Vapor Pressure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02fluidproperties/5exercise.html">
+     Exercise Set 2
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../04fluidstaticsandpressure/0fluidstaticsandpressure.html">
+   Fluid Statics and Pressure (2/2)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04fluidstaticsandpressure/1forces.html">
+     Pressure Force on Submerged Objects (pp XXX-XXX)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04fluidstaticsandpressure/2lineofaction.html">
+     Line of Action of Equivalent Point Force
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04fluidstaticsandpressure/3bouyancy.html">
+     Bouyancy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04fluidstaticsandpressure/4stability.html">
+     Stability
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04fluidstaticsandpressure/5exercise.html">
+     Exercise Set 4
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../19PumpSelection/1fluidmachines.html">
+   Hydraulic Machines: Pumps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../21chydpipes/1chydpipes.html">
+   Computational Hydraulics: Pipe Networks
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/lessons/01introduction/3problemsolving.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flessons/01introduction/3problemsolving.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/lessons/01introduction/3problemsolving.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#suggested-exercise-solution-format-paper-based">
+   Suggested Exercise Solution Format (Paper-Based)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#suggested-exercise-solution-format-jupyter-notebook">
+   Suggested Exercise Solution Format (Jupyter Notebook)
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="problem-solving-and-documentation-pp-11-13">
+<h1>Problem Solving and Documentation (pp 11-13)<a class="headerlink" href="#problem-solving-and-documentation-pp-11-13" title="Permalink to this headline">¶</a></h1>
+<p>Three major work components for the course are:</p>
+<ol class="simple">
+<li><p>Exercises (called “Exercise Sets”)</p></li>
+<li><p>Quizzes</p></li>
+<li><p>Exams</p></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>All the above instruments should be engaged with a mindset of engaging in the practice of problem solving as a process (regardless of how difficult the actual problem may be).  Most of the problems are  <a class="reference external" href="https://www.chegg.com/">Cheggable</a>; however the Chegg solutions are pretty minimal and often incorrect (Input values change, and the tutors dont fucking read the problems).  Use Chegg if you wish with this limitation in mind - beware in other classes Chegg is considered cheating; You are warned!</p>
+</div>
+<p>The exercises and exams (and to a lesser extent the quizzes) purpose is threefold:</p>
+<ol class="simple">
+<li><p>Practice a systematic method to solve and document closed engineering problems;</p></li>
+<li><p>Develop a type of “muscle memory” in applying the process;</p></li>
+<li><p>Become accustomed to documenting effort so that others can replicate your work.</p></li>
+</ol>
+<p>The fundamental protocol is</p>
+<ol class="simple">
+<li><p>State the problem</p></li>
+<li><p>Sketch the situation</p></li>
+<li><p>List known quantities</p></li>
+<li><p>List unknown quantities</p></li>
+<li><p>Identify and list governing principles, assumptions, and equations</p></li>
+<li><p>Analyse the problem - solve for the unknowns</p></li>
+<li><p>Discuss the results; validate when possible, examine effect of changing an assumption.</p></li>
+</ol>
+<p>There is also an issue of format or the visual structure of a solution.  The use of Jupyter Notebooks as your computation tool is expected - as part of a documentation process and the WCOE’s integration of computational thinking throughout the curriculum.  Most problems you will work a large part by hand then transfer the computational burden the the Jupyter Notebook.</p>
+<p>Throughtout the class do your best to adhere to this format, in some cases it will seem dumb, but thats the nature of training - embrace the “dumbness” now, so you dont have to be dumb later on.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some exercise sets have an “Easy-Button” which link to YouTube videos of the solutions worked out somewhat, by all means use the EZ button to help you with your exercises. Be aware the videos are kind of rambling, and are longish (nearly an hour in a few cases) - but you can fast forward as you see fit to efficiently work your exercises.</p>
+</div>
+<p>An illustrative example follows (It is a homework problem of sorts, so examine the format somewhat)</p>
+<div class="section" id="suggested-exercise-solution-format-paper-based">
+<h2>Suggested Exercise Solution Format (Paper-Based)<a class="headerlink" href="#suggested-exercise-solution-format-paper-based" title="Permalink to this headline">¶</a></h2>
+<p>The format will differ if you prepare a Notebook, or work the problem entirely by-hand. Here is an example worked out on paper which will be repeated in a Notebook.</p>
+<div class="figure align-default" id="ex1-1">
+<a class="reference internal image-reference" href="../../_images/example-1-1.png"><img alt="../../_images/example-1-1.png" src="../../_images/example-1-1.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Example of fluid mechanics homework problem solution format (page 1 of 4)</span><a class="headerlink" href="#ex1-1" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#ex1-1"><span class="std std-numref">Fig. 1</span></a> is a screen capture of the problem with the first four solution protocol items listed.  The author used headings (underlined) in the figure to keep track of the protocol items.  Also observe the simplistic sketch - a device to organize knowns and unknowns.</p>
+<div class="figure align-default" id="ex1-2">
+<a class="reference internal image-reference" href="../../_images/example-1-2.png"><img alt="../../_images/example-1-2.png" src="../../_images/example-1-2.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Example of fluid mechanics homework problem solution format (page 2 of 4)</span><a class="headerlink" href="#ex1-2" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#ex1-2"><span class="std std-numref">Fig. 2</span></a> is a screen capture of the solution process.  Here the author uses various definitions of volumes, mass, and the ideal gas law to try to find the sought after quantity.  Part way into the solution an additional quantity was needed - simply add that known or governing principle where needed and make a note as done in the example.</p>
+<div class="figure align-default" id="ex1-3">
+<a class="reference internal image-reference" href="../../_images/example-1-3.png"><img alt="../../_images/example-1-3.png" src="../../_images/example-1-3.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Example of fluid mechanics homework problem solution format (page 3 of 4)</span><a class="headerlink" href="#ex1-3" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#ex1-3"><span class="std std-numref">Fig. 3</span></a> is a screen capture of the solution.  Here the author uses the computed volumes, mass, and the ideal gas law to solve for the desired quantity.  Then a unit conversion is applied because the problem was stated in mixed (SI and Imperial) units.  Finally the results are discussed from a problem solving perspective; so years later anyone reading will understand the thinking process applied for the problem.</p>
+<div class="figure align-default" id="ex1-4">
+<a class="reference internal image-reference" href="../../_images/example-1-4.png"><img alt="../../_images/example-1-4.png" src="../../_images/example-1-4.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Example of fluid mechanics homework problem solution format (page 4 of 4)</span><a class="headerlink" href="#ex1-4" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#ex1-4"><span class="std std-numref">Fig. 4</span></a> is a screen capture of a Periodic Chart of Elements.  Here it is included as a citation for the source of the molar masses of the gasses in the problem.  The URL is circled on the chart, again establishing a persistent citation to the data source.</p>
+</div>
+<div class="section" id="suggested-exercise-solution-format-jupyter-notebook">
+<h2>Suggested Exercise Solution Format (Jupyter Notebook)<a class="headerlink" href="#suggested-exercise-solution-format-jupyter-notebook" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Here we will repeat the example.  Because this “lesson” is actually a Jupyter Notebook, I am embedding some code directly into the “lesson” - you will not need to mix markdown code blocks with actual code in <strong>your</strong> notebooks</p>
+</div>
+<hr class="docutils" />
+<p><strong>Name</strong><br>
+<strong>R Number</strong><br>
+<strong>Date</strong><br></p>
+<p><strong>Problem Statement</strong><br>
+Find the total weight of a 17 <span class="math notranslate nohighlight">\(ft^3\)</span> tank of nitrogen at 500 <span class="math notranslate nohighlight">\(psia\)</span>.  The vessel itself weighs 50 <span class="math notranslate nohighlight">\(lbf\)</span>.  The gas is stored at a temperature of 20 <span class="math notranslate nohighlight">\(^o~C\)</span><br>
+<strong>Sketch</strong><br>
+This is the hardest part, draw the sketch, then save as a png file and embed using</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>![](filename.png)
+</pre></div>
+</div>
+<p>like so:</p>
+<div class="figure align-default" id="fbd-tank">
+<a class="reference internal image-reference" href="../../_images/FBD-tank.png"><img alt="../../_images/FBD-tank.png" src="../../_images/FBD-tank.png" style="width: 400px;" /></a>
+</div>
+<p><strong>Known Quantities</strong><br>
+Here we will be mixing code and text</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a code cell</span>
+<span class="n">vol_tank</span> <span class="o">=</span> <span class="mi">17</span> <span class="c1"># tank volume in cubic feet</span>
+<span class="n">p_gas</span> <span class="o">=</span> <span class="mi">500</span> <span class="c1"># gas pressure in psi</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="mi">20</span> <span class="c1"># gas temperature in celsius</span>
+<span class="n">wt_tank</span> <span class="o">=</span> <span class="mi">50</span> <span class="c1"># tank weight in pounds</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Unknown Quantities</strong>&gt;br&gt;</p>
+<p>Our unknowns are</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wt_gas</span>
+<span class="n">wt_total</span> <span class="o">=</span> <span class="n">wt_tank</span><span class="o">+</span><span class="n">wt_gas</span>
+</pre></div>
+</div>
+<p><strong>Governing Principles</strong><br></p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(pV=\frac{m}{M}RT\)</span> Ideal gas law</p></li>
+<li><p><span class="math notranslate nohighlight">\(wt_{total} = wt_{tank}+wt_{gas}\)</span> Duh!</p></li>
+<li><p><span class="math notranslate nohighlight">\(R = 0.0821 \frac{L \cdot atm}{K \cdot mol}\)</span> Definition of universal gas constant</p></li>
+<li><p><span class="math notranslate nohighlight">\(T_{K}=T_{C}+273\)</span> Definition of Kelvin temperature scale</p></li>
+<li><p><span class="math notranslate nohighlight">\(1 atm = 14.7 psi\)</span> Unit conversion</p></li>
+<li><p><span class="math notranslate nohighlight">\(M_{N_2} = 28.014 \frac{g}{mol}\)</span> Molar weight of nitrogen gas</p></li>
+</ol>
+<p><strong>Solution</strong><br>
+Now simply produce a sequential script to solve for total weight</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mwN2</span><span class="o">=</span><span class="mf">28.014</span> <span class="c1"># MW nitrogen</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mf">0.0821</span> <span class="c1"># universal gas constant</span>
+<span class="n">grabity</span> <span class="o">=</span> <span class="mf">9.8</span> <span class="c1"># acceleration of gravity</span>
+<span class="n">vol_tank_l</span><span class="o">=</span><span class="n">vol_tank</span><span class="o">*</span><span class="p">((</span><span class="mi">1</span><span class="o">/</span><span class="mf">3.28</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span> <span class="c1"># tank volume in liters</span>
+<span class="n">temp_k</span><span class="o">=</span><span class="n">temp</span><span class="o">+</span><span class="mi">273</span> <span class="c1"># temp in kelvin</span>
+<span class="n">p_atm</span><span class="o">=</span><span class="n">p_gas</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mf">14.7</span><span class="p">)</span> <span class="c1"># gas pressure in atmospheres</span>
+<span class="n">mass_gas</span> <span class="o">=</span> <span class="p">(</span><span class="n">p_atm</span><span class="o">*</span><span class="n">vol_tank_l</span><span class="o">*</span><span class="n">mwN2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">R</span><span class="o">*</span><span class="n">temp_k</span><span class="p">)</span> <span class="c1"># gas mass in grams</span>
+<span class="n">wt_gas</span> <span class="o">=</span> <span class="n">mass_gas</span><span class="o">*</span><span class="n">grabity</span><span class="o">/</span><span class="mi">1000</span> <span class="c1"># weight of gas in newtons</span>
+<span class="n">wt_total</span> <span class="o">=</span> <span class="n">wt_tank</span> <span class="o">+</span> <span class="n">wt_gas</span><span class="o">*</span><span class="p">(</span><span class="mf">2.2</span><span class="p">)</span><span class="o">/</span><span class="n">grabity</span> <span class="c1"># total weight in pounds</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Total weight = &#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">wt_total</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="s1">&#39; pounds&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total weight =  92.0  pounds
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Discussion</strong><br>
+Probably would want a little more description in the calculation sequence, notice units are reported with the answer. If we want to get fancy, could embed a database for common gasses, and some interactive inputs - but that’s overkill.  In practice, you will find a hybrid of paper-based and notebook-based problem solving is most useful.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lessons/01introduction"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="1introduction.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Introduction</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="2computation.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Computational Hydraulics (pg. 9 - 10)</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Theodore G, Cleveland<br/>
+        
+            &copy; Copyright 2023.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
