@@ -91,7 +91,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../intro.html">
-   Instructor Notes to Accompany Engineering Fluid Mechanics CE 3305 at TTU
+   Instructor notes to accompany CE 3305 at TTU
   </a>
  </li>
 </ul>
@@ -126,11 +126,6 @@
      Dimensions and Units (pp. 6-8)
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../01introduction/6exercise.html">
-     Exercise Set 1
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -154,6 +149,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../02fluidproperties/6exercise.html">
+     Exercise Set 1
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../02fluidproperties/3liquids.html">
      Liquid Properties (pp. 46-52)
     </a>
@@ -169,6 +169,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03fluidstatics/1statics.html">
+   Fluid Statics and Pressure (1/2)
+  </a>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="0fluidstaticsandpressure.html">
@@ -206,6 +211,16 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../12dimensionalAnalysis/1dimensional-analysis.html">
+   Dimensional Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../13similitude/1similitude.html">
+   Similitude
+  </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../19PumpSelection/1fluidmachines.html">
@@ -380,9 +395,9 @@
 A floating body is UNSTABLE if, when it is displaced, it continues to move to a new equilibrium.</p>
 <div class="figure align-default" id="stability-1">
 <a class="reference internal image-reference" href="../../_images/stability-1.png"><img alt="../../_images/stability-1.png" src="../../_images/stability-1.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 53 </span><span class="caption-text">Object floating in some liquid; tilted a bit - if the bouyancy-weight couple tends to return to initial position, then stable - otherwise will continue to overturn.</span><a class="headerlink" href="#stability-1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 81 </span><span class="caption-text">Object floating in some liquid; tilted a bit - if the bouyancy-weight couple tends to return to initial position, then stable - otherwise will continue to overturn.</span><a class="headerlink" href="#stability-1" title="Permalink to this image">¶</a></p>
 </div>
-<p>Consider a floating body tilted by an angle <span class="math notranslate nohighlight">\(\Delta \Theta\)</span>, as shown in <a class="reference internal" href="#stability-1"><span class="std std-numref">Fig. 53</span></a>. For the untilted body the point G is
+<p>Consider a floating body tilted by an angle <span class="math notranslate nohighlight">\(\Delta \Theta\)</span>, as shown in <a class="reference internal" href="#stability-1"><span class="std std-numref">Fig. 81</span></a>. For the untilted body the point G is
 the centre of gravity of the body where the body weight, W, acts. The point B is the center of buoyancy
 (the centroid of the displaced volume of fluid) where the upward buoyancy force, FB, acts.</p>
 <p>When the body is tilted the centre of buoyancy moves to a new position, B’, because the shape of the
@@ -397,7 +412,7 @@ other words the METACENTRIC HEIGHT, MG, is positive (<span class="math notransla
 lies below the centre of gravity, G, then the body is unstable. In other words the metacentric height, MG, is negative (MG &lt; 0).</p>
 <div class="figure align-default" id="stability-2">
 <a class="reference internal image-reference" href="../../_images/stability-2.png"><img alt="../../_images/stability-2.png" src="../../_images/stability-2.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 54 </span><span class="caption-text">Reference sketch for center of bouyancy and metacenter distances.</span><a class="headerlink" href="#stability-2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 82 </span><span class="caption-text">Reference sketch for center of bouyancy and metacenter distances.</span><a class="headerlink" href="#stability-2" title="Permalink to this image">¶</a></p>
 </div>
 <p>The metacentric height, MG, is given by</p>
 <p><span class="math notranslate nohighlight">\(MG = MB - GB = \frac{I}{V_s} - GB\)</span></p>
@@ -407,7 +422,7 @@ if you cut horizontally through a solid body at the water surface
 lifted the top part up and looked at the bottom of it!), VS is the
 submerged volume (i.e. volume of fluid displaced) and GB is the
 distance between the centre of gravity and the centre of buoyancy
-(<span class="math notranslate nohighlight">\(= z_G – z_B\)</span>). <a class="reference internal" href="#stability-2"><span class="std std-numref">Fig. 54</span></a> is a reference sketch for the various distances.</p>
+(<span class="math notranslate nohighlight">\(= z_G – z_B\)</span>). <a class="reference internal" href="#stability-2"><span class="std std-numref">Fig. 82</span></a> is a reference sketch for the various distances.</p>
 <div class="section" id="strategy-for-solving-buoyancy-stability-problems">
 <h2>Strategy for solving buoyancy/stability problems<a class="headerlink" href="#strategy-for-solving-buoyancy-stability-problems" title="Permalink to this headline">¶</a></h2>
 <p>The usual problem solving protocol works fine, but the additional governing principles/solution algorithm include:</p>
@@ -423,10 +438,10 @@ distance between the centre of gravity and the centre of buoyancy
 <div class="section" id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
 <p>A solid cylindrical pine (SG=0.5) <a class="reference external" href="https://norfloat.com/aids-to-navigation/navigation-buoys-intro/channel-marker-spar-buoys/">spar buoy</a> has a cylindrical lead (SG=11.3) weight attached as
-shown in <a class="reference internal" href="#stability-example"><span class="std std-numref">Fig. 55</span></a>.</p>
+shown in <a class="reference internal" href="#stability-example"><span class="std std-numref">Fig. 83</span></a>.</p>
 <div class="figure align-default" id="stability-example">
 <a class="reference internal image-reference" href="../../_images/stability-example.png"><img alt="../../_images/stability-example.png" src="../../_images/stability-example.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 55 </span><span class="caption-text">Schematic of a spar buoy.</span><a class="headerlink" href="#stability-example" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 83 </span><span class="caption-text">Schematic of a spar buoy.</span><a class="headerlink" href="#stability-example" title="Permalink to this image">¶</a></p>
 </div>
 <p>Determine:</p>
 <ol class="simple">

@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>ES4</title>
+<title>ES3</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13079,10 +13079,23 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Download</strong> (right-click, save target as ...) this page as a Jupyterlab notebook from: <a href="http://54.243.252.9/ce-3305-webroot/2-Exercises/ES4/ES4.ipynb">ES-4</a></p>
+<p><strong>Download</strong> (right-click, save target as ...) this page as a Jupyterlab notebook from: <a href="http://54.243.252.9/ce-3305-webroot/2-Exercises/ES3/ES3.ipynb">ES-3</a></p>
 <hr>
 
 </div>
@@ -13091,11 +13104,12 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1><font color=darkblue>CE 3305 Engineering Fluid Mechanics <br> Summer 2022 Exercise Set 4</font></h1>
+<h1><font color=darkblue>CE 3305 Engineering Fluid Mechanics <br> Summer 2022 Exercise Set 3</font></h1>
 <p><strong>LAST NAME, FIRST NAME</strong></p>
 <p><strong>R00000000</strong></p>
 <hr>
-<h3 id="Purpose-:">Purpose :<a class="anchor-link" href="#Purpose-:">&#182;</a></h3><p>Apply concept of density and hydrostatic pressure in different fluids and determine pressure variation in layered fluids of different densities. Apply principles of manometry to determine density of unknown fluid.</p>
+<h3 id="Purpose-:">Purpose :<a class="anchor-link" href="#Purpose-:">&#182;</a></h3><p>Application of surface tension to find water column rise height in a
+capillary tube. Application of steady fall velocity and viscosity definition to relate kinematic behavior of objects.</p>
 <h3 id="Assessment-Criteria-:">Assessment Criteria :<a class="anchor-link" href="#Assessment-Criteria-:">&#182;</a></h3><p>Completion, plausible solutions, use of Jupyter Notebook as a calculator/documentation method</p>
 <hr>
 
@@ -13105,12 +13119,12 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem-1.">Problem 1.<a class="anchor-link" href="#Problem-1.">&#182;</a></h3><p>Imagine two tanks (both open to air). Tank A is filled to a depth $h$ with water. Tank B is filled to a depth $h$ with oil.</p>
-<ul>
-<li>Which tank has the largest pressure?</li>
-<li>Why?</li>
-<li>Where in the tank does the largest pressure occur?</li>
-</ul>
+<h3 id="Problem-1.">Problem 1.<a class="anchor-link" href="#Problem-1.">&#182;</a></h3><figure align="center">
+<!-- <img src="./SlidingPlateViscosity.png" width="400" > -->
+<img src="http://54.243.252.9/ce-3305-webroot/2-Exercises/ES3/ParallelPlates.png" width="200" > 
+<figcaption>Figure 1. Parallel Glass Plates.</figcaption>
+</figure><p>Figure 1 is a schematic of two glass plates spaced 1 millimeter
+apart. Calculate the maximum capillary rise of water between the two plates.</p>
 
 </div>
 </div>
@@ -13204,14 +13218,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem-2.">Problem 2.<a class="anchor-link" href="#Problem-2.">&#182;</a></h3><p>Figure 2 is a schematic of a <strong>closed</strong> tank with Bourdon-tube gages tapped into it.</p>
-<figure align="center">
-<!--<img src="./layers-o-fluid.png" width="400" > -->
-<img src="http://54.243.252.9/ce-3305-webroot/2-Exercises/ES4/layers-o-fluid.png" width="400" >
-<figcaption>Figure 2. Closed tank with three phase system (Air, Oil, Water)</figcaption>
-</figure><ol>
-<li>What is the specific gravity of the oil?</li>
-<li>What is the pressure reading on gage C?</li>
+<h3 id="Problem-2.">Problem 2.<a class="anchor-link" href="#Problem-2.">&#182;</a></h3><figure align="center">
+<!-- <img src="./SlidingPlateViscosity.png" width="400" > -->
+<img src="http://54.243.252.9/ce-3305-webroot/2-Exercises/ES3/FallingCylinderViscosity.png" width="200" > 
+<figcaption>Figure 2. Falling Cylinder Viscosimeter.</figcaption>
+</figure><p>Figure 2 is a schematic of a cylinder falling inside a pipe that is filled with oil. The annular space between the cylinder and the pipe is lubricated with an oil film that has viscosity $\mu$.</p>
+<ol>
+<li>Derive a formula for the steady rate of descent of a cylinder with weight W, diameter d, and length l sliding inside a vertical smooth pipe that has inside diameter D. Assume the cylinder remains concentric with the pipe as it falls.</li>
+<li>Use the general formula you develop to estimate the rate of descent for a cylinder 100 millimeters in diameter that slides inside a 100.5 millimeter inside diameter pipe. The cylinder is 200 millimeters long and weighs 15 Newtons. The lubricant is SAE 20W oil at 10$^o$C.</li>
 </ol>
 
 </div>
@@ -13306,15 +13320,108 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem-3.">Problem 3.<a class="anchor-link" href="#Problem-3.">&#182;</a></h3><p>A device for measuring the specific weight of a liquid consists of a (U-,You-, or Ewe-) Tube manometer as depicted in Figure 3. 
-The manometer tube has an internal diameter of $0.5~cm$ and originally has water in it. 
-Exactly $2~cm^3$ of unknown liquid is poured into one leg of the manometer, and a displacement of $5~cm$ is measured between the free surfaces as shown.</p>
+<h3 id="Problem-3.">Problem 3.<a class="anchor-link" href="#Problem-3.">&#182;</a></h3><p>Figure 3 is a schematic of a hydraulic machine lifting an elephant using the weight of a mouse.</p>
 <figure align="center">
-<!-- <img src="./you-tube-manometer.png" width="400" > -->
-<img src="http://54.243.252.9/ce-3305-webroot/2-Exercises/ES4/you-tube-manometer.png" width="400" >
-<figcaption>Figure 3: U-Tube manometer for measuring specific weight</figcaption>
-</figure><p>What is the specific weight of the unknown liquid?</p>
+<!--<img src="./mouseUndHeffaklump.png" width="500" > -->
+<img src="http://54.243.252.9/ce-3305-webroot/2-Exercises/ES3/mouseUndHeffaklump.png" width="400" > 
+<figcaption>Figure 3. Mechanical advantage using a hydraulic jack – or a mouse supports a heffalump!</figcaption>
+</figure><ol>
+<li>Develop an algebraic equation that gives the mechanical advantage of the hydraulic machine shown. Neglect piston friction and piston mass.</li>
+<li>A mouse can have a mass of 25 grams while an elephant can have a mass of 7500 kilograms. Determine the values of D1 and D2 so that a mouse can support an elephant.</li>
+</ol>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Problem-3.1-here-(by-hand-+-image-is-OK)">Problem 3.1 here (by-hand + image is OK)<a class="anchor-link" href="#Problem-3.1-here-(by-hand-+-image-is-OK)">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># sketch here</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># list known quantities</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># list unknown quantities</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># governing principles</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># solution (step-by-step)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># discussion</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Problem-3.2-here-(by-hand-+-image-is-OK)">Problem 3.2 here (by-hand + image is OK)<a class="anchor-link" href="#Problem-3.2-here-(by-hand-+-image-is-OK)">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13400,7 +13507,99 @@ Exactly $2~cm^3$ of unknown liquid is poured into one leg of the manometer, and 
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<p><a href="https://youtu.be/QmUB1FN5g20"> <img src="http://54.243.252.9/ce-3305-webroot/2-Exercises/ES4/easy-button.png" alt="EZ Button Link to ES-4 sample solution" style="width:42px;height:42px;align:left"> </a></p>
+<h3 id="Problem-4.-(Application-of-ENGR-1330-Computational-Thinking)">Problem 4. (Application of ENGR-1330 Computational Thinking)<a class="anchor-link" href="#Problem-4.-(Application-of-ENGR-1330-Computational-Thinking)">&#182;</a></h3><p>Develop a script (Jupyter Notebook; Matlab; EXCEL ...) that takes as input the mass of the mouse, the elephant, and the D1 value and returns a D2 value. Apply the script to the following cases:</p>
+<ul>
+<li>Case 1: $m_{mouse} = $ 0.025 kg; $m_{elephant} = $ 7500 kg; D1 = 70 mm (about 3 inches)</li>
+<li>Case 2: $m_{mouse} = $ 0.020 kg; $m_{elephant} = $ 7300 kg; D1 = 100 mm (about 4 inches)</li>
+<li>Case 3: $m_{mouse} = $ 0.015 kg; $m_{elephant} = $ 8000 kg; D1 = 700 mm (about 30 inches)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># list input quantities/specifications</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># list output quantities/specifications</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># governing principles/equations</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># solution (step-by-step) algorithm (aka code)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># application</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># discussion of results</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<p><a href="https://youtu.be/jxZh7hwWy3s"> <img src="http://54.243.252.9/ce-3305-webroot/2-Exercises/ES3/easy-button.png" alt="EZ Button Link to ES-3 sample solution" style="width:42px;height:42px;align:left"> </a></p>
 
 </div>
 </div>

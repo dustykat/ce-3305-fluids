@@ -22,6 +22,10 @@ chapters:
   - file: lessons/02fluidproperties/4vaporpressure # vapor pressure/readings/exercises
   - file: lessons/02fluidproperties/5exercise      # viscosity, radial geometry viscosity, capillary
   
+- file: lessons/03fluidstatics/1statics
+  sections:
+  - file: lessons/03fluidstatics/5exercise
+
 - file: lessons/04fluidstaticsandpressure/0fluidstaticsandpressure # fluid statics and pressure part2
   sections:
   - file: lessons/04fluidstaticsandpressure/1forces    # intensive/extensive fluid properties
