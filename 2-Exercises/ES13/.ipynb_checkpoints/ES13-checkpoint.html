@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>ES12</title>
+<title>ES13</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13082,12 +13082,21 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1><font color=darkblue>CE 3305 Engineering Fluid Mechanics <br> Spring 2023 Exercise Set 12</font></h1>
+<p><strong>Download</strong> (right-click, save target as ...) this page as a Jupyterlab notebook from: <a href="http://54.243.252.9/ce-3305-webroot/2-Exercises/ES13/ES13.ipynb">ES-13</a></p>
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1><font color=darkblue>CE 3305 Engineering Fluid Mechanics <br> Summer 2022 Exercise Set 13</font></h1>
 <p><strong>LAST NAME, FIRST NAME</strong></p>
 <p><strong>R00000000</strong></p>
 <hr>
-<h3 id="Purpose-:">Purpose :<a class="anchor-link" href="#Purpose-:">&#182;</a></h3><p>Application of Dimensional Analysis and Similitude.</p>
-<h3 id="Assessment-Criteria-:">Assessment Criteria :<a class="anchor-link" href="#Assessment-Criteria-:">&#182;</a></h3><p>Completion, plausible solutions, use JupyterLab or equivalent as a calculator.</p>
+<h3 id="Purpose-:">Purpose :<a class="anchor-link" href="#Purpose-:">&#182;</a></h3><p>Application of Modified Bernoulli Equation in pipeline systems.</p>
+<h3 id="Assessment-Criteria-:">Assessment Criteria :<a class="anchor-link" href="#Assessment-Criteria-:">&#182;</a></h3><p>Completion, plausible solutions, use JupyterLab as a calculator.</p>
 <hr>
 
 </div>
@@ -13096,65 +13105,89 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem-1.-(Problem-8-19-pg.441)">Problem 1. (Problem 8-19 pg.441)<a class="anchor-link" href="#Problem-1.-(Problem-8-19-pg.441)">&#182;</a></h3><p>The discharge, $Q$, over the weir $A$ depends on the width, $b$, of the weir, the head, $H$ above the weir crest, and the gravitational acceleration constant, $g$.</p>
-<p><img src="weir.png" alt=""></p>
-<p>For the case(s) where $Q$ is known to be directly proportional to $b$,</p>
-<p>Determine:</p>
-<ol>
-<li>The relation between $Q$ and these parameters.</li>
-<li>The resulting value for $Q$ if $H$ is doubled.</li>
-</ol>
-<hr>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>sketch here</strong></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>list known quantities</strong></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>list unknown quantities</strong></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>governing principles</strong></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>solution (step-by-step)</strong></p>
+<h3 id="Problem-1.">Problem 1.<a class="anchor-link" href="#Problem-1.">&#182;</a></h3><p>Figure 1 is a schematic of a hydropower system. The elevation
+difference between the reservoir water surface and the pond water surface downstream
+of the reservoir (called the tailwater), H, is 24 m. The velocity of the water exiting into the pond is 7 m/s, and the discharge through the system is 4 $m^3/s$.</p>
+<figure align="center">
+<!--<img src="./Hydropower.png" width="300" >-->
+<img src="http://54.243.252.9/ce-3305-webroot/2-Exercises/ES13/Hydropower.png" width="300" >
+<figcaption>Figure 1: Schematic of hydropower system </figcaption>
+</figure><p>Neglecting frictional losses in the penstock (the pipe from the reservoir to the turbine). Estimate the power produced by the turbine in kilowatts.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># code cell(s) here</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># sketch here</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># list known quantities</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># list unknown quantities</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># governing principles</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># solution (step-by-step)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># discussion</span>
 </pre></div>
 
     </div>
@@ -13165,22 +13198,6 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>discussion</strong></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<h3 id="Problem-2.-(Problem-8-53-pg.-446)">Problem 2. (Problem 8-53 pg. 446)<a class="anchor-link" href="#Problem-2.-(Problem-8-53-pg.-446)">&#182;</a></h3><p>The flow of water around a bridge pier is to be studied with a $\frac{1}{15}$ scale model.</p>
-<p><img src="bridge-pier-2.png" alt=""></p>
-<p>The anticipated river (prototype) velocity is 0.8 m/s.</p>
-<p>Determine:</p>
-<ol>
-<li>The water velocity in the model at the same temperature. </li>
-</ol>
 <hr>
 
 </div>
@@ -13189,226 +13206,29 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>sketch here</strong></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>list known quantities</strong></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>list unknown quantities</strong></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>governing principles</strong></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>solution (step-by-step)</strong></p>
+<h3 id="Problem-2.">Problem 2.<a class="anchor-link" href="#Problem-2.">&#182;</a></h3><p>Figure 2 is a schematic of a pumped-storage system. How much power must be supplied to the water by the pump (in kilowatts) to pump water at $0.085~m^3/s$ at 20$^o$C from the lower to the upper reservoir?</p>
+<figure align="center">
+<!--<img src="./bridgepier.png" width="300" >-->
+<img src="http://54.243.252.9/ce-3305-webroot/2-Exercises/ES13/PumpUphill.png" width="300" >
+<figcaption>Figure 2: Pumping from lower to higher elevation</figcaption>
+</figure><p>The head loss in the pipes is $h_l = 0.018 \frac{L}{D} \frac{V^2}{2g}$ , where $L$ is the length of the pipe in meters, and $D$ is the diameter of the pipe in meters.</p>
+<p>Sketch the HGL and EGL for the system.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># code cell(s) here</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>discussion</strong></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem-3.-(Application-of-ENGR-1330-Computational-Thinking)">Problem 3. (Application of ENGR-1330 Computational Thinking)<a class="anchor-link" href="#Problem-3.-(Application-of-ENGR-1330-Computational-Thinking)">&#182;</a></h3><p>Experiments are performed to measure the pressure drop in a pipe with water at 20$^oC$ and crude oil at the same temperature. Data was gathered with pipes of two diameters, 5 cm and 10 cm for pressure drop per unit length of pipe, and are tabulated below:</p>
-<table>
-<thead><tr>
-<th style="text-align:left">Liquid</th>
-<th style="text-align:right">Pipe Diameter (cm)</th>
-<th style="text-align:right">Velocity (m/s)</th>
-<th style="text-align:right">Pressure Drop (N/m$^3$)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">Water</td>
-<td style="text-align:right">5</td>
-<td style="text-align:right">1</td>
-<td style="text-align:right">210</td>
-</tr>
-<tr>
-<td style="text-align:left">Oil</td>
-<td style="text-align:right">5</td>
-<td style="text-align:right">1</td>
-<td style="text-align:right">310</td>
-</tr>
-<tr>
-<td style="text-align:left">Water</td>
-<td style="text-align:right">5</td>
-<td style="text-align:right">2</td>
-<td style="text-align:right">730</td>
-</tr>
-<tr>
-<td style="text-align:left">Oil</td>
-<td style="text-align:right">5</td>
-<td style="text-align:right">2</td>
-<td style="text-align:right">1040</td>
-</tr>
-<tr>
-<td style="text-align:left">Water</td>
-<td style="text-align:right">5</td>
-<td style="text-align:right">5</td>
-<td style="text-align:right">3750</td>
-</tr>
-<tr>
-<td style="text-align:left">Oil</td>
-<td style="text-align:right">5</td>
-<td style="text-align:right">5</td>
-<td style="text-align:right">5300</td>
-</tr>
-<tr>
-<td style="text-align:left">Water</td>
-<td style="text-align:right">10</td>
-<td style="text-align:right">1</td>
-<td style="text-align:right">86</td>
-</tr>
-<tr>
-<td style="text-align:left">Oil</td>
-<td style="text-align:right">10</td>
-<td style="text-align:right">1</td>
-<td style="text-align:right">130</td>
-</tr>
-<tr>
-<td style="text-align:left">Water</td>
-<td style="text-align:right">10</td>
-<td style="text-align:right">2</td>
-<td style="text-align:right">320</td>
-</tr>
-<tr>
-<td style="text-align:left">Oil</td>
-<td style="text-align:right">10</td>
-<td style="text-align:right">2</td>
-<td style="text-align:right">450</td>
-</tr>
-<tr>
-<td style="text-align:left">Water</td>
-<td style="text-align:right">10</td>
-<td style="text-align:right">5</td>
-<td style="text-align:right">1650</td>
-</tr>
-<tr>
-<td style="text-align:left">Oil</td>
-<td style="text-align:right">10</td>
-<td style="text-align:right">5</td>
-<td style="text-align:right">2210</td>
-</tr>
-</tbody>
-</table>
-<p>The presure drop per unit length is postulated to be a function of pipe diameter, liquid density, liquid viscosity, and flow velocity as:</p>
-$$\frac{\Delta p}{L}=f(\rho,\mu,V,D)$$<p>Perform a dimensional analysis to identify suitable $\pi-$groups and create a Jupyter Notebook to reduce the data and plot the results using the dimensionless values.  Select an appropriate data model based on the plot.</p>
-<hr>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>sketch here</strong></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>list known quantities</strong></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>list unknown quantities</strong></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>governing principles</strong></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>solution (step-by-step)</strong></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># code cell(s) here</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>discussion</strong></p>
-
-</div>
-</div>
 </div>
     </div>
   </div>
