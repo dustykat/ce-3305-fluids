@@ -32,7 +32,30 @@ chapters:
   - file: lessons/04fluidstaticsandpressure/2lineofaction     # viscosity
   - file: lessons/04fluidstaticsandpressure/3bouyancy       # liquid properties
   - file: lessons/04fluidstaticsandpressure/4stability # vapor pressure/readings/exercises
-  - file: lessons/04fluidstaticsandpressure/5exercise      # vapor pressure/readings/exercises
+
+- file: lessons/05aflowkinematics/0kinematics      # kinematics
+  sections:
+  - file: lessons/05aflowkinematics/1flowpattern 
+  - file: lessons/05aflowkinematics/5exercise
+  
+- file: lessons/05bernoulli/0bernoulli      # bernoulli and euler equations
+  sections:
+  - file: lessons/05bernoulli/2eulers 
+  - file: lessons/05bernoulli/5exercise
+  
+- file: lessons/05rotation/0rotation      # rotation
+  sections:
+  - file: lessons/05rotation/1bernoulli 
+  - file: lessons/05rotation/2rotation
+  - file: lessons/05rotation/3flowrate
+  - file: lessons/05rotation/5exercise
+  
+- file: lessons/06controlvolumes/0controlvolumeanalysis      # control volumes/continunity
+  sections:
+  - file: lessons/06controlvolumes/1controlvolumes 
+  - file: lessons/06controlvolumes/2conservationmass
+  - file: lessons/06controlvolumes/3examples 
+  - file: lessons/06controlvolumes/5exercise
   
 - file: lessons/12dimensionalAnalysis/1dimensional-analysis # Dimensional Analysis
 - file: lessons/13similitude/1similitude             # Similitude
