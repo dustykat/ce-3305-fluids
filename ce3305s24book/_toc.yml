@@ -32,7 +32,8 @@ chapters:
   - file: lessons/04fluidstaticsandpressure/2lineofaction     # viscosity
   - file: lessons/04fluidstaticsandpressure/3bouyancy       # liquid properties
   - file: lessons/04fluidstaticsandpressure/4stability # vapor pressure/readings/exercises
-
+  - file: lessons/04fluidstaticsandpressure/5exercise
+  
 - file: lessons/05aflowkinematics/0kinematics      # kinematics
   sections:
   - file: lessons/05aflowkinematics/1flowpattern 
@@ -41,6 +42,7 @@ chapters:
 - file: lessons/05bernoulli/0bernoulli      # bernoulli and euler equations
   sections:
   - file: lessons/05bernoulli/2eulers 
+  - file: lessons/05bernoulli/3examples 
   - file: lessons/05bernoulli/5exercise
   
 - file: lessons/05rotation/0rotation      # rotation
@@ -57,9 +59,45 @@ chapters:
   - file: lessons/06controlvolumes/3examples 
   - file: lessons/06controlvolumes/5exercise
   
+- file: lessons/07energy/0energy
+
+- file: lessons/10momentum_linear/0momentum     # bernoulli and euler equations
+  sections:
+  - file: lessons/10momentum_linear/1linearmomentum
+  - file: lessons/10momentum_linear/2examples
+  - file: lessons/10momentum_linear/5exercise
+  
+- file: lessons/11momentum_angular/0angular     # bernoulli and euler equations
+  sections:
+  - file: lessons/11momentum_angular/1angular
+
 - file: lessons/12dimensionalAnalysis/1dimensional-analysis # Dimensional Analysis
+
 - file: lessons/13similitude/1similitude             # Similitude
+
+- file: lessons/15closedconduits/0closedconduits
+
+- file: lessons/16pipeanalysis/0pipeanalysis
 
 - file: lessons/19PumpSelection/1fluidmachines # fluid statics and pressure part2
 
 - file: lessons/21chydpipes/1chydpipes # fluid statics and pressure part2
+
+- file: lessons/23openchannel_nrg/0openchannel
+
+- file: lessons/24openchannel_bump/0openchannel_bump
+
+- file: lessons/25openchannel_gvf/0openchannel_gvf
+
+- file: lessons/26openchannel_rvf/0openchannel_rvf
+
+- file: lessons/27chydchannels/chdopenchannels # fluid statics and pressure part2
+
+- file: lessons/28boundarylayers/0boundarylayers
+
+- file: lessons/29drag_lift/0drag_lift
+  sections:
+  - file: lessons/29drag_lift/BLTplate
+  - file: lessons/29drag_lift/BLTcylinder
+  - file: lessons/29drag_lift/windondrum
+
