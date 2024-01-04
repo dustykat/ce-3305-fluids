@@ -7,7 +7,7 @@
 # [http://54.243.252.9/ce-3305-webroot/](http://54.243.252.9/ce-3305-webroot/)
 # :::
 # 
-# This lesson introduces the Euler (and Bernoulli) equations, which are fundamental in applied fluid mechanics; it also examines Lagrangian and Eulerian reference frames in the context of variational calculus as applied to fluid mechanics. 
+# This lesson introduces and examines Lagrangian and Eulerian reference frames in the context of variational calculus as applied to fluid mechanics as well as some flow visualization. 
 
 # 
 # ## Readings
@@ -21,15 +21,13 @@
 # 4. De Lima, R. P., Cleveland, T. G., De Carvalho, R.P., 2014. *Infrared thermography as a heat tracer method for velocity estimation in shallow flows* [Die Bodenkultur, Journal for Land Management, Food, and Envrionment, Vol 65, No. 3-4, pp. 71-77. ISSN 006-5471](http://54.243.252.9/ce-3305-webroot/3-Readings/Thermal-Image.PDF)
 
 # ## Lesson Outline
-# - Background
+# - Flow patterns
 # - Constant velocity; constant acceleration
 # - Translation
 # - Rotation
 
-# ### Background
-# 
-# This lesson introduces the Euler (and Bernoulli) equations which are fundamental in applied fluid mechanics.
-# 
-# The lesson also examines Lagrangian and Eulerian reference frames in the contaext of variational gonckulus as applied to fluid mechanics.  
-# 
-# We begin with flow patterns
+# In[ ]:
+
+
+
+

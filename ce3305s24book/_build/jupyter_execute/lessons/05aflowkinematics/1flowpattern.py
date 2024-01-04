@@ -97,6 +97,19 @@
 # 
 # Different regimes can exist simultaneously in adjacent space as in {numref}`boundary6-1`. The approach region is nearly inviscid, at the boundary viscid flow along the interface, separation where flow leaves the interface, and a wake region.  Drag increases where there is separation - prevention is impossible but drag reduction by delaying sepaeration is possible.
 # 
+# Consider another image
+# 
+# ```{figure} starrynight.png
+# ---
+# width: 500px
+# name: starrynight
+# ---
+# Multiple flow regimes ... What would you caption this?
+# ```
+# 
+# How many regimes appear to be represented in {numref}`starrynight`?  
+# 
+# 
 # ```{figure} cannonball.png
 # ---
 # width: 500px
