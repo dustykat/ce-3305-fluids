@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Line of Action of Equivalent Point Force
+# # Line of Action of Equivalent Point Force (pp. 78-84)
 # 
 # Now we have the magnitude, and sometimes that might be enough but usually we need to also know the line of action.  We find that by taking a moment to examine {numref}`line-o-action`
 # 

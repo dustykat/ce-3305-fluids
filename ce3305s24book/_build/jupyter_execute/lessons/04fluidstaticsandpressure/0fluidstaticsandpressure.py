@@ -9,7 +9,7 @@
 
 # ## Readings
 # 
-# 1. Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 3-14
+# 1. Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 64-90
 # 
 # 2. DF Elger, BC Williams, Crowe, CT and JA Roberson, *Engineering Fluid Mechanics 10th edition*, John Wiley & Sons, Inc., 2013. Chapter 3. [http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-4.pdf](http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-4.pdf)
 # 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Liquid Properties (pp. 46-52)
+# # Liquid Properties (pp. 28-31)
 # 
 # A liquid is one kind of fluid, but it has a few added properties that are important.  One such property is surface tension, $\sigma$.
 # 

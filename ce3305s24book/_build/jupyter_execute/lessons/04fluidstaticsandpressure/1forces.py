@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Pressure Force on Submerged Objects (pp XXX-XXX)
+# # Pressure Force on Submerged Objects (pp 64-78)
 # 
 # Now we consider the forces generated on submerged objects by hydrostatic pressure.  
 # It's the same force you feel on your [耳](https://translate.yandex.com/?lang=en-ja&text=ears) when you dive to the bottom of a [schwimmbad](https://dictionary.cambridge.org/us/dictionary/german-english/schwimmbad).
@@ -100,3 +100,9 @@
 # Where $\bar h$ is the depth from the free surface to the centroid of the plate area.  So we now can express the magnitude of the force in terms of depth (to the centroid) and the plate area.
 # 
 # $$F = \gamma A \bar h$$
+
+# In[ ]:
+
+
+
+

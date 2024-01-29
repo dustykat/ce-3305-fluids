@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Viscosity (pp 36-45)
+# # Viscosity (pp 18-26)
 # 
 # "... a property of a fluid that relates the resistance to motion (in a thin layer) when a shear force is applied..."  
 # 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Bouyancy 
+# # Bouyancy (pp. 85-88)
 # 
 # Buoyancy is the upward force exerted by a fluid on a partially or fully immersed object. In a column of liquid, pressure increases with depth as a result of the weight of the overlying liquid. Thus the pressure at the bottom of a column of liquid is greater than at the top of the column. Similarly, the pressure at the bottom of an object submerged in a liquid is greater than at the top of the object. The pressure difference results in a net upward force on the object. The magnitude of the force is proportional to the pressure difference, and (as explained by Archimedes' principle) is equivalent to the weight of the displaced fluid. 
 
@@ -25,7 +25,7 @@
 # 5. Starting from one or more governing principles and the known quantities solve for the unknowns.
 # 6. Validate/discuss results
 # 
-# #### State the problem
+# ### State the problem
 # 
 # ```{figure} will-it-float-setup.png
 # ---
@@ -35,7 +35,7 @@
 # Cube floating in water; problem statement
 # ```
 # 
-# #### Sketch and list knowns
+# ### Sketch and list knowns
 # 
 # ```{figure} will-it-floatFBD.png
 # ---
@@ -49,11 +49,11 @@
 # - $\rho g = 40 \frac{lbf}{ft^3}$
 # - $V_{block} = (1ft)(1ft)(1ft) = 1 ft^3$
 # 
-# #### Unknowns
+# ### Unknowns
 # 
 # Draft of the block ($d$ in the drawing)
 # 
-# #### Governing Principles
+# ### Governing Principles
 # 
 # ```{figure} will-it-float-gov-eqn.png
 # ---
@@ -79,7 +79,7 @@
 # ---
 # Insert numerical values and compute draft
 # ```
-# #### Validate/Discuss
+# ### Validate/Discuss
 # 
 # Now you can do "will it float" on your own, so if there is ever a revival of the sketch you can win serious prizes!
 # 

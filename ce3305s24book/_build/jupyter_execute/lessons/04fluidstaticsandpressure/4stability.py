@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Stability
+# # Stability (pp. 88-90)
 # 
 # A floating body is STABLE if, when it is displaced, it returns to equilibrium.
 # A floating body is UNSTABLE if, when it is displaced, it continues to move to a new equilibrium.
