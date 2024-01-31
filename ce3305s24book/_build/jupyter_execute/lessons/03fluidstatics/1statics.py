@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Fluid Pressure 
+# # Fluid Pressure (pp. 45-50)
 # 
 # :::{admonition} Course Website
 # [http://54.243.252.9/ce-3305-webroot/](http://54.243.252.9/ce-3305-webroot/)
@@ -36,7 +36,7 @@
 # 3. Measuring Devices (Pressure)
 # 4. Manometers (application of Pascal's law)
 
-# ## Stress
+# ## Stress (pp. 20)
 # 
 # Fluid statics deals with forces in fluids that are have no relative motion within the fluid.  The vessel containing the fluid may be at non-zero velocity or acceleration, but the fluid body within the vessel has no relative motion.
 # 
@@ -71,7 +71,7 @@
 # 
 # 
 
-# ## Pressure (pp XXX-XXX)
+# ## Pressure (pp 45-51)
 # 
 # Fluid pressure (usual symbol $p$) is the normal stress applied to a fluid element, so in practice we simply make the direct substitution.
 # 
@@ -119,7 +119,7 @@
 # 
 # Some practical application of Pascal's Law is that in a closed system a change in pressure is transmitted undiminished throughout the entire system.  This phenomenon is the basis of hydraulic machinery like pneumatic jacks (pg. 49 of the textbook)
 
-# ### Absolute and Gage Pressure
+# ### Absolute and Gage Pressure (pp. 48-49)
 # Pressure is usually measured against some reference value.  Two values in common use are a vaccum (zero pressure) and a standard atmosphere.
 # 
 # If the measurement is referenced to a standard atmosphere the measure is called *gage pressure*.
@@ -137,7 +137,7 @@
 # ```
 # {numref}`AbsolutePressure` is a diagram depicting the relationship of gage and absolute pressures.
 # 
-# ## Hydrostatic Equation
+# ## Hydrostatic Equation (pp. 50-52)
 # Here we develop the fundamental equation of fluid statics, and examine a couple of applications (pg. 52 is a condensed explaination).
 # 
 # Recall fluid statics means no relative motion within the fluid - the entire fluid behaves as a rigid body. The absence of angular deformation implies absence of shear stress; static fluids only sustain normal stress (pressure)
@@ -235,7 +235,7 @@
 # ```
 # {numref}`fstatics-9` is the hydrostatic approximation for compressible fluid. Here the ideal gas law is used as the equation of state.
 
-# ## Pressure Measurements
+# ## Pressure Measurements (pp. 56 - 63)
 # 
 # [Pressure is measured](https://en.wikipedia.org/wiki/Pressure_measurement) by a variety of devices depending on the fluid.  Some of these are:
 # 
@@ -306,6 +306,7 @@
 # 2. pressure **increases** with depth in a liquid column.
 
 # ### Transducers
+# 
 # [Insert link to sensor book here]
 
 # ## Examples

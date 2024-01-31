@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Flow Patterns and Visualization
+# # Flow Patterns and Visualization (pp. 137-141)
 # 
 # In real fluids, markers such as dye, smoke, heat are used to visualize how things flow.
 # 
@@ -31,7 +31,7 @@
 
 # Flow dimensions are classified by how many space coordinates are required to speciofy the velocity field.  All real flows are 3D, but useful results are possible with 2D and 1D approximations.
 # 
-# ## Velocity Field
+# ## Velocity Field (pp. 141-147)
 # 
 # Velocities are expressed in either a LaGrangian sense, or Eulerian sense.
 # 
@@ -67,7 +67,7 @@
 # Streamline coordinates for a velocity 
 # ```
 
-# ## Uniform Flow
+# ## Uniform Flow (pp. )
 # 
 # Uniform flow occurs in things with relatively straight pathlines (streamlines), and constant cross section geometries.  Things like pipes, channels of constant geometry, aquifers (like sand-filled pipes), and petroleum reservoirs (like aquifers, but with hydrocarbons in economically useable amounts).
 # 
@@ -191,7 +191,7 @@
 # 
 # Employ some of these ideas in an example.
 
-# ## Example: Flow field in a nozzle
+# ## Example: Flow field in a nozzle (pp. 151)
 # 
 # Here is an example of the type of analysis involved.  Identify the problem solving steps depicted.
 # 

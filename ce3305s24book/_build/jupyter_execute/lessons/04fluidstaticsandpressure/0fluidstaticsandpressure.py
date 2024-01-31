@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Fluid Statics 
+# # Fluid Statics (pp. 64-90)
 # 
 # :::{admonition} Course Website
 # [http://54.243.252.9/ce-3305-webroot/](http://54.243.252.9/ce-3305-webroot/)
