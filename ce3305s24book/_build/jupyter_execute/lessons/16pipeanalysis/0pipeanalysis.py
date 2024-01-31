@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Closed Conduit Head Loss Models
+# # Closed Conduit Head Loss Models (pp. 517-523)
 # 
 # ## Outline
 # - Loss Models

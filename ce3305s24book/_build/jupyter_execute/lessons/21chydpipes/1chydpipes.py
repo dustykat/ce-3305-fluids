@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Computational Hydraulics: Pipe Networks
+# # Computational Hydraulics: Pipe Networks (pp. 524-529)
 # 
 # In fluid dynamics, pipe network analysis is the analysis of the fluid flow through a hydraulics network, containing several or many interconnected branches. The aim is to determine the flow rates and pressure drops in the individual sections of the network. This is a common problem in hydraulic design.
 # 

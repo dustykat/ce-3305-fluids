@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Bernoulli Equation Applications
+# # Bernoulli Equation Applications (pp. 220-232)
 # 
 # Recall from last time the equation of 
 # 

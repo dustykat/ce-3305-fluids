@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Control Volumes
+# # Control Volumes (pp. 178)
 # 
 # A control volume (CV) is the equivalent of a free-body diagram in other fields of engineering mechanics (statics, dynamics).
 # 
@@ -16,7 +16,7 @@
 # ```
 # 
 # ```{note}
-# The control volume is the basis of reynold's transport theorem that is employed to allow analysis from a Eulerian reference frame rather than tracking individual particles.  The goal is to describe fundamental laws of mechanics in integral form
+# The control volume is the basis of Reynolds' transport theorem that is employed to allow analysis from a Eulerian reference frame rather than tracking individual particles.  The goal is to describe fundamental laws of mechanics in integral form
 # ```
 # The bounding surface is called the *control surface* (CS)
 # 
@@ -56,8 +56,6 @@
 # > where $Q$ is heat flow into the system, S is entropy, and T is the absolute temperature of the system.
 # 
 # The first four conservation principles are the most useful in fluid mechanics problems; the last principle is applied in various forms in mechanical and chemical thermodynamics problems - its relevant in Civil and Environmental Engineering, but covered in later classes.
-# 
-# 
 
 # In[ ]:
 

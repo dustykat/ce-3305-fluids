@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Euler's Equation and the Bernoulli Equation
+# # Euler's Equation and the Bernoulli Equation (pp. 91-96)
 # 
 # Here we will start with the Euler equation and from a sequence of plausible stipulations arrive at the Bernoulli Equation.  This development is an alternative to the way most books present the Bernoulli Equation - choose whichever makes more sense to you.
 # 
@@ -13,7 +13,7 @@
 # > - Uniform linear acceleration
 # > - Constant angular velocity
 # 
-# ## Example: Fluid surface under constant linear acceleration
+# ## Example: Fluid surface under constant linear acceleration (pp. 91)
 # 
 # Here is an example combining hydrostatic pressure equation and acceleration.  Identify the problem solving steps depicted.  
 # 
@@ -33,7 +33,7 @@
 # 
 # ```
 # 
-# ## Example: Constant Angular Velocity
+# ## Example: Constant Angular Velocity (pp. 96)
 # 
 # ```{figure} ang-vel-1.png
 # ---

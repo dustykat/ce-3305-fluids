@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Similitude
+# # Similitude (pp. 427-449)
 # 
 # :::{admonition} Course Website
 # [http://54.243.252.9/ce-3305-webroot/](http://54.243.252.9/ce-3305-webroot/)

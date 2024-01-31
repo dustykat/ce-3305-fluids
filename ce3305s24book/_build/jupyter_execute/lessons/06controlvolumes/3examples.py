@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# 
-
-# # Example Applications of Continunity
+# # Example Applications of Continunity (pp. 182)
 
 # ## Example 1: Application of Continunity to a Spa
 # 

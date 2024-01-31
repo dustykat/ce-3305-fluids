@@ -1,12 +1,16 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ### CV Relationships for Mass Conservation (Continunity)
+# # CV Relationships for Mass Conservation (Continunity) (pp. 179)
 # 
-# To use CV analysis the system equations are converted to volume variation relations.
+# To use CV analysis the system equations are converted to volume variation relations. Recall that extensive properties are defined throughout an entire mass of a fluid (a system) whereas intensive properties are an amount of property per unit mass.
+
+# ## References
 # 
-# Recall that extensive properties are defined throughout an entire mass of a fluid (a system) whereas intensive properties are an amount of property per unit mass.
-# 
+# 1. [Reynolds Transport Theorem (Wikipedia)](https://en.wikipedia.org/wiki/Reynolds_transport_theorem#:~:text=Reynolds%20transport%20theorem%20can%20be,(not%20the%20flow%20velocity).)
+
+# ## RTT applied to conservation of mass
+
 # Starting with mass itself, the extensive property is mass $m$
 # 
 # The mass per unit mass is unity; $\frac{m}{m}=1$
@@ -158,10 +162,6 @@ Q_out = 0.003 #m^3/s
 dSdt = V_in*A_in - Q_out
 print('storage accumulation is .... wait for it ...',dSdt)
 
-
-# ## References
-# 
-# 1. [Reynolds Transport Theorem (Wikipedia)](https://en.wikipedia.org/wiki/Reynolds_transport_theorem#:~:text=Reynolds%20transport%20theorem%20can%20be,(not%20the%20flow%20velocity).)
 
 # In[ ]:
 

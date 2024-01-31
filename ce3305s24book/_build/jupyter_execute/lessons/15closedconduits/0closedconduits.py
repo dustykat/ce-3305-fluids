@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Closed Conduits  
+# # Closed Conduits  (pp. 496-551)
 # 
 # ## Outline
 # 
@@ -33,6 +33,8 @@
 
 # 
 # ## Readings
+# 
+# 1. Hibbeler, R.C, Fluid Mechanics, 3ed. Prentice Hall, 2022. ISBN:  pp. 496-551
 # 
 # 1. Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 444-469
 # 

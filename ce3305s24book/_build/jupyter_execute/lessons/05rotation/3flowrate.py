@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Volumetric and Mass Flow Rate
+# # Volumetric and Mass Flow Rate (pp. 168-174)
 # 
 # Consider a conduit with cross section area, $A$.
 # 
