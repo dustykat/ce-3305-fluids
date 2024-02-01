@@ -3,11 +3,11 @@
 
 # # Computational Hydraulics: Pipe Networks (pp. 524-529)
 # 
-# In fluid dynamics, pipe network analysis is the analysis of the fluid flow through a hydraulics network, containing several or many interconnected branches. The aim is to determine the flow rates and pressure drops in the individual sections of the network. This is a common problem in hydraulic design.
-# 
 # :::{admonition} Course Website
 # [http://54.243.252.9/ce-3305-webroot/](http://54.243.252.9/ce-3305-webroot/)
 # :::
+# 
+# In fluid dynamics, pipe network analysis is the analysis of the fluid flow through a hydraulics network, containing several or many interconnected branches. The aim is to determine the flow rates and pressure drops in the individual sections of the network. This is a common problem in hydraulic design.
 
 # ## Readings
 # 
@@ -15,7 +15,7 @@
 # 
 # 3. DF Elger, BC Williams, Crowe, CT and JA Roberson, *Engineering Fluid Mechanics 10th edition*, John Wiley & Sons, Inc., 2013. [http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-15.pdf](http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-15.pdf)
 # 
-# 3. Cleveland, T.G. (2023). Hydraulic Network Simulation with EPANET and Python. *Notes to accompany Metropolia ICT Summer School 2023 Course TX00FJ07* [http://freeswmm.ddns.net/ects-epanet/ects-epanet-notes/_build/html/intro.html](http://freeswmm.ddns.net/ects-epanet/ects-epanet-notes/_build/html/intro.html)
+# 3. Cleveland, T.G. (2023). Hydraulic Network Simulation with EPANET and Python. *Notes to accompany Metropolia ICT Summer School 2023 Course TX00FJ07* [http://freeswmm.ddns.net/ects-epanet/ects-epanet-notes/_build/html/intro.html](http://18.210.253.169/ects-epanet/ects-epanet-notes/_build/html/lessons/lesson01/introduction.html)
 # 
 # 4. Cleveland, T. G. (2014) *Fluid Mechanics Notes to Accompany CE 3305 at Jade-Holshule (TTU Study Abroad 2015-2019)*, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering. [http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture12.pdf](http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture12.pdf)
 # 
@@ -51,9 +51,7 @@
 # 
 # Most content in this section is derived from a short course taught in Finland:
 # 
-# - Cleveland, T.G. (2023). Hydraulic Network Simulation with EPANET and Python. *Notes to accompany Metropolia ICT Summer School 2023 Course TX00FJ07* [http://freeswmm.ddns.net/ects-epanet/ects-epanet-notes/_build/html/intro.html](http://freeswmm.ddns.net/ects-epanet/ects-epanet-notes/_build/html/intro.html)
-# 
-# 
+# - Cleveland, T.G. (2023). Hydraulic Network Simulation with EPANET and Python. *Notes to accompany Metropolia ICT Summer School 2023 Course TX00FJ07* [http://freeswmm.ddns.net/ects-epanet/ects-epanet-notes/_build/html/intro.html](http://18.210.253.169/ects-epanet/ects-epanet-notes/_build/html/lessons/lesson01/introduction.html)
 # :::
 # 
 # 
@@ -459,9 +457,9 @@ def k_factor(howlong,diameter,gravity):
 
 # We will need our linear solver:
 # 
-# ```{note}
+# :::{note}
 # If we use **numpy** we will be able to use the linear algebra package that is part of **numpy** and the function below is completely replaced by that function; additionally the reading and writing of files is considerably simplified, and the vector-matrix multiplication functions (next code block) are not necessary (numpy has such arithmetic already defined).  The remainder is essentially unchanged.  The script below however works using just python core (and math.pi).
-# ```
+# :::
 
 # In[2]:
 
