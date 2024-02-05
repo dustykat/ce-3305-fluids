@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.5.30)  26 NOV 2023 00:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.5.30)  4 FEB 2024 21:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -396,30 +396,10 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 30--32
-
+Overfull \hbox (30.0pt too wide) in paragraph at lines 43--44
+[] 
  []
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 33.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Underfull \hbox (badness 10000) in paragraph at lines 36--38
-
- []
-
-<SlidingPlateViscosity.png, id=1, 474.77374pt x 179.67125pt>
-File: SlidingPlateViscosity.png Graphic file (type png)
-<use SlidingPlateViscosity.png>
-Package pdftex.def Info: SlidingPlateViscosity.png  used on input line 50.
-(pdftex.def)             Requested size: 289.07999pt x 109.40189pt.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
 Make it at least 14.49998pt.
@@ -428,42 +408,64 @@ This may cause the page layout to be inconsistent, however.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
+]
+Underfull \hbox (badness 10000) in paragraph at lines 47--49
+
+ []
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 50.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 50.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [2
+
+]
+<SlidingPlateViscosity.png, id=14, 474.77374pt x 179.67125pt>
+File: SlidingPlateViscosity.png Graphic file (type png)
+<use SlidingPlateViscosity.png>
+Package pdftex.def Info: SlidingPlateViscosity.png  used on input line 71.
+(pdftex.def)             Requested size: 289.07999pt x 109.40189pt.
+ [3
+
  <./SlidingPlateViscosity.png>]
-<drop.png, id=15, 95.35625pt x 129.48375pt>
-File: drop.png Graphic file (type png)
-<use drop.png>
-Package pdftex.def Info: drop.png  used on input line 65.
-(pdftex.def)             Requested size: 72.26999pt x 98.13797pt.
-<circlegate.png, id=16, 323.40825pt x 230.66174pt>
+<circlegate.png, id=23, 323.40825pt x 230.66174pt>
 File: circlegate.png Graphic file (type png)
 <use circlegate.png>
-Package pdftex.def Info: circlegate.png  used on input line 82.
+Package pdftex.def Info: circlegate.png  used on input line 105.
 (pdftex.def)             Requested size: 216.81pt x 154.63406pt.
  
 AED: lastpage setting LastPage
-[2
+[4
 
- <./drop.png> <./circlegate.png>] (./exam1-s24.aux) ) 
+ <./circlegate.png>] (./exam1-s24.aux) ) 
 Here is how much of TeX's memory you used:
- 5783 strings out of 483183
- 77655 string characters out of 5966292
- 331382 words of memory out of 5000000
- 20688 multiletter control sequences out of 15000+600000
- 537589 words of font info for 44 fonts, out of 8000000 for 9000
+ 5788 strings out of 483183
+ 77717 string characters out of 5966292
+ 331427 words of memory out of 5000000
+ 20692 multiletter control sequences out of 15000+600000
+ 539595 words of font info for 53 fonts, out of 8000000 for 9000
  15 hyphenation exceptions out of 8191
- 40i,11n,45p,868b,308s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-8.pfb>
-Output written on exam1-s24.pdf (2 pages, 125177 bytes).
+ 40i,12n,45p,868b,307s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on exam1-s24.pdf (4 pages, 150370 bytes).
 PDF statistics:
- 46 PDF objects out of 1000 (max. 8388607)
- 28 compressed objects within 1 object stream
+ 62 PDF objects out of 1000 (max. 8388607)
+ 41 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
