@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Control Volumes (pp. 178) &#8212; Engineering Fluid Mechanics</title>
+    <title>Volumetric and Mass Flow Rate &#8212; Engineering Fluid Mechanics</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -317,7 +317,7 @@
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Control Volumes (pp. 178)
+     Volumetric and Mass Flow Rate
     </a>
    </li>
    <li class="toctree-l2">
@@ -555,35 +555,59 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conservation-of-mass-continunity-br">
-   Conservation of mass (continunity)
-   <br/>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Volumetric and Mass Flow Rate
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-flow-in-a-rectangular-conduit">
+     Example: Flow in a Rectangular Conduit
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-flow-in-a-triangular-conduit">
+     Example: Flow in a Triangular Conduit
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conservation-of-linear-momentum-br">
-   Conservation of linear momentum
-   <br/>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#control-volumes-pp-178">
+   Control Volumes (pp. 178)
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conservation-of-angular-momentum-br">
-   Conservation of angular momentum
-   <br/>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conservation-of-energy-br">
-   Conservation of energy
-   <br/>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#entropy-principle-br">
-   Entropy principle
-   <br/>
-  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conservation-of-mass-continunity-br">
+     Conservation of mass (continunity)
+     <br/>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conservation-of-linear-momentum-br">
+     Conservation of linear momentum
+     <br/>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conservation-of-angular-momentum-br">
+     Conservation of angular momentum
+     <br/>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conservation-of-energy-br">
+     Conservation of energy
+     <br/>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#entropy-principle-br">
+     Entropy principle
+     <br/>
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -596,7 +620,45 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="control-volumes-pp-178">
+  <div class="tex2jax_ignore mathjax_ignore section" id="volumetric-and-mass-flow-rate">
+<h1>Volumetric and Mass Flow Rate<a class="headerlink" href="#volumetric-and-mass-flow-rate" title="Permalink to this headline">¶</a></h1>
+<p>Consider a conduit with cross section area, <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>The volume of fluid that passes area <span class="math notranslate nohighlight">\(A\)</span> at location <span class="math notranslate nohighlight">\(x\)</span> in some time interval <span class="math notranslate nohighlight">\(\Delta t\)</span> is given by
+<span class="math notranslate nohighlight">\( A \Delta x = V\)</span></p>
+<div class="figure align-default" id="discharge">
+<a class="reference internal image-reference" href="../../_images/discharge1.png"><img alt="../../_images/discharge1.png" src="../../_images/discharge1.png" style="width: 600px;" /></a>
+</div>
+<p>The flow rate is <span class="math notranslate nohighlight">\(Q = \frac{V}{\Delta t} = \frac{\Delta x}{\Delta t}A\)</span>, the “velocity term” <span class="math notranslate nohighlight">\(u = \frac{\Delta x}{\Delta t}\)</span> is the “mean section velocity”.</p>
+<p>If the velocity varies over the cross section one can obtain the mean section velocity by integration; and in fact this is how streamflow is determined.</p>
+<div class="figure align-default" id="velocity-dist">
+<a class="reference internal image-reference" href="../../_images/velocity-dist1.png"><img alt="../../_images/velocity-dist1.png" src="../../_images/velocity-dist1.png" style="width: 600px;" /></a>
+</div>
+<p>If the orientation is not orthogonal the integrals are the result of the inner product of the velocity vector <span class="math notranslate nohighlight">\(\bar V\)</span> and the area vector <span class="math notranslate nohighlight">\(\bar {dA}\)</span></p>
+<div class="figure align-default" id="q-flux">
+<a class="reference internal image-reference" href="../../_images/q-flux1.png"><img alt="../../_images/q-flux1.png" src="../../_images/q-flux1.png" style="width: 600px;" /></a>
+</div>
+<p>The mass flow rate is the product of the volumetric rate and the fluid density</p>
+<div class="figure align-default" id="mass-flow">
+<a class="reference internal image-reference" href="../../_images/mass-flow1.png"><img alt="../../_images/mass-flow1.png" src="../../_images/mass-flow1.png" style="width: 600px;" /></a>
+</div>
+<p>As with volume, the mass flows also are obtained by inner products as:</p>
+<div class="figure align-default" id="frux-integrals">
+<a class="reference internal image-reference" href="../../_images/frux-integrals1.png"><img alt="../../_images/frux-integrals1.png" src="../../_images/frux-integrals1.png" style="width: 600px;" /></a>
+</div>
+<div class="section" id="example-flow-in-a-rectangular-conduit">
+<h2>Example: Flow in a Rectangular Conduit<a class="headerlink" href="#example-flow-in-a-rectangular-conduit" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="rect-channel">
+<a class="reference internal image-reference" href="../../_images/rect-channel1.png"><img alt="../../_images/rect-channel1.png" src="../../_images/rect-channel1.png" style="width: 600px;" /></a>
+</div>
+</div>
+<div class="section" id="example-flow-in-a-triangular-conduit">
+<h2>Example: Flow in a Triangular Conduit<a class="headerlink" href="#example-flow-in-a-triangular-conduit" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="v-channel">
+<a class="reference internal image-reference" href="../../_images/v-channel1.png"><img alt="../../_images/v-channel1.png" src="../../_images/v-channel1.png" style="width: 600px;" /></a>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="control-volumes-pp-178">
 <h1>Control Volumes (pp. 178)<a class="headerlink" href="#control-volumes-pp-178" title="Permalink to this headline">¶</a></h1>
 <p>A control volume (CV) is the equivalent of a free-body diagram in other fields of engineering mechanics (statics, dynamics).</p>
 <p>A control volume is some defined area in space, as depicted by the cube below.</p>
