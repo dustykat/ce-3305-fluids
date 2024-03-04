@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.5.30)  4 MAR 2024 14:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.5.30)  4 MAR 2024 19:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**exam2-s24.tex
-(./exam2-s24.tex
+**WillItFloat.tex
+(./WillItFloat.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -318,8 +318,8 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count273
 \l__pdf_internal_box=\box55
 )
-(./exam2-s24.aux)
-\openout1 = `exam2-s24.aux'.
+(./WillItFloat.aux)
+\openout1 = `WillItFloat.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
@@ -396,10 +396,36 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-Overfull \hbox (30.0pt too wide) in paragraph at lines 43--44
-[] 
- []
+<amboy.png, id=1, 369.63094pt x 228.10219pt>
+File: amboy.png Graphic file (type png)
+<use amboy.png>
+Package pdftex.def Info: amboy.png  used on input line 31.
+(pdftex.def)             Requested size: 144.54pt x 89.19615pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 35.
 
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 35.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 35.
+
+<ellipsoid.png, id=3, 175.40532pt x 118.94438pt>
+File: ellipsoid.png Graphic file (type png)
+<use ellipsoid.png>
+Package pdftex.def Info: ellipsoid.png  used on input line 43.
+(pdftex.def)             Requested size: 144.54pt x 98.02141pt.
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 48.
+
+
+AED: lastpage setting LastPage
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
 Make it at least 14.49998pt.
@@ -408,63 +434,27 @@ This may cause the page layout to be inconsistent, however.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-]
-<continunity.png, id=8, 299.31825pt x 208.3785pt>
-File: continunity.png Graphic file (type png)
-<use continunity.png>
-Package pdftex.def Info: continunity.png  used on input line 52.
-(pdftex.def)             Requested size: 289.07999pt x 201.25249pt.
- [2
-
- <./continunity.png>]
-<venturiflow.png, id=14, 257.16075pt x 261.97874pt>
-File: venturiflow.png Graphic file (type png)
-<use venturiflow.png>
-Package pdftex.def Info: venturiflow.png  used on input line 77.
-(pdftex.def)             Requested size: 289.07999pt x 294.4975pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 84.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 84.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [3
-
- <./venturiflow.png>]
-<plug-valve.png, id=21, 492.03825pt x 264.99pt>
-File: plug-valve.png Graphic file (type png)
-<use plug-valve.png>
-Package pdftex.def Info: plug-valve.png  used on input line 109.
-(pdftex.def)             Requested size: 289.07999pt x 155.68365pt.
- [4
-
- <./plug-valve.png>] 
-AED: lastpage setting LastPage
-[5
-
-] (./exam2-s24.aux) ) 
+ <./amboy.png> <./ellipsoid.png>] (./WillItFloat.aux) ) 
 Here is how much of TeX's memory you used:
- 5785 strings out of 483183
- 77666 string characters out of 5966292
- 332435 words of memory out of 5000000
- 20690 multiletter control sequences out of 15000+600000
- 537896 words of font info for 45 fonts, out of 8000000 for 9000
+ 5777 strings out of 483183
+ 77492 string characters out of 5966292
+ 331413 words of memory out of 5000000
+ 20682 multiletter control sequences out of 15000+600000
+ 537758 words of font info for 45 fonts, out of 8000000 for 9000
  15 hyphenation exceptions out of 8191
- 40i,12n,45p,868b,302s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on exam2-s24.pdf (5 pages, 156185 bytes).
+ 40i,12n,45p,870b,233s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+tt12.pfb>
+Output written on WillItFloat.pdf (1 page, 497499 bytes).
 PDF statistics:
- 47 PDF objects out of 1000 (max. 8388607)
- 28 compressed objects within 1 object stream
+ 41 PDF objects out of 1000 (max. 8388607)
+ 26 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
