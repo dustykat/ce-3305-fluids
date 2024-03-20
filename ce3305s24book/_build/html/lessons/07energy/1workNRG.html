@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Closed Conduits (pp. 496-551) &#8212; Engineering Fluid Mechanics</title>
+    <title>Work and Energy (pp. 212-243) &#8212; Engineering Fluid Mechanics</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,6 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Closed Conduit Head Loss Models (pp. 517-523)" href="../16pipeanalysis/0pipeanalysis.html" />
-    <link rel="prev" title="Viscous Internal Flows (pp. 450-496)" href="../14viscousinternalflow/14viscousinternalflow.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -93,7 +91,7 @@
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../01introduction/1introduction.html">
    Introduction
@@ -336,7 +334,7 @@
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../07energy/0energy.html">
+  <a class="reference internal" href="0energy.html">
    Conservation of Energy (pp. 212-243)
   </a>
  </li>
@@ -399,8 +397,8 @@
    Viscous Internal Flows (pp. 450-496)
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../15closedconduits/0closedconduits.html">
    Closed Conduits  (pp. 496-551)
   </a>
  </li>
@@ -495,7 +493,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/lessons/15closedconduits/0closedconduits.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/lessons/07energy/1workNRG.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -515,7 +513,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flessons/15closedconduits/0closedconduits.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flessons/07energy/1workNRG.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -536,7 +534,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/lessons/15closedconduits/0closedconduits.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/lessons/07energy/1workNRG.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -559,18 +557,43 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#outline">
-   Outline
+  <a class="reference internal nav-link" href="#eulers-equation">
+   Eulers Equation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#example">
-   Example
+  <a class="reference internal nav-link" href="#bernoulli-equation">
+   Bernoulli Equation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#readings">
-   Readings
+  <a class="reference internal nav-link" href="#energy-grade-line">
+   Energy Grade Line
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hydraulic-grade-line">
+   Hydraulic Grade Line
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modified-bernoulli-equation-energy-equation">
+   Modified Bernoulli Equation (Energy Equation)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pumps">
+   Pumps
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#turbines">
+   Turbines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lesson-outline">
+   Lesson Outline
   </a>
  </li>
 </ul>
@@ -584,28 +607,39 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="closed-conduits-pp-496-551">
-<h1>Closed Conduits  (pp. 496-551)<a class="headerlink" href="#closed-conduits-pp-496-551" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="outline">
-<h2>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">¶</a></h2>
+  <div class="tex2jax_ignore mathjax_ignore section" id="work-and-energy-pp-212-243">
+<h1>Work and Energy (pp. 212-243)<a class="headerlink" href="#work-and-energy-pp-212-243" title="Permalink to this headline">¶</a></h1>
+<div class="admonition-course-website admonition">
+<p class="admonition-title">Course Website</p>
+<p><a class="reference external" href="http://54.243.252.9/ce-3305-webroot/">http://54.243.252.9/ce-3305-webroot/</a></p>
+</div>
+<div class="section" id="eulers-equation">
+<h2>Eulers Equation<a class="headerlink" href="#eulers-equation" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="bernoulli-equation">
+<h2>Bernoulli Equation<a class="headerlink" href="#bernoulli-equation" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="energy-grade-line">
+<h2>Energy Grade Line<a class="headerlink" href="#energy-grade-line" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="hydraulic-grade-line">
+<h2>Hydraulic Grade Line<a class="headerlink" href="#hydraulic-grade-line" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="modified-bernoulli-equation-energy-equation">
+<h2>Modified Bernoulli Equation (Energy Equation)<a class="headerlink" href="#modified-bernoulli-equation-energy-equation" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="pumps">
+<h2>Pumps<a class="headerlink" href="#pumps" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="turbines">
+<h2>Turbines<a class="headerlink" href="#turbines" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="lesson-outline">
+<h2>Lesson Outline<a class="headerlink" href="#lesson-outline" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Define a closed conduit</p></li>
-<li><p>Direct application of modified bernoulli</p></li>
-<li><p>Concept of head loss</p></li>
-<li><p>Derive Head Loss model “structure” from momentum equation</p></li>
+<li><p>Definition of energy</p></li>
+<li><p>Example application</p></li>
 </ul>
-</div>
-<div class="section" id="example">
-<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="readings">
-<h2>Readings<a class="headerlink" href="#readings" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>Hibbeler, R.C, Fluid Mechanics, 3ed. Prentice Hall, 2022. ISBN:  pp. 496-551</p></li>
-<li><p>Hibbeler, R.C, Fluid Mechanics, 2ed. Prentice Hall, 2018. ISBN: 9780134655413 pp. 444-469</p></li>
-<li><p>DF Elger, BC Williams, Crowe, CT and JA Roberson, <em>Engineering Fluid Mechanics 10th edition</em>, John Wiley &amp; Sons, Inc., 2013.  (placeholder file to get links working). <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-13.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/EFM-13.pdf</a></p></li>
-<li><p>Cleveland, T. G. (2014) <em>Fluid Mechanics Notes to Accompany CE 3305 at Jade-Holshule (TTU Study Abroad 2015-2019)</em>, Department of Civil, Environmental, and Construction Engineering, Whitacre College of Engineering. <a class="reference external" href="http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture12.pdf">http://54.243.252.9/ce-3305-webroot/3-Readings/ce3305-lecture11.pdf</a></p></li>
-</ol>
 </div>
 </div>
 
@@ -622,7 +656,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./lessons/15closedconduits"
+            path: "./lessons/07energy"
         },
         predefinedOutput: true
     }
@@ -638,24 +672,6 @@
 
 <div class='prev-next-bottom'>
     
-    <div id="prev">
-        <a class="left-prev" href="../14viscousinternalflow/14viscousinternalflow.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Viscous Internal Flows (pp. 450-496)</p>
-            </div>
-        </a>
-    </div>
-     <div id="next">
-        <a class="right-next" href="../16pipeanalysis/0pipeanalysis.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Closed Conduit Head Loss Models (pp. 517-523)</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
 
 </div>
         
