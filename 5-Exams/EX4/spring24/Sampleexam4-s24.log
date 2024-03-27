@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.3.15)  27 MAR 2024 16:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.3.15)  27 MAR 2024 21:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**exam4-s24.tex
-(./exam4-s24.tex
+**Sampleexam4-s24.tex
+(./Sampleexam4-s24.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -322,7 +322,7 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count273
 \l__pdf_internal_box=\box55
 )
-(./exam4-s24.aux
+(./Sampleexam4-s24.aux
 
 LaTeX Warning: Label `fig:concreteDam' multiply defined.
 
@@ -333,7 +333,7 @@ LaTeX Warning: Label `fig:gate' multiply defined.
 LaTeX Warning: Label `fig:gate' multiply defined.
 
 )
-\openout1 = `exam4-s24.aux'.
+\openout1 = `Sampleexam4-s24.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
 LaTeX Font Info:    ... okay on input line 24.
@@ -423,95 +423,149 @@ This may cause the page layout to be inconsistent, however.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-<manometer.png, id=8, 294.34969pt x 164.11313pt>
-File: manometer.png Graphic file (type png)
-<use manometer.png>
-Package pdftex.def Info: manometer.png  used on input line 63.
-(pdftex.def)             Requested size: 216.81pt x 120.88338pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 75.
+<manometerTwo.png, id=8, 608.2725pt x 460.72125pt>
+File: manometerTwo.png Graphic file (type png)
+<use manometerTwo.png>
+Package pdftex.def Info: manometerTwo.png  used on input line 63.
+(pdftex.def)             Requested size: 216.81pt x 164.2145pt.
+ [2
 
+ <./manometerTwo.png>]
+<concreteDam.png, id=14, 483.8075pt x 539.01375pt>
+File: concreteDam.png Graphic file (type png)
+<use concreteDam.png>
+Package pdftex.def Info: concreteDam.png  used on input line 80.
+(pdftex.def)             Requested size: 216.81pt x 241.55052pt.
+[3
+
+ <./concreteDam.png>]
+File: concreteDam.png Graphic file (type png)
+<use concreteDam.png>
+Package pdftex.def Info: concreteDam.png  used on input line 97.
+(pdftex.def)             Requested size: 216.81pt x 241.55052pt.
+ [4
+
+]
+<slopedSide.png, id=22, 428.60126pt x 539.01375pt>
+File: slopedSide.png Graphic file (type png)
+<use slopedSide.png>
+Package pdftex.def Info: slopedSide.png  used on input line 114.
+(pdftex.def)             Requested size: 216.81pt x 272.66447pt.
+ [5
+
+ <./slopedSide.png>]
+File: slopedSide.png Graphic file (type png)
+<use slopedSide.png>
+Package pdftex.def Info: slopedSide.png  used on input line 131.
+(pdftex.def)             Requested size: 216.81pt x 272.66447pt.
+ [6
+
+]
+File: slopedSide.png Graphic file (type png)
+<use slopedSide.png>
+Package pdftex.def Info: slopedSide.png  used on input line 148.
+(pdftex.def)             Requested size: 216.81pt x 272.66447pt.
+ [7
+
+]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 162
+.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 75.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 162
+.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [2
+) [8
 
- <./manometer.png>]
-<gate.png, id=16, 185.94469pt x 131.74219pt>
-File: gate.png Graphic file (type png)
-<use gate.png>
-Package pdftex.def Info: gate.png  used on input line 89.
-(pdftex.def)             Requested size: 216.81pt x 153.61507pt.
- [3
+]
+<submergedPlate.png, id=42, 322.20375pt x 500.87125pt>
+File: submergedPlate.png Graphic file (type png)
+<use submergedPlate.png>
+Package pdftex.def Info: submergedPlate.png  used on input line 196.
+(pdftex.def)             Requested size: 216.81pt x 337.04938pt.
+ [9
 
- <./gate.png>]
-<nozzle.png, id=24, 404.26031pt x 130.23656pt>
-File: nozzle.png Graphic file (type png)
-<use nozzle.png>
-Package pdftex.def Info: nozzle.png  used on input line 136.
-(pdftex.def)             Requested size: 216.81pt x 69.84776pt.
- [4 <./nozzle.png>]
-<trapezoid.png, id=29, 386.6445pt x 154.77824pt>
+ <./submergedPlate.png>] [10
+
+]
+<trapezoid.png, id=50, 386.6445pt x 154.77824pt>
 File: trapezoid.png Graphic file (type png)
 <use trapezoid.png>
-Package pdftex.def Info: trapezoid.png  used on input line 165.
+Package pdftex.def Info: trapezoid.png  used on input line 225.
 (pdftex.def)             Requested size: 216.81pt x 86.79094pt.
-<sluicegate.png, id=30, 335.2525pt x 188.705pt>
+ [11
+
+ <./trapezoid.png>]
+<sluicegate.png, id=55, 335.2525pt x 188.705pt>
 File: sluicegate.png Graphic file (type png)
 <use sluicegate.png>
-Package pdftex.def Info: sluicegate.png  used on input line 190.
+Package pdftex.def Info: sluicegate.png  used on input line 250.
 (pdftex.def)             Requested size: 216.81pt x 122.03484pt.
- [5
+ [12
 
- <./trapezoid.png> <./sluicegate.png>]
-<centrifugepump.png, id=36, 552.56438pt x 243.15843pt>
+ <./sluicegate.png>]
+<centrifugepump.png, id=60, 552.56438pt x 243.15843pt>
 File: centrifugepump.png Graphic file (type png)
 <use centrifugepump.png>
-Package pdftex.def Info: centrifugepump.png  used on input line 207.
+Package pdftex.def Info: centrifugepump.png  used on input line 268.
 (pdftex.def)             Requested size: 289.07999pt x 127.20743pt.
-<channel_profile.png, id=37, 637.38126pt x 143.53625pt>
+ [13
+
+ <./centrifugepump.png>]
+<channel_profile.png, id=66, 637.38126pt x 143.53625pt>
 File: channel_profile.png Graphic file (type png)
 <use channel_profile.png>
-Package pdftex.def Info: channel_profile.png  used on input line 222.
+Package pdftex.def Info: channel_profile.png  used on input line 283.
 (pdftex.def)             Requested size: 289.07999pt x 65.09883pt.
+ [14
 
-[6
+ <./channel_profile.png>]
+<drop.png, id=71, 95.35625pt x 129.48375pt>
+File: drop.png Graphic file (type png)
+<use drop.png>
+Package pdftex.def Info: drop.png  used on input line 302.
+(pdftex.def)             Requested size: 72.26999pt x 98.13797pt.
+ [15
 
- <./centrifugepump.png> <./channel_profile.png>]
+ <./drop.png>]
+<windmill.png, id=76, 263.98625pt x 393.47pt>
+File: windmill.png Graphic file (type png)
+<use windmill.png>
+Package pdftex.def Info: windmill.png  used on input line 320.
+(pdftex.def)             Requested size: 144.54pt x 215.43654pt.
+ [16
 
+ <./windmill.png>] 
 AED: lastpage setting LastPage
-(./exam4-s24.aux)
+(./Sampleexam4-s24.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5845 strings out of 483183
- 78539 string characters out of 5966292
- 333922 words of memory out of 5000000
- 20742 multiletter control sequences out of 15000+600000
- 539595 words of font info for 53 fonts, out of 8000000 for 9000
+ 5854 strings out of 483183
+ 78874 string characters out of 5966292
+ 332950 words of memory out of 5000000
+ 20750 multiletter control sequences out of 15000+600000
+ 537896 words of font info for 45 fonts, out of 8000000 for 9000
  15 hyphenation exceptions out of 8191
- 40i,12n,45p,868b,325s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,12n,45p,874b,302s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy8.pfb>
-Output written on exam4-s24.pdf (6 pages, 930149 bytes).
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy8.pfb>
+Output written on Sampleexam4-s24.pdf (16 pages, 948958 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
+ 108 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
