@@ -13082,11 +13082,20 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1><font color=darkblue>CE 3305 Engineering Fluid Mechanics <br> Spring 2024 Exercise Set 14</font></h1>
+<p><strong>Download</strong> (right-click, save target as ...) this page as a Jupyterlab notebook from: <a href="http://54.243.252.9/ce-3305-webroot/2-Exercises/ES13/ES13.ipynb">ES-13</a></p>
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1><font color=darkblue>CE 3305 Engineering Fluid Mechanics <br> Summer 2022 Exercise Set 14</font></h1>
 <p><strong>LAST NAME, FIRST NAME</strong></p>
 <p><strong>R00000000</strong></p>
 <hr>
-<h3 id="Purpose-:">Purpose :<a class="anchor-link" href="#Purpose-:">&#182;</a></h3><p>Pipeline analysis and design; use of Moody-Stanton diagram.</p>
+<h3 id="Purpose-:">Purpose :<a class="anchor-link" href="#Purpose-:">&#182;</a></h3><p>Modified Bernoulli’s Equation (Head Losses) in hydraulics systems</p>
 <h3 id="Assessment-Criteria-:">Assessment Criteria :<a class="anchor-link" href="#Assessment-Criteria-:">&#182;</a></h3><p>Completion, plausible solutions, use JupyterLab as a calculator.</p>
 <hr>
 
@@ -13096,37 +13105,97 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem-1---Part-1.">Problem 1 - Part 1.<a class="anchor-link" href="#Problem-1---Part-1.">&#182;</a></h3><p>The pressure drop over 150 m of 10-cm-diameter galvanized iron pipe is measured to be 100 kPa. 
-Roughness height is $k_s$ = 0.20 millimeters. The kinematic viscosity is $\nu = 10^{−6}~m^2/sec$
-Estimate the flow rate of water in the horizontal pipe (Express the result in Liters per second)</p>
-<p><img src="problemsketch.png" alt=""></p>
-<ol>
-<li>Write the pipe length on the sketch depicted in Figure 1, include units.</li>
-<li>Write the pipe diameter on the sketch depicted in Figure 1, include units.</li>
-<li>Horizontal means (circle correct response)<ol>
-<li>$z_1 &gt; z_2$</li>
-<li>$z_1 = z_2$</li>
-<li>$z_1 &lt; z_2$</li>
-</ol>
-</li>
-<li>Constant diameter pipe means (circle correct response) (circle correct response)<ol>
-<li>$V_1 &gt; V_2$</li>
-<li>$V_1 = V_2$</li>
-<li>$V_1 &lt; V_2$</li>
-</ol>
-</li>
-<li>The energy equation for this pipeline is <br><br> $$\frac{p_1}{\rho g} + \frac{V_1^2}{2g} + z_1 = \frac{p_2}{\rho g} + \frac{V_2^2}{2g} + z_2 + f\frac{L}{D}\frac{V^2}{2g}$$<br><br><ol>
-<li>Cancel the terms that are identical because the pipeline is horizontal.<br></li>
-<li>Cancel the terms that are identical because the pipeline is constant diameter.<br></li>
-<li>Compute the relative roughness $\frac{k_s}{D}=\text{______}$<br></li>
-</ol>
-</li>
-<li>Highlight the appropriate relative roughness curve on the Moody (blue) chart below</li>
-</ol>
-<p><img src="moodychart.png" alt=""></p>
+<h3 id="Problem-1.">Problem 1.<a class="anchor-link" href="#Problem-1.">&#182;</a></h3><p>Figure 1 depicts a reservoir draining through a valve used to
+control the flow rate. 
+The head loss across the valve is $h_l = \frac{4V^2}{2g}$ , where V is the velocity in the pipe. 
+The cross-sectional area of the pipe is 8 $cm^2$.</p>
+<figure align="center">
+<!--<img src="./Hydropower.png" width="300" >-->
+<img src="http://54.243.252.9/ce-3305-webroot/2-Exercises/ES14/pipeline14.png" width="300" >
+<figcaption>Figure 1: Reservoir draining through a valve and a pipe </figcaption>
+</figure><p>The elevation of the water level in the reservoir above the pipe outlet is 9 m. Find the
+discharge in the pipe assuming all loss occurs in the valve (e.g. pipe loss is small compared to valve loss).; assume $\alpha = 1.0$ at all locations in the system.</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># sketch here</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># list known quantities</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># list unknown quantities</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># governing principles</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># solution (step-by-step)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># discussion</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13139,19 +13208,94 @@ Estimate the flow rate of water in the horizontal pipe (Express the result in Li
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem-1---Part-2.">Problem 1 - Part 2.<a class="anchor-link" href="#Problem-1---Part-2.">&#182;</a></h3><p>Using the results above;</p>
-<ol>
-<li>For Reynolds number larger than $10^5$ what is the value of the friction factor $f$ on the Moody Chart ?</li>
-<li>Compute the numerical value of change in pressure head, in meters</li>
-<li>What is the velocity in the pipe for the given change in pressure head using the initial friction factor?</li>
-<li>What is the computed Reynolds number for this velocity?</li>
-<li>Plot the intersection of the computed Reynolds number and the relative roughness on the Moody chart.</li>
-<li>Is the initial guess of friction factor reasonable based on the plot?</li>
-<li>Iterate (as needed) and compute the discharge in the pipe in liters per second</li>
-</ol>
+<h3 id="Problem-2.">Problem 2.<a class="anchor-link" href="#Problem-2.">&#182;</a></h3><p>Figure 2 is a schematic of a pump system that supplies water to a hydraulic component through a 15 cm diameter, 60 m length of pipe. 
+The mean velocity in the pipe is 2 m/s, and the head loss in the pipe is 2 m. 
+Determine the pressure drop in the horizontal pipe and the power required from the pump to overcome the head loss in the pipe.</p>
+<figure align="center">
+<!--<img src="./bridgepier.png" width="300" >-->
+<img src="http://54.243.252.9/ce-3305-webroot/2-Exercises/ES14/hydraulicmachine14.png" width="300" >
+<figcaption>Figure 2: Pumping from lower to higher elevation</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># sketch here</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># list known quantities</span>
+</pre></div>
+
+    </div>
 </div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># list unknown quantities</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># governing principles</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># solution (step-by-step)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># discussion</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
