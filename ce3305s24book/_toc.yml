@@ -95,6 +95,11 @@ chapters:
 - file: lessons/24openchannel_bump/0openchannel_bump
 
 - file: lessons/25openchannel_gvf/0openchannel_gvf
+  sections:
+  - file: lessons/25openchannel_gvf/wspcomputation
+  - file: lessons/25openchannel_gvf/wspfixeddepth
+  - file: lessons/25openchannel_gvf/wspfixedspace
+  - file: lessons/25openchannel_gvf/wspnatural
 
 - file: lessons/26openchannel_rvf/0openchannel_rvf
 
