@@ -86,11 +86,11 @@ chapters:
 - file: lessons/21chydpipes/1chydpipes # fluid statics and pressure part2
 
 - file: lessons/23openchannel_nrg/0openchannel
-  sections:
-  - file: lessons/23openchannel_nrg/basicprinciples
-  - file: lessons/23openchannel_nrg/topic2-1
-  - file: lessons/23openchannel_nrg/topic2-2
-  - file: lessons/23openchannel_nrg/topic2-3
+#  sections:
+#  - file: lessons/23openchannel_nrg/basicprinciples
+#  - file: lessons/23openchannel_nrg/topic2-1
+#  - file: lessons/23openchannel_nrg/topic2-2
+#  - file: lessons/23openchannel_nrg/topic2-3
 
 - file: lessons/24openchannel_bump/0openchannel_bump
 

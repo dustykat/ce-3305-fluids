@@ -299,7 +299,11 @@
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "jupyter": {
+     "source_hidden": true
+    }
+   },
    "source": [
     "The first term integrates to the cross sectional area, the second term is the variation in pressure with position along the channel.\n",
     "\n",
@@ -362,7 +366,11 @@
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "jupyter": {
+     "source_hidden": true
+    }
+   },
    "source": [
     "The second term integral is the sectional flow area, so it simplifies to \n",
     "\n",
@@ -403,7 +411,11 @@
   },
   {
    "cell_type": "markdown",
-   "metadata": {},
+   "metadata": {
+    "jupyter": {
+     "source_hidden": true
+    }
+   },
    "source": [
     "The above equation is the final form of the momentum equation for practical use.  It will be rearranged in the remainder of this discuaaion to fit some other purposes, but this is the expression of momentum in the channel reach.\n",
     "\n",
