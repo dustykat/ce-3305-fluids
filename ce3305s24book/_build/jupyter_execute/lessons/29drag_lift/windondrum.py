@@ -3,36 +3,24 @@
 
 # # Application of Drag 
 # 
-# ## Example: Bang the Drum Slowly
+# ## Example: Blown Over
 # 
 # Figure XX is a schematic of wind blowing on a traffic barrier drum (A 55-gallon drum painted orange). Estimate the wind speed needed to tip the drum over. The weight of the drum is 48 lbs, the diameter is 22.5 inches, and the height is 34.5 inches.
 # 
-# <figure align="center">
-# <!--<img src="./trafficdrum.png" width="400" > -->
-# <img src="http://54.243.252.9/ce-3305-webroot/ce3305s22book/lessons/lesson24/trafficdrum.png" width="400"> 
-# <figcaption>Figure XX. Traffic Barrier Drum </figcaption>
-# </figure>
+# ![](trafficdrum.png)
 # 
 # ### Step 1: Problem Statement
 # 
 # The statement above is good enough, to suppliment we will notice this is a fluids problem as well as a static problem.
 # 
 # ### Step 2: Sketch(s)
-# The first sketch is really a side view of the original conceptualization above.
+# The first sketch below is really a side view of the original conceptualization above.
 # 
-# <figure align="center">
-# <!--<img src="./drumsketch.png" width="400" > -->
-# <img src="http://54.243.252.9/ce-3305-webroot/ce3305s22book/lessons/lesson24/drumsketch.png" width="400">
-# <figcaption>Figure XX. Schematic of Situation </figcaption>
-# </figure>
+# ![](drumsketch.png)
 # 
 # The next sketch is key, when the drum starts to tip over there is a moment of a single point of contact which is important to the analysis/
 # 
-# <figure align="center">
-# <!--<img src="./tippingdrum.png" width="400" > -->
-#     <img src="http://54.243.252.9/ce-3305-webroot/ce3305s22book/lessons/lesson24/tippingdrum.png" width="400">
-# <figcaption>Figure XX. Drum at Moment of Tipping </figcaption>
-# </figure>
+# ![](tippingdrum.png)
 # 
 # ### Step 3: List knowns and unknowns
 # 
