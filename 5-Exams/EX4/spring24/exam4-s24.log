@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.3.15)  27 MAR 2024 16:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.3.15)  1 MAY 2024 21:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -322,17 +322,7 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count273
 \l__pdf_internal_box=\box55
 )
-(./exam4-s24.aux
-
-LaTeX Warning: Label `fig:concreteDam' multiply defined.
-
-
-LaTeX Warning: Label `fig:gate' multiply defined.
-
-
-LaTeX Warning: Label `fig:gate' multiply defined.
-
-)
+(./exam4-s24.aux)
 \openout1 = `exam4-s24.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
@@ -410,7 +400,7 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-Overfull \hbox (30.0pt too wide) in paragraph at lines 44--45
+Overfull \hbox (30.0pt too wide) in paragraph at lines 43--44
 [] 
  []
 
@@ -426,92 +416,101 @@ This may cause the page layout to be inconsistent, however.
 <manometer.png, id=8, 294.34969pt x 164.11313pt>
 File: manometer.png Graphic file (type png)
 <use manometer.png>
-Package pdftex.def Info: manometer.png  used on input line 63.
+Package pdftex.def Info: manometer.png  used on input line 62.
 (pdftex.def)             Requested size: 216.81pt x 120.88338pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 75.
+ [2
+
+ <./manometer.png>]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 79.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 75.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 79.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [2
+) [3
 
- <./manometer.png>]
-<gate.png, id=16, 185.94469pt x 131.74219pt>
+]
+<gate.png, id=19, 185.94469pt x 131.74219pt>
 File: gate.png Graphic file (type png)
 <use gate.png>
-Package pdftex.def Info: gate.png  used on input line 89.
+Package pdftex.def Info: gate.png  used on input line 98.
 (pdftex.def)             Requested size: 216.81pt x 153.61507pt.
- [3
+ [4
 
- <./gate.png>]
-<nozzle.png, id=24, 404.26031pt x 130.23656pt>
+ <./gate.png>] [5
+
+]
+<nozzle.png, id=28, 404.26031pt x 130.23656pt>
 File: nozzle.png Graphic file (type png)
 <use nozzle.png>
-Package pdftex.def Info: nozzle.png  used on input line 136.
+Package pdftex.def Info: nozzle.png  used on input line 155.
 (pdftex.def)             Requested size: 216.81pt x 69.84776pt.
- [4 <./nozzle.png>]
-<trapezoid.png, id=29, 386.6445pt x 154.77824pt>
+ [6
+
+ <./nozzle.png>] [7
+
+]
+<trapezoid.png, id=38, 386.6445pt x 154.77824pt>
 File: trapezoid.png Graphic file (type png)
 <use trapezoid.png>
-Package pdftex.def Info: trapezoid.png  used on input line 165.
+Package pdftex.def Info: trapezoid.png  used on input line 192.
 (pdftex.def)             Requested size: 216.81pt x 86.79094pt.
-<sluicegate.png, id=30, 335.2525pt x 188.705pt>
+ [8
+
+ <./trapezoid.png>]
+<sluicegate.png, id=43, 335.2525pt x 188.705pt>
 File: sluicegate.png Graphic file (type png)
 <use sluicegate.png>
-Package pdftex.def Info: sluicegate.png  used on input line 190.
+Package pdftex.def Info: sluicegate.png  used on input line 223.
 (pdftex.def)             Requested size: 216.81pt x 122.03484pt.
- [5
+ [9
 
- <./trapezoid.png> <./sluicegate.png>]
-<centrifugepump.png, id=36, 552.56438pt x 243.15843pt>
-File: centrifugepump.png Graphic file (type png)
-<use centrifugepump.png>
-Package pdftex.def Info: centrifugepump.png  used on input line 207.
-(pdftex.def)             Requested size: 289.07999pt x 127.20743pt.
-<channel_profile.png, id=37, 637.38126pt x 143.53625pt>
-File: channel_profile.png Graphic file (type png)
-<use channel_profile.png>
-Package pdftex.def Info: channel_profile.png  used on input line 222.
-(pdftex.def)             Requested size: 289.07999pt x 65.09883pt.
+ <./sluicegate.png>]
+<pipe-network.png, id=48, 419.5675pt x 309.155pt>
+File: pipe-network.png Graphic file (type png)
+<use pipe-network.png>
+Package pdftex.def Info: pipe-network.png  used on input line 245.
+(pdftex.def)             Requested size: 196.16602pt x 144.54pt.
 
-[6
+Overfull \hbox (3.93895pt too wide) in paragraph at lines 253--253
+[]|\OT1/cmr/m/n/12 Diameter(mm)| 
+ []
 
- <./centrifugepump.png> <./channel_profile.png>]
 
+Overfull \hbox (26.26372pt too wide) in paragraph at lines 265--266
+[]|\OT1/cmr/m/n/12 Demand(liters/sec)| 
+ []
+
+[10
+
+ <./pipe-network.png>] [11
+
+] 
 AED: lastpage setting LastPage
-(./exam4-s24.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+(./exam4-s24.aux) ) 
 Here is how much of TeX's memory you used:
- 5845 strings out of 483183
- 78539 string characters out of 5966292
- 333922 words of memory out of 5000000
- 20742 multiletter control sequences out of 15000+600000
- 539595 words of font info for 53 fonts, out of 8000000 for 9000
+ 5826 strings out of 483183
+ 78228 string characters out of 5966292
+ 336862 words of memory out of 5000000
+ 20726 multiletter control sequences out of 15000+600000
+ 537896 words of font info for 45 fonts, out of 8000000 for 9000
  15 hyphenation exceptions out of 8191
- 40i,12n,45p,868b,325s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy8.pfb>
-Output written on exam4-s24.pdf (6 pages, 930149 bytes).
+ 40i,12n,45p,868b,306s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on exam4-s24.pdf (11 pages, 276293 bytes).
 PDF statistics:
  77 PDF objects out of 1000 (max. 8388607)
  45 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
